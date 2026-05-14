@@ -1,15 +1,12 @@
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
 
-const CACHE_PATH = join(process.cwd(), 'public', 'data', 'history.json');
-const MAX_AGE_MS = 25 * 60 * 60 * 1000;
-const VALID      = new Set(['ALL', 'EUR', 'USD', 'GBP', 'CHF']);
+const VALID   = new Set(['ALL', 'EUR', 'USD', 'GBP', 'CHF']);
+const CDN     = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api';
 
-function buildRateMap(r: Record<string, number>): Record<string, number> {
-  const { ALL, USD, GBP, CHF } = r;
+function buildRateMap(r: { all: number; usd: number; gbp: number; chf: number }): Record<string, number> {
+  const { all: ALL, usd: USD, gbp: GBP, chf: CHF } = r;
   return {
     EUR_ALL: ALL,       ALL_EUR: 1 / ALL,
     USD_ALL: ALL / USD, ALL_USD: USD / ALL,
@@ -24,23 +21,17 @@ function buildRateMap(r: Record<string, number>): Record<string, number> {
   };
 }
 
-function buildSeries(
-  dates: string[],
-  ratesByDate: Record<string, Record<string, number>>,
-  from: string,
-  to: string,
-) {
-  const slice = dates.slice(-30);
-  return slice.map((date, i) => {
-    const map  = buildRateMap(ratesByDate[date]);
-    const rate = from === to ? 1 : (map[`${from}_${to}`] ?? 0);
-    const prev = i === 0 ? null : (() => {
-      const pm = buildRateMap(ratesByDate[slice[i - 1]]);
-      return from === to ? 1 : (pm[`${from}_${to}`] ?? 0);
-    })();
-    const change = prev ? ((rate - prev) / prev) * 100 : null;
-    return { date, rate: parseFloat(rate.toFixed(6)), change };
-  });
+async function fetchDay(date: string): Promise<{ date: string; r: { all: number; usd: number; gbp: number; chf: number } } | null> {
+  try {
+    const res = await fetch(`${CDN}@${date}/v1/currencies/eur.json`);
+    if (!res.ok) return null;
+    const json = await res.json() as { date: string; eur: Record<string, number> };
+    const { all, usd, gbp, chf } = json.eur ?? {};
+    if (!all || !usd || !gbp || !chf) return null;
+    return { date: json.date ?? date, r: { all, usd, gbp, chf } };
+  } catch {
+    return null;
+  }
 }
 
 export const GET: APIRoute = async ({ request }) => {
@@ -52,80 +43,57 @@ export const GET: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'Çift i pavlefshëm.' }), { status: 400 });
   }
 
-  // 1. Servir desde el archivo generado por scripts/fetch-rates.mjs
-  try {
-    if (existsSync(CACHE_PATH)) {
-      const raw   = readFileSync(CACHE_PATH, 'utf-8');
-      const cache = JSON.parse(raw) as {
-        updatedAt: string;
-        dates: string[];
-        rates: Record<string, Record<string, number>>;
-      };
-      const age = Date.now() - new Date(cache.updatedAt).getTime();
-      if (age < MAX_AGE_MS) {
-        const series = buildSeries(cache.dates, cache.rates, from, to);
-        const values = series.map(s => s.rate);
-        const max    = Math.max(...values);
-        const min    = Math.min(...values);
-        return new Response(JSON.stringify({
-          from, to, series,
-          stats: {
-            max, min,
-            maxDate: series.find(s => s.rate === max)?.date ?? null,
-            minDate: series.find(s => s.rate === min)?.date ?? null,
-          },
-        }), {
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-            'X-Source': 'file-cache',
-          },
-        });
-      }
-    }
-  } catch {
-    // archivo no existe o está corrupto → fallback a fetch live
-  }
+  // Últimos 35 días en paralelo (35 < límite de 50 subrequests de Cloudflare Workers)
+  const today = new Date();
+  const dates = Array.from({ length: 35 }, (_, i) => {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    return d.toISOString().split('T')[0];
+  });
 
-  // 2. Fallback: fetch en vivo desde Frankfurter
-  try {
-    const end   = new Date();
-    const start = new Date();
-    start.setDate(start.getDate() - 45);
-    const fmt = (d: Date) => d.toISOString().split('T')[0];
+  const settled = await Promise.allSettled(dates.map(fetchDay));
 
-    const res = await fetch(
-      `https://api.frankfurter.app/${fmt(start)}..${fmt(end)}?from=EUR&to=ALL,USD,GBP,CHF`
-    );
-    if (!res.ok) throw new Error('Frankfurter error');
+  const days = settled
+    .filter((r): r is PromiseFulfilledResult<NonNullable<Awaited<ReturnType<typeof fetchDay>>>> =>
+      r.status === 'fulfilled' && r.value !== null
+    )
+    .map(r => r.value)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(-30);
 
-    const timeseries = await res.json() as {
-      rates: Record<string, Record<string, number>>;
-    };
-    const dates  = Object.keys(timeseries.rates).sort();
-    const series = buildSeries(dates, timeseries.rates, from, to);
-    const values = series.map(s => s.rate);
-    const max    = Math.max(...values);
-    const min    = Math.min(...values);
-
-    return new Response(JSON.stringify({
-      from, to, series,
-      stats: {
-        max, min,
-        maxDate: series.find(s => s.rate === max)?.date ?? null,
-        minDate: series.find(s => s.rate === min)?.date ?? null,
-      },
-    }), {
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-        'X-Source': 'live',
-      },
-    });
-  } catch {
+  if (days.length === 0) {
     return new Response(JSON.stringify({ error: 'Nuk mund të merret historiku.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
+
+  const series = days.map((day, i) => {
+    const map  = buildRateMap(day.r);
+    const rate = from === to ? 1 : (map[`${from}_${to}`] ?? 0);
+    const prev = i === 0 ? null : (() => {
+      const pm = buildRateMap(days[i - 1].r);
+      return from === to ? 1 : (pm[`${from}_${to}`] ?? 0);
+    })();
+    const change = prev ? ((rate - prev) / prev) * 100 : null;
+    return { date: day.date, rate: parseFloat(rate.toFixed(6)), change };
+  });
+
+  const values = series.map(s => s.rate);
+  const max    = Math.max(...values);
+  const min    = Math.min(...values);
+
+  return new Response(JSON.stringify({
+    from, to, series,
+    stats: {
+      max, min,
+      maxDate: series.find(s => s.rate === max)?.date ?? null,
+      minDate: series.find(s => s.rate === min)?.date ?? null,
+    },
+  }), {
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+    },
+  });
 };
