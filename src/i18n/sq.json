@@ -1,0 +1,34 @@
+{
+  "nav.converter":  "Konvertuesi",
+  "nav.history":    "Historiku",
+  "nav.remittance": "Remitanca",
+  "nav.table":      "Tabela",
+
+  "index.meta.title":       "Kursi i këmbimit sot — ALL, EUR, USD, GBP | kursi.al",
+  "index.meta.description": "Konverto lekë shqiptare në euro, dollar dhe paund. Kursi i ditës nga Banka Qendrore Europiane.",
+  "index.remit.title":      "Sa merr familja jote?",
+  "index.remit.sub":        "Krahaso Wise, Remitly dhe bankën",
+  "index.rates.title":      "Kurset e sotit",
+
+  "tabela.meta.title":       "Tabela e kurseve — ALL, EUR, USD, GBP, CHF | kursi.al",
+  "tabela.meta.description": "Tabela e plotë e kurseve të këmbimit valutor për ditën e sotit.",
+  "tabela.heading":          "Tabela e kurseve",
+  "tabela.subtitle":         "Kurset e këmbimit valutor për ditën e sotit",
+
+  "historiku.meta.title":       "Historiku i kursit — 30 ditë | kursi.al",
+  "historiku.meta.description": "Grafiku i kursit të këmbimit valutor për 30 ditët e fundit.",
+  "historiku.heading":          "Historiku i kursit",
+  "historiku.subtitle":         "Kurset e këmbimit valutor për 30 ditët e fundit",
+
+  "remitanca.meta.title":       "Kalkulatore remitancash — Sa arrin familja juaj? | kursi.al",
+  "remitanca.meta.description": "Krahaso Wise, Remitly dhe bankën. Shiko sa lekë merr familja jote.",
+  "remitanca.heading":          "Kalkulatore remitancash",
+  "remitanca.subtitle":         "Sa merr familja jote? Krahaso ofruesit kryesorë",
+
+  "footer.disclaimer":  "Kurset janë indikative. Burimi:",
+  "footer.sourceSuffix":"(të dhëna nga Banka Qendrore Europiane).",
+
+  "common.pair":    "Çifti",
+  "common.rate":    "Kursi",
+  "common.updated": "E përditësuar"
+}

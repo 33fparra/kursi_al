@@ -1,0 +1,34 @@
+{
+  "nav.converter":  "Converter",
+  "nav.history":    "History",
+  "nav.remittance": "Remittance",
+  "nav.table":      "Rates table",
+
+  "index.meta.title":       "Albanian exchange rate today — ALL, EUR, USD, GBP | kursi.al",
+  "index.meta.description": "Convert Albanian lek to euros, dollars and pounds. Today's rate from the European Central Bank.",
+  "index.remit.title":      "How much does your family receive?",
+  "index.remit.sub":        "Compare Wise, Remitly and your bank",
+  "index.rates.title":      "Today's rates",
+
+  "tabela.meta.title":       "Exchange rate table — ALL, EUR, USD, GBP, CHF | kursi.al",
+  "tabela.meta.description": "Full exchange rate table for today. Buy, sell and 24h change.",
+  "tabela.heading":          "Exchange rates",
+  "tabela.subtitle":         "Today's currency exchange rates",
+
+  "historiku.meta.title":       "Exchange rate history — 30 days | kursi.al",
+  "historiku.meta.description": "Exchange rate chart for the last 30 days. EUR/ALL, USD/ALL, GBP/ALL, CHF/ALL.",
+  "historiku.heading":          "Rate history",
+  "historiku.subtitle":         "Exchange rates for the last 30 days",
+
+  "remitanca.meta.title":       "Remittance calculator — How much does your family get? | kursi.al",
+  "remitanca.meta.description": "Compare Wise, Remitly and your bank. See how many lek your family receives.",
+  "remitanca.heading":          "Remittance calculator",
+  "remitanca.subtitle":         "How much does your family receive? Compare providers",
+
+  "footer.disclaimer":  "Rates are indicative. Source:",
+  "footer.sourceSuffix":"(data from the European Central Bank).",
+
+  "common.pair":    "Pair",
+  "common.rate":    "Rate",
+  "common.updated": "Updated"
+}

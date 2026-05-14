@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import RateTable from '../../components/RateTable';
+import { t } from '../../lib/i18n';
+
+export const prerender = true;
+const lang = 'el' as const;
+---
+<Base title={t(lang, 'tabela.meta.title')} description={t(lang, 'tabela.meta.description')} lang={lang} currentPath="/tabela">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'tabela.heading')}</h1>
+    <p class="page-subtitle">{t(lang, 'tabela.subtitle')}</p>
+  </div>
+  <RateTable client:load lang={lang} />
+</Base>

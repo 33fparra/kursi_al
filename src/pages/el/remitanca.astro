@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import Remittance from '../../components/Remittance';
+import { t } from '../../lib/i18n';
+
+export const prerender = true;
+const lang = 'el' as const;
+---
+<Base title={t(lang, 'remitanca.meta.title')} description={t(lang, 'remitanca.meta.description')} lang={lang} currentPath="/remitanca">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'remitanca.heading')}</h1>
+    <p class="page-subtitle">{t(lang, 'remitanca.subtitle')}</p>
+  </div>
+  <Remittance client:load lang={lang} />
+</Base>

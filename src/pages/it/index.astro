@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import Converter from '../../components/Converter';
+import { fetchRates } from '../../lib/rates';
+import { t, localePath } from '../../lib/i18n';
+
+export const prerender = true;
+const lang = 'it' as const;
+const ratesData = await fetchRates();
+const rates     = ratesData?.rates ?? {};
+const ratesDate = ratesData?.date ?? '';
+const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: 'GBP', to: 'ALL' }, { from: 'CHF', to: 'ALL' }];
+---
+<Base title={t(lang, 'index.meta.title')} description={t(lang, 'index.meta.description')} lang={lang} currentPath="/">
+  <h1 class="sr-only">{t(lang, 'index.meta.title')}</h1>
+  <Converter client:load initialRates={rates} lang={lang} />
+  <a href={localePath(lang, '/remitanca')} class="remit-banner" aria-label={t(lang, 'index.remit.title')}>
+    <div>
+      <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'index.remit.title')}</p>
+      <p class="remit-sub">{t(lang, 'index.remit.sub')}</p>
+    </div>
+    <i class="ti ti-chevron-right" style="color: var(--green-trend); font-size: 20px;" aria-hidden="true"></i>
+  </a>
+  {Object.keys(rates).length > 0 && (
+    <div class="rates-summary">
+      <p class="rates-summary-title"><i class="ti ti-table" aria-hidden="true"></i>{t(lang, 'index.rates.title')}</p>
+      <table class="rates-table" aria-label={t(lang, 'index.rates.title')}>
+        <thead><tr><th scope="col">{t(lang, 'common.pair')}</th><th scope="col" style="text-align:right">{t(lang, 'common.rate')}</th></tr></thead>
+        <tbody>
+          {PAIRS.map(({ from, to }) => (
+            <tr>
+              <td class="pair">{from} → {to}</td>
+              <td class="rate-val">{(rates[`${from}_${to}`] ?? 0).toLocaleString('sq-AL', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {ratesDate && <p class="update-info"><i class="ti ti-clock" aria-hidden="true"></i>{t(lang, 'common.updated')}: {ratesDate} · BCE</p>}
+    </div>
+  )}
+</Base>

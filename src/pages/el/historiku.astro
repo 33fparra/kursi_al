@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import RateChart from '../../components/RateChart';
+import { t } from '../../lib/i18n';
+
+export const prerender = true;
+const lang = 'el' as const;
+---
+<Base title={t(lang, 'historiku.meta.title')} description={t(lang, 'historiku.meta.description')} lang={lang} currentPath="/historiku">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'historiku.heading')}</h1>
+    <p class="page-subtitle">{t(lang, 'historiku.subtitle')}</p>
+  </div>
+  <RateChart client:load lang={lang} />
+</Base>
