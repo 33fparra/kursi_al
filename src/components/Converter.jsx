@@ -8,17 +8,22 @@ const CURRENCY_NAMES = {
 const QUICK_AMOUNTS = [100, 200, 500, 1000];
 
 const UI = {
-  sq: { from: 'Dërgoj',     to: 'Familja merr',            loading: 'Duke ngarkuar…', source: 'BCE' },
-  en: { from: 'I send',     to: 'Family receives',          loading: 'Loading…',       source: 'ECB' },
-  it: { from: 'Invio',      to: 'La famiglia riceve',       loading: 'Caricamento…',   source: 'BCE' },
-  el: { from: 'Αποστολή',   to: 'Η οικογένεια λαμβάνει',   loading: 'Φόρτωση…',       source: 'ΕΚΤ' },
+  sq: { from: 'Dërgoj',     to: 'Familja merr',            loading: 'Duke ngarkuar…', source: 'kursi.al' },
+  en: { from: 'I send',     to: 'Family receives',          loading: 'Loading…',       source: 'kursi.al' },
+  it: { from: 'Invio',      to: 'La famiglia riceve',       loading: 'Caricamento…',   source: 'kursi.al' },
+  el: { from: 'Αποστολή',   to: 'Η οικογένεια λαμβάνει',   loading: 'Φόρτωση…',       source: 'kursi.al' },
 };
 
+// Formateo manual consistente entre Node y browser (evita hydration mismatch de Intl)
 function fmt(amount, currency) {
   if (!isFinite(amount) || isNaN(amount)) return '—';
+  if (currency === 'ALL') {
+    // Lek: sin decimales, separador de miles con punto (estilo europeo)
+    return Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
   return new Intl.NumberFormat('sq-AL', {
-    minimumFractionDigits: currency === 'ALL' ? 0 : 2,
-    maximumFractionDigits: currency === 'ALL' ? 0 : 4,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 4,
   }).format(amount);
 }
 
