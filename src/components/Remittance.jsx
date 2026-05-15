@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const SEND_CURRENCIES = ['EUR', 'GBP', 'USD'];
 const QUICK_AMOUNTS   = [100, 200, 500, 1000];
+const CDN = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json';
 
 const UI = {
   sq: { sendLabel: 'Shuma që dërgon', rateReal: 'Kursi real', arrives: 'Familja merr', fee: 'Komisioni', hiddenCost: 'Kosto e fshehur (spread)', appliedRate: 'Kursi i aplikuar', best: '★ Më e mira', tagWise: 'Kursi real', tagRemitly: 'Komision i ulët', tagBank: 'Spread i lartë', btnWise: 'Dërgo me Wise', btnRemitly: 'Dërgo me Remitly', legal: 'Tarifat janë orientuese dhe mund të ndryshojnë. Kurset dhe komisionet verifikohen çdo javë. Kursi.al nuk mban përgjegjësi për diferencat ndërmjet tarifave të paraqitura dhe atyre reale.' },
@@ -30,24 +31,31 @@ function calcArrives(provider, numAmount, currency, midRate) {
 
 export default function Remittance({ lang = 'sq' }) {
   const u = UI[lang] ?? UI.sq;
-  const [amount, setAmount]   = useState('200');
+  const [amount, setAmount]     = useState('200');
   const [currency, setCurrency] = useState('EUR');
-  const [rates, setRates]     = useState(null);
+  const [midRates, setMidRates] = useState({});
 
   useEffect(() => {
-    fetch('/api/rates.json')
+    fetch(CDN)
       .then(r => r.json())
-      .then(d => { if (d.rates) setRates(d.rates); })
+      .then(json => {
+        const { all, usd, gbp, chf } = json.eur ?? {};
+        if (!all) return;
+        setMidRates({
+          EUR: all,
+          USD: all / usd,
+          GBP: all / gbp,
+        });
+      })
       .catch(() => {});
   }, []);
 
   const numAmount = parseFloat(amount.replace(',', '.')) || 0;
-  const midRate   = rates ? (rates[`${currency}_ALL`] ?? 0) : 0;
+  const midRate   = midRates[currency] ?? 0;
   const results   = PROVIDERS.map(p => ({ ...p, ...calcArrives(p, numAmount, currency, midRate) }));
   const bestVal   = Math.max(...results.map(r => r.arrives));
 
   function openAffiliate(url) {
-    // TODO: POST /api/track-click { provider, amount, currency } once Supabase is wired
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 
@@ -83,7 +91,7 @@ export default function Remittance({ lang = 'sq' }) {
         <div style={{ marginBottom: 'var(--space-4)' }}>
           <span className="rate-badge">
             <i className="ti ti-info-circle" style={{ fontSize: '13px' }} aria-hidden="true" />
-            {u.rateReal}: 1 {currency} = {fmt(midRate, 'ALL')} ALL · BCE
+            {u.rateReal}: 1 {currency} = {fmt(midRate, 'ALL')} ALL · kursi.al
           </span>
         </div>
       )}
@@ -110,7 +118,7 @@ export default function Remittance({ lang = 'sq' }) {
               <div className="remit-details">
                 <div className="remit-detail-row">
                   <span>{u.appliedRate}</span>
-                  <span>1 {currency} = {rates ? fmt(provider.effectiveRate, 'ALL') : '…'} ALL</span>
+                  <span>1 {currency} = {midRate ? fmt(provider.effectiveRate, 'ALL') : '…'} ALL</span>
                 </div>
                 {provider.feeAmount > 0 && (
                   <div className="remit-detail-row">
@@ -127,7 +135,7 @@ export default function Remittance({ lang = 'sq' }) {
                 <div className="remit-detail-row remit-detail-row--total">
                   <span>{u.arrives}</span>
                   <span className={isWinner ? 'remit-arrives--best' : 'remit-arrives'}>
-                    {rates ? fmt(provider.arrives, 'ALL') : '…'} ALL
+                    {midRate ? fmt(provider.arrives, 'ALL') : '…'} ALL
                   </span>
                 </div>
               </div>

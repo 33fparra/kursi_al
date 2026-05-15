@@ -6,12 +6,22 @@ const PAIRS = [
   { from: 'EUR', to: 'USD' }, { from: 'EUR', to: 'GBP' }, { from: 'EUR', to: 'CHF' },
 ];
 
+const CDN = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api';
+
 const UI = {
   sq: { loading: 'Po ngarkohen kurset…', error: 'Kurset nuk janë të disponueshme. Provo përsëri.', pair: 'Çifti', buy: 'Blerje', sell: 'Shitje', change24h: 'Ndryshimi 24h', updated: 'E përditësuar', disclaimer: 'Kurset e blerjes dhe shitjes janë orientuese (spread ±0.25–0.8%). Kursi real ndryshon sipas bankës.' },
   en: { loading: 'Loading rates…', error: 'Rates unavailable. Please try again.', pair: 'Pair', buy: 'Buy', sell: 'Sell', change24h: '24h change', updated: 'Updated', disclaimer: 'Buy and sell rates are indicative (spread ±0.25–0.8%). Actual rates vary by bank.' },
   it: { loading: 'Caricamento tassi…', error: 'Tassi non disponibili. Riprova.', pair: 'Coppia', buy: 'Acquisto', sell: 'Vendita', change24h: 'Var. 24h', updated: 'Aggiornato', disclaimer: 'I tassi di acquisto e vendita sono indicativi (spread ±0,25–0,8%). Il tasso reale varia per banca.' },
   el: { loading: 'Φόρτωση ισοτιμιών…', error: 'Οι ισοτιμίες δεν είναι διαθέσιμες. Δοκιμάστε ξανά.', pair: 'Ζεύγος', buy: 'Αγορά', sell: 'Πώληση', change24h: 'Μεταβολή 24ω', updated: 'Ενημερώθηκε', disclaimer: 'Οι τιμές αγοράς και πώλησης είναι ενδεικτικές (spread ±0,25–0,8%). Η πραγματική ισοτιμία διαφέρει ανά τράπεζα.' },
 };
+
+function buildRates({ all, usd, gbp, chf }) {
+  return {
+    EUR_ALL: all,       USD_ALL: all / usd, GBP_ALL: all / gbp, CHF_ALL: all / chf,
+    EUR_USD: usd,       EUR_GBP: gbp,       EUR_CHF: chf,
+    USD_GBP: gbp / usd, GBP_USD: usd / gbp,
+  };
+}
 
 function fmtRate(val, to) {
   if (!val) return '—';
@@ -25,6 +35,16 @@ function fmtChange(pct) {
   return { text: `${sign}${pct.toFixed(2)}%`, cls: pct > 0.005 ? 'change-positive' : pct < -0.005 ? 'change-negative' : 'change-neutral' };
 }
 
+async function fetchDay(date) {
+  const url = date === 'latest' ? `${CDN}@latest/v1/currencies/eur.json` : `${CDN}@${date}/v1/currencies/eur.json`;
+  const res = await fetch(url);
+  if (!res.ok) return null;
+  const json = await res.json();
+  const { all, usd, gbp, chf } = json.eur ?? {};
+  if (!all || !usd || !gbp || !chf) return null;
+  return { date: json.date, raw: { all, usd, gbp, chf } };
+}
+
 export default function RateTable({ lang = 'sq' }) {
   const u = UI[lang] ?? UI.sq;
   const [data, setData]       = useState(null);
@@ -32,9 +52,24 @@ export default function RateTable({ lang = 'sq' }) {
   const [error, setError]     = useState(false);
 
   useEffect(() => {
-    fetch('/api/rates.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(setData)
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yDate = yesterday.toISOString().split('T')[0];
+
+    Promise.all([fetchDay('latest'), fetchDay(yDate)])
+      .then(([today, prev]) => {
+        if (!today) { setError(true); return; }
+        const rates   = buildRates(today.raw);
+        const changes = {};
+        if (prev) {
+          const prevRates = buildRates(prev.raw);
+          for (const key of Object.keys(rates)) {
+            const curr = rates[key], p = prevRates[key];
+            if (curr && p && p !== 0) changes[key] = ((curr - p) / p) * 100;
+          }
+        }
+        setData({ date: today.date, rates, changes });
+      })
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
@@ -46,21 +81,21 @@ export default function RateTable({ lang = 'sq' }) {
     </div>
   );
 
-  if (error || !data?.rates) return (
+  if (error || !data) return (
     <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--ink-muted)' }}>
       <i className="ti ti-wifi-off" style={{ fontSize: '24px', display: 'block', marginBottom: '8px' }} aria-hidden="true" />
       <p style={{ fontSize: 'var(--text-small)' }}>{u.error}</p>
     </div>
   );
 
-  const { rates, changes = {}, date } = data;
+  const { rates, changes, date } = data;
 
   return (
     <div>
       {date && (
         <p className="update-info" style={{ marginBottom: 'var(--space-4)' }}>
           <i className="ti ti-clock" aria-hidden="true" />
-          {' '}{u.updated}: {date} · Frankfurter API / BCE
+          {' '}{u.updated}: {date} · kursi.al
         </p>
       )}
       <table className="rates-table rates-table--full" aria-label={u.pair}>
