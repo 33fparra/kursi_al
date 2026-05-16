@@ -1,6 +1,6 @@
 ---
-import { t, localePath } from '../lib/i18n';
-import LangSwitch from '../components/LangSwitch';
+import { t } from '../lib/i18n';
+import Nav from '../components/Nav';
 
 export interface Props {
   title: string;
@@ -29,14 +29,14 @@ const pathname = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Alternate hreflang links for SEO -->
-    <link rel="alternate" hreflang="sq" href={`https://kursi.al${currentPath}`} />
-    <link rel="alternate" hreflang="en" href={`https://kursi.al/en${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="it" href={`https://kursi.al/it${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="el" href={`https://kursi.al/el${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="x-default" href={`https://kursi.al${currentPath}`} />
+    <!-- hreflang SEO -->
+    <link rel="alternate" hreflang="sq"      href={`https://leku.al${currentPath}`} />
+    <link rel="alternate" hreflang="en"      href={`https://leku.al/en${currentPath === '/' ? '' : currentPath}`} />
+    <link rel="alternate" hreflang="it"      href={`https://leku.al/it${currentPath === '/' ? '' : currentPath}`} />
+    <link rel="alternate" hreflang="el"      href={`https://leku.al/el${currentPath === '/' ? '' : currentPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://leku.al${currentPath}`} />
 
-    <!-- Anti-flash: MUST run before any CSS to avoid dark-mode flicker -->
+    <!-- Anti-flash: corre ANTES de cualquier CSS, evita parpadeo en dark mode -->
     <script is:inline>
       const t = localStorage.getItem('kursi-theme') ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -56,53 +56,17 @@ const pathname = Astro.url.pathname;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css"
     />
+
+    <!-- Flag Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
   </head>
   <body>
-    <nav class="nav" role="navigation" aria-label="Navigimi kryesor">
-      <a href={localePath(lang, '/')} class="nav-logo" aria-label="kursi.al">
-        kursi<span>.</span>al
-      </a>
 
-      <ul class="nav-links" role="list">
-        <li>
-          <a
-            href={localePath(lang, '/')}
-            class:list={['nav-link', { 'nav-link--active': currentPath === '/' }]}
-          >{t(lang, 'nav.converter')}</a>
-        </li>
-        <li>
-          <a
-            href={localePath(lang, '/historiku')}
-            class:list={['nav-link', { 'nav-link--active': currentPath === '/historiku' }]}
-          >{t(lang, 'nav.history')}</a>
-        </li>
-        <li>
-          <a
-            href={localePath(lang, '/remitanca')}
-            class:list={['nav-link', { 'nav-link--active': currentPath === '/remitanca' }]}
-          >{t(lang, 'nav.remittance')}</a>
-        </li>
-        <li>
-          <a
-            href={localePath(lang, '/tabela')}
-            class:list={['nav-link', { 'nav-link--active': currentPath === '/tabela' }]}
-          >{t(lang, 'nav.table')}</a>
-        </li>
-      </ul>
-
-      <div class="nav-controls">
-        <LangSwitch client:load currentLang={lang} pathname={pathname} />
-        <button
-          id="theme-toggle"
-          class="theme-toggle"
-          aria-label="Ndrysho temën"
-          title="Modaliteti i errët / i ndritshëm"
-        >
-          <i class="ti ti-sun theme-toggle__icon theme-toggle__icon--light" aria-hidden="true"></i>
-          <i class="ti ti-moon theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true"></i>
-        </button>
-      </div>
-    </nav>
+    <!-- Nav es un componente React con useState para hamburger -->
+    <Nav client:load lang={lang} currentPath={currentPath} pathname={pathname} />
 
     <main class="main">
       <div class="container">
@@ -119,22 +83,13 @@ const pathname = Astro.url.pathname;
             href="https://www.frankfurter.app"
             class="footer-link"
             target="_blank"
-            rel="noopener noreferrer">Frankfurter API</a>
+            rel="noopener noreferrer">fawazahmed0 API</a>
           {t(lang, 'footer.sourceSuffix')}
         </p>
-        <p class="footer-copy">© 2026 kursi.al</p>
+        <p class="footer-copy">{t(lang, 'footer.copyright')}</p>
       </div>
     </footer>
 
-    <script>
-      const toggle = document.getElementById('theme-toggle');
-      toggle?.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('kursi-theme', next);
-      });
-    </script>
   </body>
 </html>
 
@@ -178,7 +133,7 @@ const pathname = Astro.url.pathname;
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme='light']) {
-      --red-albania:   #f03032; --red-dark:      #c41e20; --red-soft:      #2d1515;
+      --red-albania:   #e07088; --red-dark:      #c85070; --red-soft:      #2d1515;
       --ink:           #f0efeb; --ink-secondary: #b8b6b0; --ink-muted:     #7a7875;
       --bg-page:       #141412; --bg-card:       #1e1d1a; --bg-input:      #2a2926;
       --border-light:  #2e2d2a; --border-medium: #3e3d3a;
@@ -186,7 +141,6 @@ const pathname = Astro.url.pathname;
       --blue-info:     #60a5fa; --blue-soft:     #0f1f35;
     }
   }
-
   [data-theme='dark'] {
     --red-albania:   #f03032; --red-dark:      #c41e20; --red-soft:      #2d1515;
     --ink:           #f0efeb; --ink-secondary: #b8b6b0; --ink-muted:     #7a7875;
@@ -195,7 +149,6 @@ const pathname = Astro.url.pathname;
     --green-result:  #4ade80; --green-soft:    #0f2a1a; --green-trend:   #3abf6a;
     --blue-info:     #60a5fa; --blue-soft:     #0f1f35;
   }
-
   [data-theme='light'] {
     --red-albania:   #e41e20; --red-dark:      #b01519; --red-soft:      #fbeaea;
     --ink:           #1a1a1a; --ink-secondary: #4a4a4a; --ink-muted:     #888888;
@@ -230,37 +183,42 @@ const pathname = Astro.url.pathname;
     white-space: nowrap; border: 0;
   }
 
-  /* ─── Nav ─── */
+  /* ─── Nav base ─── */
   .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: var(--space-4) var(--container-pad);
+    gap: var(--space-3);
+    padding: var(--space-3) var(--container-pad);
     background: var(--bg-card);
     border-bottom: 1px solid var(--border-light);
     position: sticky;
     top: 0;
     z-index: 100;
-    gap: var(--space-3);
+    /* position: relative necesario para el panel absoluto */
+    position: sticky;
   }
+
   .nav-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--ink);
     flex-shrink: 0;
+    margin-right: auto; /* empuja todo lo demás a la derecha */
   }
   .nav-logo span { color: var(--red-albania); }
+
+  /* Links desktop: ocultos en móvil, visibles en ≥768px */
   .nav-links {
-    display: flex;
+    display: none;
     gap: var(--space-3);
     list-style: none;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    flex: 1;
+    margin-right: auto; /* empuja controles a la derecha */
   }
-  .nav-links::-webkit-scrollbar { display: none; }
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+  }
+
   .nav-link {
     font-size: var(--text-small);
     color: var(--ink-secondary);
@@ -269,53 +227,227 @@ const pathname = Astro.url.pathname;
     border-bottom: 2px solid transparent;
     transition: color var(--transition-fast), border-color var(--transition-fast);
   }
-  .nav-link:hover, .nav-link--active { color: var(--red-albania); border-color: var(--red-albania); }
-  .nav-controls { display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0; }
-
-  /* ─── Lang Switch ─── */
-  .lang-switch { display: flex; gap: 3px; }
-  .lang-btn {
-    background: transparent;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-sm);
-    padding: 4px 7px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    font-weight: var(--weight-medium);
-    color: var(--ink-secondary);
-    cursor: pointer;
-    min-height: 32px;
-    min-width: 32px;
-    transition: all var(--transition-fast);
-    line-height: 1;
-  }
-  .lang-btn:hover { border-color: var(--red-albania); color: var(--red-albania); }
-  .lang-btn--active {
-    background: var(--red-soft);
-    border-color: var(--red-albania);
+  .nav-link:hover, .nav-link--active {
     color: var(--red-albania);
-    font-weight: var(--weight-bold);
+    border-color: var(--red-albania);
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
   }
 
   /* ─── Theme Toggle ─── */
+  /* Desktop: visible ≥768px. En móvil aparece dentro del panel */
   .theme-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
     background: var(--bg-input);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-md);
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     color: var(--ink-secondary);
     transition: background var(--transition-fast), color var(--transition-fast);
     flex-shrink: 0;
   }
+  @media (min-width: 768px) {
+    .theme-toggle { display: flex; }
+  }
   .theme-toggle:hover { background: var(--border-light); color: var(--ink); }
+
+  /* CSS controla qué icono mostrar según data-theme */
   [data-theme='dark']  .theme-toggle__icon--dark,
   [data-theme='light'] .theme-toggle__icon--light,
   :root:not([data-theme]) .theme-toggle__icon--light { display: none; }
+
+  /* ─── Hamburger (solo móvil) ─── */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    color: var(--ink-secondary);
+    font-size: 20px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+    flex-shrink: 0;
+  }
+  .hamburger:hover { background: var(--border-light); color: var(--ink); }
+  @media (min-width: 768px) {
+    .hamburger { display: none; }
+  }
+
+  /* ─── Panel móvil ─── */
+  .nav-mobile-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    z-index: 99;
+    animation: fadeSlideDown 180ms ease forwards;
+  }
+
+  .nav-mobile-links {
+    list-style: none;
+    padding: var(--space-2) 0;
+  }
+
+  .nav-mobile-link {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--container-pad);
+    min-height: 52px;
+    font-size: var(--text-body);
+    color: var(--ink-secondary);
+    border-left: 3px solid transparent;
+    transition: all var(--transition-fast);
+  }
+  .nav-mobile-link:hover,
+  .nav-mobile-link--active {
+    color: var(--red-albania);
+    border-left-color: var(--red-albania);
+    background: var(--red-soft);
+  }
+
+  .nav-mobile-footer {
+    padding: var(--space-3) var(--container-pad);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .theme-toggle-mobile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    min-height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: var(--text-body);
+    padding: var(--space-2) 0;
+    text-align: left;
+    transition: color var(--transition-fast);
+  }
+  .theme-toggle-mobile:hover { color: var(--ink); }
+
+  .theme-toggle-mobile__icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-input);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .theme-toggle-mobile__label { font-size: var(--text-small); }
+
+  /* ─── Flag icons size ─── */
+  .fi {
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  /* ─── Lang dropdown ─── */
+  .lang-dropdown { position: relative; flex-shrink: 0; }
+
+  .lang-dropdown__trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 0 var(--space-2);
+    height: 36px;
+    cursor: pointer;
+    color: var(--ink-secondary);
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+    flex-shrink: 0;
+  }
+  .lang-dropdown__trigger:hover,
+  .lang-dropdown__trigger--open {
+    background: var(--border-light);
+    border-color: var(--border-medium);
+  }
+
+  .lang-flag { font-size: 18px; line-height: 1; }
+
+  .lang-dropdown__chevron {
+    font-size: 11px;
+    transition: transform var(--transition-fast);
+    color: var(--ink-muted);
+  }
+  .lang-dropdown__chevron--open { transform: rotate(180deg); }
+
+  .lang-dropdown__menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    min-width: 160px;
+    z-index: 200;
+    overflow: hidden;
+    animation: fadeSlideDown 150ms ease forwards;
+  }
+  [data-theme='dark'] .lang-dropdown__menu {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  }
+
+  .lang-dropdown__option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: 0 var(--space-4);
+    min-height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: var(--text-small);
+    color: var(--ink-secondary);
+    text-align: left;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  .lang-dropdown__option:hover,
+  .lang-dropdown__option:focus {
+    background: var(--bg-input);
+    color: var(--ink);
+    outline: none;
+  }
+  .lang-option-name { font-size: var(--text-small); }
+
+  /* ─── Animaciones ─── */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
   /* ─── Layout ─── */
   .main { flex: 1; padding: var(--space-6) 0 var(--space-12); }
@@ -335,12 +467,7 @@ const pathname = Astro.url.pathname;
   .update-info { font-size: var(--text-xs); color: var(--ink-muted); display: flex; align-items: center; gap: var(--space-1); margin-top: var(--space-3); }
 
   /* ─── Rate Badge ─── */
-  .rate-badge {
-    display: inline-flex; align-items: center; gap: var(--space-2);
-    background: var(--blue-soft); color: var(--blue-info);
-    font-size: var(--text-xs); font-weight: var(--weight-medium);
-    padding: 6px 12px; border-radius: var(--radius-sm);
-  }
+  .rate-badge { display: inline-flex; align-items: center; gap: var(--space-2); background: var(--blue-soft); color: var(--blue-info); font-size: var(--text-xs); font-weight: var(--weight-medium); padding: 6px 12px; border-radius: var(--radius-sm); }
 
   /* ─── Converter Card ─── */
   .converter-card { background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-light); padding: var(--space-6); margin-bottom: var(--space-4); }
@@ -353,13 +480,7 @@ const pathname = Astro.url.pathname;
   .currency-select option { background: var(--bg-card); color: var(--ink); }
   .result-amount { font-family: 'Playfair Display', serif; font-size: var(--text-display); font-weight: 700; color: var(--green-result); line-height: 1.1; transition: opacity var(--transition-fast); word-break: break-all; }
   .result-amount--loading { opacity: 0.4; }
-  .swap-btn {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; background: var(--bg-card);
-    border: 1px solid var(--border-medium); border-radius: 50%;
-    cursor: pointer; color: var(--ink-secondary); margin: var(--space-1) auto;
-    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-normal);
-  }
+  .swap-btn { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 50%; cursor: pointer; color: var(--ink-secondary); margin: var(--space-1) auto; transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-normal); }
   .swap-btn:hover { background: var(--red-soft); border-color: var(--red-albania); color: var(--red-albania); transform: rotate(180deg); }
   .converter-meta { display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-4); flex-wrap: wrap; gap: var(--space-2); }
 

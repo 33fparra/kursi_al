@@ -11,5 +11,5 @@ const lang = 'sq' as const;
     <h1 class="page-title">{t(lang, 'remitanca.heading')}</h1>
     <p class="page-subtitle">{t(lang, 'remitanca.subtitle')}</p>
   </div>
-  <Remittance client:load lang={lang} />
+  <Remittance client:only="react" lang={lang} />
 </Base>

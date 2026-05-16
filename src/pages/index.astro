@@ -13,7 +13,7 @@ const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: '
 ---
 <Base title={t(lang, 'index.meta.title')} description={t(lang, 'index.meta.description')} lang={lang} currentPath="/">
   <h1 class="sr-only">{t(lang, 'index.meta.title')}</h1>
-  <Converter client:load initialRates={rates} lang={lang} />
+  <Converter client:only="react" initialRates={rates} lang={lang} />
   <a href="/remitanca" class="remit-banner" aria-label={t(lang, 'index.remit.title')}>
     <div>
       <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'index.remit.title')}</p>

@@ -9,10 +9,10 @@ const QUICK_AMOUNTS = [100, 200, 500, 1000];
 const CDN = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json';
 
 const UI = {
-  sq: { from: 'Dërgoj',   to: 'Familja merr',          loading: 'Duke ngarkuar…', source: 'kursi.al' },
-  en: { from: 'I send',   to: 'Family receives',        loading: 'Loading…',       source: 'kursi.al' },
-  it: { from: 'Invio',    to: 'La famiglia riceve',     loading: 'Caricamento…',   source: 'kursi.al' },
-  el: { from: 'Αποστολή', to: 'Η οικογένεια λαμβάνει', loading: 'Φόρτωση…',       source: 'kursi.al' },
+  sq: { from: 'Dërgoj',   to: 'Familja merr',          loading: 'Duke ngarkuar…', source: 'leku.al' },
+  en: { from: 'I send',   to: 'Family receives',        loading: 'Loading…',       source: 'leku.al' },
+  it: { from: 'Invio',    to: 'La famiglia riceve',     loading: 'Caricamento…',   source: 'leku.al' },
+  el: { from: 'Αποστολή', to: 'Η οικογένεια λαμβάνει', loading: 'Φόρτωση…',       source: 'leku.al' },
 };
 
 function buildRates({ all, usd, gbp, chf }) {

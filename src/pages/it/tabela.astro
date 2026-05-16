@@ -11,5 +11,5 @@ const lang = 'it' as const;
     <h1 class="page-title">{t(lang, 'tabela.heading')}</h1>
     <p class="page-subtitle">{t(lang, 'tabela.subtitle')}</p>
   </div>
-  <RateTable client:load lang={lang} />
+  <RateTable client:only="react" lang={lang} />
 </Base>
