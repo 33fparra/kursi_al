@@ -10,13 +10,35 @@
  * npm script: npm run fetch-rates
  */
 
-import { mkdir, writeFile } from 'fs/promises';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { mkdir, writeFile, readFile } from 'fs/promises';
+import { join, dirname }               from 'path';
+import { fileURLToPath }               from 'url';
+import { createClient }                from '@supabase/supabase-js';
 
-const __dirname   = dirname(fileURLToPath(import.meta.url));
+const __dirname    = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
-const DATA_DIR    = join(PROJECT_ROOT, 'public', 'data');
+const DATA_DIR     = join(PROJECT_ROOT, 'public', 'data');
+
+// ── Cargar .env manualmente (sin dotenv) ─────────────────────
+try {
+  const env = await readFile(join(PROJECT_ROOT, '.env'), 'utf-8');
+  for (const line of env.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const idx = trimmed.indexOf('=');
+    if (idx === -1) continue;
+    const key = trimmed.slice(0, idx).trim();
+    const val = trimmed.slice(idx + 1).trim();
+    if (key && !process.env[key]) process.env[key] = val;
+  }
+} catch { /* .env opcional */ }
+
+// ── Cliente Supabase (service role, solo para este script) ───
+const SUPABASE_URL  = process.env.PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY  = process.env.SUPABASE_SERVICE_KEY;
+const supabase = (SUPABASE_URL && SUPABASE_KEY)
+  ? createClient(SUPABASE_URL, SUPABASE_KEY)
+  : null;
 
 const BASE_URL  = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api';
 const FALLBACK  = 'https://latest.currency-api.pages.dev/v1/currencies/eur.json';
@@ -135,6 +157,34 @@ async function main() {
   console.log(`  USD → ALL : ${rates.USD_ALL.toFixed(4)}`);
   console.log(`  GBP → ALL : ${rates.GBP_ALL.toFixed(4)}`);
   console.log(`  CHF → ALL : ${rates.CHF_ALL.toFixed(4)}`);
+  // ── Guardar en Supabase (si está configurado) ──────────────
+  if (supabase) {
+    // Construir filas: una por par (base EUR) por cada fecha
+    const rows = [];
+    for (const date of KEEP) {
+      const day = byDate.get(date);
+      if (!day) continue;
+      rows.push(
+        { date, base: 'EUR', target: 'ALL', rate: day.all, source: 'fawazahmed0' },
+        { date, base: 'EUR', target: 'USD', rate: day.usd, source: 'fawazahmed0' },
+        { date, base: 'EUR', target: 'GBP', rate: day.gbp, source: 'fawazahmed0' },
+        { date, base: 'EUR', target: 'CHF', rate: day.chf, source: 'fawazahmed0' },
+      );
+    }
+
+    const { error } = await supabase
+      .from('daily_rates')
+      .upsert(rows, { onConflict: 'date,base,target' });
+
+    if (error) {
+      console.warn(`[${ts()}] ⚠ Supabase error:`, error.message);
+    } else {
+      console.log(`[${ts()}] ✓ Supabase daily_rates → ${rows.length} filas guardadas`);
+    }
+  } else {
+    console.log(`[${ts()}] ℹ Supabase no configurado — saltando insert`);
+  }
+
   console.log(`[${ts()}] Listo.`);
 }
 

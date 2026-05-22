@@ -1,4 +1,10 @@
 import { useState, useEffect } from 'react';
+import { createClient }        from '@supabase/supabase-js';
+
+// Cliente Supabase con anon key (solo para INSERT en affiliate_clicks)
+const sbUrl  = import.meta.env.PUBLIC_SUPABASE_URL;
+const sbAnon = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabase = (sbUrl && sbAnon) ? createClient(sbUrl, sbAnon) : null;
 
 const SEND_CURRENCIES = ['EUR', 'GBP', 'USD'];
 const QUICK_AMOUNTS   = [100, 200, 500, 1000];
@@ -55,7 +61,15 @@ export default function Remittance({ lang = 'sq' }) {
   const results   = PROVIDERS.map(p => ({ ...p, ...calcArrives(p, numAmount, currency, midRate) }));
   const bestVal   = Math.max(...results.map(r => r.arrives));
 
-  function openAffiliate(url) {
+  function openAffiliate(provider, url) {
+    // Tracking fire-and-forget — no bloquea la navegación
+    if (supabase) {
+      supabase.from('affiliate_clicks')
+        .insert({ provider, amount: numAmount, currency })
+        .then(({ error }) => {
+          if (error) console.warn('Tracking error:', error.message);
+        });
+    }
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 
@@ -109,7 +123,7 @@ export default function Remittance({ lang = 'sq' }) {
                 </div>
                 {provider.affiliateUrl && (
                   <button className={`btn-affiliate btn-affiliate--${provider.id}`}
-                    onClick={() => openAffiliate(provider.affiliateUrl)}>
+                    onClick={() => openAffiliate(provider.id, provider.affiliateUrl)}>
                     {u[provider.btnKey]}
                     <i className="ti ti-external-link" style={{ fontSize: '14px' }} aria-hidden="true" />
                   </button>
