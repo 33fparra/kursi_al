@@ -66,9 +66,8 @@ const jsonLd = JSON.stringify({
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
@@ -159,7 +158,9 @@ const jsonLd = JSON.stringify({
             rel="noopener noreferrer">fawazahmed0 API</a>
           {t(lang, 'footer.sourceSuffix')}
         </p>
-        <p class="footer-copy">{t(lang, 'footer.copyright')}</p>
+        <p class="footer-copy">
+          {t(lang, 'footer.copyright')} · Hecho por <a href="https://scalegrades.com" class="footer-link" target="_blank" rel="noopener noreferrer">scalegrades.com</a>
+        </p>
       </div>
     </footer>
 
@@ -528,8 +529,8 @@ const jsonLd = JSON.stringify({
 
   /* ─── Footer ─── */
   .footer { border-top: 1px solid var(--border-light); padding: var(--space-6) 0; background: var(--bg-card); }
-  .footer .container { display: flex; flex-direction: column; gap: var(--space-2); }
-  .footer-text { font-size: var(--text-xs); color: var(--ink-muted); display: flex; align-items: center; gap: var(--space-1); flex-wrap: wrap; }
+  .footer .container { display: flex; flex-direction: column; gap: var(--space-2); align-items: center; text-align: center; }
+  .footer-text { font-size: var(--text-xs); color: var(--ink-muted); display: flex; align-items: center; justify-content: center; gap: var(--space-1); flex-wrap: wrap; }
   .footer-link { color: var(--blue-info); text-decoration: underline; text-underline-offset: 2px; }
   .footer-copy { font-size: var(--text-xs); color: var(--ink-muted); }
 
