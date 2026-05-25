@@ -66,7 +66,7 @@ export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/' }) 
 
       {/* ── Logo ── */}
       <a href={localePath(lang, '/')} className="nav-logo" aria-label="leku.al">
-        leku<span>.</span>al
+        <img src="/logo.svg" alt="leku.al" className="nav-logo__img" />
       </a>
 
       {/* ── Links desktop (ocultos en móvil via CSS) ── */}

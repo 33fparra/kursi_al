@@ -66,6 +66,7 @@ const jsonLd = JSON.stringify({
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
 
@@ -273,14 +274,16 @@ const jsonLd = JSON.stringify({
   }
 
   .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--ink);
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
-    margin-right: auto; /* empuja todo lo demás a la derecha */
+    margin-right: auto;
   }
-  .nav-logo span { color: var(--red-albania); }
+  .nav-logo__img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
 
   /* Links desktop: ocultos en móvil, visibles en ≥768px */
   .nav-links {
