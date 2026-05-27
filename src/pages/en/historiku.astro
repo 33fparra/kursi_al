@@ -5,11 +5,62 @@ import { t } from '../../lib/i18n';
 
 export const prerender = true;
 const lang = 'en' as const;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'historiku.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'historiku.faq.a1') } },
+    { '@type': 'Question', name: t(lang, 'historiku.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'historiku.faq.a2') } },
+    { '@type': 'Question', name: t(lang, 'historiku.faq.q3'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'historiku.faq.a3') } },
+  ],
+});
+
+const breadcrumbJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'leku.al', item: 'https://leku.al/' },
+    { '@type': 'ListItem', position: 2, name: 'leku.al (EN)', item: 'https://leku.al/en/' },
+    { '@type': 'ListItem', position: 3, name: t(lang, 'historiku.heading'), item: 'https://leku.al/en/historiku' },
+  ],
+});
 ---
-<Base title={t(lang, 'historiku.meta.title')} description={t(lang, 'historiku.meta.description')} lang={lang} currentPath="/historiku">
+<Base
+  title={t(lang, 'historiku.meta.title')}
+  description={t(lang, 'historiku.meta.description')}
+  keywords={t(lang, 'historiku.meta.keywords')}
+  lang={lang}
+  currentPath="/historiku"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+    <script type="application/ld+json" set:html={breadcrumbJsonLd} />
+  </Fragment>
+
   <div class="section-header">
     <h1 class="page-title">{t(lang, 'historiku.heading')}</h1>
     <p class="page-subtitle">{t(lang, 'historiku.subtitle')}</p>
+    <p class="page-intro">{t(lang, 'historiku.intro')}</p>
   </div>
+
   <RateChart client:only="react" lang={lang} />
+
+  <section class="faq-section" aria-label={t(lang, 'historiku.faq.title')}>
+    <h2 class="faq-title">{t(lang, 'historiku.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'historiku.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'historiku.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'historiku.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'historiku.faq.a2')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'historiku.faq.q3')}</dt>
+        <dd class="faq-answer">{t(lang, 'historiku.faq.a3')}</dd>
+      </div>
+    </dl>
+  </section>
 </Base>

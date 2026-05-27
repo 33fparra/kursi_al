@@ -5,6 +5,7 @@ import Nav from '../components/Nav';
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
   lang?: 'sq' | 'en' | 'it' | 'el';
   currentPath?: string;
 }
@@ -12,6 +13,7 @@ export interface Props {
 const {
   title,
   description = t('sq', 'index.meta.description'),
+  keywords,
   lang = 'sq',
   currentPath = '/',
 } = Astro.props;
@@ -69,6 +71,7 @@ const jsonLd = JSON.stringify({
     <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
+    {keywords && <meta name="keywords" content={keywords} />}
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
@@ -135,6 +138,9 @@ const jsonLd = JSON.stringify({
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
+
+    <!-- Page-specific JSON-LD and meta -->
+    <slot name="head" />
   </head>
   <body>
 
@@ -638,4 +644,25 @@ const jsonLd = JSON.stringify({
 
   /* ─── Legal note ─── */
   .legal-note { font-size: var(--text-xs); color: var(--ink-muted); margin-top: var(--space-6); display: flex; align-items: flex-start; gap: var(--space-2); line-height: 1.6; }
+
+  /* ─── Page intro ─── */
+  .page-intro { font-size: var(--text-small); color: var(--ink-secondary); line-height: 1.6; margin-bottom: var(--space-5); }
+
+  /* ─── Features section ─── */
+  .features-section { margin-top: var(--space-8); }
+  .features-title { font-size: var(--text-xs); font-weight: var(--weight-medium); color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-4); }
+  .features-grid { display: flex; flex-direction: column; gap: var(--space-3); }
+  .feature-item { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-light); }
+  .feature-icon { font-size: 20px; color: var(--red-albania); flex-shrink: 0; margin-top: 1px; }
+  .feature-title { font-size: var(--text-small); font-weight: var(--weight-medium); color: var(--ink); margin-bottom: 2px; }
+  .feature-desc { font-size: var(--text-xs); color: var(--ink-secondary); line-height: 1.5; }
+
+  /* ─── FAQ section ─── */
+  .faq-section { margin-top: var(--space-8); }
+  .faq-title { font-family: 'Playfair Display', serif; font-size: var(--text-h2); font-weight: 700; color: var(--ink); margin-bottom: var(--space-5); }
+  .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-card); }
+  .faq-item { padding: var(--space-5); border-bottom: 1px solid var(--border-light); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question { font-size: var(--text-small); font-weight: var(--weight-medium); color: var(--ink); margin-bottom: var(--space-2); line-height: 1.4; }
+  .faq-answer { font-size: var(--text-small); color: var(--ink-secondary); line-height: 1.6; margin: 0; }
 </style>

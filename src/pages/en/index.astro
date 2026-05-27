@@ -10,10 +10,47 @@ const ratesData = await fetchRates();
 const rates     = ratesData?.rates ?? {};
 const ratesDate = ratesData?.date ?? '';
 const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: 'GBP', to: 'ALL' }, { from: 'CHF', to: 'ALL' }];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'index.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'index.faq.a1') } },
+    { '@type': 'Question', name: t(lang, 'index.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'index.faq.a2') } },
+    { '@type': 'Question', name: t(lang, 'index.faq.q3'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'index.faq.a3') } },
+    { '@type': 'Question', name: t(lang, 'index.faq.q4'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'index.faq.a4') } },
+  ],
+});
+
+const webPageJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Albanian Currency Converter — leku.al',
+  url: 'https://leku.al/en/',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description: t(lang, 'index.meta.description'),
+  inLanguage: 'en',
+});
 ---
-<Base title={t(lang, 'index.meta.title')} description={t(lang, 'index.meta.description')} lang={lang} currentPath="/">
+<Base
+  title={t(lang, 'index.meta.title')}
+  description={t(lang, 'index.meta.description')}
+  keywords={t(lang, 'index.meta.keywords')}
+  lang={lang}
+  currentPath="/"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+    <script type="application/ld+json" set:html={webPageJsonLd} />
+  </Fragment>
+
   <h1 class="sr-only">{t(lang, 'index.meta.title')}</h1>
+  <p class="page-intro">{t(lang, 'index.intro')}</p>
+
   <Converter client:only="react" initialRates={rates} lang={lang} />
+
   <a href={localePath(lang, '/remitanca')} class="remit-banner" aria-label={t(lang, 'index.remit.title')}>
     <div>
       <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'index.remit.title')}</p>
@@ -21,6 +58,7 @@ const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: '
     </div>
     <i class="ti ti-chevron-right" style="color: var(--green-trend); font-size: 20px;" aria-hidden="true"></i>
   </a>
+
   {Object.keys(rates).length > 0 && (
     <div class="rates-summary">
       <p class="rates-summary-title"><i class="ti ti-table" aria-hidden="true"></i>{t(lang, 'index.rates.title')}</p>
@@ -38,4 +76,53 @@ const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: '
       {ratesDate && <p class="update-info"><i class="ti ti-clock" aria-hidden="true"></i>{t(lang, 'common.updated')}: {ratesDate} · ECB</p>}
     </div>
   )}
+
+  <section class="features-section" aria-label={t(lang, 'index.features.title')}>
+    <p class="features-title">{t(lang, 'index.features.title')}</p>
+    <div class="features-grid">
+      <div class="feature-item">
+        <i class="ti ti-building-bank feature-icon" aria-hidden="true"></i>
+        <div>
+          <p class="feature-title">{t(lang, 'index.feature1.title')}</p>
+          <p class="feature-desc">{t(lang, 'index.feature1.desc')}</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="ti ti-shield-check feature-icon" aria-hidden="true"></i>
+        <div>
+          <p class="feature-title">{t(lang, 'index.feature2.title')}</p>
+          <p class="feature-desc">{t(lang, 'index.feature2.desc')}</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="ti ti-send feature-icon" aria-hidden="true"></i>
+        <div>
+          <p class="feature-title">{t(lang, 'index.feature3.title')}</p>
+          <p class="feature-desc">{t(lang, 'index.feature3.desc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" aria-label={t(lang, 'index.faq.title')}>
+    <h2 class="faq-title">{t(lang, 'index.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'index.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'index.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'index.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'index.faq.a2')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'index.faq.q3')}</dt>
+        <dd class="faq-answer">{t(lang, 'index.faq.a3')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'index.faq.q4')}</dt>
+        <dd class="faq-answer">{t(lang, 'index.faq.a4')}</dd>
+      </div>
+    </dl>
+  </section>
 </Base>

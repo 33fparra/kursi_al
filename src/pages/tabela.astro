@@ -5,11 +5,61 @@ import { t } from '../lib/i18n';
 
 export const prerender = true;
 const lang = 'sq' as const;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'tabela.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'tabela.faq.a1') } },
+    { '@type': 'Question', name: t(lang, 'tabela.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'tabela.faq.a2') } },
+    { '@type': 'Question', name: t(lang, 'tabela.faq.q3'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'tabela.faq.a3') } },
+  ],
+});
+
+const breadcrumbJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'leku.al', item: 'https://leku.al/' },
+    { '@type': 'ListItem', position: 2, name: t(lang, 'tabela.heading'), item: 'https://leku.al/tabela' },
+  ],
+});
 ---
-<Base title={t(lang, 'tabela.meta.title')} description={t(lang, 'tabela.meta.description')} lang={lang} currentPath="/tabela">
+<Base
+  title={t(lang, 'tabela.meta.title')}
+  description={t(lang, 'tabela.meta.description')}
+  keywords={t(lang, 'tabela.meta.keywords')}
+  lang={lang}
+  currentPath="/tabela"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+    <script type="application/ld+json" set:html={breadcrumbJsonLd} />
+  </Fragment>
+
   <div class="section-header">
     <h1 class="page-title">{t(lang, 'tabela.heading')}</h1>
     <p class="page-subtitle">{t(lang, 'tabela.subtitle')}</p>
+    <p class="page-intro">{t(lang, 'tabela.intro')}</p>
   </div>
+
   <RateTable client:only="react" lang={lang} />
+
+  <section class="faq-section" aria-label={t(lang, 'tabela.faq.title')}>
+    <h2 class="faq-title">{t(lang, 'tabela.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'tabela.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'tabela.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'tabela.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'tabela.faq.a2')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'tabela.faq.q3')}</dt>
+        <dd class="faq-answer">{t(lang, 'tabela.faq.a3')}</dd>
+      </div>
+    </dl>
+  </section>
 </Base>
