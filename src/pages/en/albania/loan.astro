@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import LoanCalc from '../../../components/LoanCalc';
+import { t } from '../../../lib/i18n';
+import albaniaData from '../../../data/albania.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const banks = albaniaData.banks as any[];
+---
+<Base
+  title="Albania Personal Loan Calculator — Monthly Payment & Cost | leku.al"
+  description="Calculate monthly payments and total cost of personal loans in Albania. Rates from 11.9% per year. Compare BKT, Raiffeisen, Credins and more."
+  keywords="Albania personal loan calculator, Albania loan rates, personal loan Albania, BKT loan, Raiffeisen loan Albania, loan comparison Albania"
+  lang={lang}
+  currentPath="/albania/kredia"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/albania/" class="breadcrumb-link"><span class="fi fi-al" aria-hidden="true"></span> Albania</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.loan')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'loan.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'loan.subtitle.al')}</p>
+    <p class="page-intro">Personal loans in Albania range from 11.9% to 14% annually. Calculate the real cost — monthly payment and total interest paid — before applying.</p>
+  </div>
+
+  <LoanCalc client:load banks={banks} currency="ALL" lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'loan.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'loan.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'loan.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'loan.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'loan.faq.a2')}</dd>
+      </div>
+    </dl>
+  </section>
+</Base>

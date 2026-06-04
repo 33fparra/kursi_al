@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Converter from '../components/Converter';
+import { fetchRates } from '../lib/rates';
+import { t } from '../lib/i18n';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const ratesData = await fetchRates();
+const rates     = ratesData?.rates ?? {};
+const ratesDate = ratesData?.date ?? '';
+const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: 'GBP', to: 'ALL' }, { from: 'CHF', to: 'ALL' }];
+---
+<Base
+  title={t(lang, 'index.meta.title')}
+  description={t(lang, 'index.meta.description')}
+  keywords={t(lang, 'index.meta.keywords')}
+  lang={lang}
+  currentPath="/kursi"
+>
+  <h1 class="sr-only">{t(lang, 'index.meta.title')}</h1>
+  <p class="page-intro">{t(lang, 'index.intro')}</p>
+
+  <Converter client:only="react" initialRates={rates} lang={lang} />
+
+  <a href="/kursi/remitanca" class="remit-banner">
+    <div>
+      <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'index.remit.title')}</p>
+      <p class="remit-sub">{t(lang, 'index.remit.sub')}</p>
+    </div>
+    <i class="ti ti-chevron-right" style="font-size:20px" aria-hidden="true"></i>
+  </a>
+
+  {Object.keys(rates).length > 0 && (
+    <div class="rates-summary">
+      <p class="rates-summary-title"><i class="ti ti-table" aria-hidden="true"></i>{t(lang, 'index.rates.title')}</p>
+      <table class="rates-table" aria-label={t(lang, 'index.rates.title')}>
+        <thead><tr><th scope="col">{t(lang, 'common.pair')}</th><th scope="col" style="text-align:right">{t(lang, 'common.rate')}</th></tr></thead>
+        <tbody>
+          {PAIRS.map(({ from, to }) => (
+            <tr>
+              <td class="pair">{from} → {to}</td>
+              <td class="rate-val">{(rates[`${from}_${to}`] ?? 0).toLocaleString('sq-AL', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {ratesDate && <p class="update-info"><i class="ti ti-clock" aria-hidden="true"></i>{t(lang, 'common.updated')}: {ratesDate} · BCE</p>}
+    </div>
+  )}
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'index.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'index.faq.q1')}</dt><dd class="faq-answer">{t(lang, 'index.faq.a1')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'index.faq.q2')}</dt><dd class="faq-answer">{t(lang, 'index.faq.a2')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'index.faq.q3')}</dt><dd class="faq-answer">{t(lang, 'index.faq.a3')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'index.faq.q4')}</dt><dd class="faq-answer">{t(lang, 'index.faq.a4')}</dd></div>
+    </dl>
+  </section>
+
+  <!-- Cross-links SEO: from converter to country financial tools -->
+  <div class="kursi-xlinks">
+    <p class="kursi-xlinks-label">Eksploroni gjithashtu</p>
+    <div class="kursi-xlinks-grid">
+      <div class="kursi-xlinks-group">
+        <a href="/albania" class="kursi-xlinks-country">
+          <span class="fi fi-al" aria-hidden="true"></span><strong>Shqipëria</strong>
+        </a>
+        <a href="/albania/hipoteka" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
+        <a href="/albania/paga"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
+        <a href="/albania/bankat"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
+        <a href="/albania/kredia"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
+      </div>
+      <div class="kursi-xlinks-group">
+        <a href="/kosova" class="kursi-xlinks-country">
+          <span class="fi fi-xk" aria-hidden="true"></span><strong>Kosova</strong>
+        </a>
+        <a href="/kosova/hipoteka" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
+        <a href="/kosova/paga"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
+        <a href="/kosova/bankat"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
+        <a href="/kosova/kredia"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
+      </div>
+    </div>
+  </div>
+</Base>

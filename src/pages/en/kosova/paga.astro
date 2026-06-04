@@ -1,0 +1,29 @@
+---
+import Base from '../../../layouts/Base.astro';
+import SalaryCalc from '../../../components/SalaryCalc';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+export const prerender = true;
+const lang = 'en' as const;
+const { salary } = kosovoData;
+const professions = kosovoData.professions as any[];
+---
+<Base title="Kosovo Salary Calculator — Gross to Net 2025 | leku.al" description="Calculate net salary from gross using Kosovo's tax system (TAK)." lang={lang} currentPath="/kosova/paga">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'salary.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'salary.subtitle.xk')}</p>
+  </div>
+  <SalaryCalc client:load country="xk" currency="EUR" lang={lang} minWage={salary.minWage} avgWage={salary.avgWage} professions={professions} />
+  <div class="tax-brackets-card">
+    <h2 class="tax-brackets-title">Tax brackets (monthly) — Kosovo (TAK)</h2>
+    <div class="tax-brackets-list">
+      {salary.brackets.map(b => (
+        <div class="tax-bracket-row">
+          <span class="tax-bracket-range">€{b.from} – {b.to ? '€' + b.to : '∞'}</span>
+          <span class={`tax-bracket-rate tax-bracket-rate--${b.rate === 0 ? 'zero' : b.rate < 0.08 ? 'mid' : 'high'}`}>{b.label}</span>
+        </div>
+      ))}
+    </div>
+    <p class="tax-brackets-note">+ 5% pension (employee)</p>
+  </div>
+</Base>

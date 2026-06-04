@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BankTable from '../../../components/BankTable';
+import { t } from '../../../lib/i18n';
+import albaniaData from '../../../data/albania.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const banks = albaniaData.banks as any[];
+---
+<Base
+  title="Albanian Bank Comparison — Mortgage & Loan Rates 2025 | leku.al"
+  description="Compare mortgage and personal loan rates from Albania's main banks: Raiffeisen, BKT, OTP, Tirana Bank, Credins and ProCredit. Rates from 5.5%/yr."
+  keywords="Albanian banks comparison, Albania mortgage rates, Albania personal loan rates, Raiffeisen Albania, BKT Albania, best bank Albania"
+  lang={lang}
+  currentPath="/albania/bankat"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/albania/" class="breadcrumb-link"><span class="fi fi-al" aria-hidden="true"></span> Albania</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.banks')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'banks.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'banks.subtitle.al')}</p>
+    <p class="page-intro">Albania has {banks.length} main banks. Mortgage rates range from 5.5% to 6.5% per year, while personal loans go from 11.9% to 14%. Compare and negotiate before committing.</p>
+  </div>
+
+  <BankTable client:load banks={banks} lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'banks.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q1.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a1.al')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q2.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a2.al')}</dd>
+      </div>
+    </dl>
+  </section>
+</Base>

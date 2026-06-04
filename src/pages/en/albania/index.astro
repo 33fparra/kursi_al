@@ -1,0 +1,106 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { t } from '../../../lib/i18n';
+import albaniaData from '../../../data/albania.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const d = albaniaData;
+---
+<Base
+  title="Albania — Banks, Mortgages, Loans and Salaries | leku.al"
+  description="Compare Albanian banks, calculate mortgages and loans, and see salaries by profession. Financial tools for Albania."
+  keywords="Albanian banks, Albania mortgage, Albania loan, Albania salary, interest rates Albania, Raiffeisen Albania, BKT Albania"
+  lang={lang}
+  currentPath="/albania"
+>
+  <div class="country-hero">
+    <div class="country-hero-flag">
+      <span class="fi fi-al" aria-hidden="true"></span>
+    </div>
+    <div class="country-hero-text">
+      <h1 class="country-hero-title">{t(lang, 'hub.al.title')}</h1>
+      <p class="country-hero-sub">{t(lang, 'hub.al.subtitle')}</p>
+    </div>
+  </div>
+
+  <div class="country-facts">
+    <div class="country-fact">
+      <span class="country-fact-label">Currency</span>
+      <span class="country-fact-value">Lek (ALL)</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Minimum wage</span>
+      <span class="country-fact-value">45,000 L/month</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Banks</span>
+      <span class="country-fact-value">{d.banks.length} banks</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Avg mortgage rate</span>
+      <span class="country-fact-value">~5.5–6.5%/yr</span>
+    </div>
+  </div>
+
+  <section class="hub-tools" aria-label="Financial tools">
+    <h2 class="hub-tools-title">Financial tools</h2>
+    <div class="hub-grid">
+      <a href="/en/albania/banks" class="hub-card">
+        <div class="hub-card-icon"><i class="ti ti-building-bank" aria-hidden="true"></i></div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.banks')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.banks.desc')}</p>
+          <p class="hub-card-meta">{d.banks.length} banks · mortgage and loans</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/en/albania/mortgage" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--green"><i class="ti ti-home" aria-hidden="true"></i></div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.mortgage')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.mortgage.desc')}</p>
+          <p class="hub-card-meta">From 5.50% per year</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/en/albania/loan" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--blue"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.loan')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.loan.desc')}</p>
+          <p class="hub-card-meta">From 11.90% per year</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/en/albania/salary" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--orange"><i class="ti ti-wallet" aria-hidden="true"></i></div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.salary')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.salary.desc')}</p>
+          <p class="hub-card-meta">Min: 45,000 L · {d.professions.length} professions</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="hub-converter-links">
+    <a href="/en/" class="hub-conv-link"><i class="ti ti-arrows-up-down" aria-hidden="true"></i>{t(lang, 'hub.converter.link')}</a>
+    <a href="/en/remitanca" class="hub-conv-link"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'hub.remit.link')}</a>
+  </section>
+
+  <a href="/en/kosova/" class="country-switch-banner">
+    <span class="fi fi-xk" aria-hidden="true"></span>
+    <div>
+      <p class="country-switch-title">Kosovo</p>
+      <p class="country-switch-sub">Banks, mortgages and loans in Kosovo →</p>
+    </div>
+    <i class="ti ti-chevron-right" aria-hidden="true"></i>
+  </a>
+
+  <p class="country-disclaimer"><i class="ti ti-shield" aria-hidden="true"></i>{t(lang, 'country.disclaimer')}</p>
+</Base>

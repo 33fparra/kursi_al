@@ -1,0 +1,31 @@
+---
+import Base from '../../../layouts/Base.astro';
+import LoanCalc from '../../../components/LoanCalc';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base
+  title="Kosovo Personal Loan Calculator — Monthly Payment & Cost | leku.al"
+  description="Calculate monthly payments and total cost of personal loans in Kosovo. Rates from 9.5% per year in EUR. Compare Raiffeisen, ProCredit, NLB."
+  keywords="Kosovo personal loan calculator, Kosovo loan rates EUR, personal loan Kosovo, Raiffeisen loan Kosovo, loan comparison Kosovo"
+  lang={lang}
+  currentPath="/kosova/kredia"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/kosova/" class="breadcrumb-link"><span class="fi fi-xk" aria-hidden="true"></span> Kosovo</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.loan')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'loan.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'loan.subtitle.xk')}</p>
+    <p class="page-intro">Personal loans in Kosovo range from 9.5% to 11.5% annually in EUR — slightly lower than Albania. Calculate the total cost before applying.</p>
+  </div>
+
+  <LoanCalc client:load banks={banks} currency="EUR" lang={lang} />
+</Base>

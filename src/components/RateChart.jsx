@@ -128,8 +128,8 @@ export default function RateChart({ lang = 'sq' }) {
           tooltip: { mode: 'index', intersect: false, backgroundColor: bgCard, titleColor: inkSec, bodyColor: muted, borderColor: border, borderWidth: 1, padding: 10, callbacks: { title: items => items[0]?.label ?? '', label: ctx => `${fmtRate(ctx.parsed.y, pair.to)} ${pair.to}` } },
         },
         scales: {
-          x: { grid: { display: false }, border: { display: false }, ticks: { color: muted, font: { family: "'DM Sans', sans-serif", size: 11 }, maxTicksLimit: 7, maxRotation: 0 } },
-          y: { position: 'right', grid: { color: border }, border: { display: false }, ticks: { color: muted, font: { family: "'DM Sans', sans-serif", size: 11 }, callback: val => fmtRate(val, pair.to), maxTicksLimit: 5 } },
+          x: { grid: { display: false }, border: { display: false }, ticks: { color: muted, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, maxTicksLimit: 7, maxRotation: 0 } },
+          y: { position: 'right', grid: { color: border }, border: { display: false }, ticks: { color: muted, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, callback: val => fmtRate(val, pair.to), maxTicksLimit: 5 } },
         },
         interaction: { mode: 'index', intersect: false },
       },

@@ -1,0 +1,104 @@
+{
+  "code": "al",
+  "country": { "sq": "Shqipëria", "en": "Albania", "it": "Albania" },
+  "flag": "al",
+  "currency": { "code": "ALL", "symbol": "L", "name": "Lek shqiptar" },
+  "capital": { "sq": "Tirana", "en": "Tirana" },
+
+  "salary": {
+    "minWage": 45000,
+    "avgWage": 62000,
+    "currency": "ALL",
+    "incomeTaxNote": { "sq": "Tatimi mbi të ardhurat personale", "en": "Personal income tax" },
+    "brackets": [
+      { "from": 0,      "to": 30000,  "rate": 0,    "label": "0%" },
+      { "from": 30000,  "to": 150000, "rate": 0.13, "label": "13%" },
+      { "from": 150000, "to": null,   "rate": 0.23, "label": "23%" }
+    ],
+    "contributions": {
+      "socialEmployee": 0.095,
+      "socialEmployer": 0.15,
+      "healthEmployee": 0.017,
+      "healthEmployer": 0.017
+    }
+  },
+
+  "banks": [
+    {
+      "name": "Raiffeisen Bank",
+      "shortName": "Raiffeisen",
+      "mortgageRatePct": 5.5,
+      "loanRatePct": 12.0,
+      "featured": true,
+      "url": "https://www.raiffeisen.al"
+    },
+    {
+      "name": "BKT — Banka Kombëtare Tregtare",
+      "shortName": "BKT",
+      "mortgageRatePct": 5.75,
+      "loanRatePct": 11.9,
+      "featured": false,
+      "url": "https://www.bkt.com.al"
+    },
+    {
+      "name": "OTP Bank Albania",
+      "shortName": "OTP Bank",
+      "mortgageRatePct": 5.9,
+      "loanRatePct": 12.8,
+      "featured": false,
+      "url": "https://www.otpbank.al"
+    },
+    {
+      "name": "Tirana Bank (Intesa Sanpaolo)",
+      "shortName": "Tirana Bank",
+      "mortgageRatePct": 6.0,
+      "loanRatePct": 13.5,
+      "featured": false,
+      "url": "https://www.tiranabank.al"
+    },
+    {
+      "name": "Credins Bank",
+      "shortName": "Credins",
+      "mortgageRatePct": 6.25,
+      "loanRatePct": 14.0,
+      "featured": false,
+      "url": "https://www.credinsbank.al"
+    },
+    {
+      "name": "ProCredit Bank Albania",
+      "shortName": "ProCredit",
+      "mortgageRatePct": 6.5,
+      "loanRatePct": 13.0,
+      "featured": false,
+      "url": "https://www.procreditbank.com.al"
+    }
+  ],
+
+  "professions": [
+    { "id": "it",          "sq": "Programues / IT", "en": "IT Developer",  "avgSalary": 150000 },
+    { "id": "mjek",        "sq": "Mjek",            "en": "Doctor",        "avgSalary": 120000 },
+    { "id": "avokat",      "sq": "Avokat",           "en": "Lawyer",        "avgSalary": 110000 },
+    { "id": "menaxher",    "sq": "Menaxher",         "en": "Manager",       "avgSalary": 100000 },
+    { "id": "inxhinier",   "sq": "Inxhinier",        "en": "Engineer",      "avgSalary": 95000  },
+    { "id": "kontabilist", "sq": "Kontabilist",      "en": "Accountant",    "avgSalary": 75000  },
+    { "id": "mesues",      "sq": "Mësues",           "en": "Teacher",       "avgSalary": 65000  },
+    { "id": "infermier",   "sq": "Infermier",        "en": "Nurse",         "avgSalary": 55000  }
+  ],
+
+  "quickFacts": {
+    "population": "2.8 milionë",
+    "gdpPerCapita": "€5,300",
+    "unemployment": "11%",
+    "eu_candidate": true
+  },
+
+  "_meta": {
+    "lastVerified": "2025-06",
+    "nextReview": "2026-01",
+    "sources": {
+      "banks": "Faqet zyrtare të bankave shqiptare, AMF",
+      "salary": "INSTAT — Instituti i Statistikave të Shqipërisë",
+      "tax": "Drejtoria e Përgjithshme e Tatimeve (tatimi.gov.al)"
+    }
+  }
+}

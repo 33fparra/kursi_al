@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import MortgageCalc from '../../components/MortgageCalc';
+import { t } from '../../lib/i18n';
+import albaniaData from '../../data/albania.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = albaniaData.banks as any[];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'mortgage.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'mortgage.faq.a1') } },
+    { '@type': 'Question', name: t(lang, 'mortgage.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'mortgage.faq.a2') } },
+  ],
+});
+---
+<Base
+  title="Kalkulatore Hipoteke Shqipëri — Llogarit Këstët Mujore | leku.al"
+  description="Llogarit këstët mujore të hipotekës për bankat shqiptare. Krahaso Raiffeisen, BKT, OTP, Tirana Bank. Norma nga 5.5% vjetore."
+  keywords="kalkulatore hipoteke, hipoteka shqipëri, keste mujore hipoteke, norma hipoteke 2025, raiffeisen hipoteke, BKT hipoteke"
+  lang={lang}
+  currentPath="/albania/hipoteka"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/albania" class="breadcrumb-link">
+      <span class="fi fi-al" aria-hidden="true"></span> Shqipëria
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.mortgage')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'mortgage.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'mortgage.subtitle.al')}</p>
+    <p class="page-intro">Hipotekat në Shqipëri ofrohen në ALL dhe EUR. Normat vjetore luhaten nga 5.5% tek 6.5% sipas bankës dhe afatit. Llogarisni këstët mujore dhe koston totale para se të vendosni.</p>
+  </div>
+
+  <MortgageCalc client:load banks={banks} currency="ALL" lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'mortgage.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'mortgage.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'mortgage.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'mortgage.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'mortgage.faq.a2')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/albania/bankat" class="tool-nav-link">
+      <i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash →
+    </a>
+    <a href="/albania/kredia" class="tool-nav-link">
+      <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
+    </a>
+  </div>
+</Base>

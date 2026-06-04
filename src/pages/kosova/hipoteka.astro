@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import MortgageCalc from '../../components/MortgageCalc';
+import { t } from '../../lib/i18n';
+import kosovoData from '../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base
+  title="Kalkulatore Hipoteke Kosovë — Llogarit Këstët Mujore | leku.al"
+  description="Llogarit këstët mujore të hipotekës për bankat e Kosovës. Norma nga 4.5% vjetore. Krahaso Raiffeisen, ProCredit, NLB dhe TEB."
+  keywords="kalkulatore hipoteke kosove, hipoteka kosove, keste mujore, norma hipoteke 2025, raiffeisen hipoteke kosove"
+  lang={lang}
+  currentPath="/kosova/hipoteka"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/kosova" class="breadcrumb-link">
+      <span class="fi fi-xk" aria-hidden="true"></span> Kosova
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.mortgage')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'mortgage.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'mortgage.subtitle.xk')}</p>
+    <p class="page-intro">Hipotekat në Kosovë janë në Euro (EUR). Normat vjetore luhaten nga 4.5% tek 5.5% — konkurruese krahasuar me vendet e rajonit. Llogarisni këstët mujore para se të vendosni.</p>
+  </div>
+
+  <MortgageCalc client:load banks={banks} currency="EUR" lang={lang} />
+
+  <div class="country-tool-nav">
+    <a href="/kosova/bankat" class="tool-nav-link">
+      <i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash →
+    </a>
+    <a href="/kosova/kredia" class="tool-nav-link">
+      <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
+    </a>
+  </div>
+</Base>

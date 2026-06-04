@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import Remittance from '../../components/Remittance';
+import { t } from '../../lib/i18n';
+export const prerender = true;
+const lang = 'sq' as const;
+---
+<Base title={t(lang,'remitanca.meta.title')} description={t(lang,'remitanca.meta.description')} keywords={t(lang,'remitanca.meta.keywords')} lang={lang} currentPath="/kursi/remitanca">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang,'remitanca.heading')}</h1>
+    <p class="page-subtitle">{t(lang,'remitanca.subtitle')}</p>
+    <p class="page-intro">{t(lang,'remitanca.intro')}</p>
+  </div>
+  <Remittance client:only="react" lang={lang} />
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang,'remitanca.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item"><dt class="faq-question">{t(lang,'remitanca.faq.q1')}</dt><dd class="faq-answer">{t(lang,'remitanca.faq.a1')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang,'remitanca.faq.q2')}</dt><dd class="faq-answer">{t(lang,'remitanca.faq.a2')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang,'remitanca.faq.q3')}</dt><dd class="faq-answer">{t(lang,'remitanca.faq.a3')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang,'remitanca.faq.q4')}</dt><dd class="faq-answer">{t(lang,'remitanca.faq.a4')}</dd></div>
+    </dl>
+  </section>
+</Base>

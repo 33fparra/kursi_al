@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import LoanCalc from '../../components/LoanCalc';
+import { t } from '../../lib/i18n';
+import kosovoData from '../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base
+  title="Kalkulatore Kredie Personale Kosovë — Llogarit Koston | leku.al"
+  description="Llogarit këstët mujore dhe koston totale të kredisë personale për bankat e Kosovës. Norma nga 9.5% vjetore. Krahaso Raiffeisen, ProCredit, NLB."
+  keywords="kredi personale kosove, kalkulatore kredie kosove, norma kredise kosove, raiffeisen kredi kosove, procredit kredi"
+  lang={lang}
+  currentPath="/kosova/kredia"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/kosova" class="breadcrumb-link">
+      <span class="fi fi-xk" aria-hidden="true"></span> Kosova
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.loan')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'loan.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'loan.subtitle.xk')}</p>
+    <p class="page-intro">Kreditë personale në Kosovë ofrohen me norma midis 9.5% dhe 11.5% vjetore — pak më të ulëta se Shqipëria. Llogarisni koston totale para se të aplikoni.</p>
+  </div>
+
+  <LoanCalc client:load banks={banks} currency="EUR" lang={lang} />
+
+  <div class="country-tool-nav">
+    <a href="/kosova/bankat" class="tool-nav-link">
+      <i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash →
+    </a>
+    <a href="/kosova/hipoteka" class="tool-nav-link">
+      <i class="ti ti-home" aria-hidden="true"></i> Kalkulatore hipoteke →
+    </a>
+  </div>
+</Base>

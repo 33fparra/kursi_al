@@ -1,0 +1,96 @@
+---
+import Base from '../../layouts/Base.astro';
+import SalaryCalc from '../../components/SalaryCalc';
+import { t } from '../../lib/i18n';
+import albaniaData from '../../data/albania.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const { salary } = albaniaData;
+const professions = albaniaData.professions as any[];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'salary.faq.q1.al'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'salary.faq.a1.al') } },
+    { '@type': 'Question', name: t(lang, 'salary.faq.q2.al'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'salary.faq.a2.al') } },
+  ],
+});
+---
+<Base
+  title="Pagat dhe Tatimi në Shqipëri — Bruto në Neto 2025 | leku.al"
+  description="Llogarit pagën neto nga bruto sipas sistemit tatimor shqiptar. Shiko pagat mesatare sipas profesionit: mjek, inxhinier, programues dhe më shumë."
+  keywords="pagat shqipëri, tatimi paga shqipëri, paga bruto neto, paga minimale shqipëri, paga mesatare shqipëri, pagat sipas profesionit"
+  lang={lang}
+  currentPath="/albania/paga"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/albania" class="breadcrumb-link">
+      <span class="fi fi-al" aria-hidden="true"></span> Shqipëria
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.salary')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'salary.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'salary.subtitle.al')}</p>
+  </div>
+
+  <!-- Calculator FIRST — most important -->
+  <SalaryCalc
+    client:load
+    country="al"
+    currency="ALL"
+    lang={lang}
+    minWage={salary.minWage}
+    avgWage={salary.avgWage}
+    professions={professions}
+  />
+
+  <!-- Tax brackets info — secondary context -->
+  <div class="tax-brackets-card">
+    <h2 class="tax-brackets-title">Fashët tatimore (mujore) — Shqipëria</h2>
+    <p style="font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: var(--space-3);">Tatim progresiv + Kontribut shoqëror 9.5% + Kontribut shëndetësor 1.7%</p>
+    <div class="tax-brackets-list">
+      {salary.brackets.map(b => (
+        <div class="tax-bracket-row">
+          <span class="tax-bracket-range">
+            {b.from.toLocaleString('sq-AL')} – {b.to ? b.to.toLocaleString('sq-AL') : '∞'} L
+          </span>
+          <span class={`tax-bracket-rate tax-bracket-rate--${b.rate === 0 ? 'zero' : b.rate < 0.2 ? 'mid' : 'high'}`}>
+            {b.label}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'salary.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'salary.faq.q1.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'salary.faq.a1.al')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'salary.faq.q2.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'salary.faq.a2.al')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/albania/bankat" class="tool-nav-link">
+      <i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash →
+    </a>
+    <a href="/albania" class="tool-nav-link">
+      <i class="ti ti-arrow-left" aria-hidden="true"></i> Të gjitha mjetet →
+    </a>
+  </div>
+</Base>

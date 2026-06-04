@@ -7,13 +7,14 @@ const LANGS = [
   { code: 'el', flag: 'gr', name: 'Ελληνικά' },
 ];
 
-export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLabel = 'Select language' }) {
+export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLabel = 'Select language', allowedLangs = null }) {
   const [open, setOpen]       = useState(false);
   const wrapRef               = useRef(null);
   const triggerRef            = useRef(null);
   const optionRefs            = useRef([]);
-  const current               = LANGS.find(l => l.code === currentLang) ?? LANGS[0];
-  const others                = LANGS.filter(l => l.code !== currentLang);
+  const filtered              = allowedLangs ? LANGS.filter(l => allowedLangs.includes(l.code)) : LANGS;
+  const current               = filtered.find(l => l.code === currentLang) ?? filtered[0] ?? LANGS[0];
+  const others                = filtered.filter(l => l.code !== currentLang);
 
   // Cerrar al hacer click fuera
   useEffect(() => {

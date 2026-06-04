@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Sitemap: https://leku.al/sitemap.xml
 Sitemap: https://leku.al/sitemap-index.xml

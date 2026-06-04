@@ -1,0 +1,23 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BankTable from '../../../components/BankTable';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+export const prerender = true;
+const lang = 'en' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base title="Kosovo Bank Comparison — Mortgage & Loan Rates 2025 | leku.al" description="Compare mortgage and personal loan rates from Kosovo's main banks." lang={lang} currentPath="/kosova/bankat">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'banks.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'banks.subtitle.xk')}</p>
+  </div>
+  <BankTable client:load banks={banks} lang={lang} />
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'banks.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'banks.faq.q1.xk')}</dt><dd class="faq-answer">{t(lang, 'banks.faq.a1.xk')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'banks.faq.q2.xk')}</dt><dd class="faq-answer">{t(lang, 'banks.faq.a2.xk')}</dd></div>
+    </dl>
+  </section>
+</Base>

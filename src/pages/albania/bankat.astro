@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import BankTable from '../../components/BankTable';
+import { t } from '../../lib/i18n';
+import albaniaData from '../../data/albania.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = albaniaData.banks as any[];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'banks.faq.q1.al'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'banks.faq.a1.al') } },
+    { '@type': 'Question', name: t(lang, 'banks.faq.q2.al'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'banks.faq.a2.al') } },
+  ],
+});
+---
+<Base
+  title="Krahasimi i Bankave Shqiptare — Hipoteka dhe Kredi 2025 | leku.al"
+  description="Krahaso normat e hipotekës dhe kredisë personale të bankave kryesore shqiptare: Raiffeisen, BKT, OTP, Tirana Bank, Credins dhe ProCredit."
+  keywords="bankat shqiptare, norma hipoteke shqipëri, kredi personale shqipëri, raiffeisen albania, BKT albania, krahasim bankash"
+  lang={lang}
+  currentPath="/albania/bankat"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/albania" class="breadcrumb-link">
+      <span class="fi fi-al" aria-hidden="true"></span> Shqipëria
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.banks')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'banks.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'banks.subtitle.al')}</p>
+    <p class="page-intro">Shqipëria ka {banks.length} banka kryesore. Normat e hipotekës luhaten midis 5.5% dhe 6.5% vjetore, ndërsa kreditë personale nga 11.9% deri 14% — krahaso dhe zgjidhni me kujdes.</p>
+  </div>
+
+  <BankTable client:load banks={banks} lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'banks.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q1.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a1.al')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q2.al')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a2.al')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/albania/hipoteka" class="tool-nav-link">
+      <i class="ti ti-home" aria-hidden="true"></i> Kalkulatore hipoteke →
+    </a>
+    <a href="/albania/kredia" class="tool-nav-link">
+      <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
+    </a>
+  </div>
+</Base>

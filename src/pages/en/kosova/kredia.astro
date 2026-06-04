@@ -1,0 +1,16 @@
+---
+import Base from '../../../layouts/Base.astro';
+import LoanCalc from '../../../components/LoanCalc';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+export const prerender = true;
+const lang = 'en' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base title="Kosovo Personal Loan Calculator | leku.al" description="Calculate monthly payments for personal loans in Kosovo. Rates from 9.5% per year in EUR." lang={lang} currentPath="/kosova/kredia">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'loan.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'loan.subtitle.xk')}</p>
+  </div>
+  <LoanCalc client:load banks={banks} currency="EUR" lang={lang} />
+</Base>

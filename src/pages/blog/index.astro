@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPostsByLang } from '../../data/blog-posts';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const posts = getPostsByLang('sq');
+---
+<Base
+  title="Blog Financiar — Bankat, Hipotekat dhe Pagat | leku.al"
+  description="Artikuj mbi financat personale, bankat shqiptare, hipotekat, kreditë dhe pagat. Këshilla praktike financiare për Shqipërinë dhe Kosovën."
+  keywords="blog financiar shqiperi, keshilla financiare, bankat shqiptare, hipoteka shqiperi, pagat shqiperi, financa personale"
+  lang={lang}
+  currentPath="/blog"
+>
+  <div class="section-header">
+    <h1 class="page-title">Blog Financiar</h1>
+    <p class="page-subtitle">Artikuj praktikë mbi financat, bankat dhe ekonominë shqiptare</p>
+  </div>
+
+  <div class="blog-grid">
+    {posts.map(post => (
+      <a href={`/blog/${post.slug}`} class="blog-card">
+        <div class="blog-card-meta">
+          <span class="blog-category">{post.category}</span>
+          <span class="blog-date">{new Date(post.date).toLocaleDateString('sq-AL', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <span class="blog-read">{post.readMinutes} min</span>
+        </div>
+        <h2 class="blog-card-title">{post.title}</h2>
+        <p class="blog-card-desc">{post.description}</p>
+        <span class="blog-read-more">Lexo më shumë <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+    ))}
+  </div>
+
+  <div class="blog-langs">
+    <p class="blog-langs-label">Gjuha tjetër:</p>
+    <a href="/en/blog/" class="blog-lang-link">
+      <span class="fi fi-gb" aria-hidden="true"></span> English blog →
+    </a>
+  </div>
+</Base>

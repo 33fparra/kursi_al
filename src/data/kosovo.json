@@ -1,0 +1,95 @@
+{
+  "code": "xk",
+  "country": { "sq": "Kosova", "en": "Kosovo", "it": "Kosovo" },
+  "flag": "xk",
+  "currency": { "code": "EUR", "symbol": "€", "name": "Euro" },
+  "capital": { "sq": "Prishtina", "en": "Pristina" },
+
+  "salary": {
+    "minWage": 400,
+    "avgWage": 780,
+    "currency": "EUR",
+    "incomeTaxNote": { "sq": "Tatimi mbi të ardhurat (ATK)", "en": "Income tax (TAK)" },
+    "brackets": [
+      { "from": 0,   "to": 80,  "rate": 0,    "label": "0%" },
+      { "from": 80,  "to": 250, "rate": 0.04, "label": "4%" },
+      { "from": 250, "to": 450, "rate": 0.08, "label": "8%" },
+      { "from": 450, "to": null,"rate": 0.10, "label": "10%" }
+    ],
+    "contributions": {
+      "pensionEmployee": 0.05,
+      "pensionEmployer": 0.05
+    }
+  },
+
+  "banks": [
+    {
+      "name": "Raiffeisen Bank Kosovo",
+      "shortName": "Raiffeisen",
+      "mortgageRatePct": 4.5,
+      "loanRatePct": 9.5,
+      "featured": true,
+      "url": "https://www.raiffeisen-kosovo.com"
+    },
+    {
+      "name": "ProCredit Bank Kosovo",
+      "shortName": "ProCredit",
+      "mortgageRatePct": 5.0,
+      "loanRatePct": 10.5,
+      "featured": false,
+      "url": "https://www.procreditbank-kos.com"
+    },
+    {
+      "name": "NLB Banka",
+      "shortName": "NLB",
+      "mortgageRatePct": 4.75,
+      "loanRatePct": 9.9,
+      "featured": false,
+      "url": "https://www.nlb.com"
+    },
+    {
+      "name": "TEB Bank",
+      "shortName": "TEB",
+      "mortgageRatePct": 5.25,
+      "loanRatePct": 11.0,
+      "featured": false,
+      "url": "https://www.teb-kos.com"
+    },
+    {
+      "name": "Banka për Biznes (BpB)",
+      "shortName": "BpB",
+      "mortgageRatePct": 5.5,
+      "loanRatePct": 11.5,
+      "featured": false,
+      "url": "https://www.bpbbank.com"
+    }
+  ],
+
+  "professions": [
+    { "id": "it",          "sq": "Programues / IT", "en": "IT Developer",  "avgSalary": 1500 },
+    { "id": "mjek",        "sq": "Mjek",            "en": "Doctor",        "avgSalary": 1400 },
+    { "id": "avokat",      "sq": "Avokat",           "en": "Lawyer",        "avgSalary": 1200 },
+    { "id": "inxhinier",   "sq": "Inxhinier",        "en": "Engineer",      "avgSalary": 1100 },
+    { "id": "menaxher",    "sq": "Menaxher",         "en": "Manager",       "avgSalary": 950  },
+    { "id": "kontabilist", "sq": "Kontabilist",      "en": "Accountant",    "avgSalary": 800  },
+    { "id": "infermier",   "sq": "Infermier",        "en": "Nurse",         "avgSalary": 700  },
+    { "id": "mesues",      "sq": "Mësues",           "en": "Teacher",       "avgSalary": 600  }
+  ],
+
+  "quickFacts": {
+    "population": "1.8 milionë",
+    "gdpPerCapita": "€4,800",
+    "unemployment": "12%",
+    "currency_note": "Kosova përdor Euron (EUR) si monedhë zyrtare"
+  },
+
+  "_meta": {
+    "lastVerified": "2025-06",
+    "nextReview": "2026-01",
+    "sources": {
+      "banks": "Faqet zyrtare të bankave të Kosovës, BQK",
+      "salary": "ASK — Agjencia e Statistikave të Kosovës",
+      "tax": "ATK — Administrata Tatimore e Kosovës (atk-ks.org)"
+    }
+  }
+}

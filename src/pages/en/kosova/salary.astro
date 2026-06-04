@@ -1,0 +1,58 @@
+---
+import Base from '../../../layouts/Base.astro';
+import SalaryCalc from '../../../components/SalaryCalc';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const { salary } = kosovoData;
+const professions = kosovoData.professions as any[];
+---
+<Base
+  title="Kosovo Salary Calculator — Gross to Net 2025 | leku.al"
+  description="Calculate net salary from gross using Kosovo's tax system (TAK). See average salaries by profession. Minimum wage: €400/month."
+  keywords="Kosovo salary calculator, gross to net Kosovo, Kosovo income tax, Kosovo minimum wage, Kosovo salary by profession, TAK Kosovo"
+  lang={lang}
+  currentPath="/kosova/paga"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/kosova/" class="breadcrumb-link"><span class="fi fi-xk" aria-hidden="true"></span> Kosovo</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.salary')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'salary.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'salary.subtitle.xk')}</p>
+  </div>
+
+  <SalaryCalc client:load country="xk" currency="EUR" lang={lang} minWage={salary.minWage} avgWage={salary.avgWage} professions={professions} />
+
+  <div class="tax-brackets-card">
+    <h2 class="tax-brackets-title">Tax brackets (monthly) — Kosovo (TAK)</h2>
+    <p style="font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: var(--space-3);">Progressive income tax + 5% pension (employee) + 5% pension (employer)</p>
+    <div class="tax-brackets-list">
+      {salary.brackets.map(b => (
+        <div class="tax-bracket-row">
+          <span class="tax-bracket-range">€{b.from} – {b.to ? '€' + b.to : '∞'}</span>
+          <span class={`tax-bracket-rate tax-bracket-rate--${b.rate === 0 ? 'zero' : b.rate < 0.08 ? 'mid' : 'high'}`}>{b.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'salary.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'salary.faq.q1.xk')}</dt>
+        <dd class="faq-answer">{t(lang, 'salary.faq.a1.xk')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'salary.faq.q2.xk')}</dt>
+        <dd class="faq-answer">{t(lang, 'salary.faq.a2.xk')}</dd>
+      </div>
+    </dl>
+  </section>
+</Base>

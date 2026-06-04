@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import LoanCalc from '../../components/LoanCalc';
+import { t } from '../../lib/i18n';
+import albaniaData from '../../data/albania.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = albaniaData.banks as any[];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'loan.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'loan.faq.a1') } },
+    { '@type': 'Question', name: t(lang, 'loan.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'loan.faq.a2') } },
+  ],
+});
+---
+<Base
+  title="Kalkulatore Kredie Personale Shqipëri — Llogarit Koston | leku.al"
+  description="Llogarit këstët mujore dhe koston totale të kredisë personale për bankat shqiptare. Norma nga 11.9% vjetore. Krahaso BKT, Raiffeisen, Credins."
+  keywords="kredi personale shqipëri, kalkulatore kredie, norma kredisë shqipëri, BKT kredi, raiffeisen kredi, keste mujore kredie"
+  lang={lang}
+  currentPath="/albania/kredia"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/albania" class="breadcrumb-link">
+      <span class="fi fi-al" aria-hidden="true"></span> Shqipëria
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.loan')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'loan.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'loan.subtitle.al')}</p>
+    <p class="page-intro">Kreditë personale në Shqipëri ofrohen me norma midis 11.9% dhe 14% vjetore. Llogarisni shumën që mund të merrni dhe koston reale para se të aplikoni.</p>
+  </div>
+
+  <LoanCalc client:load banks={banks} currency="ALL" lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'loan.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'loan.faq.q1')}</dt>
+        <dd class="faq-answer">{t(lang, 'loan.faq.a1')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'loan.faq.q2')}</dt>
+        <dd class="faq-answer">{t(lang, 'loan.faq.a2')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/albania/bankat" class="tool-nav-link">
+      <i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash →
+    </a>
+    <a href="/albania/hipoteka" class="tool-nav-link">
+      <i class="ti ti-home" aria-hidden="true"></i> Kalkulatore hipoteke →
+    </a>
+  </div>
+</Base>

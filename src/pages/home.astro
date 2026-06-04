@@ -1,0 +1,223 @@
+---
+import Base from '../layouts/Base.astro';
+import { fetchRates } from '../lib/rates';
+import { t } from '../lib/i18n';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const ratesData = await fetchRates();
+const rates     = ratesData?.rates ?? {};
+const ratesDate = ratesData?.date ?? '';
+
+const PAIRS = [
+  { from: 'EUR', to: 'ALL', label: 'Euro' },
+  { from: 'USD', to: 'ALL', label: 'Dollar' },
+  { from: 'GBP', to: 'ALL', label: 'Paund' },
+];
+
+function fmtRate(r: number) {
+  return new Intl.NumberFormat('sq-AL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(r);
+}
+---
+<Base
+  title="leku.al — Financa të thjeshta për Shqipërinë dhe Kosovën"
+  description="Konverto valuta, krahaso bankat, llogarit hipotekën dhe pagën neto. Të gjitha mjetet financiare shqiptare — falas dhe menjëherë."
+  keywords="leku al, financat shqipëri, bankat shqiptare, kursi valutor, hipoteka shqipëri, konvertuesi valutor"
+  lang={lang}
+  currentPath="/home"
+>
+  <!-- ── HERO ── -->
+  <section class="home-hero">
+    <div class="home-badge">
+      <i class="ti ti-shield-check" aria-hidden="true"></i>
+      Të dhëna nga Banka Qendrore Europiane
+    </div>
+
+    <h1 class="home-headline">
+      Financa të thjeshta<br/>
+      për <em>Shqipërinë</em> dhe Kosovën
+    </h1>
+
+    <p class="home-tagline">
+      Konverto valuta, krahaso bankat, llogarit hipotekën dhe pagën neto.
+      Gjithçka falas — pa regjistrim, pa komisione.
+    </p>
+
+    <!-- ── Three main cards ── -->
+    <div class="home-cards">
+
+      <!-- Albania -->
+      <a href="/albania" class="home-card">
+        <span class="fi fi-al home-card-flag" aria-hidden="true"></span>
+        <h2 class="home-card-title">Shqipëria</h2>
+        <p class="home-card-sub">Mjetet financiare për bankat, hipotekat, kreditë dhe pagat shqiptare.</p>
+        <div class="home-card-features">
+          <span class="home-card-feature">
+            <i class="ti ti-building-bank" aria-hidden="true"></i>
+            Krahaso 6 banka · norma nga 5.5%
+          </span>
+          <span class="home-card-feature">
+            <i class="ti ti-home" aria-hidden="true"></i>
+            Kalkulatore hipoteke dhe kredie
+          </span>
+          <span class="home-card-feature">
+            <i class="ti ti-wallet" aria-hidden="true"></i>
+            Paga bruto → neto me tatim
+          </span>
+        </div>
+        <span class="home-card-cta">
+          Shiko mjetet <i class="ti ti-arrow-right" aria-hidden="true"></i>
+        </span>
+      </a>
+
+      <!-- Kosovo -->
+      <a href="/kosova" class="home-card">
+        <span class="fi fi-xk home-card-flag" aria-hidden="true"></span>
+        <h2 class="home-card-title">Kosova</h2>
+        <p class="home-card-sub">Mjetet financiare për bankat, hipotekat, kreditë dhe pagat e Kosovës.</p>
+        <div class="home-card-features">
+          <span class="home-card-feature">
+            <i class="ti ti-building-bank" aria-hidden="true"></i>
+            Krahaso 5 banka · norma nga 4.5%
+          </span>
+          <span class="home-card-feature">
+            <i class="ti ti-home" aria-hidden="true"></i>
+            Hipoteka dhe kredi në Euro
+          </span>
+          <span class="home-card-feature">
+            <i class="ti ti-wallet" aria-hidden="true"></i>
+            Sistem tatimor ATK
+          </span>
+        </div>
+        <span class="home-card-cta">
+          Shiko mjetet <i class="ti ti-arrow-right" aria-hidden="true"></i>
+        </span>
+      </a>
+
+      <!-- Currency Converter -->
+      <a href="/" class="home-card home-card--converter">
+        <div class="home-card-icon" aria-hidden="true">
+          <i class="ti ti-arrows-up-down"></i>
+        </div>
+        <h2 class="home-card-title">Konvertuesi</h2>
+        <p class="home-card-sub">Kurset e këmbimit valutor të ditës. EUR, USD, GBP, CHF kundrejt lekës shqiptare.</p>
+
+        {Object.keys(rates).length > 0 && (
+          <div class="home-card-features">
+            {PAIRS.map(({ from, to, label }) => (
+              <span class="home-card-feature">
+                <i class="ti ti-currency-euro" aria-hidden="true"></i>
+                1 {label} = {fmtRate(rates[`${from}_${to}`] ?? 0)} L
+              </span>
+            ))}
+          </div>
+        )}
+
+        <span class="home-card-cta" style="color: var(--blue-info)">
+          Konverto tani <i class="ti ti-arrow-right" aria-hidden="true"></i>
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── Trust bar ── -->
+  <div class="home-trust">
+    <div class="home-trust-item">
+      <i class="ti ti-shield-check" aria-hidden="true"></i>
+      Të dhëna nga Banka Qendrore Europiane
+    </div>
+    <div class="home-trust-item">
+      <i class="ti ti-refresh" aria-hidden="true"></i>
+      Përditësohet çdo ditë pune
+    </div>
+    <div class="home-trust-item">
+      <i class="ti ti-lock-off" aria-hidden="true"></i>
+      Falas · Pa regjistrim · Pa komisione
+    </div>
+    <div class="home-trust-item">
+      <i class="ti ti-device-mobile" aria-hidden="true"></i>
+      E optimizuar për celular
+    </div>
+  </div>
+
+  <!-- ── Rates snapshot ── -->
+  {Object.keys(rates).length > 0 && (
+    <section class="home-rates-section">
+      <p class="home-section-label">
+        <i class="ti ti-clock" aria-hidden="true"></i>
+        Kurset e sotit
+        {ratesDate && <span style="margin-left: 8px; font-weight: 400; text-transform: none; letter-spacing: 0;">— {ratesDate}</span>}
+      </p>
+      <table class="rates-table" aria-label="Kurset e këmbimit valutor">
+        <thead>
+          <tr>
+            <th scope="col">{t(lang, 'common.pair')}</th>
+            <th scope="col" style="text-align:right">{t(lang, 'common.rate')}</th>
+            <th scope="col" style="text-align:right">Inverse</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            { from: 'EUR', to: 'ALL' },
+            { from: 'USD', to: 'ALL' },
+            { from: 'GBP', to: 'ALL' },
+            { from: 'CHF', to: 'ALL' },
+          ].map(({ from, to }) => (
+            <tr>
+              <td class="pair">{from} → {to}</td>
+              <td class="rate-val">
+                {fmtRate(rates[`${from}_${to}`] ?? 0)}
+              </td>
+              <td class="rate-val" style="font-size: var(--text-xs); color: var(--ink-muted)">
+                1 ALL = {(rates[`${to}_${from}`] ?? 0).toFixed(5)} {from}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="update-info" style="margin-top: var(--space-3)">
+        <i class="ti ti-info-circle" aria-hidden="true"></i>
+        Burimi: Banka Qendrore Europiane (BCE) · <a href="/tabela" style="color: var(--blue-info)">Tabela e plotë →</a>
+      </p>
+    </section>
+  )}
+
+  <!-- ── Remittance CTA ── -->
+  <a href="/remitanca" class="home-remit-cta">
+    <div class="home-remit-icon">
+      <i class="ti ti-send" aria-hidden="true"></i>
+    </div>
+    <div>
+      <p class="home-remit-title">Sa merr familja jote?</p>
+      <p class="home-remit-sub">Krahaso Wise, Remitly dhe bankën para se të dërgosh para</p>
+    </div>
+    <i class="ti ti-chevron-right home-remit-chevron" aria-hidden="true"></i>
+  </a>
+
+</Base>
+
+<style>
+  .home-remit-cta {
+    display: flex; align-items: center; gap: var(--space-4);
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+    margin-top: var(--space-4);
+  }
+  .home-remit-cta:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+  .home-remit-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: var(--red-soft); color: var(--red-albania);
+    border-radius: var(--radius-lg);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .home-remit-title { font-size: var(--text-body); font-weight: var(--weight-medium); color: var(--ink); margin-bottom: 2px; }
+  .home-remit-sub { font-size: var(--text-small); color: var(--ink-secondary); }
+  .home-remit-chevron { margin-left: auto; color: var(--ink-muted); font-size: 20px; flex-shrink: 0; }
+</style>

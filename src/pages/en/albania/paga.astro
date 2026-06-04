@@ -1,0 +1,29 @@
+---
+import Base from '../../../layouts/Base.astro';
+import SalaryCalc from '../../../components/SalaryCalc';
+import { t } from '../../../lib/i18n';
+import albaniaData from '../../../data/albania.json';
+export const prerender = true;
+const lang = 'en' as const;
+const { salary } = albaniaData;
+const professions = albaniaData.professions as any[];
+---
+<Base title="Albania Salary Calculator — Gross to Net 2025 | leku.al" description="Calculate net salary from gross using Albania's tax system." lang={lang} currentPath="/albania/paga">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'salary.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'salary.subtitle.al')}</p>
+  </div>
+  <SalaryCalc client:load country="al" currency="ALL" lang={lang} minWage={salary.minWage} avgWage={salary.avgWage} professions={professions} />
+  <div class="tax-brackets-card">
+    <h2 class="tax-brackets-title">Tax brackets (monthly) — Albania</h2>
+    <div class="tax-brackets-list">
+      {salary.brackets.map(b => (
+        <div class="tax-bracket-row">
+          <span class="tax-bracket-range">{b.from.toLocaleString('en')} – {b.to ? b.to.toLocaleString('en') : '∞'} L</span>
+          <span class={`tax-bracket-rate tax-bracket-rate--${b.rate === 0 ? 'zero' : b.rate < 0.2 ? 'mid' : 'high'}`}>{b.label}</span>
+        </div>
+      ))}
+    </div>
+    <p class="tax-brackets-note">+ 9.5% social + 1.7% health</p>
+  </div>
+</Base>

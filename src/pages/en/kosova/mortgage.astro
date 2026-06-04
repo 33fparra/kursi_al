@@ -1,0 +1,31 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MortgageCalc from '../../../components/MortgageCalc';
+import { t } from '../../../lib/i18n';
+import kosovoData from '../../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const banks = kosovoData.banks as any[];
+---
+<Base
+  title="Kosovo Mortgage Calculator — Monthly Payment in EUR | leku.al"
+  description="Calculate monthly mortgage payments for Kosovo banks. Rates from 4.5% per year in EUR. Compare Raiffeisen, ProCredit, NLB and TEB."
+  keywords="Kosovo mortgage calculator, Kosovo mortgage rates EUR, home loan Kosovo, Raiffeisen mortgage Kosovo, monthly payment Kosovo"
+  lang={lang}
+  currentPath="/kosova/hipoteka"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/kosova/" class="breadcrumb-link"><span class="fi fi-xk" aria-hidden="true"></span> Kosovo</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.mortgage')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'mortgage.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'mortgage.subtitle.xk')}</p>
+    <p class="page-intro">Kosovo mortgages are in Euro (EUR). Rates range from 4.5% to 5.5% annually — competitive compared to the region. Calculate monthly payments before deciding.</p>
+  </div>
+
+  <MortgageCalc client:load banks={banks} currency="EUR" lang={lang} />
+</Base>

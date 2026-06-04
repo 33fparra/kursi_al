@@ -1,0 +1,23 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MortgageCalc from '../../../components/MortgageCalc';
+import { t } from '../../../lib/i18n';
+import albaniaData from '../../../data/albania.json';
+export const prerender = true;
+const lang = 'en' as const;
+const banks = albaniaData.banks as any[];
+---
+<Base title="Albania Mortgage Calculator — Monthly Payment & Total Cost | leku.al" description="Calculate monthly mortgage payments for Albanian banks. Rates from 5.5% per year." lang={lang} currentPath="/albania/hipoteka">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'mortgage.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'mortgage.subtitle.al')}</p>
+  </div>
+  <MortgageCalc client:load banks={banks} currency="ALL" lang={lang} />
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'mortgage.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'mortgage.faq.q1')}</dt><dd class="faq-answer">{t(lang, 'mortgage.faq.a1')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang, 'mortgage.faq.q2')}</dt><dd class="faq-answer">{t(lang, 'mortgage.faq.a2')}</dd></div>
+    </dl>
+  </section>
+</Base>

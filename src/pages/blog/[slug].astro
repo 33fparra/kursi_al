@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+import { BLOG_POSTS, getPostBySlug } from '../../data/blog-posts';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return BLOG_POSTS
+    .filter(p => p.lang === 'sq')
+    .map(p => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = getPostBySlug(slug as string);
+if (!post) return Astro.redirect('/blog/');
+
+const lang = 'sq' as const;
+
+const articleJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  inLanguage: 'sq',
+  publisher: {
+    '@type': 'Organization',
+    name: 'leku.al',
+    url: 'https://leku.al',
+  },
+});
+---
+<Base
+  title={`${post.title} | leku.al`}
+  description={post.description}
+  lang={lang}
+  currentPath="/blog"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={articleJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/blog" class="breadcrumb-link">Blog</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{post.category}</span>
+  </nav>
+
+  <article class="blog-post">
+    <header class="blog-post-header">
+      <div class="blog-post-meta">
+        <span class="blog-category">{post.category}</span>
+        <span class="blog-date">
+          {new Date(post.date).toLocaleDateString('sq-AL', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </span>
+        <span class="blog-read">{post.readMinutes} min lexim</span>
+      </div>
+      <h1 class="blog-post-title">{post.title}</h1>
+      <p class="blog-post-desc">{post.description}</p>
+    </header>
+
+    <div class="blog-post-content" set:html={post.content} />
+
+    <footer class="blog-post-footer">
+      <a href="/blog" class="tool-nav-link">
+        <i class="ti ti-arrow-left" aria-hidden="true"></i> Kthehu te blogu
+      </a>
+    </footer>
+  </article>
+</Base>

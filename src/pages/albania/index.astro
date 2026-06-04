@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+import { t } from '../../lib/i18n';
+import albaniaData from '../../data/albania.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const d = albaniaData;
+---
+<Base
+  title="Shqipëria — Bankat, Hipotekat, Kreditë dhe Pagat | leku.al"
+  description="Krahasoni bankat shqiptare, llogaritni hipotekën dhe kredinë, dhe shikoni pagat sipas profesionit. Mjetet financiare për Shqipërinë."
+  keywords="bankat shqiptare, hipoteka shqipëri, kredi shqipëri, pagat shqipëri, norma interesi shqipëri, raiffeisen bkt credins"
+  lang={lang}
+  currentPath="/albania"
+>
+  <!-- Hero -->
+  <div class="country-hero">
+    <div class="country-hero-flag">
+      <span class="fi fi-al" aria-hidden="true"></span>
+    </div>
+    <div class="country-hero-text">
+      <h1 class="country-hero-title">{t(lang, 'hub.al.title')}</h1>
+      <p class="country-hero-sub">{t(lang, 'hub.al.subtitle')}</p>
+    </div>
+  </div>
+
+  <!-- Quick facts -->
+  <div class="country-facts">
+    <div class="country-fact">
+      <span class="country-fact-label">Monedha</span>
+      <span class="country-fact-value">Lek (ALL)</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Paga minimale</span>
+      <span class="country-fact-value">45,000 L/muaj</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Bankat</span>
+      <span class="country-fact-value">{d.banks.length} banka</span>
+    </div>
+    <div class="country-fact">
+      <span class="country-fact-label">Hipoteka mesatare</span>
+      <span class="country-fact-value">~5.5–6.5%/vit</span>
+    </div>
+  </div>
+
+  <!-- Tool cards -->
+  <section class="hub-tools" aria-label="Mjetet financiare">
+    <h2 class="hub-tools-title">Mjetet financiare</h2>
+    <div class="hub-grid">
+
+      <a href="/albania/bankat" class="hub-card">
+        <div class="hub-card-icon">
+          <i class="ti ti-building-bank" aria-hidden="true"></i>
+        </div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.banks')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.banks.desc')}</p>
+          <p class="hub-card-meta">{d.banks.length} banka · hipoteka dhe kredi</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/albania/hipoteka" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--green">
+          <i class="ti ti-home" aria-hidden="true"></i>
+        </div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.mortgage')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.mortgage.desc')}</p>
+          <p class="hub-card-meta">Nga 5.50% vjetore</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/albania/kredia" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--blue">
+          <i class="ti ti-credit-card" aria-hidden="true"></i>
+        </div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.loan')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.loan.desc')}</p>
+          <p class="hub-card-meta">Nga 11.90% vjetore</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="/albania/paga" class="hub-card">
+        <div class="hub-card-icon hub-card-icon--orange">
+          <i class="ti ti-wallet" aria-hidden="true"></i>
+        </div>
+        <div class="hub-card-body">
+          <h3 class="hub-card-title">{t(lang, 'hub.tools.salary')}</h3>
+          <p class="hub-card-desc">{t(lang, 'hub.tools.salary.desc')}</p>
+          <p class="hub-card-meta">Min: 45,000 L · {d.professions.length} profesione</p>
+        </div>
+        <i class="ti ti-chevron-right hub-card-arrow" aria-hidden="true"></i>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Links to existing tools -->
+  <section class="hub-converter-links">
+    <a href="/" class="hub-conv-link">
+      <i class="ti ti-arrows-up-down" aria-hidden="true"></i>
+      {t(lang, 'hub.converter.link')}
+    </a>
+    <a href="/remitanca" class="hub-conv-link">
+      <i class="ti ti-send" aria-hidden="true"></i>
+      {t(lang, 'hub.remit.link')}
+    </a>
+  </section>
+
+  <!-- Kosovo link -->
+  <a href="/kosova" class="country-switch-banner">
+    <span class="fi fi-xk" aria-hidden="true"></span>
+    <div>
+      <p class="country-switch-title">Kosova</p>
+      <p class="country-switch-sub">Bankat, hipotekat dhe kreditë e Kosovës →</p>
+    </div>
+    <i class="ti ti-chevron-right" aria-hidden="true"></i>
+  </a>
+
+  <p class="country-disclaimer">
+    <i class="ti ti-shield" aria-hidden="true"></i>
+    {t(lang, 'country.disclaimer')}
+  </p>
+</Base>

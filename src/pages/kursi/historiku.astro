@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import RateChart from '../../components/RateChart';
+import { t } from '../../lib/i18n';
+export const prerender = true;
+const lang = 'sq' as const;
+---
+<Base title={t(lang,'historiku.meta.title')} description={t(lang,'historiku.meta.description')} keywords={t(lang,'historiku.meta.keywords')} lang={lang} currentPath="/kursi/historiku">
+  <div class="section-header">
+    <h1 class="page-title">{t(lang,'historiku.heading')}</h1>
+    <p class="page-subtitle">{t(lang,'historiku.subtitle')}</p>
+    <p class="page-intro">{t(lang,'historiku.intro')}</p>
+  </div>
+  <RateChart client:only="react" lang={lang} />
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang,'historiku.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item"><dt class="faq-question">{t(lang,'historiku.faq.q1')}</dt><dd class="faq-answer">{t(lang,'historiku.faq.a1')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang,'historiku.faq.q2')}</dt><dd class="faq-answer">{t(lang,'historiku.faq.a2')}</dd></div>
+      <div class="faq-item"><dt class="faq-question">{t(lang,'historiku.faq.q3')}</dt><dd class="faq-answer">{t(lang,'historiku.faq.a3')}</dd></div>
+    </dl>
+  </section>
+</Base>

@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import BankTable from '../../components/BankTable';
+import { t } from '../../lib/i18n';
+import kosovoData from '../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const banks = kosovoData.banks as any[];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: t(lang, 'banks.faq.q1.xk'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'banks.faq.a1.xk') } },
+    { '@type': 'Question', name: t(lang, 'banks.faq.q2.xk'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'banks.faq.a2.xk') } },
+  ],
+});
+---
+<Base
+  title="Krahasimi i Bankave të Kosovës — Hipoteka dhe Kredi 2025 | leku.al"
+  description="Krahaso normat e hipotekës dhe kredisë personale për bankat e Kosovës: Raiffeisen, ProCredit, NLB, TEB dhe BpB. Norma nga 4.5% vjetore."
+  keywords="bankat kosoves, norma hipoteke kosove, kredi personale kosove, raiffeisen kosove, procredit kosove, NLB kosove, krahasim bankash kosove"
+  lang={lang}
+  currentPath="/kosova/bankat"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqJsonLd} />
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/kosova" class="breadcrumb-link">
+      <span class="fi fi-xk" aria-hidden="true"></span> Kosova
+    </a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{t(lang, 'country.banks')}</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'banks.title')}</h1>
+    <p class="page-subtitle">{t(lang, 'banks.subtitle.xk')}</p>
+    <p class="page-intro">Kosova përdor Euron dhe ka {banks.length} banka kryesore. Falë monedhës europiane, normat e hipotekës janë pak më të ulëta se Shqipëria — nga 4.5% deri 5.5% vjetore.</p>
+  </div>
+
+  <BankTable client:load banks={banks} lang={lang} />
+
+  <section class="faq-section">
+    <h2 class="faq-title">{t(lang, 'banks.faq.title')}</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q1.xk')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a1.xk')}</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">{t(lang, 'banks.faq.q2.xk')}</dt>
+        <dd class="faq-answer">{t(lang, 'banks.faq.a2.xk')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/kosova/hipoteka" class="tool-nav-link">
+      <i class="ti ti-home" aria-hidden="true"></i> Kalkulatore hipoteke →
+    </a>
+    <a href="/kosova/kredia" class="tool-nav-link">
+      <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
+    </a>
+  </div>
+</Base>
