@@ -977,12 +977,28 @@ const jsonLd = JSON.stringify({
   .remit-arrives { font-family: 'Instrument Serif', Georgia, serif; font-weight: 700; }
   .remit-arrives--best { font-family: 'Instrument Serif', Georgia, serif; font-weight: 700; color: var(--green-result); }
 
+  /* ─── Provider logo ─── */
+  .remit-provider-logo {
+    height: 28px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    display: block;
+  }
+  [data-theme='dark'] .remit-provider-logo { filter: brightness(0.9) contrast(1.05); }
+
   /* ─── Affiliate buttons ─── */
-  .btn-affiliate { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-md); border: none; font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-small); font-weight: var(--weight-medium); cursor: pointer; transition: all var(--transition-fast); min-height: 44px; white-space: nowrap; }
-  .btn-affiliate--wise    { background: var(--green-result); color: #fff; }
-  .btn-affiliate--wise:hover { background: var(--green-trend); }
-  .btn-affiliate--remitly { background: var(--red-soft); color: var(--red-albania); border: 1px solid var(--red-albania); }
+  .btn-affiliate { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-medium); font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-small); font-weight: var(--weight-medium); cursor: pointer; transition: all var(--transition-fast); min-height: 40px; white-space: nowrap; background: var(--bg-input); color: var(--ink-secondary); }
+  .btn-affiliate:hover { background: var(--border-light); color: var(--ink); border-color: var(--border-medium); }
+  .btn-affiliate--wise    { background: var(--green-result); color: #fff; border-color: transparent; }
+  .btn-affiliate--wise:hover { background: var(--green-trend); color: #fff; }
+  .btn-affiliate--remitly { background: var(--red-soft); color: var(--red-albania); border-color: var(--red-albania); }
   .btn-affiliate--remitly:hover { background: var(--red-albania); color: #fff; }
+  .btn-affiliate--wu { background: #ffcc00; color: #1a1a1a; border-color: transparent; }
+  .btn-affiliate--wu:hover { background: #e6b800; color: #1a1a1a; }
+  .btn-affiliate--wr { background: #e8174c; color: #fff; border-color: transparent; }
+  .btn-affiliate--wr:hover { background: #c0143f; color: #fff; }
 
   /* ─── Currency pills ─── */
   .currency-pill { background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 6px 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-small); font-weight: var(--weight-medium); color: var(--ink-secondary); cursor: pointer; transition: all var(--transition-fast); min-height: 36px; }

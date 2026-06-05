@@ -57,20 +57,28 @@ function RemitPicker({ value, onChange }) {
     </div>
   );
 }
-const QUICK_AMOUNTS   = [100, 200, 500, 1000];
+const QUICK_AMOUNTS = [100, 200, 500, 1000];
+const MAX_AMOUNT    = 200_000_000;
 const CDN = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json';
 
+function fmtInput(raw) {
+  const digits = raw.replace(/\D/g, '');
+  if (!digits) return '';
+  return parseInt(digits, 10).toLocaleString('en-US');
+}
+
 const UI = {
-  sq: { sendLabel: 'Shuma që dërgon', rateReal: 'Kursi real', arrives: 'Familja merr', fee: 'Komisioni', hiddenCost: 'Kosto e fshehur (spread)', appliedRate: 'Kursi i aplikuar', best: '★ Më e mira', tagWise: 'Kursi real', tagRemitly: 'Komision i ulët', tagBank: 'Spread i lartë', btnWise: 'Dërgo me Wise', btnRemitly: 'Dërgo me Remitly', legal: 'Tarifat janë orientuese dhe mund të ndryshojnë. Kurset dhe komisionet verifikohen çdo javë. Kursi.al nuk mban përgjegjësi për diferencat ndërmjet tarifave të paraqitura dhe atyre reale.' },
-  en: { sendLabel: 'Amount I send', rateReal: 'Mid-market rate', arrives: 'Family receives', fee: 'Fee', hiddenCost: 'Hidden cost (spread)', appliedRate: 'Applied rate', best: '★ Best deal', tagWise: 'Mid-market rate', tagRemitly: 'Low fee', tagBank: 'High spread', btnWise: 'Send with Wise', btnRemitly: 'Send with Remitly', legal: 'Rates are indicative and may change. Fees are verified weekly. Kursi.al is not responsible for differences between displayed and actual rates.' },
-  it: { sendLabel: 'Importo che invio', rateReal: 'Tasso di mercato', arrives: 'La famiglia riceve', fee: 'Commissione', hiddenCost: 'Costo nascosto (spread)', appliedRate: 'Tasso applicato', best: '★ Migliore', tagWise: 'Tasso di mercato', tagRemitly: 'Commissione bassa', tagBank: 'Spread elevato', btnWise: 'Invia con Wise', btnRemitly: 'Invia con Remitly', legal: 'Le tariffe sono indicative e possono variare. Le commissioni vengono verificate ogni settimana. Kursi.al non è responsabile per le differenze tra le tariffe mostrate e quelle reali.' },
-  el: { sendLabel: 'Ποσό που στέλνω', rateReal: 'Ισοτιμία αγοράς', arrives: 'Η οικογένεια λαμβάνει', fee: 'Προμήθεια', hiddenCost: 'Κρυφό κόστος (spread)', appliedRate: 'Εφαρμοσμένη ισοτιμία', best: '★ Καλύτερο', tagWise: 'Ισοτιμία αγοράς', tagRemitly: 'Χαμηλή προμήθεια', tagBank: 'Υψηλό spread', btnWise: 'Αποστολή με Wise', btnRemitly: 'Αποστολή με Remitly', legal: 'Οι τιμές είναι ενδεικτικές και ενδέχεται να αλλάξουν. Οι προμήθειες επαληθεύονται εβδομαδιαία. Το kursi.al δεν φέρει ευθύνη για τυχόν διαφορές μεταξύ των εμφανιζόμενων και των πραγματικών τιμών.' },
+  sq: { sendLabel: 'Shuma që dërgon', rateReal: 'Kursi real', arrives: 'Familja merr', fee: 'Komisioni', hiddenCost: 'Kosto e fshehur (spread)', appliedRate: 'Kursi i aplikuar', best: '★ Më e mira', tagWise: 'Kursi real', tagRemitly: 'Komision i ulët', tagWU: 'Rrjet i gjerë', tagWR: 'Dërgim i shpejtë', btnWise: 'Dërgo me Wise', btnRemitly: 'Dërgo me Remitly', btnWU: 'Dërgo me Western Union', btnWR: 'Dërgo me WorldRemit', legal: 'Tarifat janë orientuese dhe mund të ndryshojnë. Kurset dhe komisionet verifikohen çdo javë. Kursi.al nuk mban përgjegjësi për diferencat ndërmjet tarifave të paraqitura dhe atyre reale.' },
+  en: { sendLabel: 'Amount I send', rateReal: 'Mid-market rate', arrives: 'Family receives', fee: 'Fee', hiddenCost: 'Hidden cost (spread)', appliedRate: 'Applied rate', best: '★ Best deal', tagWise: 'Mid-market rate', tagRemitly: 'Low fee', tagWU: 'Wide network', tagWR: 'Fast transfer', btnWise: 'Send with Wise', btnRemitly: 'Send with Remitly', btnWU: 'Send with Western Union', btnWR: 'Send with WorldRemit', legal: 'Rates are indicative and may change. Fees are verified weekly. Kursi.al is not responsible for differences between displayed and actual rates.' },
+  it: { sendLabel: 'Importo che invio', rateReal: 'Tasso di mercato', arrives: 'La famiglia riceve', fee: 'Commissione', hiddenCost: 'Costo nascosto (spread)', appliedRate: 'Tasso applicato', best: '★ Migliore', tagWise: 'Tasso di mercato', tagRemitly: 'Commissione bassa', tagWU: 'Rete ampia', tagWR: 'Trasferimento rapido', btnWise: 'Invia con Wise', btnRemitly: 'Invia con Remitly', btnWU: 'Invia con Western Union', btnWR: 'Invia con WorldRemit', legal: 'Le tariffe sono indicative e possono variare. Le commissioni vengono verificate ogni settimana. Kursi.al non è responsabile per le differenze tra le tariffe mostrate e quelle reali.' },
+  el: { sendLabel: 'Ποσό που στέλνω', rateReal: 'Ισοτιμία αγοράς', arrives: 'Η οικογένεια λαμβάνει', fee: 'Προμήθεια', hiddenCost: 'Κρυφό κόστος (spread)', appliedRate: 'Εφαρμοσμένη ισοτιμία', best: '★ Καλύτερο', tagWise: 'Ισοτιμία αγοράς', tagRemitly: 'Χαμηλή προμήθεια', tagWU: 'Ευρύ δίκτυο', tagWR: 'Γρήγορη μεταφορά', btnWise: 'Αποστολή με Wise', btnRemitly: 'Αποστολή με Remitly', btnWU: 'Αποστολή με Western Union', btnWR: 'Αποστολή με WorldRemit', legal: 'Οι τιμές είναι ενδεικτικές και ενδέχεται να αλλάξουν. Οι προμήθειες επαληθεύονται εβδομαδιαία. Το kursi.al δεν φέρει ευθύνη για τυχόν διαφορές μεταξύ των εμφανιζόμενων και των πραγματικών τιμών.' },
 };
 
 const PROVIDERS = [
-  { id: 'wise',    nameKey: 'Wise',    tagCls: 'tag-green', fees: { EUR: { pct: 0.0095, fixed: 0 }, GBP: { pct: 0.0085, fixed: 0 }, USD: { pct: 0.012, fixed: 0 } }, rateSpread: 0,     affiliateUrl: 'https://wise.com',      btnKey: 'btnWise',    tagKey: 'tagWise'    },
-  { id: 'remitly', nameKey: 'Remitly', tagCls: 'tag-blue',  fees: { EUR: { pct: 0, fixed: 3.99 }, GBP: { pct: 0, fixed: 2.99 }, USD: { pct: 0, fixed: 3.99 } }, rateSpread: 0.003, affiliateUrl: 'https://www.remitly.com', btnKey: 'btnRemitly', tagKey: 'tagRemitly' },
-  { id: 'bank',    nameKey: 'Banka',   tagCls: 'tag-muted', fees: { EUR: { pct: 0, fixed: 0 }, GBP: { pct: 0, fixed: 0 }, USD: { pct: 0, fixed: 0 } },         rateSpread: 0.035, affiliateUrl: null,                    btnKey: null,         tagKey: 'tagBank'    },
+  { id: 'wise',    nameKey: 'Wise',          logo: '/wise01.webp',          tagCls: 'tag-green', fees: { EUR: { pct: 0.0095, fixed: 0 }, GBP: { pct: 0.0085, fixed: 0 }, USD: { pct: 0.012, fixed: 0 } },  rateSpread: 0,     affiliateUrl: 'https://wise.com',              btnKey: 'btnWise',    tagKey: 'tagWise'    },
+  { id: 'remitly', nameKey: 'Remitly',        logo: '/remitly01.webp',       tagCls: 'tag-blue',  fees: { EUR: { pct: 0, fixed: 3.99 }, GBP: { pct: 0, fixed: 2.99 }, USD: { pct: 0, fixed: 3.99 } },      rateSpread: 0.003, affiliateUrl: 'https://www.remitly.com',        btnKey: 'btnRemitly', tagKey: 'tagRemitly' },
+  { id: 'wu',      nameKey: 'Western Union',  logo: '/westerunion01.webp',   tagCls: 'tag-muted', fees: { EUR: { pct: 0, fixed: 4.90 }, GBP: { pct: 0, fixed: 3.90 }, USD: { pct: 0, fixed: 4.90 } },      rateSpread: 0.02,  affiliateUrl: 'https://www.westernunion.com',  btnKey: 'btnWU',      tagKey: 'tagWU'      },
+  { id: 'wr',      nameKey: 'WorldRemit',     logo: '/worldremit01.webp',    tagCls: 'tag-blue',  fees: { EUR: { pct: 0, fixed: 2.99 }, GBP: { pct: 0, fixed: 1.99 }, USD: { pct: 0, fixed: 2.99 } },      rateSpread: 0.005, affiliateUrl: 'https://www.worldremit.com',    btnKey: 'btnWR',      tagKey: 'tagWR'      },
 ];
 
 function fmt(val, currency) {
@@ -87,7 +95,7 @@ function calcArrives(provider, numAmount, currency, midRate) {
 
 export default function Remittance({ lang = 'sq' }) {
   const u = UI[lang] ?? UI.sq;
-  const [amount, setAmount]     = useState('200');
+  const [amount, setAmount]     = useState('200');   // raw digits only
   const [currency, setCurrency] = useState('EUR');
   const [midRates, setMidRates] = useState({});
 
@@ -106,7 +114,7 @@ export default function Remittance({ lang = 'sq' }) {
       .catch(() => {});
   }, []);
 
-  const numAmount = parseFloat(amount.replace(',', '.')) || 0;
+  const numAmount = parseInt(amount, 10) || 0;
   const midRate   = midRates[currency] ?? 0;
   const results   = PROVIDERS.map(p => ({ ...p, ...calcArrives(p, numAmount, currency, midRate) }));
   const bestVal   = Math.max(...results.map(r => r.arrives));
@@ -137,11 +145,14 @@ export default function Remittance({ lang = 'sq' }) {
           <div className="cv-row">
             <input
               type="text"
-              inputMode="decimal"
-              value={amount}
+              inputMode="numeric"
+              value={fmtInput(amount)}
               onChange={e => {
-                const v = e.target.value;
-                if (/^[\d.,]*$/.test(v) && v.replace(/[^\d]/g, '').length <= 10) setAmount(v);
+                const digits = e.target.value.replace(/\D/g, '');
+                if (!digits) { setAmount(''); return; }
+                const n = parseInt(digits, 10);
+                if (n > MAX_AMOUNT) return;
+                setAmount(digits);
               }}
               className="cv-input"
               style={{ fontSize: autoSize(amount) }}
@@ -156,8 +167,8 @@ export default function Remittance({ lang = 'sq' }) {
           <div className="quick-amounts" style={{ marginTop: 'var(--space-3)' }}>
             {QUICK_AMOUNTS.map(q => (
               <button key={q} onClick={() => setAmount(String(q))}
-                className={`quick-btn${amount === String(q) ? ' quick-btn--active' : ''}`}
-                aria-pressed={amount === String(q)}>{q}</button>
+                className={`quick-btn${parseInt(amount, 10) === q ? ' quick-btn--active' : ''}`}
+                aria-pressed={parseInt(amount, 10) === q}>{q}</button>
             ))}
           </div>
         </div>
@@ -178,15 +189,21 @@ export default function Remittance({ lang = 'sq' }) {
           return (
             <div key={provider.id} className={`remit-row${isWinner ? ' remit-row--best' : ''}`} role="listitem">
               <div className="remit-row-header">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
-                  <span className="remit-provider-name">{provider.nameKey}</span>
-                  <span className={`remit-tag ${provider.tagCls}`}>{u[provider.tagKey]}</span>
-                  {isWinner && <span className="remit-tag tag-best">{u.best}</span>}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                  <img
+                    src={provider.logo}
+                    alt={provider.nameKey}
+                    className="remit-provider-logo"
+                    loading="lazy"
+                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                    <span className={`remit-tag ${provider.tagCls}`}>{u[provider.tagKey]}</span>
+                    {isWinner && <span className="remit-tag tag-best">{u.best}</span>}
+                  </div>
                 </div>
                 {provider.affiliateUrl && (
                   <button className={`btn-affiliate btn-affiliate--${provider.id}`}
                     onClick={() => openAffiliate(provider.id, provider.affiliateUrl)}>
-                    {u[provider.btnKey]}
                     <i className="ti ti-external-link" style={{ fontSize: '14px' }} aria-hidden="true" />
                   </button>
                 )}
@@ -202,10 +219,10 @@ export default function Remittance({ lang = 'sq' }) {
                     <span style={{ color: 'var(--ink-muted)' }}>−{fmt(provider.feeAmount, currency)} {currency}</span>
                   </div>
                 )}
-                {provider.id === 'bank' && (
+                {provider.rateSpread > 0.01 && provider.feeAmount === 0 && (
                   <div className="remit-detail-row">
                     <span>{u.hiddenCost}</span>
-                    <span style={{ color: 'var(--ink-muted)' }}>~3.5%</span>
+                    <span style={{ color: 'var(--ink-muted)' }}>~{(provider.rateSpread * 100).toFixed(1)}%</span>
                   </div>
                 )}
                 <div className="remit-detail-row remit-detail-row--total">
