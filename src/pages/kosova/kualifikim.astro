@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import MortgageEligibility from '../../components/MortgageEligibility';
+import kosovoData from '../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const eligibility = kosovoData.eligibility as any;
+---
+<Base
+  title="Sa mund të marr me hipotekë? Kualifikimi Kosovë 2025 | leku.al"
+  description="Zbulo nëse kualifikohesh për hipotekë në Kosovë. Llogarit hipotekën maksimale sipas pagës — për rezidentë, diasporë dhe të huaj. Raiffeisen, ProCredit, NLB."
+  keywords="kualifikim hipoteke kosove, sa mund te marr hipoteke kosove, hipoteka diaspora kosovare, hipoteka te huaj kosove, paradhenie hipoteka EUR"
+  lang={lang}
+  currentPath="/kosova/kualifikim"
+>
+  <nav class="breadcrumb">
+    <a href="/kosova" class="breadcrumb-link"><span class="fi fi-xk"></span> Kosova</a>
+    <i class="ti ti-chevron-right breadcrumb-sep"></i>
+    <span class="breadcrumb-current">Kualifikimi</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">Sa mund të marr me hipotekë?</h1>
+    <p class="page-subtitle">Llogarit hipotekën maksimale sipas pagës — rezidentë, diasporë nga Gjermania e Zvicra, dhe të huaj</p>
+    <p class="page-intro">Kosova përdor Euron, gjë që e bën procesin hipotekar relativisht më të thjeshtë — sidomos për diasporën kosovare në Gjermani, Zvicër, Austri dhe Luksemburg. Plotëso 3 hapa dhe shiko mundësitë konkrete.</p>
+  </div>
+
+  <MortgageEligibility
+    client:load
+    country="xk"
+    currency="EUR"
+    eligibilityData={eligibility}
+    lang={lang}
+  />
+
+  <section class="faq-section" style="margin-top: var(--space-8)">
+    <h2 class="faq-title">Pyetje të shpeshta mbi hipotekën në Kosovë</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">A mund të marr hipotekë si kosovar që jeton në Gjermani ose Zvicër?</dt>
+        <dd class="faq-answer">Po! Raiffeisen Kosovo ka program specifik për diasporën kosovare. Pranon të ardhura nga Gjermania, Zvicra, Austria dhe Luksemburgu. Nevojitet kontratë e pacaktuar dhe të paktën 12 muaj punësim.</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">Pse normat e hipotekës në Kosovë janë më të ulëta se në Shqipëri?</dt>
+        <dd class="faq-answer">Sepse Kosova përdor Euron. Meqë nuk ka rrezik të kursit të këmbimit valutor, bankat mund të ofrojnë norma më të ulëta (4.5–5.5% kundrejt 5.5–6.5% në Shqipëri).</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">Sa duhet paradhënia (PIE) për hipotekë në Kosovë?</dt>
+        <dd class="faq-answer">Minimumi zakonisht është 20% e çmimit të pronës. Disa banka kërkojnë 25% për diasporën. Pra: shtëpi €80,000 = €16,000–€20,000 paradhënie.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/kosova/hipoteka" class="tool-nav-link"><i class="ti ti-home"></i> Kalkulatore hipoteke →</a>
+    <a href="/kosova/bankat" class="tool-nav-link"><i class="ti ti-building-bank"></i> Krahasim bankash →</a>
+  </div>
+</Base>

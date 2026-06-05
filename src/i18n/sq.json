@@ -10,8 +10,8 @@
   "nav.toggleTheme":    "Ndrysho temën",
   "nav.selectLanguage": "Zgjidhni gjuhën",
 
-  "index.meta.title":       "Kursi i Këmbimit Sot — Euro, Dollar, Paund në Lekë | leku.al",
-  "index.meta.description": "Konverto euro, dollar, paund dhe franga zvicerane në lekë shqiptare menjëherë. Kursi zyrtar i ditës nga Banka Qendrore Europiane — falas, pa regjistrim.",
+  "index.meta.title":       "Kursi i Këmbimit Sot — EUR, USD, GBP në Lekë | Falas | leku.al",
+  "index.meta.description": "Konverto euro, dollar dhe paund në lekë menjëherë. Kursi zyrtar i Bankës Qendrore Europiane. EUR/ALL sot ↔ Historiku 30 ditë ↔ Wise vs Remitly. Falas.",
   "index.meta.keywords":    "kursi dollar sot, kursi euro sot, këmbim valutor, konvertuesi valutor, kursi lekut, kursi i eurove, kursi i dollarit, lekë shqiptare, ALL EUR, ALL USD, ALL GBP, konvertues monedhe shqipëri",
   "index.intro":            "Konverto lekë shqiptare (ALL) në euro, dollar, paund dhe franga zvicerane menjëherë dhe falas. Kursi i ditës nga Banka Qendrore Europiane.",
   "index.remit.title":      "Sa merr familja jote?",
@@ -34,8 +34,8 @@
   "index.faq.q4":           "Nga vijnë kurset e këmbimit valutor?",
   "index.faq.a4":           "Kurset vijnë direkt nga Banka Qendrore Europiane (BCE) dhe përditësohen automatikisht çdo mëngjes — të njëjtat të dhëna që përdorin bankat europiane.",
 
-  "tabela.meta.title":       "Tabela e Kurseve Sot — EUR USD GBP CHF kundrejt Lekës | leku.al",
-  "tabela.meta.description": "Tabela e plotë e kursit të këmbimit valutor sot: EUR/ALL, USD/ALL, GBP/ALL, CHF/ALL me variacionin 24-orësh. Burimi: Banka Qendrore Europiane.",
+  "tabela.meta.title":       "Tabela Kurseve Sot — EUR USD GBP CHF vs Lek | +24h Ndryshim | leku.al",
+  "tabela.meta.description": "Kursi sot: EUR/ALL, USD/ALL, GBP/ALL, CHF/ALL me variacionin 24-orësh. Norma blerjeje dhe shitjeje + burimi zyrtar BCE. Përditësohet çdo ditë pune.",
   "tabela.meta.keywords":    "tabela kurseve, kursi euro sot, kursi dollar sot, kursi paund sot, EUR ALL, USD ALL, GBP ALL, CHF ALL, kursi i këmbimit sot shqipëri",
   "tabela.heading":          "Tabela e Kurseve",
   "tabela.subtitle":         "Kurset e këmbimit valutor të ditës — nga Banka Qendrore Europiane",
@@ -48,8 +48,8 @@
   "tabela.faq.q3":           "A është i ndryshëm kursi i bankave shqiptare?",
   "tabela.faq.a3":           "Bankat shqiptare aplikojnë zakonisht një spread (diferencë) mbi kursin e BCE. Kursi jonë është kursi i referencës ndërkombëtare — kursi real pa komisione.",
 
-  "historiku.meta.title":       "Historiku i Kursit të Këmbimit — EUR USD GBP 30 Ditë | leku.al",
-  "historiku.meta.description": "Grafiku dhe tabela e kursit të këmbimit EUR/ALL, USD/ALL dhe GBP/ALL për 30 ditët e fundit. Shiko minimumin, maksimumin dhe trendin e lekut.",
+  "historiku.meta.title":       "Historiku Kursit Valutor 30 Ditë — EUR USD GBP ALL | Grafik | leku.al",
+  "historiku.meta.description": "Grafiku i kursit EUR/ALL, USD/ALL, GBP/ALL, CHF/ALL për 30 ditët e fundit. Shiko min, max, trendin dhe variacionin. Të dhëna ditore nga BCE. Falas.",
   "historiku.meta.keywords":    "historiku kursit valutor, grafiku kursit, kurs euro 30 ditë, kurs dollar historik, EUR ALL historiku, USD ALL historiku, trend kursi lekut shqipëri",
   "historiku.heading":          "Historiku i Kursit",
   "historiku.subtitle":         "Kurset e 30 ditëve të fundit me grafik dhe tabelë ditore",
@@ -62,8 +62,8 @@
   "historiku.faq.q3":           "Pse ndryshon kursi i këmbimit çdo ditë?",
   "historiku.faq.a3":           "Kursi ndryshon bazuar në tregtinë ndërkombëtare, politikën monetare dhe ekonominë globale. Ndjekja e historikut ndihmon të kuptoni trendet dhe të zgjidhni momentin e duhur.",
 
-  "remitanca.meta.title":       "Kalkulatore Remitancash — Wise vs Remitly vs Bankë | leku.al",
-  "remitanca.meta.description": "Sa lekë merr familja jote kur dërgon para nga Italia, UK ose Greqia? Krahaso Wise, Remitly dhe bankën — shiko komisionet reale para se të dërgosh.",
+  "remitanca.meta.title":       "Wise vs Remitly vs Bankë — Sa Lekë Merr Familja? | leku.al",
+  "remitanca.meta.description": "Dërgon para nga Italia, UK ose Greqia? Krahaso Wise (0.95%), Remitly dhe bankën (spread 3-5%). Shiko saktësisht sa ALL merr familja jote. Falas.",
   "remitanca.meta.keywords":    "kalkulatore remitancash, dërgim parash shqipëri, wise shqipëri, remitly shqipëri, transferim ndërkombëtar, komisione wise remitly, dërgoj para familjes shqipëri",
   "remitanca.heading":          "Kalkulatore Remitancash",
   "remitanca.subtitle":         "Sa merr familja jote? Krahaso Wise, Remitly dhe bankën",

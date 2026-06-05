@@ -1,0 +1,54 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MortgageEligibility from '../../../components/MortgageEligibility';
+import albaniaData from '../../../data/albania.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const eligibility = albaniaData.eligibility as any;
+---
+<Base
+  title="Albania Mortgage Eligibility Calculator 2025 — How Much Can I Borrow? | leku.al"
+  description="Find out if you qualify for a mortgage in Albania. Calculate max loan by salary — for residents, diaspora and foreign nationals. Raiffeisen, BKT, OTP."
+  keywords="Albania mortgage eligibility, how much mortgage Albania, diaspora mortgage Albania, foreigner mortgage Albania, Albania home loan"
+  lang={lang}
+  currentPath="/albania/kualifikim"
+>
+  <nav class="breadcrumb">
+    <a href="/en/albania/" class="breadcrumb-link"><span class="fi fi-al"></span> Albania</a>
+    <i class="ti ti-chevron-right breadcrumb-sep"></i>
+    <span class="breadcrumb-current">Eligibility</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">How much mortgage can I get in Albania?</h1>
+    <p class="page-subtitle">Calculate your maximum loan based on salary — for residents, diaspora and foreign nationals</p>
+    <p class="page-intro">Albania's banking system now accepts applications from diaspora Albanians earning abroad and, in some cases, foreign nationals with residency. Complete 3 quick steps to see your real options at each bank.</p>
+  </div>
+
+  <MortgageEligibility
+    client:load
+    country="al"
+    currency="ALL"
+    eligibilityData={eligibility}
+    lang={lang}
+  />
+
+  <section class="faq-section" style="margin-top: var(--space-8)">
+    <h2 class="faq-title">Frequently asked questions</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">Can I get a mortgage in Albania as a non-resident Albanian?</dt>
+        <dd class="faq-answer">Yes! Raiffeisen Bank and BKT accept income from Italy, Greece, UK and Germany with verified documentation. You typically need an indefinite contract and at least 12 months at the same employer. Down payment is usually 25% (vs 20% for residents).</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">Can foreigners get a mortgage in Albania?</dt>
+        <dd class="faq-answer">Raiffeisen Albania is the main bank offering mortgages to foreign nationals with a valid residency permit. Rates and conditions are stricter, typically requiring 30% down payment and indefinite employment.</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">How much down payment is needed for a mortgage in Albania?</dt>
+        <dd class="faq-answer">The minimum is typically 20% of the property price. Some banks require 25–30% for diaspora or foreign applicants. Example: a 10,000,000 L property requires at least 2,000,000 L down payment.</dd>
+      </div>
+    </dl>
+  </section>
+</Base>

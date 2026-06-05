@@ -10,8 +10,8 @@
   "nav.toggleTheme":    "Toggle theme",
   "nav.selectLanguage": "Select language",
 
-  "index.meta.title":       "Albanian Lek Exchange Rate Today — EUR USD GBP | leku.al",
-  "index.meta.description": "Convert Albanian lek (ALL) to euros, dollars and pounds instantly. Official daily rate from the European Central Bank — free, no registration required.",
+  "index.meta.title":       "Albanian Lek Exchange Rate Today — EUR USD GBP Live | leku.al",
+  "index.meta.description": "Convert Albanian lek (ALL) ↔ euros, dollars, pounds instantly. Official ECB rate. 30-day history chart · Wise vs Remitly comparison · Free, no registration.",
   "index.meta.keywords":    "Albanian lek exchange rate, ALL to EUR, EUR to ALL, Albanian currency converter, Albania exchange rate today, Albanian lek to dollar, Albania currency, lek to pound, ALL USD, ALL GBP",
   "index.intro":            "Convert Albanian lek (ALL) to euros, dollars, pounds and Swiss francs instantly and for free. Daily rates sourced directly from the European Central Bank.",
   "index.remit.title":      "How much does your family receive?",
@@ -62,8 +62,8 @@
   "historiku.faq.q3":           "Why does the exchange rate change every day?",
   "historiku.faq.a3":           "Exchange rates change based on international trade, monetary policy and global economic conditions. Tracking history helps you find the best moment to send money.",
 
-  "remitanca.meta.title":       "Albania Remittance Calculator — Wise vs Remitly vs Bank | leku.al",
-  "remitanca.meta.description": "How many lek does your family get when you send money from Italy, the UK or Greece? Compare Wise, Remitly and your bank — see real fees before you send.",
+  "remitanca.meta.title":       "Wise vs Remitly vs Bank — How Many Lek Does Your Family Get? | leku.al",
+  "remitanca.meta.description": "Sending from Italy, UK or Greece? Compare Wise (0.95% fee), Remitly and bank (3-5% spread). See exactly how many ALL your family receives. Free.",
   "remitanca.meta.keywords":    "Albania remittance calculator, send money Albania, Wise Albania, Remitly Albania, international money transfer Albania, Albania remittance fees, money transfer to Albania",
   "remitanca.heading":          "Remittance calculator",
   "remitanca.subtitle":         "How much does your family receive? Compare Wise, Remitly and your bank",

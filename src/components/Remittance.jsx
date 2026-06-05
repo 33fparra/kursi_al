@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createClient }        from '@supabase/supabase-js';
 
 // Cliente Supabase con anon key (solo para INSERT en affiliate_clicks)
@@ -7,6 +7,56 @@ const sbAnon = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = (sbUrl && sbAnon) ? createClient(sbUrl, sbAnon) : null;
 
 const SEND_CURRENCIES = ['EUR', 'GBP', 'USD'];
+const SEND_META = { EUR: { flag: 'eu', name: 'Euro' }, GBP: { flag: 'gb', name: 'Paund' }, USD: { flag: 'us', name: 'Dollar' } };
+
+// Same auto-size as Converter
+function autoSize(val) {
+  const d = String(val).replace(/[^\d]/g, '').length;
+  if (d <= 4) return '3.2rem';
+  if (d <= 6) return '2.8rem';
+  if (d <= 8) return '2.2rem';
+  return '1.75rem';
+}
+
+// Currency picker — reuse same pattern as Converter
+function RemitPicker({ value, onChange }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const h = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', h);
+    return () => document.removeEventListener('mousedown', h);
+  }, []);
+  const meta = SEND_META[value] ?? SEND_META.EUR;
+  return (
+    <div ref={ref} className="cv-picker" style={{ flexShrink: 0 }}>
+      <button type="button" className={`cv-picker-btn${open ? ' cv-picker-btn--open' : ''}`}
+        onClick={() => setOpen(v => !v)} aria-haspopup="listbox">
+        <span className={`fi fi-${meta.flag} cv-flag`} aria-hidden="true" />
+        <span className="cv-code">{value}</span>
+        <i className={`ti ti-chevron-down cv-chevron${open ? ' cv-chevron--open' : ''}`} aria-hidden="true" />
+      </button>
+      {open && (
+        <ul className="cv-picker-menu" role="listbox">
+          {SEND_CURRENCIES.map(c => {
+            const m = SEND_META[c];
+            return (
+              <li key={c} role="option" aria-selected={c === value}>
+                <button type="button"
+                  className={`cv-picker-option${c === value ? ' cv-picker-option--active' : ''}`}
+                  onClick={() => { onChange(c); setOpen(false); }}>
+                  <span className={`fi fi-${m.flag} cv-flag`} aria-hidden="true" />
+                  <span className="cv-code">{c}</span>
+                  <span className="cv-name">{m.name}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
 const QUICK_AMOUNTS   = [100, 200, 500, 1000];
 const CDN = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json';
 
@@ -76,21 +126,33 @@ export default function Remittance({ lang = 'sq' }) {
   return (
     <div>
       <div className="converter-card" style={{ marginBottom: 'var(--space-4)' }}>
-        <div className="currency-block" style={{ marginBottom: 0 }}>
-          <p className="currency-label">
-            <i className="ti ti-building-bank" aria-hidden="true" />
+        <div className="currency-block cv-block" style={{ marginBottom: 0 }}>
+          {/* Label row */}
+          <p className="cv-block-label">
+            <i className="ti ti-send" aria-hidden="true" />
             {u.sendLabel}
           </p>
-          <input type="text" inputMode="decimal" value={amount}
-            onChange={e => { const v = e.target.value; if (/^[\d.,]*$/.test(v)) setAmount(v); }}
-            className="amount-input" placeholder="200" autoComplete="off" aria-label={u.sendLabel} />
-          <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
-            {SEND_CURRENCIES.map(c => (
-              <button key={c} onClick={() => setCurrency(c)}
-                className={`currency-pill${currency === c ? ' currency-pill--active' : ''}`}
-                aria-pressed={currency === c}>{c}</button>
-            ))}
+
+          {/* Amount + currency picker — same row, same layout as Converter */}
+          <div className="cv-row">
+            <input
+              type="text"
+              inputMode="decimal"
+              value={amount}
+              onChange={e => {
+                const v = e.target.value;
+                if (/^[\d.,]*$/.test(v) && v.replace(/[^\d]/g, '').length <= 10) setAmount(v);
+              }}
+              className="cv-input"
+              style={{ fontSize: autoSize(amount) }}
+              placeholder="200"
+              autoComplete="off"
+              aria-label={u.sendLabel}
+            />
+            <RemitPicker value={currency} onChange={setCurrency} />
           </div>
+
+          {/* Quick amounts */}
           <div className="quick-amounts" style={{ marginTop: 'var(--space-3)' }}>
             {QUICK_AMOUNTS.map(q => (
               <button key={q} onClick={() => setAmount(String(q))}

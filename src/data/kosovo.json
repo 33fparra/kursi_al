@@ -76,6 +76,115 @@
     { "id": "mesues",      "sq": "Mësues",           "en": "Teacher",       "avgSalary": 600  }
   ],
 
+  "eligibility": {
+    "country": "xk",
+    "currency": "EUR",
+    "maxDTI": 0.35,
+    "defaultTerm": 20,
+    "globalMinDown": 0.20,
+    "banks": [
+      {
+        "name": "Raiffeisen Bank Kosovo",
+        "shortName": "Raiffeisen",
+        "mortgageRatePct": 4.5,
+        "url": "https://www.raiffeisen-kosovo.com",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": true
+          },
+          "diaspora": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.25, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR", "CHF"],
+            "note": "Program specifik për diasporën kosovare. Pranon të ardhura nga Gjermania, Zvicra, Austria dhe Luksemburgu. Kërkon llogari aktive."
+          },
+          "foreigner": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "requiresResidency": true,
+            "note": "Kërkon leje qëndrimi të vlefshme në Kosovë. Meqë Kosova përdor Euron, procedura është relativisht e thjeshtë."
+          }
+        }
+      },
+      {
+        "name": "ProCredit Bank Kosovo",
+        "shortName": "ProCredit",
+        "mortgageRatePct": 5.0,
+        "url": "https://www.procreditbank-kos.com",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": true
+          },
+          "diaspora": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR"],
+            "note": "Rast pas rasti. Kërkon dëshmi të ardhurash. Fokus tek bizneset e vogla."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "ProCredit Kosovo nuk ofron hipotekë për jo-rezidentët."
+          }
+        }
+      },
+      {
+        "name": "NLB Banka",
+        "shortName": "NLB",
+        "mortgageRatePct": 4.75,
+        "url": "https://www.nlb.com",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": false
+          },
+          "diaspora": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.25, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR"],
+            "note": "NLB ka lidhje me diasporën ballkanike. Kontaktoni degën për kushtet specifike."
+          },
+          "foreigner": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "requiresResidency": true,
+            "note": "Meqë monedha është Euro, procedura për të huajt është pak më e thjeshtë."
+          }
+        }
+      },
+      {
+        "name": "TEB Bank",
+        "shortName": "TEB",
+        "mortgageRatePct": 5.25,
+        "url": "https://www.teb-kos.com",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.33, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": false
+          },
+          "diaspora": {
+            "eligible": "no",
+            "note": "TEB nuk ka produkte specifike për diasporën."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "Vetëm për rezidentët e Kosovës."
+          }
+        }
+      }
+    ]
+  },
+
   "quickFacts": {
     "population": "1.8 milionë",
     "gdpPerCapita": "€4,800",

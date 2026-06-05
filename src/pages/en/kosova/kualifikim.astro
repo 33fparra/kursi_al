@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MortgageEligibility from '../../../components/MortgageEligibility';
+import kosovoData from '../../../data/kosovo.json';
+
+export const prerender = true;
+const lang = 'en' as const;
+const eligibility = kosovoData.eligibility as any;
+---
+<Base
+  title="Kosovo Mortgage Eligibility Calculator 2025 — How Much Can I Borrow? | leku.al"
+  description="Find out if you qualify for a mortgage in Kosovo. Calculate max loan in EUR by salary — for residents, diaspora and foreign nationals. Raiffeisen Kosovo, NLB, ProCredit."
+  keywords="Kosovo mortgage eligibility, how much mortgage Kosovo, diaspora mortgage Kosovo, Kosovo home loan EUR, foreigner mortgage Kosovo"
+  lang={lang}
+  currentPath="/kosova/kualifikim"
+>
+  <nav class="breadcrumb">
+    <a href="/en/kosova/" class="breadcrumb-link"><span class="fi fi-xk"></span> Kosovo</a>
+    <i class="ti ti-chevron-right breadcrumb-sep"></i>
+    <span class="breadcrumb-current">Eligibility</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">How much mortgage can I get in Kosovo?</h1>
+    <p class="page-subtitle">Calculate your maximum loan in EUR — for residents, diaspora and foreign nationals</p>
+    <p class="page-intro">Kosovo uses the Euro, making it easier for diaspora Kosovars in Germany, Switzerland, Austria and Luxembourg to qualify for a mortgage back home. Complete 3 quick steps to see your real options.</p>
+  </div>
+
+  <MortgageEligibility
+    client:load
+    country="xk"
+    currency="EUR"
+    eligibilityData={eligibility}
+    lang={lang}
+  />
+</Base>

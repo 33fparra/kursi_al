@@ -1,0 +1,36 @@
+{
+  "name": "leku.al — Kursi & Financa",
+  "short_name": "leku.al",
+  "description": "Konvertuesi i monedhave dhe mjetet financiare për Shqipërinë dhe Kosovën",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "lang": "sq",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" },
+    { "src": "/logo.svg",    "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "categories": ["finance", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Konvertuesi",
+      "short_name": "Konverto",
+      "description": "Kursi i këmbimit valutor",
+      "url": "/kursi",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Hipoteka Shqipëri",
+      "short_name": "Hipoteka",
+      "url": "/albania/hipoteka",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Kualifikimi",
+      "short_name": "Kualifikim",
+      "url": "/albania/kualifikim",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    }
+  ]
+}

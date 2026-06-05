@@ -64,10 +64,14 @@ export default function RateChart({ lang = 'sq' }) {
   const [data, setData]       = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError]     = useState(false);
+  const [mounted, setMounted] = useState(false);
   const canvasRef             = useRef(null);
   const chartRef              = useRef(null);
 
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
+    if (!mounted) return;
     setLoading(true); setError(false); setData(null);
 
     // Fetch 35 días en paralelo desde el browser (sin límite de subrequests)
@@ -105,7 +109,7 @@ export default function RateChart({ lang = 'sq' }) {
       })
       .catch(() => setError(true))
       .finally(() => setLoading(false));
-  }, [pair.from, pair.to]);
+  }, [pair.from, pair.to, mounted]);
 
   useEffect(() => {
     if (!data || !canvasRef.current) return;
@@ -140,6 +144,13 @@ export default function RateChart({ lang = 'sq' }) {
   useEffect(() => () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } }, []);
 
   const { stats, series } = data ?? {};
+
+  if (!mounted) return (
+    <div className="skeleton-card" aria-hidden="true" style={{ minHeight: '260px' }}>
+      <div className="skeleton-line" style={{ width: '60%', marginBottom: '16px' }} />
+      <div className="skeleton-line skeleton-line--lg" style={{ height: '180px' }} />
+    </div>
+  );
 
   return (
     <div>

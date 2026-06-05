@@ -85,6 +85,133 @@
     { "id": "infermier",   "sq": "Infermier",        "en": "Nurse",         "avgSalary": 55000  }
   ],
 
+  "eligibility": {
+    "country": "al",
+    "currency": "ALL",
+    "maxDTI": 0.35,
+    "defaultTerm": 20,
+    "globalMinDown": 0.20,
+    "banks": [
+      {
+        "name": "Raiffeisen Bank",
+        "shortName": "Raiffeisen",
+        "mortgageRatePct": 5.5,
+        "url": "https://www.raiffeisen.al",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": true
+          },
+          "diaspora": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.25, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR", "GBP", "USD"],
+            "note": "Kërkon llogari aktive bankare. Pranon të ardhura nga Italia, Greqia, UK dhe Gjermania me dëshmi të verifikuara."
+          },
+          "foreigner": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "requiresResidency": true,
+            "note": "Kërkon leje qëndrimi të vlefshme. Norma mund të jetë 0.5–1% më e lartë."
+          }
+        }
+      },
+      {
+        "name": "BKT",
+        "shortName": "BKT",
+        "mortgageRatePct": 5.75,
+        "url": "https://www.bkt.com.al",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": true
+          },
+          "diaspora": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR"],
+            "note": "Produkt i kufizuar për diasporën. Kërkon dëshmi të ardhurash të verifikuara nga konsulli."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "BKT nuk ofron hipotekë për shtetasit e huaj jo-rezidentë."
+          }
+        }
+      },
+      {
+        "name": "OTP Bank Albania",
+        "shortName": "OTP Bank",
+        "mortgageRatePct": 5.9,
+        "url": "https://www.otpbank.al",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": true, "acceptsSelf": false
+          },
+          "diaspora": {
+            "eligible": "conditional",
+            "maxDTI": 0.30, "minDownPct": 0.30, "minMonthsEmployed": 12,
+            "acceptsFixed": false, "acceptsSelf": false,
+            "foreignCurrencies": ["EUR"],
+            "note": "Rast pas rasti. Kërkon kontakt me degën."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "Nuk ofrohet për shtetasit e huaj."
+          }
+        }
+      },
+      {
+        "name": "Tirana Bank",
+        "shortName": "Tirana Bank",
+        "mortgageRatePct": 6.0,
+        "url": "https://www.tiranabank.al",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.33, "minDownPct": 0.20, "minMonthsEmployed": 6,
+            "acceptsFixed": false, "acceptsSelf": false
+          },
+          "diaspora": {
+            "eligible": "no",
+            "note": "Tirana Bank nuk ka produkte hipotekare për diasporën aktualisht."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "Nuk ofrohet për jo-rezidentët."
+          }
+        }
+      },
+      {
+        "name": "Credins Bank",
+        "shortName": "Credins",
+        "mortgageRatePct": 6.25,
+        "url": "https://www.credinsbank.al",
+        "profiles": {
+          "rezident": {
+            "eligible": "yes",
+            "maxDTI": 0.35, "minDownPct": 0.20, "minMonthsEmployed": 3,
+            "acceptsFixed": true, "acceptsSelf": true
+          },
+          "diaspora": {
+            "eligible": "no",
+            "note": "Credins nuk ofron hipotekë për të ardhura jashtë vendit."
+          },
+          "foreigner": {
+            "eligible": "no",
+            "note": "Vetëm për rezidentët e Shqipërisë."
+          }
+        }
+      }
+    ]
+  },
+
   "quickFacts": {
     "population": "2.8 milionë",
     "gdpPerCapita": "€5,300",

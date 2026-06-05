@@ -14,6 +14,53 @@ const faqJsonLd = JSON.stringify({
   mainEntity: [
     { '@type': 'Question', name: t(lang, 'mortgage.faq.q1'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'mortgage.faq.a1') } },
     { '@type': 'Question', name: t(lang, 'mortgage.faq.q2'), acceptedAnswer: { '@type': 'Answer', text: t(lang, 'mortgage.faq.a2') } },
+    { '@type': 'Question', name: 'Cila bankë jep normën më të ulët hipotekare në Shqipëri?', acceptedAnswer: { '@type': 'Answer', text: 'Raiffeisen Bank Albania ofron normën më konkurruese me 5.50% vjetore, ndjekur nga BKT me 5.75% dhe OTP Bank me 5.90%. Normat mund të ndryshojnë sipas profileve dhe negocimit.' } },
+    { '@type': 'Question', name: 'Sa vjet mund të zgjasë hipoteka në Shqipëri?', acceptedAnswer: { '@type': 'Answer', text: 'Hipotekat në Shqipëri zakonisht ofrohen me afat nga 5 deri në 30 vjet. Afati 20–25 vjeçar është ekuilibri optimal — këste të menaxhueshme dhe interes total i arsyeshëm.' } },
+  ],
+});
+
+const loanJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'LoanOrCredit',
+  '@id': 'https://leku.al/albania/hipoteka#loan',
+  name: 'Hipoteka Shqipëri — Krahasim Bankash',
+  loanType: 'Mortgage',
+  currency: 'ALL',
+  amount: {
+    '@type': 'MonetaryAmount',
+    minValue: 1000000,
+    maxValue: 50000000,
+    currency: 'ALL',
+  },
+  loanTerm: {
+    '@type': 'QuantitativeValue',
+    minValue: 5,
+    maxValue: 30,
+    unitCode: 'ANN',
+  },
+  annualPercentageRate: {
+    '@type': 'QuantitativeValue',
+    minValue: 5.5,
+    maxValue: 6.5,
+    unitCode: 'P1',
+  },
+  provider: { '@type': 'Organization', name: 'Bankat Shqiptare', url: 'https://leku.al/albania/bankat' },
+  feesAndCommissionsSpecification: 'Norma vjetore e interesit 5.5%–6.5%. Komision administrimi sipas bankës. Sigurim prone i detyrueshëm.',
+  description: 'Krahasim i normave të hipotekës për bankat kryesore shqiptare: Raiffeisen, BKT, OTP Bank, Tirana Bank, Credins dhe ProCredit.',
+});
+
+const howToJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Si të llogaritni këstët mujore të hipotekës në Shqipëri',
+  description: 'Llogaritni këstët mujore, interesin total dhe koston totale të hipotekës sipas bankës dhe afatit.',
+  totalTime: 'PT2M',
+  tool: [{ '@type': 'HowToTool', name: 'Kalkulatore hipoteke leku.al' }],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Vendosni shumën e huasë', text: 'Shkruani shumën e hipotekës në lekë ose euro në fushën e parë.' },
+    { '@type': 'HowToStep', position: 2, name: 'Zgjidhni bankën', text: 'Klikoni mbi bankën e preferuar — norma do të plotësohet automatikisht.' },
+    { '@type': 'HowToStep', position: 3, name: 'Zgjidhni afatin', text: 'Zgjidhni afatin e dëshiruar (5, 10, 15, 20, 25 ose 30 vjet).' },
+    { '@type': 'HowToStep', position: 4, name: 'Shikoni rezultatin', text: 'Kalkulatori llogarit menjëherë këstët mujore, totalin e paguar dhe interesin total.' },
   ],
 });
 ---
@@ -25,7 +72,9 @@ const faqJsonLd = JSON.stringify({
   currentPath="/albania/hipoteka"
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={faqJsonLd} />
+    <script is:inline type="application/ld+json" set:html={faqJsonLd} />
+    <script is:inline type="application/ld+json" set:html={loanJsonLd} />
+    <script is:inline type="application/ld+json" set:html={howToJsonLd} />
   </Fragment>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">

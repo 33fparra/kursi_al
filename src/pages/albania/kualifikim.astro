@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import MortgageEligibility from '../../components/MortgageEligibility';
+import albaniaData from '../../data/albania.json';
+import { t } from '../../lib/i18n';
+
+export const prerender = true;
+const lang = 'sq' as const;
+const eligibility = albaniaData.eligibility as any;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Sa mund të marr me hipotekë në Shqipëri?', acceptedAnswer: { '@type': 'Answer', text: 'Shuma maksimale e hipotekës varet nga paga neto juaj. Bankat shqiptare lejojnë zakonisht deri 35% të pagës neto si këst mujor. Bazuar në pagën mesatare (62,000 L/muaj neto ≈ 51,000 L), mund të kualifikoheni për deri 6–8 milion L hipotekë me afat 20 vjet.' } },
+    { '@type': 'Question', name: 'A mund të marr hipotekë si shqiptar që jeton jashtë?', acceptedAnswer: { '@type': 'Answer', text: 'Po! Raiffeisen Bank dhe BKT kanë produkte specifike për diasporën shqiptare. Pranojnë të ardhura nga Italia, Greqia, UK dhe Gjermania me dëshmi të verifikuara. Nevojitet zakonisht kontratë e pacaktuar dhe të paktën 12 muaj punësim në të njëjtin vend.' } },
+    { '@type': 'Question', name: 'Sa duhet të jetë paradhënia (PIE) për hipotekë?', acceptedAnswer: { '@type': 'Answer', text: 'Në Shqipëri, paradhënia minimale është zakonisht 20% e çmimit të pronës. Disa banka kërkojnë 25–30% për diasporën ose të huajt. Kjo do të thotë se për një pronë 10 milion L, nevojitet të paktën 2 milion L paradhënie.' } },
+    { '@type': 'Question', name: 'Cilat banka ofrojnë hipotekë për të huajt?', acceptedAnswer: { '@type': 'Answer', text: 'Raiffeisen Bank Albania është banka kryesore që ofron hipotekë për shtetasit e huaj me leje qëndrimi. Kërkon norma dhe kushte të ndryshme nga ato për rezidentët. BKT dhe bankat e tjera zakonisht nuk ofrojnë hipotekë për jo-rezidentët.' } },
+  ],
+});
+---
+<Base
+  title="Sa mund të marr me hipotekë? Kualifikimi Shqipëri 2025 | leku.al"
+  description="Zbulo nëse kualifikohesh për hipotekë në Shqipëri. Llogarit hipotekën maksimale sipas pagës — për rezidentë, diasporë dhe të huaj. Raiffeisen, BKT, OTP."
+  keywords="kualifikim hipoteke shqiperi, sa mund te marr hipoteke, hipoteka diaspora shqiptare, hipoteka te huaj shqiperi, paradhenie hipoteka"
+  lang={lang}
+  currentPath="/albania/kualifikim"
+>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={faqJsonLd} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Si të zbuloni nëse kualifikoheni për hipotekë në Shqipëri',
+      description: 'Hapat për të llogaritur nëse jeni i/e kualifikuar/e për hipotekë si rezident, anëtar i diasporës ose shtetas i huaj.',
+      totalTime: 'PT3M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'EUR', value: '0' },
+      tool: [{ '@type': 'HowToTool', name: 'Kalkulatore kualifikimi leku.al — Falas' }],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Zgjidhni profilin tuaj', text: 'Zgjidhni midis: Banor lokal, Diasporë (shtetas shqiptar jashtë vendit), ose Shtetas i huaj.' },
+        { '@type': 'HowToStep', position: 2, name: 'Vendosni financat tuaja', text: 'Shkruani pagën bruto mujore, detyrimet ekzistuese dhe paradhënien e disponueshme.' },
+        { '@type': 'HowToStep', position: 3, name: 'Zgjidhni llojin e punësimit', text: 'Zgjidhni kontratën (e pacaktuar, me afat ose vetëpunësim) dhe muajt e punësimit.' },
+        { '@type': 'HowToStep', position: 4, name: 'Shikoni rezultatin sipas çdo banke', text: 'Kalkulatori tregon hipotekën maksimale, këstët mujore dhe mundësinë e kualifikimit tek çdo bankë.' },
+      ],
+    })} />
+  </Fragment>
+
+  <nav class="breadcrumb">
+    <a href="/albania" class="breadcrumb-link"><span class="fi fi-al"></span> Shqipëria</a>
+    <i class="ti ti-chevron-right breadcrumb-sep"></i>
+    <span class="breadcrumb-current">Kualifikimi</span>
+  </nav>
+
+  <div class="section-header">
+    <h1 class="page-title">Sa mund të marr me hipotekë?</h1>
+    <p class="page-subtitle">Llogarit hipotekën maksimale sipas pagës dhe situatës suaj — rezidentë, diasporë dhe të huaj</p>
+    <p class="page-intro">Sistemi bankar shqiptar lejoi gjithnjë e më shumë lloje klientësh, përfshirë diasporën dhe të huajt. Plotëso 3 hapa të thjeshtë dhe shiko mundësitë konkrete sipas çdo banke.</p>
+  </div>
+
+  <MortgageEligibility
+    client:load
+    country="al"
+    currency="ALL"
+    eligibilityData={eligibility}
+    lang={lang}
+  />
+
+  <section class="faq-section" style="margin-top: var(--space-8)">
+    <h2 class="faq-title">Pyetje të shpeshta mbi kualifikimin</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt class="faq-question">Sa mund të marr me hipotekë në Shqipëri?</dt>
+        <dd class="faq-answer">Shuma maksimale varet nga paga neto. Bankat lejojnë zakonisht deri 35% të pagës neto si këst mujor. Bazuar në pagën mesatare shqiptare (~62,000 L/muaj), mund të kualifikoheni për 6–8 milion L me afat 20 vjet.</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">A mund të marr hipotekë si shqiptar që jeton jashtë?</dt>
+        <dd class="faq-answer">Po! Raiffeisen Bank dhe BKT pranojnë të ardhura nga Italia, Greqia, UK dhe Gjermania. Nevojitet kontratë e pacaktuar dhe të paktën 12 muaj punësim. Paradhënia zakonisht është 25% (jo 20% si për rezidentët).</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">Sa duhet të jetë paradhënia (PIE)?</dt>
+        <dd class="faq-answer">Minimumi është 20% e çmimit të pronës. Disa banka kërkojnë 25–30% për diasporën. Pra: pronë 10 milion L = 2–3 milion L paradhënie.</dd>
+      </div>
+      <div class="faq-item">
+        <dt class="faq-question">Cilat banka ofrojnë hipotekë për të huajt?</dt>
+        <dd class="faq-answer">Raiffeisen Albania është opsioni kryesor për shtetasit e huaj me leje qëndrimi. Kërkohen norma dhe kushte shtesë. BKT dhe bankat e tjera nuk ofrojnë zakonisht hipotekë për jo-rezidentët.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="country-tool-nav">
+    <a href="/albania/hipoteka" class="tool-nav-link"><i class="ti ti-home"></i> Kalkulatore hipoteke →</a>
+    <a href="/albania/bankat" class="tool-nav-link"><i class="ti ti-building-bank"></i> Krahasim bankash →</a>
+  </div>
+</Base>
