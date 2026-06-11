@@ -35,6 +35,7 @@ const HOME_LINKS = {
     { path: '/kosova',  label: 'Kosova',       flag: 'xk' },
     { path: '/kursi',  label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
     { path: '/blog',    label: 'Blog',         icon: 'ti-notebook' },
+    { path: '/ditari',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
   ],
   en: [
     { path: '/',           label: 'Home',      icon: 'ti-home-2' },
@@ -42,6 +43,7 @@ const HOME_LINKS = {
     { path: '/en/kosova',  label: 'Kosovo',    flag: 'xk' },
     { path: '/en/kursi',  label: 'Converter', icon: 'ti-arrows-up-down' },
     { path: '/en/blog',    label: 'Blog',      icon: 'ti-notebook' },
+    { path: '/en/ditari',  label: "Lek's Diary", icon: 'ti-notebook-2' },
   ],
   it: [
     { path: '/',              label: 'Home',         icon: 'ti-home-2' },
@@ -142,7 +144,7 @@ function ThemeIcon() {
   );
 }
 
-export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/' }) {
+export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', allowedLangs: allowedLangsProp = null }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const headerRef = useRef(null);
 
@@ -162,8 +164,8 @@ export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/' }) 
     ? (COUNTRY_TOOLS[activeCountry]?.[ctxLang] ?? [])
     : [];
 
-  // Language filter: country section → only sq + en
-  const allowedLangs = section === 'country' ? ['sq', 'en'] : null;
+  // Language filter: explicit prop wins, otherwise country section → only sq + en
+  const allowedLangs = allowedLangsProp ?? (section === 'country' ? ['sq', 'en'] : null);
 
   // Sync subnav height to CSS so app-shell margin adjusts
   useEffect(() => {

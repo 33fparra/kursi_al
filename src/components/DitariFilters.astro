@@ -1,0 +1,16 @@
+---
+import { t } from '../lib/i18n';
+
+export interface Props {
+  lang?: 'sq' | 'en';
+  active: 'all' | 'edukim' | 'lajme';
+}
+
+const { lang = 'sq', active } = Astro.props;
+const base = lang === 'en' ? '/en/ditari' : '/ditari';
+---
+<nav class="ditari-filters" aria-label="Filter">
+  <a href={base} class={`ditari-filter${active === 'all' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.allArticles')}</a>
+  <a href={`${base}/edukim`} class={`ditari-filter${active === 'edukim' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.typeEdukim')}</a>
+  <a href={`${base}/lajme`} class={`ditari-filter${active === 'lajme' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.typeLajme')}</a>
+</nav>

@@ -201,5 +201,27 @@
   "hub.tools.salary":        "Pagat & tatimi",
   "hub.tools.salary.desc":   "Paga bruto → neto",
   "hub.converter.link":      "Konvertuesi i monedhës →",
-  "hub.remit.link":          "Kalkulatore remitancash →"
+  "hub.remit.link":          "Kalkulatore remitancash →",
+
+  "ditari.navLabel":         "Ditari i Lekut",
+  "ditari.heading":          "Ditari i Lekut",
+  "ditari.subtitle":         "Artikuj edukativë dhe lajme ekonomike, shpjeguar thjeshtë",
+  "ditari.typeEdukim":       "Edukim",
+  "ditari.typeLajme":        "Lajme",
+  "ditari.allArticles":      "Të gjitha",
+  "ditari.readMore":         "Lexo më shumë",
+  "ditari.minRead":          "min lexim",
+  "ditari.publishedOn":      "Publikuar më",
+  "ditari.backToList":       "Kthehu te Ditari",
+  "ditari.prevPage":         "Faqja e mëparshme",
+  "ditari.nextPage":         "Faqja tjetër",
+  "ditari.page":             "Faqja",
+  "ditari.empty":            "Nuk ka artikuj ende.",
+  "ditari.meta.title":       "Ditari i Lekut — Edukim Financiar dhe Lajme Ekonomike | leku.al",
+  "ditari.meta.description": "Artikuj të thjeshtë mbi financat, kursin e këmbimit, remitancat dhe lajme ekonomike për Shqipërinë dhe Kosovën.",
+  "ditari.meta.keywords":    "edukim financiar, lajme ekonomike shqiperi, kursi valutor, remitanca",
+  "ditari.edukim.meta.title":       "Edukim Financiar — Ditari i Lekut | leku.al",
+  "ditari.edukim.meta.description": "Mëso si funksionon kursi i këmbimit, remitancat, hipotekat dhe financat personale — shpjeguar thjeshtë.",
+  "ditari.lajme.meta.title":        "Lajme Ekonomike — Ditari i Lekut | leku.al",
+  "ditari.lajme.meta.description":  "Lajmet më të fundit ekonomike që prekin Shqipërinë, Kosovën dhe diasporën."
 }

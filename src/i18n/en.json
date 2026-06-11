@@ -201,5 +201,27 @@
   "hub.tools.salary":        "Salaries & tax",
   "hub.tools.salary.desc":   "Gross → net salary",
   "hub.converter.link":      "Currency converter →",
-  "hub.remit.link":          "Remittance calculator →"
+  "hub.remit.link":          "Remittance calculator →",
+
+  "ditari.navLabel":         "Lek's Diary",
+  "ditari.heading":          "Lek's Diary",
+  "ditari.subtitle":         "Educational articles and economic news, explained simply",
+  "ditari.typeEdukim":       "Learn",
+  "ditari.typeLajme":        "News",
+  "ditari.allArticles":      "All",
+  "ditari.readMore":         "Read more",
+  "ditari.minRead":          "min read",
+  "ditari.publishedOn":      "Published on",
+  "ditari.backToList":       "Back to the Diary",
+  "ditari.prevPage":         "Previous page",
+  "ditari.nextPage":         "Next page",
+  "ditari.page":             "Page",
+  "ditari.empty":            "No articles yet.",
+  "ditari.meta.title":       "Lek's Diary — Financial Education and Economic News | leku.al",
+  "ditari.meta.description": "Simple articles about finance, exchange rates, remittances and economic news for Albania and Kosovo.",
+  "ditari.meta.keywords":    "financial education, albania economic news, exchange rate, remittances",
+  "ditari.edukim.meta.title":       "Financial Education — Lek's Diary | leku.al",
+  "ditari.edukim.meta.description": "Learn how exchange rates, remittances, mortgages and personal finance work — explained simply.",
+  "ditari.lajme.meta.title":        "Economic News — Lek's Diary | leku.al",
+  "ditari.lajme.meta.description":  "The latest economic news affecting Albania, Kosovo and the diaspora."
 }
