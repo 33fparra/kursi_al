@@ -144,7 +144,7 @@ function ThemeIcon() {
   );
 }
 
-export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', allowedLangs: allowedLangsProp = null }) {
+export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', allowedLangs: allowedLangsProp = null, langLinks = null }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const headerRef = useRef(null);
 
@@ -254,6 +254,7 @@ export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', al
               pathname={pathname}
               ariaLabel={t(lang, 'nav.selectLanguage')}
               allowedLangs={allowedLangs}
+              langLinks={langLinks}
             />
             <button
               className="topbar-icon-btn"

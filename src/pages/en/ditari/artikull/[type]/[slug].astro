@@ -20,8 +20,12 @@ const { Content } = await render(entry);
 
 const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 const sqEntries = await getCollection('ditari', e => e.data.lang === 'sq' && e.data.type === type);
-const hasTranslation = sqEntries.some(e => e.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '') === slug);
-const allowedLangs: ('sq' | 'en' | 'it' | 'el')[] | null = hasTranslation ? null : ['en'];
+const sqMatch = sqEntries.find(e => e.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '') === slug);
+const allowedLangs: ('sq' | 'en' | 'it' | 'el')[] | null = ['sq', 'en'];
+const langLinks = {
+  en: `/en/ditari/artikull/${type}/${slug}`,
+  sq: sqMatch ? `/ditari/artikull/${type}/${sqMatch.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '')}` : '/ditari',
+};
 
 const dateLabel = date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 const typeLabel = type === 'edukim' ? t(lang, 'ditari.typeEdukim') : t(lang, 'ditari.typeLajme');
@@ -47,6 +51,7 @@ const articleJsonLd = JSON.stringify({
   lang={lang}
   currentPath="/en/ditari"
   allowedLangs={allowedLangs}
+  langLinks={langLinks}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={articleJsonLd} />

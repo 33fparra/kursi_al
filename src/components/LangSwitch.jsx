@@ -7,7 +7,7 @@ const LANGS = [
   // { code: 'el', flag: 'gr', name: 'Ελληνικά' },
 ];
 
-export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLabel = 'Select language', allowedLangs = null }) {
+export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLabel = 'Select language', allowedLangs = null, langLinks = null }) {
   const [open, setOpen]       = useState(false);
   const wrapRef               = useRef(null);
   const triggerRef            = useRef(null);
@@ -41,6 +41,10 @@ export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLab
 
   function switchLang(targetLang) {
     if (targetLang === currentLang) { setOpen(false); return; }
+    if (langLinks && langLinks[targetLang]) {
+      window.location.href = langLinks[targetLang];
+      return;
+    }
     let base = pathname;
     if (currentLang !== 'sq') {
       base = pathname.replace(new RegExp(`^/${currentLang}`), '') || '/';

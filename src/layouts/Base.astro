@@ -11,6 +11,7 @@ export interface Props {
   ogType?: string;
   dateModified?: string;
   allowedLangs?: ('sq' | 'en' | 'it' | 'el')[] | null;
+  langLinks?: Partial<Record<'sq' | 'en' | 'it' | 'el', string>> | null;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   ogType = 'website',
   dateModified = new Date().toISOString().split('T')[0],
   allowedLangs = null,
+  langLinks = null,
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -269,7 +271,7 @@ const jsonLd = JSON.stringify({
       })();
     </script>
 
-    <Nav client:load lang={lang} currentPath={currentPath} pathname={pathname} allowedLangs={allowedLangs as any} />
+    <Nav client:load lang={lang} currentPath={currentPath} pathname={pathname} allowedLangs={allowedLangs as any} langLinks={langLinks as any} />
 
     <div class="app-shell">
       <main class="app-main">
