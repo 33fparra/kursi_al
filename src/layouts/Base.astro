@@ -1335,6 +1335,134 @@ const jsonLd = JSON.stringify({
 
   .ditari-empty { font-size: var(--text-small); color: var(--ink-muted); padding: var(--space-8) 0; text-align: center; }
 
+  /* ── Ditari search bar ── */
+  .ditari-search-wrap {
+    position: relative;
+    margin-bottom: var(--space-5);
+  }
+  .ditari-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--ink-muted);
+    pointer-events: none;
+  }
+  .ditari-search-input {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 12px 16px 12px 42px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: var(--text-body);
+    color: var(--ink);
+    outline: none;
+    min-height: 48px;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+    -webkit-appearance: none;
+  }
+  .ditari-search-input::placeholder { color: var(--ink-muted); }
+  .ditari-search-input:focus {
+    border-color: var(--red-albania);
+    background: var(--bg-card);
+  }
+  /* Hide browser's native clear button on search inputs */
+  .ditari-search-input::-webkit-search-cancel-button { display: none; }
+
+  /* ── Ditari two-column layout ── */
+  .ditari-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .ditari-layout {
+      grid-template-columns: 1fr 240px;
+    }
+  }
+
+  /* ── Ditari sidebar ── */
+  .ditari-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  /* On mobile sidebar goes below main content — already correct with grid order */
+
+  .ditari-sidebar-widget {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+  }
+
+  .ditari-sidebar-title {
+    font-size: var(--text-small);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .ditari-sidebar-title .ti {
+    font-size: 15px;
+    color: var(--ink-muted);
+  }
+
+  .ditari-sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ditari-sidebar-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+  .ditari-sidebar-item:last-child { border-bottom: none; }
+
+  .ditari-sidebar-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--space-3) 0;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  .ditari-sidebar-link:hover .ditari-sidebar-link-title {
+    color: var(--red-albania);
+  }
+
+  .ditari-sidebar-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: fit-content;
+  }
+  .ditari-sidebar-badge--edukim { background: var(--blue-soft); color: var(--blue-info); }
+  .ditari-sidebar-badge--lajme  { background: var(--green-soft); color: var(--green-trend); }
+
+  .ditari-sidebar-link-title {
+    font-size: var(--text-small);
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.35;
+    transition: color var(--transition-fast);
+  }
+
+  .ditari-sidebar-link-date {
+    font-size: var(--text-xs);
+    color: var(--ink-muted);
+  }
+
   .ditari-article-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: var(--space-6); }
   .ditari-content { font-size: var(--text-body); line-height: 1.75; color: var(--ink-secondary); }
   .ditari-content h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: var(--text-h2); font-weight: 700; color: var(--ink); margin: var(--space-8) 0 var(--space-4); }

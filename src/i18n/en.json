@@ -223,5 +223,8 @@
   "ditari.edukim.meta.title":       "Financial Education — Lek's Diary | leku.al",
   "ditari.edukim.meta.description": "Learn how exchange rates, remittances, mortgages and personal finance work — explained simply.",
   "ditari.lajme.meta.title":        "Economic News — Lek's Diary | leku.al",
-  "ditari.lajme.meta.description":  "The latest economic news affecting Albania, Kosovo and the diaspora."
+  "ditari.lajme.meta.description":  "The latest economic news affecting Albania, Kosovo and the diaspora.",
+  "ditari.search.placeholder":      "Search articles...",
+  "ditari.search.noResults":        "No articles found for this search.",
+  "ditari.sidebar.recent":          "Recent articles"
 }

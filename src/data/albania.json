@@ -23,6 +23,9 @@
     }
   },
 
+  "_____EDIT_BANK_RATES_BELOW_____": "⬇️ EDITO KËTU — normat e bankave (çdo 2 javë)",
+  "_____LAST_UPDATE_DATE_____": "2025-06-01",
+
   "banks": [
     {
       "name": "Raiffeisen Bank",
@@ -73,6 +76,8 @@
       "url": "https://www.procreditbank.com.al"
     }
   ],
+
+  "_____END_OF_BANK_RATES_____": "⬆️ FIN I SEKSIONIT TË EDITUAR",
 
   "professions": [
     { "id": "it",          "sq": "Programues / IT", "en": "IT Developer",  "avgSalary": 150000 },

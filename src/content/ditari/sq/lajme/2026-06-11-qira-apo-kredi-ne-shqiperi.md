@@ -3,7 +3,10 @@ title: "Qira apo kredi në Shqipëri — pyetja që askush nuk po i përgjigjet 
 description: "Çmimet e pronave në Shqipëri u rritën fort në vitin 2025. Shumë njerëz po marrin vendimin më të madh të jetës së tyre me ndjesi dhe emocione, në vend që të bëjnë llogaritë me numra. Këtu janë shifrat reale."
 type: "lajme"
 category: "Pasuri të Paluajtshme"
-date: 2026-06-11
+author: "F.A Parretti"
+country: "Albania"
+translationKey: "rent-or-mortgage-albania"
+date: 2026-06-02
 image: "/ditari/images/qira-apo-kredi-shqiperi.webp"
 imageAlt: "Dy fqinjë në Tiranë duke menduar për dilemën mes qirasë dhe kredisë për shtëpi"
 readMinutes: 4

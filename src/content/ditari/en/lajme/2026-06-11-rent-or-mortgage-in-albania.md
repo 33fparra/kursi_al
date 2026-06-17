@@ -3,7 +3,10 @@ title: "Rent or Mortgage in Albania — The Question Nobody Is Answering Correct
 description: "Property prices in Albania skyrocketed in 2025. Many people are making the biggest financial decision of their lives based on gut feelings and emotions instead of running the numbers. Here are the real figures."
 type: "lajme"
 category: "Real Estate"
-date: 2026-06-11
+author: "F.A Parretti"
+country: "Albania"
+translationKey: "rent-or-mortgage-albania"
+date: 2026-06-04
 image: "/ditari/images/qira-apo-kredi-shqiperi.webp"
 imageAlt: "Two neighbors in Tirana debating the dilemma between renting and buying a home"
 readMinutes: 4

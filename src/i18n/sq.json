@@ -223,5 +223,8 @@
   "ditari.edukim.meta.title":       "Edukim Financiar — Ditari i Lekut | leku.al",
   "ditari.edukim.meta.description": "Mëso si funksionon kursi i këmbimit, remitancat, hipotekat dhe financat personale — shpjeguar thjeshtë.",
   "ditari.lajme.meta.title":        "Lajme Ekonomike — Ditari i Lekut | leku.al",
-  "ditari.lajme.meta.description":  "Lajmet më të fundit ekonomike që prekin Shqipërinë, Kosovën dhe diasporën."
+  "ditari.lajme.meta.description":  "Lajmet më të fundit ekonomike që prekin Shqipërinë, Kosovën dhe diasporën.",
+  "ditari.search.placeholder":      "Kërko artikuj...",
+  "ditari.search.noResults":        "Nuk u gjet asnjë artikull për këtë kërkim.",
+  "ditari.sidebar.recent":          "Artikujt e fundit"
 }

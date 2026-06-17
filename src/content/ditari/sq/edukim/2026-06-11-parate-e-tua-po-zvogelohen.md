@@ -3,7 +3,10 @@ title: "Paratë e tua po zvogëlohen. Dhe nuk është faji i askujt. Është inf
 description: "Çdo vit që mban kesh në shtëpi ose në një llogari pa interes, paratë e tua vlejnë më pak. Të shpjegojmë se çfarë është inflacioni, pse ndodh dhe çfarë mund të bësh që të mos humbësh pa e kuptuar fare."
 type: "edukim"
 category: "Edukimi Financiar"
-date: 2026-06-11
+author: "F.A Parretti"
+country: "Albania"
+translationKey: "inflation-savings"
+date: 2026-06-03
 image: "/ditari/images/inflacioni-kursimet.webp"
 imageAlt: "Një personazh duke parë me habi se si paratë e tij nën dyshek po zvogëlohen ndërsa çmimet rriten"
 readMinutes: 4

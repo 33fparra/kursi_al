@@ -1,0 +1,49 @@
+name: Validate Bank Rates
+
+on:
+  schedule:
+    - cron: '0 7 * * 4'   # todos los jueves a las 07:00 UTC (recordatorio semanal)
+  workflow_dispatch:        # también se puede lanzar manualmente
+
+# Este workflow NO actualiza las tasas automáticamente — las tasas de los bancos
+# albaneses no tienen API pública. Su función es validar que los JSON estén bien
+# formados y emitir una alerta si _LAST_UPDATE_DATE_ tiene más de 14 días.
+
+jobs:
+  validate-rates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON files
+        run: node scripts/validate-json.mjs
+
+      - name: Check data freshness
+        run: |
+          AL_DATE=$(node -e "const d=JSON.parse(require('fs').readFileSync('src/data/albania.json','utf8')); console.log(d['_____LAST_UPDATE_DATE_____'] ?? 'unknown')")
+          XK_DATE=$(node -e "const d=JSON.parse(require('fs').readFileSync('src/data/kosovo.json','utf8')); console.log(d['_____LAST_UPDATE_DATE_____'] ?? 'unknown')")
+          TODAY=$(date -u +%Y-%m-%d)
+
+          check_stale() {
+            local country=$1 last=$2
+            if [ "$last" = "unknown" ]; then
+              echo "⚠️  $country: fecha de actualización desconocida"
+              return
+            fi
+            local days=$(( ( $(date -d "$TODAY" +%s) - $(date -d "$last" +%s) ) / 86400 ))
+            if [ "$days" -gt 14 ]; then
+              echo "⚠️  $country: tasas desactualizadas — última actualización hace $days días ($last). ¡Actualizar manualmente!"
+            else
+              echo "✅ $country: tasas actualizadas hace $days días ($last)"
+            fi
+          }
+
+          check_stale "Albania" "$AL_DATE"
+          check_stale "Kosovo"  "$XK_DATE"

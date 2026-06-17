@@ -3,7 +3,10 @@ title: "Shqipëria hyri në SEPA më 7 tetor 2025. 99% e shqiptarëve ende nuk e
 description: "Që nga tetori i vitit 2025, dërgimi i eurove nga Europa në Shqipëri kushton njëlloj si një transfertë lokale. Kjo ndryshon çdo gjë për diasporën — dhe pothuajse askush nuk e di ende."
 type: "lajme"
 category: "Lajme Ekonomike"
-date: 2026-06-11
+author: "F.A Parretti"
+country: "Albania"
+translationKey: "albania-sepa"
+date: 2026-06-04
 image: "/ditari/images/shqiperia-sepa-remitanca.webp"
 imageAlt: "Një personazh i lumtur duke parë urën lidhëse mes bankave europiane dhe Shqipërisë përmes sistemit SEPA"
 readMinutes: 4

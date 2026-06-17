@@ -18,7 +18,7 @@ const typeLabel = type === 'edukim' ? t(lang, 'ditari.typeEdukim') : t(lang, 'di
 const locale = lang === 'en' ? 'en-GB' : 'sq-AL';
 const dateLabel = date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
 ---
-<a href={href} class="ditari-card">
+<a href={href} class="ditari-card" data-search-title={title.toLowerCase()} data-search-desc={description.toLowerCase()}>
   <div class="ditari-card-img-wrap">
     <img src={image} alt={imageAlt} class="ditari-card-img" loading="lazy" width="400" height="225" />
     <span class={`ditari-badge ditari-badge--${type}`}>{typeLabel}</span>

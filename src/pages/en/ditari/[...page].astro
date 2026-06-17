@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import DitariCard from '../../../components/DitariCard.astro';
 import DitariPagination from '../../../components/DitariPagination.astro';
 import DitariFilters from '../../../components/DitariFilters.astro';
+import DitariSidebar from '../../../components/DitariSidebar.astro';
 import { t } from '../../../lib/i18n';
 import { getCollection } from 'astro:content';
 import type { GetStaticPathsOptions } from 'astro';
@@ -17,6 +18,10 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 }
 
 const { page } = Astro.props;
+
+const allEn = (await getCollection('ditari', e => e.data.lang === 'en'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
 ---
 <Base
   title={t(lang, 'ditari.meta.title')}
@@ -30,15 +35,61 @@ const { page } = Astro.props;
     <p class="page-subtitle">{t(lang, 'ditari.subtitle')}</p>
   </div>
 
+  <!-- Search bar -->
+  <div class="ditari-search-wrap">
+    <i class="ti ti-search ditari-search-icon" aria-hidden="true"></i>
+    <input
+      type="search"
+      id="ditari-search"
+      placeholder={t(lang, 'ditari.search.placeholder')}
+      class="ditari-search-input"
+      autocomplete="off"
+      spellcheck="false"
+    />
+  </div>
+
   <DitariFilters lang={lang} active="all" />
 
-  {page.data.length > 0 ? (
-    <div class="ditari-grid">
-      {page.data.map(entry => <DitariCard entry={entry} lang={lang} />)}
+  <div class="ditari-layout">
+    <div class="ditari-main">
+      {page.data.length > 0 ? (
+        <div class="ditari-grid" id="ditari-grid">
+          {page.data.map(entry => <DitariCard entry={entry} lang={lang} />)}
+        </div>
+      ) : (
+        <p class="ditari-empty">{t(lang, 'ditari.empty')}</p>
+      )}
+      <p id="ditari-no-results" class="ditari-empty" hidden>
+        {t(lang, 'ditari.search.noResults')}
+      </p>
+      <DitariPagination page={page} lang={lang} />
     </div>
-  ) : (
-    <p class="ditari-empty">{t(lang, 'ditari.empty')}</p>
-  )}
 
-  <DitariPagination page={page} lang={lang} />
+    <DitariSidebar recent={allEn} lang={lang} />
+  </div>
 </Base>
+
+<script is:inline>
+  (function () {
+    var input    = document.getElementById('ditari-search');
+    var grid     = document.getElementById('ditari-grid');
+    var noResult = document.getElementById('ditari-no-results');
+    if (!input || !grid) return;
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var cards = grid.querySelectorAll('.ditari-card');
+      var visible = 0;
+
+      cards.forEach(function (card) {
+        var title = card.dataset.searchTitle || '';
+        var desc  = card.dataset.searchDesc  || '';
+        var match = !q || title.includes(q) || desc.includes(q);
+        card.hidden = !match;
+        if (match) visible++;
+      });
+
+      if (noResult) noResult.hidden = visible > 0 || !q;
+    });
+  })();
+</script>

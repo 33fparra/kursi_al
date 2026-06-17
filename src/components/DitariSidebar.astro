@@ -1,0 +1,44 @@
+---
+import { t } from '../lib/i18n';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  recent: CollectionEntry<'ditari'>[];
+  lang?: 'sq' | 'en';
+}
+
+const { recent, lang = 'sq' } = Astro.props;
+const base   = lang === 'en' ? '/en/ditari' : '/ditari';
+const locale = lang === 'en' ? 'en-GB' : 'sq-AL';
+
+function getHref(entry: CollectionEntry<'ditari'>) {
+  const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+  return `${base}/artikull/${entry.data.type}/${slug}`;
+}
+---
+
+<aside class="ditari-sidebar">
+  <div class="ditari-sidebar-widget">
+    <h2 class="ditari-sidebar-title">
+      <i class="ti ti-clock" aria-hidden="true"></i>
+      {t(lang, 'ditari.sidebar.recent')}
+    </h2>
+    <ul class="ditari-sidebar-list">
+      {recent.map(entry => (
+        <li class="ditari-sidebar-item">
+          <a href={getHref(entry)} class="ditari-sidebar-link">
+            <span class={`ditari-sidebar-badge ditari-sidebar-badge--${entry.data.type}`}>
+              {entry.data.type === 'edukim'
+                ? t(lang, 'ditari.typeEdukim')
+                : t(lang, 'ditari.typeLajme')}
+            </span>
+            <span class="ditari-sidebar-link-title">{entry.data.title}</span>
+            <span class="ditari-sidebar-link-date">
+              {entry.data.date.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' })}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</aside>

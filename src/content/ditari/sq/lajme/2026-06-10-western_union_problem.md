@@ -3,7 +3,10 @@ title: "Western Union të merr 400 € në vit. Dhe më e keqja është se ti ia
 description: "Nëse dërgon para nga Italia, Greqia apo Shtetet e Bashkuara në Shqipëri, ka shumë mundësi që po humb mes 8% dhe 12% në çdo dërgim. Ky krahasim të tregon saktësisht se sa po humb dhe si ta ndalosh këtë."
 type: "lajme"
 category: "Financa Personale"
-date: 2026-06-11
+author: "F.A Parretti"
+country: "Albania"
+translationKey: "western-union-problem"
+date: 2026-06-10
 image: "/ditari/images/western-union-remitanca.webp"
 imageAlt: "Një personazh dubitativ duke parë opsionet e transfertave si Western Union, Wise, dhe Payera"
 readMinutes: 4
