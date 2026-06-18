@@ -28,9 +28,7 @@ function getHref(entry: CollectionEntry<'ditari'>) {
         <li class="ditari-sidebar-item">
           <a href={getHref(entry)} class="ditari-sidebar-link">
             <span class={`ditari-sidebar-badge ditari-sidebar-badge--${entry.data.type}`}>
-              {entry.data.type === 'edukim'
-                ? t(lang, 'ditari.typeEdukim')
-                : t(lang, 'ditari.typeLajme')}
+              {t(lang, { edukim: 'ditari.typeEdukim', lajme: 'ditari.typeLajme', tech: 'ditari.typeTech', ai: 'ditari.typeAi', int: 'ditari.typeInt' }[entry.data.type] ?? 'ditari.typeLajme')}
             </span>
             <span class="ditari-sidebar-link-title">{entry.data.title}</span>
             <span class="ditari-sidebar-link-date">

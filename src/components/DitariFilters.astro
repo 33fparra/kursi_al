@@ -3,14 +3,25 @@ import { t } from '../lib/i18n';
 
 export interface Props {
   lang?: 'sq' | 'en';
-  active: 'all' | 'edukim' | 'lajme';
+  active: 'all' | 'edukim' | 'lajme' | 'tech' | 'ai' | 'int';
 }
 
 const { lang = 'sq', active } = Astro.props;
 const base = lang === 'en' ? '/en/ditari' : '/ditari';
+
+const filters = [
+  { key: 'all',    href: base,               label: t(lang, 'ditari.allArticles') },
+  { key: 'edukim', href: `${base}/edukim`,   label: t(lang, 'ditari.typeEdukim') },
+  { key: 'lajme',  href: `${base}/lajme`,    label: t(lang, 'ditari.typeLajme') },
+  { key: 'tech',   href: `${base}/tech`,     label: t(lang, 'ditari.typeTech') },
+  { key: 'ai',     href: `${base}/ai`,       label: t(lang, 'ditari.typeAi') },
+  { key: 'int',    href: `${base}/int`,      label: t(lang, 'ditari.typeInt') },
+] as const;
 ---
 <nav class="ditari-filters" aria-label="Filter">
-  <a href={base} class={`ditari-filter${active === 'all' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.allArticles')}</a>
-  <a href={`${base}/edukim`} class={`ditari-filter${active === 'edukim' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.typeEdukim')}</a>
-  <a href={`${base}/lajme`} class={`ditari-filter${active === 'lajme' ? ' ditari-filter--active' : ''}`}>{t(lang, 'ditari.typeLajme')}</a>
+  {filters.map(f => (
+    <a href={f.href} class={`ditari-filter ditari-filter--${f.key}${active === f.key ? ' ditari-filter--active' : ''}`}>
+      {f.label}
+    </a>
+  ))}
 </nav>

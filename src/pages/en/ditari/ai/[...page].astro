@@ -1,0 +1,44 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import DitariCard from '../../../../components/DitariCard.astro';
+import DitariPagination from '../../../../components/DitariPagination.astro';
+import DitariFilters from '../../../../components/DitariFilters.astro';
+import { t } from '../../../../lib/i18n';
+import { getCollection } from 'astro:content';
+import type { GetStaticPathsOptions } from 'astro';
+
+export const prerender = true;
+const lang = 'en' as const;
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = (await getCollection('ditari', e => e.data.lang === 'en' && e.data.type === 'ai'))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return paginate(entries, { pageSize: 24 });
+}
+
+const { page } = Astro.props;
+---
+<Base
+  title={t(lang, 'ditari.ai.meta.title')}
+  description={t(lang, 'ditari.ai.meta.description')}
+  keywords={t(lang, 'ditari.meta.keywords')}
+  lang={lang}
+  currentPath="/ditari"
+>
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'ditari.heading')}</h1>
+    <p class="page-subtitle">{t(lang, 'ditari.subtitle')}</p>
+  </div>
+
+  <DitariFilters lang={lang} active="ai" />
+
+  {page.data.length > 0 ? (
+    <div class="ditari-grid">
+      {page.data.map(entry => <DitariCard entry={entry} lang={lang} />)}
+    </div>
+  ) : (
+    <p class="ditari-empty">{t(lang, 'ditari.empty')}</p>
+  )}
+
+  <DitariPagination page={page} lang={lang} />
+</Base>

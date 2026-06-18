@@ -14,7 +14,14 @@ const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 const base = lang === 'en' ? '/en/ditari' : '/ditari';
 const href = `${base}/artikull/${type}/${slug}`;
 
-const typeLabel = type === 'edukim' ? t(lang, 'ditari.typeEdukim') : t(lang, 'ditari.typeLajme');
+const TYPE_KEYS: Record<string, string> = {
+  edukim: 'ditari.typeEdukim',
+  lajme:  'ditari.typeLajme',
+  tech:   'ditari.typeTech',
+  ai:     'ditari.typeAi',
+  int:    'ditari.typeInt',
+};
+const typeLabel = t(lang, TYPE_KEYS[type] ?? 'ditari.typeLajme');
 const locale = lang === 'en' ? 'en-GB' : 'sq-AL';
 const dateLabel = date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
 ---

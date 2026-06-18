@@ -6,7 +6,7 @@ const ditari = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    type: z.enum(['edukim', 'lajme']),
+    type: z.enum(['edukim', 'lajme', 'tech', 'ai', 'int']),
     category: z.string(),
     author: z.string().optional(),
     coAuthor: z.string().optional(),
