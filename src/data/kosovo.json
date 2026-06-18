@@ -11,11 +11,11 @@
     "currency": "EUR",
     "incomeTaxNote": { "sq": "Tatimi mbi të ardhurat (ATK)", "en": "Income tax (TAK)" },
     "brackets": [
-      { "from": 0,   "to": 80,  "rate": 0,    "label": "0%" },
-      { "from": 80,  "to": 250, "rate": 0.04, "label": "4%" },
-      { "from": 250, "to": 450, "rate": 0.08, "label": "8%" },
+      { "from": 0,   "to": 250, "rate": 0,    "label": "0%" },
+      { "from": 250, "to": 450, "rate": 0.04, "label": "4%" },
       { "from": 450, "to": null,"rate": 0.10, "label": "10%" }
     ],
+    "bracketsNote": { "sq": "Trashësia tatimore zbatohet mbi bazën (bruto − Trusti 5%)", "en": "Brackets apply on tax base (gross − 5% Trusti pension)" },
     "contributions": {
       "pensionEmployee": 0.05,
       "pensionEmployer": 0.05

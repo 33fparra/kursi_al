@@ -69,12 +69,18 @@ function calcSalaryAL(gross) {
 }
 
 function calcSalaryXK(gross) {
-  const pension = gross * 0.05;
+  const pension = gross * 0.05;         // Trusti: 5% e pagës bruto
+  const taxBase = gross - pension;      // TAP llogaritet mbi bruto minus Trusti
+
   let tax = 0;
-  if (gross <= 80) tax = 0;
-  else if (gross <= 250) tax = (gross - 80) * 0.04;
-  else if (gross <= 450) tax = (250 - 80) * 0.04 + (gross - 250) * 0.08;
-  else tax = (250 - 80) * 0.04 + (450 - 250) * 0.08 + (gross - 450) * 0.10;
+  if (taxBase <= 250) {
+    tax = 0;
+  } else if (taxBase <= 450) {
+    tax = (taxBase - 250) * 0.04;
+  } else {
+    tax = (450 - 250) * 0.04 + (taxBase - 450) * 0.10;
+  }
+
   const deductions = pension + tax;
   return { net: gross - deductions, incomeTax: tax, social: 0, health: 0, pension, deductions };
 }
