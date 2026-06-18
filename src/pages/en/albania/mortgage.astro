@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../../layouts/Base.astro';
 import MortgageCalc from '../../../components/MortgageCalc';
 import { t } from '../../../lib/i18n';
@@ -7,6 +7,7 @@ import albaniaData from '../../../data/albania.json';
 export const prerender = true;
 const lang = 'en' as const;
 const banks = albaniaData.banks as any[];
+const lastUpdatedAL = (albaniaData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 ---
 <Base
   title="Albania Mortgage Calculator — Monthly Payment & Total Cost | leku.al"
@@ -42,4 +43,9 @@ const banks = albaniaData.banks as any[];
       </div>
     </dl>
   </section>
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedAL}
+  </p>
 </Base>

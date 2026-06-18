@@ -52,13 +52,23 @@ export default function RateTable({ lang = 'sq' }) {
   const [error, setError]     = useState(false);
 
   useEffect(() => {
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yDate = yesterday.toISOString().split('T')[0];
-
-    Promise.all([fetchDay('latest'), fetchDay(yDate)])
-      .then(([today, prev]) => {
-        if (!today) { setError(true); return; }
+    async function load() {
+      try {
+        // Try cached rates.json first (written by GitHub Action trigger)
+        const rj = await fetch('/data/rates.json').then(r => r.ok ? r.json() : null).catch(() => null);
+        if (rj?.rates && rj?.date) {
+          setData({ date: rj.date, rates: rj.rates, changes: rj.changes ?? {}, updatedAt: rj.updatedAt ?? null });
+          setLoading(false);
+          return;
+        }
+      } catch {}
+      // Fall back to live fawazahmed0
+      try {
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yDate = yesterday.toISOString().split('T')[0];
+        const [today, prev] = await Promise.all([fetchDay('latest'), fetchDay(yDate)]);
+        if (!today) { setError(true); setLoading(false); return; }
         const rates   = buildRates(today.raw);
         const changes = {};
         if (prev) {
@@ -68,10 +78,11 @@ export default function RateTable({ lang = 'sq' }) {
             if (curr && p && p !== 0) changes[key] = ((curr - p) / p) * 100;
           }
         }
-        setData({ date: today.date, rates, changes });
-      })
-      .catch(() => setError(true))
-      .finally(() => setLoading(false));
+        setData({ date: today.date, rates, changes, updatedAt: new Date().toISOString() });
+      } catch { setError(true); }
+      setLoading(false);
+    }
+    load();
   }, []);
 
   if (loading) return (
@@ -88,14 +99,18 @@ export default function RateTable({ lang = 'sq' }) {
     </div>
   );
 
-  const { rates, changes, date } = data;
+  const { rates, changes, date, updatedAt } = data;
 
   return (
     <div>
       {date && (
         <p className="update-info" style={{ marginBottom: 'var(--space-4)' }}>
           <i className="ti ti-clock" aria-hidden="true" />
-          {' '}{u.updated}: {date} · kursi.al
+          {' '}{u.updated}: {date}
+          {updatedAt && (
+            <> · {new Date(updatedAt).toLocaleTimeString(lang === 'en' ? 'en-GB' : 'sq-AL', { hour: '2-digit', minute: '2-digit' })}</>
+          )}
+          {' '}· kursi.al
         </p>
       )}
       <table className="rates-table rates-table--full" aria-label={u.pair}>

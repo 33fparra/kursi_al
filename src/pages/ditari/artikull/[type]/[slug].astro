@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, description, type, category, date, image, imageAlt, readMinutes } = entry.data;
+const { title, description, type, category, date, image, imageAlt, readMinutes, author, coAuthor } = entry.data;
 const { Content } = await render(entry);
 
 const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
@@ -72,6 +72,20 @@ const articleJsonLd = JSON.stringify({
         <span class="blog-read">{readMinutes} {t(lang, 'ditari.minRead')}</span>
       </div>
       <h1 class="blog-post-title">{title}</h1>
+      {author && (
+        <div class="article-byline">
+          <span class="article-byline-author">
+            <i class="ti ti-user-circle" aria-hidden="true"></i>
+            {author}
+          </span>
+          {coAuthor && (
+            <span class="article-byline-coauthor">
+              <i class="ti ti-users" aria-hidden="true"></i>
+              {coAuthor}
+            </span>
+          )}
+        </div>
+      )}
       <p class="blog-post-desc">{description}</p>
     </header>
 
@@ -80,6 +94,18 @@ const articleJsonLd = JSON.stringify({
     <div class="ditari-content">
       <Content />
     </div>
+
+    {author && (
+      <div class="article-author-footer">
+        <div class="article-author-card">
+          <i class="ti ti-user-circle article-author-icon" aria-hidden="true"></i>
+          <div>
+            <p class="article-author-name">{author}</p>
+            {coAuthor && <p class="article-author-coname">{coAuthor}</p>}
+          </div>
+        </div>
+      </div>
+    )}
 
     <footer class="blog-post-footer">
       <a href="/ditari" class="tool-nav-link">

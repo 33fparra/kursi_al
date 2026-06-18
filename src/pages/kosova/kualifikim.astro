@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
 import MortgageEligibility from '../../components/MortgageEligibility';
 import kosovoData from '../../data/kosovo.json';
@@ -6,6 +6,7 @@ import kosovoData from '../../data/kosovo.json';
 export const prerender = true;
 const lang = 'sq' as const;
 const eligibility = kosovoData.eligibility as any;
+const lastUpdatedKS = (kosovoData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 ---
 <Base
   title="Sa mund të marr me hipotekë? Kualifikimi Kosovë 2025 | leku.al"
@@ -56,4 +57,9 @@ const eligibility = kosovoData.eligibility as any;
     <a href="/kosova/hipoteka" class="tool-nav-link"><i class="ti ti-home"></i> Kalkulatore hipoteke →</a>
     <a href="/kosova/bankat" class="tool-nav-link"><i class="ti ti-building-bank"></i> Krahasim bankash →</a>
   </div>
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedKS}
+  </p>
 </Base>

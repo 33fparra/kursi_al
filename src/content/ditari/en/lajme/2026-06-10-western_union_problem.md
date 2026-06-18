@@ -1,9 +1,10 @@
----
+﻿---
 title: "Western Union Charges You €400 a Year. And the Worst Part Is That You Let Them."
 description: "If you send money from Italy, Greece, or the United States to Albania, chances are you're losing between 8% and 12% on every transfer. This comparison shows you exactly how much you're losing and how to stop it."
 type: "lajme"
 category: "Personal Finance"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 translationKey: "western-union-problem"
 date: 2026-06-10

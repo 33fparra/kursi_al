@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/rates.json public/data/history.json
+          git add --force public/data/rates.json public/data/history.json
           git diff --cached --quiet || git commit -m "data: FX rates $(date -u +%Y-%m-%d)"
           git push

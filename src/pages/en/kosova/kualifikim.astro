@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../../layouts/Base.astro';
 import MortgageEligibility from '../../../components/MortgageEligibility';
 import kosovoData from '../../../data/kosovo.json';
@@ -6,6 +6,7 @@ import kosovoData from '../../../data/kosovo.json';
 export const prerender = true;
 const lang = 'en' as const;
 const eligibility = kosovoData.eligibility as any;
+const lastUpdatedKS = (kosovoData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 ---
 <Base
   title="Kosovo Mortgage Eligibility Calculator 2025 — How Much Can I Borrow? | leku.al"
@@ -33,4 +34,9 @@ const eligibility = kosovoData.eligibility as any;
     eligibilityData={eligibility}
     lang={lang}
   />
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedKS}
+  </p>
 </Base>

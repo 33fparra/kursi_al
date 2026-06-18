@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../../layouts/Base.astro';
 import MortgageCalc from '../../../components/MortgageCalc';
 import { t } from '../../../lib/i18n';
@@ -7,6 +7,7 @@ import kosovoData from '../../../data/kosovo.json';
 export const prerender = true;
 const lang = 'en' as const;
 const banks = kosovoData.banks as any[];
+const lastUpdatedKS = (kosovoData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 ---
 <Base
   title="Kosovo Mortgage Calculator — Monthly Payment in EUR | leku.al"
@@ -28,4 +29,9 @@ const banks = kosovoData.banks as any[];
   </div>
 
   <MortgageCalc client:load banks={banks} currency="EUR" lang={lang} />
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedKS}
+  </p>
 </Base>

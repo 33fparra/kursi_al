@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../../layouts/Base.astro';
 import MortgageEligibility from '../../../components/MortgageEligibility';
 import albaniaData from '../../../data/albania.json';
@@ -6,6 +6,7 @@ import albaniaData from '../../../data/albania.json';
 export const prerender = true;
 const lang = 'en' as const;
 const eligibility = albaniaData.eligibility as any;
+const lastUpdatedAL = (albaniaData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 ---
 <Base
   title="Albania Mortgage Eligibility Calculator 2025 — How Much Can I Borrow? | leku.al"
@@ -51,4 +52,9 @@ const eligibility = albaniaData.eligibility as any;
       </div>
     </dl>
   </section>
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedAL}
+  </p>
 </Base>

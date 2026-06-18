@@ -1,9 +1,10 @@
----
+﻿---
 title: "Western Union të merr 400 € në vit. Dhe më e keqja është se ti ia lejon vetë."
 description: "Nëse dërgon para nga Italia, Greqia apo Shtetet e Bashkuara në Shqipëri, ka shumë mundësi që po humb mes 8% dhe 12% në çdo dërgim. Ky krahasim të tregon saktësisht se sa po humb dhe si ta ndalosh këtë."
 type: "lajme"
 category: "Financa Personale"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 translationKey: "western-union-problem"
 date: 2026-06-10

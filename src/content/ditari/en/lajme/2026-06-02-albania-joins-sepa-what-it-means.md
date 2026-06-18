@@ -1,9 +1,10 @@
----
+﻿---
 title: "Albania Joined SEPA on October 7, 2025. 99% of Albanians Still Don't Know What That Means for Their Pockets."
 description: "Since October 2025, sending euros from Europe to Albania costs the same as a local transfer. This changes everything for the Albanian diaspora — and almost nobody knows it yet."
 type: "lajme"
 category: "Economic News"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 translationKey: "albania-sepa"
 date: 2026-06-02

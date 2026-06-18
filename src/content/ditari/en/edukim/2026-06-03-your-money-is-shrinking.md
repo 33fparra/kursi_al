@@ -1,9 +1,10 @@
----
+﻿---
 title: "Your Money Is Shrinking. And It's Nobody's Fault. It's Inflation."
 description: "Every year you keep cash at home or in a zero-interest account, your money is worth less. We explain what inflation is, why it happens, and what you can do to stop losing money without even noticing."
 type: "edukim"
 category: "Financial Literacy"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 translationKey: "inflation-savings"
 date: 2026-06-03

@@ -226,6 +226,13 @@ export default function RateChart({ lang = 'sq' }) {
           </table>
         </div>
       )}
+
+      {!loading && !error && data && series.length > 0 && (
+        <p className="update-info" style={{ marginTop: 'var(--space-4)', textAlign: 'right' }}>
+          <i className="ti ti-clock" aria-hidden="true" />
+          {' '}{series[series.length - 1].date}
+        </p>
+      )}
     </div>
   );
 }

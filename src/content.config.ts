@@ -9,6 +9,7 @@ const ditari = defineCollection({
     type: z.enum(['edukim', 'lajme']),
     category: z.string(),
     author: z.string().optional(),
+    coAuthor: z.string().optional(),
     country: z.string().optional(),
     date: z.coerce.date(),
     translationKey: z.string(),

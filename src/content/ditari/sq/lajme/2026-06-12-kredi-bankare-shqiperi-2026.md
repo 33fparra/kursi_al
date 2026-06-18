@@ -1,9 +1,10 @@
----
+﻿---
 title: "Sa kushton një kredi në Shqipëri në 2026? Çfarë firmos në heshtje."
 description: "Çmimet e pronave dhe kostoja e jetesës u rritën fort. Shumë njerëz po marrin një kredi bankare në Shqipëri me ndjesi dhe emocione, në vend që të bëjnë llogaritë me numra. Këtu janë shifrat reale."
 type: "lajme"
 category: "Kredi"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 date: 2026-06-12
 translationKey: "bank-credit-albania"

@@ -1856,4 +1856,80 @@ const jsonLd = JSON.stringify({
     letter-spacing: 0.1em; margin-bottom: var(--space-4);
     display: flex; align-items: center; gap: var(--space-2);
   }
+
+  /* ── Article author byline (below title) ── */
+  .article-byline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin: var(--space-3) 0 var(--space-5);
+  }
+  .article-byline-author,
+  .article-byline-coauthor {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-small);
+    color: var(--ink-secondary);
+  }
+  .article-byline-author .ti,
+  .article-byline-coauthor .ti { font-size: 15px; color: var(--ink-muted); }
+  .article-byline-coauthor {
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--border-light);
+  }
+
+  /* ── Article author card (end of article) ── */
+  .article-author-footer {
+    margin: var(--space-8) 0 var(--space-5);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-light);
+  }
+  .article-author-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .article-author-icon {
+    font-size: 40px;
+    color: var(--ink-muted);
+    flex-shrink: 0;
+  }
+  .article-author-name {
+    font-size: var(--text-small);
+    font-weight: var(--weight-medium);
+    color: var(--ink);
+  }
+  .article-author-coname {
+    font-size: var(--text-xs);
+    color: var(--ink-secondary);
+    margin-top: 2px;
+  }
+
+  /* ── Last-updated badge (rates pages, remittance) ── */
+  .remit-update-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    font-size: var(--text-xs);
+    color: var(--ink-muted);
+    margin-top: var(--space-3);
+  }
+  .remit-update-badge .ti { font-size: 11px; }
+
+  /* ── Last-updated badge (static data pages: mortgage, loan, eligibility) ── */
+  .page-last-updated {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    font-size: var(--text-xs);
+    color: var(--ink-muted);
+    margin-top: var(--space-8);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-light);
+  }
+  .page-last-updated .ti { font-size: 11px; }
 </style>

@@ -121,24 +121,39 @@ export default function Converter({ initialRates = {}, lang = 'sq' }) {
   const [rawAmount, setRawAmount] = useState('100');
   const [from, setFrom]   = useState('EUR');
   const [to, setTo]       = useState('ALL');
-  const [rates, setRates] = useState(initialRates);
-  const [date, setDate]   = useState(null);
-  const [loading, setLoading] = useState(Object.keys(initialRates).length === 0);
-  const [mounted, setMounted] = useState(false);
+  const [rates, setRates]       = useState(initialRates);
+  const [date, setDate]         = useState(null);
+  const [updatedAt, setUpdatedAt] = useState(null);
+  const [loading, setLoading]   = useState(Object.keys(initialRates).length === 0);
+  const [mounted, setMounted]   = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    fetch(CDN)
-      .then(r => r.json())
-      .then(json => {
+    async function load() {
+      try {
+        // Try cached rates.json first (written by GitHub Action trigger)
+        const rj = await fetch('/data/rates.json').then(r => r.ok ? r.json() : null).catch(() => null);
+        if (rj?.rates && rj?.date) {
+          setRates(rj.rates);
+          setDate(rj.date);
+          setUpdatedAt(rj.updatedAt ?? null);
+          setLoading(false);
+          return;
+        }
+      } catch {}
+      // Fall back to live fawazahmed0
+      try {
+        const json = await fetch(CDN).then(r => r.json());
         const { all, usd, gbp, chf } = json.eur ?? {};
         if (!all || !usd || !gbp || !chf) return;
         setRates(buildRates({ all, usd, gbp, chf }));
         setDate(json.date);
-      })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+        setUpdatedAt(new Date().toISOString());
+      } catch {}
+      setLoading(false);
+    }
+    load();
   }, []);
 
   const handleInput = useCallback(e => {
@@ -228,10 +243,13 @@ export default function Converter({ initialRates = {}, lang = 'sq' }) {
             <i className="ti ti-info-circle" style={{ fontSize: '13px' }} aria-hidden="true" />
             {rateLabel}
           </span>
-          {date && (
+          {(date || updatedAt) && (
             <span style={{ fontSize: 'var(--text-xs)', color: 'var(--ink-muted)' }}>
               <i className="ti ti-clock" style={{ fontSize: '12px', verticalAlign: '-1px' }} aria-hidden="true" />
               {' '}{date}
+              {updatedAt && (
+                <> · {new Date(updatedAt).toLocaleTimeString(lang === 'en' ? 'en-GB' : 'sq-AL', { hour: '2-digit', minute: '2-digit' })}</>
+              )}
             </span>
           )}
         </div>

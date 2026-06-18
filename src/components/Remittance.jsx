@@ -98,20 +98,27 @@ export default function Remittance({ lang = 'sq' }) {
   const [amount, setAmount]     = useState('200');   // raw digits only
   const [currency, setCurrency] = useState('EUR');
   const [midRates, setMidRates] = useState({});
+  const [ratesDate, setRatesDate] = useState(null);
 
   useEffect(() => {
-    fetch(CDN)
-      .then(r => r.json())
-      .then(json => {
+    async function load() {
+      try {
+        const rj = await fetch('/data/rates.json').then(r => r.ok ? r.json() : null).catch(() => null);
+        if (rj?.rates) {
+          setMidRates({ EUR: rj.rates.EUR_ALL, USD: rj.rates.USD_ALL, GBP: rj.rates.GBP_ALL });
+          setRatesDate(rj.updatedAt ?? rj.date ?? null);
+          return;
+        }
+      } catch {}
+      try {
+        const json = await fetch(CDN).then(r => r.json());
         const { all, usd, gbp, chf } = json.eur ?? {};
         if (!all) return;
-        setMidRates({
-          EUR: all,
-          USD: all / usd,
-          GBP: all / gbp,
-        });
-      })
-      .catch(() => {});
+        setMidRates({ EUR: all, USD: all / usd, GBP: all / gbp });
+        setRatesDate(json.date ?? null);
+      } catch {}
+    }
+    load();
   }, []);
 
   const numAmount = parseInt(amount, 10) || 0;
@@ -241,6 +248,18 @@ export default function Remittance({ lang = 'sq' }) {
         <i className="ti ti-shield" style={{ fontSize: '14px', flexShrink: 0, marginTop: '1px' }} aria-hidden="true" />
         {u.legal}
       </p>
+
+      {ratesDate && (
+        <p className="remit-update-badge">
+          <i className="ti ti-clock" aria-hidden="true" />
+          {' '}
+          {typeof ratesDate === 'string' && ratesDate.includes('T')
+            ? new Date(ratesDate).toLocaleDateString(lang === 'en' ? 'en-GB' : 'sq-AL', { day: 'numeric', month: 'short', year: 'numeric' })
+              + ' · '
+              + new Date(ratesDate).toLocaleTimeString(lang === 'en' ? 'en-GB' : 'sq-AL', { hour: '2-digit', minute: '2-digit' })
+            : ratesDate}
+        </p>
+      )}
     </div>
   );
 }

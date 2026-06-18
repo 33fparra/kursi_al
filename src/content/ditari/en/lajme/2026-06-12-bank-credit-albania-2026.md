@@ -1,9 +1,10 @@
----
+﻿---
 title: "How Much Does a Bank Credit Cost in Albania in 2026? What You Sign in Silence."
 description: "Property prices and the cost of living have risen sharply. Many people are taking out a bank credit in Albania based on gut feelings and emotions instead of checking the numbers. Here are the real figures."
 type: "lajme"
 category: "Loans"
 author: "F.A Parretti"
+coAuthor: ""
 country: "Albania"
 date: 2026-06-12
 translationKey: "bank-credit-albania"

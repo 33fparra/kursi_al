@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
 import MortgageCalc from '../../components/MortgageCalc';
 import { t } from '../../lib/i18n';
@@ -7,6 +7,7 @@ import albaniaData from '../../data/albania.json';
 export const prerender = true;
 const lang = 'sq' as const;
 const banks = albaniaData.banks as any[];
+const lastUpdatedAL = (albaniaData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 
 const faqJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -115,4 +116,9 @@ const howToJsonLd = JSON.stringify({
       <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
     </a>
   </div>
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedAL}
+  </p>
 </Base>

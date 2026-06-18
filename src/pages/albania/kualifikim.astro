@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
 import MortgageEligibility from '../../components/MortgageEligibility';
 import albaniaData from '../../data/albania.json';
@@ -7,6 +7,7 @@ import { t } from '../../lib/i18n';
 export const prerender = true;
 const lang = 'sq' as const;
 const eligibility = albaniaData.eligibility as any;
+const lastUpdatedAL = (albaniaData as any)["_____LAST_UPDATE_DATE_____"] ?? null;
 
 const faqJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -91,4 +92,9 @@ const faqJsonLd = JSON.stringify({
     <a href="/albania/hipoteka" class="tool-nav-link"><i class="ti ti-home"></i> Kalkulatore hipoteke →</a>
     <a href="/albania/bankat" class="tool-nav-link"><i class="ti ti-building-bank"></i> Krahasim bankash →</a>
   </div>
+  
+  <p class="page-last-updated">
+    <i class="ti ti-refresh" aria-hidden="true"></i>
+    {lastUpdatedAL}
+  </p>
 </Base>
