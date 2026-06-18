@@ -216,6 +216,15 @@ const jsonLd = JSON.stringify({
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2563eb" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#0f172a" />
 
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- Global JSON-LD (Organization + WebSite + WebPage + WebApplication) -->
     <script is:inline type="application/ld+json" set:html={jsonLd} />
 
@@ -375,6 +384,7 @@ const jsonLd = JSON.stringify({
 
   /* ─── Reset ─── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
