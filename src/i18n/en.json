@@ -81,6 +81,7 @@
   "footer.disclaimer":   "Rates are indicative. Source:",
   "footer.sourceSuffix": "(data from the European Central Bank).",
   "footer.copyright":    "© 2026 leku.al",
+  "footer.madeBy":       "Made by",
 
   "common.pair":        "Pair",
   "common.rate":        "Rate",
