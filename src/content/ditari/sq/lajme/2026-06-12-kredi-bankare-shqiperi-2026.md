@@ -14,61 +14,93 @@ readMinutes: 4
 lang: "sq"
 ---
 
-Mendoje këtë situatë. Iliri ka vendosur të martohet këtë vit dhe kushdo që jeton këtu e di shumë mirë që një dasmë familjare në Shqipëri nuk është aspak e lirë. Reaksioni i tij i parë nuk është të shkojë menjëherë në një degë të BKT-së apo Raiffeisen. Jo, gjëja e parë që bën është të hapë WhatsApp-in dhe t'i shkruajë kushëririt të tij në Zvicër për t'i kërkuar një *borxh*. Në kulturën tonë, huaja familjare bazohet te fjala dhe nderi; nuk ka letra, burokraci dhe as interesa tregtare.
+Paramendo këtë situatë. Iliri ka vendosur të martohet këtë vit, dhe kushdo që jeton këtu e di shumë mirë se një dasmë familjare në Shqipëri është çdo gjë përveçse e lirë. Reagimi i tij i parë nuk është të vrapojë menjëherë në një degë lokale të BKT-së apo Raiffeisen. Përkundrazi, gjëja e parë që bën është të hapë WhatsApp-in dhe t'i shkruajë kushëririt të tij në Zvicër për t'i kërkuar një *borxh*. Në kulturën tonë, një hua familjare ndërtohet tërësisht mbi nderin dhe fjalën e dhënë; nuk ka letra, nuk ka burokraci dhe ka zero interes të përfshirë.
 
-Por çfarë ndodh nëse familja nuk ka mundësi financiare në atë moment, ose nëse të vjen rëndë të kërkosh para? Nuk të mbetet rrugë tjetër veçse t'i drejtohesh sistemit tonë financiar. Thënë thjesht, duhet të shkosh në bankë.
+Por çfarë ndodh kur familja nuk mund të ndihmojë në atë moment, ose kur ndiheni shumë në turp për të kërkuar? Nuk ju mbetet zgjedhje tjetër veçse t'i drejtoheni sistemit tonë financiar. Thënë thjesht, duhet të shkoni në bankë.
 
-Problemi i madh është se shumë njerëz aplikojnë për një **kredi bankare Shqipëri** duke firmosur verbërisht aty ku i thotë punonjësi i sportelit. Ata e bëjnë këtë pa kuptuar saktësisht se sa do t'u kushtojë ky vendim çdo muaj nga rroga e tyre dhe sa para do të mbajë banka si fitim të pastër nga interesat. Në këtë vit 2026, rregullat e lojës kanë ndryshuar, dhe përpara se të ulesh në zyrat e tyre, duhet të njohësh shifrat reale.
-
----
-
-## Rreziku i madh i "kredive të shpejta" në çdo cep të lagjes
-
-Përpara se të analizojmë se si funksionon një kredi bankare në Shqipëri, duhet të flasim për kompanitë e mikrokredive të shpejta që kanë mbirë në çdo cep të Tiranës dhe qyteteve të tjera. Ato të premtojnë "para në dorë për 15 minuta vetëm me kartë identiteti". Tingëllon joshëse, por historikisht ky sistem ka qenë një kurth financiar ku njerëzit përfundonin duke paguar dyfishin ose trefishin e shumës që kishin marrë.
-
-Për të ndaluar këtë skemë abuzive, **Banka e Shqipërisë** ka aplikuar rregullore të rrepta duke vendosur tavanet maksimale për normat e interesit:
-
-* **Për kredi të vogla (deri në 200.000 lekë):** Interesi maksimal i lejuar me ligj është **54.8%**. Vazhdon të jetë një shifër shumë e lartë, por është dukshëm më e ulët se interesat mbi 100% që aplikoheshin para disa vitesh.
-* **Për kredi të mesme (midis 200.000 dhe 600.000 lekë):** Tavani ligjor është fiksuar në **35.4%**.
-* **Për shuma të mëdha (mbi 2 milionë lekë):** Kufiri maksimal zbret në **11.94%**.
-
-Rregulli i artë për çdo shqiptar sot është i prerë: këto kioska përdoren vetëm në raste emergjencash ekstreme të jetës ose vdekjes. Për çdo gjë tjetër, rruga të çon te bankat tradicionale. Me fjalë të thjeshta: kioskat nuk abuzojnë dot më si më parë, tani do të abuzojnë vetëm bankat, por me më shumë mëshirë falë rregullores së re.
+Problemi i madh është se shumë njerëz aplikojnë për një kredi bankare duke firmosur verbërisht kudo që u tregon asistenti i kreditit. Ata e bëjnë këtë pa kuptuar vërtet se sa do t'u marrë ky vendim nga *rroga* e tyre mujore dhe sa fitim të pastër do të mbajë banka nga komisionet e interesit. Në këtë vit 2026, rregullat e lojës kanë ndryshuar dhe, përpara se të uleni në zyrat e tyre, duhet të shikoni numrat realë.
 
 ---
 
-## Shifrat reale të bankave në 2026: Kredi konsumatore
+## Përpara se të shikoni kreditë tradicionale, le të flasim për elefantin në dhomë
 
-Nëse vendos t'i drejtohesh një banke tregtare (si OTP, Tirana Bank apo Raiffeisen) për të marrë një **kredi konsumatore** me qëllim blerjen e një makine apo mobilimin e shtëpisë, numrat ndryshojnë plotësisht.
+Ne nuk mund të flasim për një kredi bankare në Shqipëri pa përmendur zyrat e mikrokredive të shpejta që kanë mbirë në pothuajse çdo kënd të Tiranës dhe qyteteve të tjera. Ata ju premtojnë "kesh në 15 minuta vetëm me kartë identiteti". Tingëllon joshëse, por historikisht ky sistem ka qenë një kurth vdekjeprurës financiar ku njerëzit përfundonin duke paguar dyfishin ose trefishin e shumës që kishin marrë hua fillimisht.
 
-Sot, bankat ofrojnë një normë interesi që qëndron **e fiksuar për 3 vitet e para**, e cila lëviz përafërsisht midis **5.5% dhe 8% në vit**, në varësi të faktit nëse e kalon rrogën mujore në atë bankë apo jo.
+Për të ndaluar këto kredi grabitqare, <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë</a> ndërhyri me rregullore strikte, duke vendosur tavanet maksimale për normat e interesit efektiv për të mbrojtur qytetarët:
 
-Por këtu fshihet kurthi që ngatërron pjesën më të madhe të klientëve: **interesi i ndryshueshëm**.
+*   **Për kreditë e vogla (deri në 200.000 Lekë):** Norma maksimale e interesit e lejuar me ligj është e kufizuar në **54.8%**. Është ende një shifër tronditëse, por dukshëm më e ulët se interesat mbi 100% që aplikoheshin disa vite më parë.
+*   **Për kreditë e mesme (midis 200.000 dhe 600.000 Lekë):** Limiti ligjor është i fiksuar në **35.4%**.
+*   **Për shumat më të mëdha (mbi 2 milionë Lekë):** Tavani maksimal zbret në **11.94%**.
 
-Pas përfundimit të këtyre tre viteve të para, interesi nuk është më i ngrirë. Ai lidhet direkt me ecurinë e **Bonove të Thesarit 12-mujore** të qeverisë shqiptare, plus një marzh fiks që shton banka. Nëse ekonomia pëson lëkundje dhe interesat e bonove të shtetit rriten, kësti yt mujor do të rritet automatikisht dhe ti nuk do të kesh asnjë mundësi ligjore për ta ndaluar apo negociuar atë.
-
----
-
-## Termi që duhet të kërkosh me ngulm: Çfarë është NEI?
-
-Asistenti i bankës do të të presë me buzëqeshje dhe do të të thotë: *"Kemi një ofertë fantastike, interesin e kredisë e ke vetëm 6%"*. Ky quhet interes nominal dhe është vetëm një e vërtetë e përgjysmuar.
-
-Gjëja e parë që duhet të kërkosh në tavolinë është vlerësimi i saktë për **NEI (Norma Efektive e Interesit)**. Kjo është e vetmja normë reale që tregon sa të kushton paraja, sepse brenda saj përfshihen automatikisht:
-
-1. Interesi bazë që fiton banka.
-2. Komisioni i hapjes së kredisë (që zakonisht varion nga 2% deri në 3% të të gjithë shumës që kërkon).
-3. Sigurimi i detyrueshëm i jetës që të kërkojnë të firmosësh.
-4. Komisioni mujor për mirëmbajtjen e llogarisë bankare.
-
-Një plan që në pamje të parë të mahnit me një "interes 6%", kur llogaritet me skemën e NEI mund të kthehet realisht në **8.5% ose 10%**. Pikërisht këtu fluturojnë paratë e tua në heshtje.
+Rregulli i artë për çdo shqiptar sot është i qartë: këto kioska të mikrokredisë janë rreptësisht për urgjenca ekstreme të jetës ose vdekjes. Për çdo gjë tjetër, shkohet në bankat tradicionale. Thënë thjesht, zyrat e mikrokredive nuk mund t'i keqpërdorin më huamarrësit si dikur; tani, vetëm bankat tregtare do të menaxhojnë kreditimin, ndonëse me pak më shumë mëshirë për shkak të rregulloreve shtetërore.
 
 ---
 
-## Si të mbroni rrogën tuaj nga shpenzimet e fshehura?
+## Numrat realë të bankave: Kreditë konsumatore
 
-Në kulturën tonë financiare ekziston një gabim shumë i përhapur: njerëzit shikojnë vetëm nëse e përballojnë dot këstin e këtij muaji. Nëse rroga jote është 80.000 lekë dhe kësti i bankës është 35.000 lekë, në mendjen tënde të duket sikur gjërat "përputhen". Por në realitet, ti po bllokon pothuajse 50% të të ardhurave të tua në një treg ku çmimet e ushqimeve dhe kostoja e jetesës po rriten çdo ditë.
+Nëse zgjidhni të punoni me një bankë tradicionale tregtare (si OTP, Tirana Bank ose Raiffeisen) për të marrë një **kredi konsumatore** për të blerë një makinë ose për të rinovuar apartamentin e prindërve, matematika duket krejtësisht ndryshe.
 
-Përpara se të vendosësh firmën mbi një kontratë dhe të lidhësh financat e tua për 5 apo 10 vitet e ardhshme, zgjidhja është e njëjtë me atë që bën kur kërkon tregun me çmimet më të mira për frutat apo bukën: **të krahasosh**.
+Sot, bankat ofrojnë norma interesi që mbeten **të fiksuara për 3 vitet e para**, përgjithësisht duke lëvizur midis **5.5% dhe 8% në vit**, në varësi të faktit nëse e kaloni pagën tuaj mujore në atë llogari specifike bankare apo jo.
 
-Mos u mjafto vetëm me ofertën e bankës ku të kalon paga. Te platforma jonë `leku.al`, ne kemi digjitalizuar dhe përditësuar të gjitha ofertat për një **kredi bankare Shqipëri** për vitin 2026. Ti thjesht fut shumën e lekëve që të duhen dhe sistemi të nxjerr në sekondë vlerën e saktë të NEI për secilën bankë.
+Por këtu qëndron kurthi që i kap shumicën e huamarrësve në rrugë të papërgatitur: **norma e ndryshueshme e interesit**.
 
-Bëj provën vetë, krahaso me kujdes dhe mos lejo që bankat të mbajnë paratë e djersës dhe të sakrificës tënde.
+Pasi kalojnë ato tre vite fillestare, interesi juaj nuk është më i ngrirë. Ai lidhet drejtpërdrejt me ecurinë e <a href="https://www.bankofalbania.org/Financat_e_Qeverise/Bono_thesari/" target="_blank" rel="noopener noreferrer">Bonove të Thesarit 12-mujore</a> të qeverisë shqiptare, plus një margjinë fitimi të fiksuar të shtuar përsipër nga banka. Nëse ekonomia lokale përballet me sfida dhe interesat e thesarit të shtetit rriten, kësti juaj mujor do të rritet automatikisht dhe nuk do të keni asnjë mekanizëm ligjor për ta ndaluar apo rinegociuar atë. Për të llogaritur se si ndikon kjo në buxhetin tuaj, është e rëndësishme të kryqëzoni të dhënat me udhëzuesin tonë mbi <a href="https://leku.al/ditari/artikull/edukim/paga-neto-kosove-atk/">llogaritjen e pagës neto reale</a>.
+
+---
+
+## Termi që duhet të kërkoni me ngulm: Çfarë është NEI?
+
+Konsulenti i bankës do t'ju presë me një buzëqeshje të ngrohtë dhe do t'ju thotë: *"Kemi një ofertë fantastike, interesi i kredisë suaj është vetëm 6%"*. Ky njihet si interesi nominal, dhe nuk është gjë tjetër veçse një e vërtetë e përgjysmuar.
+
+Treguesi i parë që duhet të kërkoni të shihni në letër përpara se të prekni stilolapsin është **NEI (Norma Efektive e Interesit)**, e njohur në anglisht si APR. Ky është i vetmi përqindje reale që tregon se sa kushton vërtet marrja e një kredie, sepse përfshin automatikisht brenda saj:
+
+1.  Interesin bazë të mbajtur nga banka për dhënien e parave.
+2.  Komisionin e hapjes së kredisë (i cili zakonisht varion nga 2% deri në 3% të vlerës totale që po kërkoni që ditën e parë).
+3.  Polisën e sigurimit të jetës të detyrueshëm që ju kërkojnë të nënshkruani.
+4.  Tarifat mujore të mirëmbajtjes së llogarisë bankare.
+
+Një plan kredie që duket i mrekullueshëm me një "interes nominal 6%" mund të shndërrohet lehtësisht në një NEI real prej **8.5% ose 10%**. Pikërisht aty paratë tuaja të fituara me vështirësi zhduken në heshtje totale. Nëse dëshironi të simuloni këto kosto paraprakisht, mund të përdorni mjetin tonë interaktiv **[Krahasuesi i Kredive Konsumatore në leku.al](https://leku.al/albania/kredi-konsumatore/)** për të parë vlerën e saktë në sekonda.
+
+---
+
+## Mbroni pagën tuaj nga komisionet e fshehura
+
+Ekziston një gabim shumë i zakonshëm i rrënjosur në kulturën tonë financiare: njerëzit shikojnë vetëm nëse e paguajnë dot këstin e këtij muaji. Nëse rroga juaj është 80.000 Lekë dhe kësti i bankës është 35.000 Lekë, ju duket sikur matematika "përputhet". Në realitetin e sotëm, ju po bllokoni pothuajse 50% të të ardhurave tuaja neto në një treg ku çmimet e ushqimeve dhe kostoja e përgjithshme e jetesës po rriten çdo ditë.
+
+Të marrësh një borxh për 5 apo 10 vite nuk mund të jetë një impuls për të kaluar radhën para një feste familjare. Kontrolli i vërtetë mbi paratë e tua nuk konsiston në arritjen që banka të të aprovojë një kredi të shpejtë për të ruajtur dukjen, por në pasjen e sigurisë së plotë që ai borxh nuk do të mbytë të ardhmen e shtëpisë tënde. Paratë qe fiton me mundin e ballit tënd meritojnë të mbrohen me informacion të qartë dhe vendime plotësisht të informuara. Bëhu zotëruesi absolut i numrave të tu, kërko të shohësh NEI-n real në kontrata dhe mbaj gjithmonë kontrollin e shëndetit tënd financiar.
+
+---
+
+## 🧠 Pyetjet e Shpeshta (FAQ)
+
+<br>
+
+<details>
+<summary><b>A mund të më detyrojë banka me ligj që ta kontraktoj sigurimin e jetës vetëm tek kompania e tyre?</b></summary>
+<br>
+Jo, rregulloret për transparencën të nxjerra nga Banka e Shqipërisë përcaktojnë se klienti ka të drejtë ligjore të paraqesë një polisë sigurimi jete nga çdo kompani e licencuar zyrtarisht në vend, për sa kohë ajo plotëson kushtet minimale të mbulimit që kërkon banka. Megjithatë, në praktikë, bankat shpesh ofrojnë interesa pak më të ulëta ose e aprovojnë dosjen më shpejt nëse zgjidhni paketën e tyre të brendshme.
+<br><br>
+</details>
+
+<details>
+<summary><b>Sa herë në vit ndryshon kësti im i kredisë nëse është i lidhur me Bonot e Thesarit (Bono Thesari)?</b></summary>
+<br>
+Pasi përfundon periudha me interes fiks (zakonisht 3 vitet e para), rishikimi i normës së ndryshueshme bëhet një herë në vit automatikisht. Banka merr si referencë interesin e ankandit të fundit zyrtar të Bonove të Thesarit 12-mujore të shtetit dhe i shton margjinën e saj fikse tregtare. Ky përqindje e re do të mbetet në fuqi për 12 muajt e ardhshëm, duke ndryshuar vlerën e këstit tuaj.
+<br><br>
+</details>
+
+<details>
+<summary><b>A ka penalitete financiare nëse vendos ta paguaj të gjithë kredinë e konsumit para afatit?</b></summary>
+<br>
+Po, por tarifat janë të kufizuara me ligj për të shmangur abuzimet. Sipas kuadrit ligjor për mbrojtjen e konsumatorit, nëse vendosni të bëni një shlyerje para afatit, komisioni i paguar nuk mund të kalojë 1% të shumës që po kthehet para kohe (nëse ka mbetur më shumë se një vit nga kontrata) ose 0.5% (nëse ka mbetur më pak se një vit).
+<br><br>
+</details>
+
+<br>
+
+---
+
+### Referencat specifike të të dhënave:
+*   **Rregulloret e normave maksimale të interesit dhe transparencës bankare:** <a href="https://www.bankofalbania.org/mbikqyrja-financiare/rregullat-dhe-rregulloret/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë - Korniza e Mbikëqyrjes</a>
+*   **Statistikat zyrtare të ankandeve dhe treguesit e Bonove të Thesarit:** <a href="https://www.bankofalbania.org/Financat_e_Qeverise/Bono_thesari/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë - Rezultatet e Bonove 12-mujore</a>
+*   **Mbrojtja e konsumatorit dhe kontratat e kredive në tregun vendas:** <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë - Standardet e Transparencës</a>

@@ -20,9 +20,7 @@ Today, that exact same transfer can cost €3 or less. And it hits the account i
 
 The technology didn’t change. No magical new application was released. There is no trick along the way. What changed is that Albania officially joined the SEPA system — the largest euro payments area in the world. With this milestone, euro bank transfers from any European country to Albania now function exactly like a local transfer within Europe.
 
-The Bank of Albania called it a "historic milestone." The World Bank estimated that in its first year alone, this integration will save the Albanian economy around €20 million.
-
-Yet, how many Albanians actually know about this? Very few.
+The Bank of Albania called it a "historic milestone." The World Bank estimated that in its first year alone, this integration will save the Albanian economy around €20 million. Yet, how many Albanians actually know about this? Very few.
 
 Before explaining how this impacts you, you need to understand what SEPA means in simple terms. SEPA stands for **Single Euro Payments Area**. It is a network comprising 41 European countries — all European Union members, plus the United Kingdom, Switzerland, Norway, and others — where euro bank transfers operate just like paying a local bill at your neighborhood bank branch.
 
@@ -43,24 +41,52 @@ Think of it this way: Before SEPA, wire-transferring money from an Italian bank 
 
 ## The part nobody explains to you
 
-The SEPA system is live, but that doesn't mean your bank is automatically prioritizing it for you, nor that you automatically know how to request it. As with any structural shift in the financial framework, theory moves a bit faster than daily implementation.
-
-Here is exactly what you need to do to take advantage of it:
+The SEPA system is live, but that doesn't mean your bank is automatically prioritizing it for you, nor that you automatically know how to request it. As with any structural shift in the financial framework, theory moves a bit faster than daily implementation. Here is exactly what you need to do to take advantage of it:
 
 ### 1. Verify your bank in Albania is fully set up
 All major commercial banks in Albania (BKT, Raiffeisen, Intesa Sanpaolo Albania, OTP, etc.) are officially integrated into the SEPA network. But to receive these transfers, you need a vital piece of information you might not have looked up yet: **your Albanian IBAN**.  
+
 The IBAN is the international account number that identifies your specific account inside the SEPA grid. Without it, your sender in Europe cannot route the payment correctly. If you don't know it, log into your banking app or call customer support to retrieve it. It is a 28-character code that starts with "AL".
 
 ### 2. Teach your family in Europe how to send it correctly
-This is where most people miss the mark. Your sister in Milan might have the best intentions, but if she continues using the legacy methods — physical Western Union counters, MoneyGram agents, or traditional international wires — she won't benefit from SEPA.  
+This is where most people miss the mark. Your sister in Milan might have the best intentions, but if she continues using legacy methods — physical Western Union counters, MoneyGram agents, or traditional international wires — she won't benefit from SEPA.  
+
 To execute a SEPA transfer to Albania, she only needs three things: **Your full legal name, your Albanian IBAN, and your bank's BIC/SWIFT code**. With these details, she can complete a wire via her European banking app within minutes. The fee on the European side ranges from €0 to €3 maximum.
 
 ### 3. Know what SEPA covers and what it doesn't
 SEPA works **strictly for transfers denominated in euros**. If someone sends you US dollars from the United States, SEPA does not apply — it remains a classic international wire with high transaction costs. Similarly, other non-euro currencies (like Swiss francs or British pounds) sent outside of euro accounts don't use this route directly. For the diaspora in Italy, Greece, or Germany, SEPA covers almost everything since they operate entirely in euros.
 
 ### 4. Keep comparing options!
-SEPA has forced banks to drop their prices dramatically. However, fintech platforms like Paysend or Remitly are still highly competitive and often offer very aggressive exchange rates. Which option is best for you today? It depends entirely on the transfer volume and the urgency.  
+SEPA has forced banks to drop their prices dramatically. However, fintech platforms are still highly competitive and often offer aggressive promotional exchange rates. Which option is best for you today? It depends entirely on the transfer volume and the urgency.  
 
-This is why we built the comparison engine at `leku.al` — so you don't have to do the manual conversion math yourself. Before your next transfer, check `leku.al` to see which route saves you the most money in real time.
+This is why we built the real-time **[Money Transfer Comparison Engine at leku.al](https://leku.al/albania/krahaso/)** — so you don't have to do the manual conversion math yourself. Before your next transfer, check our platform to see which route saves you the most money in real time.
 
 Albania's financial landscape has fundamentally shifted. The only question left is: **Are you leveraging it yet?**
+
+---
+
+## 🧠 Frequently Asked Questions (FAQ)
+
+<details>
+<summary><b>Does my bank account in Albania need to be in Euros to receive a SEPA transfer?</b></summary>
+Yes, it is highly recommended. SEPA transactions operate strictly in Euros. If you send a SEPA transfer to a Lek-denominated account, your local bank will automatically apply an internal retail exchange rate to convert the incoming Euros into Leks, which might eat up some of your savings. Opening a secondary Euro account avoids this issue entirely.
+</details>
+
+<details>
+<summary><b>What is the difference between a traditional SWIFT transfer and a SEPA transfer?</b></summary>
+Traditional SWIFT transfers rely on intermediate or correspondent banks, where each entity along the path charges an operational fee, making the final cost unpredictable and slow. SEPA eliminates all intermediary channels, routing the transaction directly from the European sender bank to the Albanian recipient bank in a standardized format within hours for a minimal, fixed fee.
+</details>
+
+<details>
+<summary><b>Are SEPA transfers to Albania subject to specific financial limits?</b></summary>
+Standard SEPA regulations do not impose a universal maximum cap, but individual commercial banks set daily or transactional limits on their online banking apps for security reasons (often capping standard transfers between €10,000 and €50,000 per day). For larger amounts, such as property acquisitions, you may need to complete a verification process with your local bank branch.
+</details>
+
+<br>
+
+---
+
+### Specific Data References:
+*   **Official application and entry criteria for Albania into SEPA:** [Banka e Shqipërisë - Shqipëria drejt Tregut Unik të Pagesave në Euro (SEPA)](https://www.bankofalbania.org/Pagesat/SEPA/)
+*   **Geographical scope and membership list of the payment network:** [European Payments Council (EPC) - SEPA Scheme Geographical Scope](https://www.europeanpaymentscouncil.eu/what-we-do/sepa-geographical-scope)
+*   **Economic impact report on remittance transaction costs:** [The World Bank - Remittance Prices Worldwide and Regional Integration Reports](https://remittanceprices.worldbank.org/)

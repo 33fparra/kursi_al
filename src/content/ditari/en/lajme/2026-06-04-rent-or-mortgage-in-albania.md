@@ -20,27 +20,25 @@ Agron has been paying €600 in rent for five years. Every first of the month, a
 
 But both could be wrong.  
 
-Because neither of them sat down to look at the real numbers. Agron doesn't know how much he has paid in total over five years or what alternative he had. Besnik has no idea how much he will have paid the bank by the time his twenty-year term ends, or how much of that money was pure interest.  
+Because neither of them sat down to look at the real numbers with a cold mind. Agron doesn't know how much he has paid in total over five years or what real alternative he had within reach. Besnik has no idea how much money he will have handed over to the bank by the time his twenty-year term ends, or how much of that capital was pure interest.  
 
-And in Albania, with property prices flying high, making this decision without the math isn't bravery.  
-It's a **blind leap into the dark**.  
+And today in Albania, with property prices flying high, making this decision based solely on intuition isn't bravery. It's a **blind leap into the dark**.  
 
 ---
 
 ## First, the context.  
 
-Because this decision isn't made in a vacuum — it happens in a specific market at a specific moment. And that moment is right now:  
+Because this decision isn't made in a vacuum — it happens in a specific real estate market at a specific moment. And the reality of this year 2026 is right now:  
 
-Real estate prices in Albania have been rising drastically for several years. Especially in Tirana. A 2+1 apartment in a mid-range neighborhood of the capital that cost €90,000 in 2022 can easily go for €130,000 to €160,000 today, depending on the area. According to the Deloitte index, the average price per square meter in Tirana reached €2,000 — almost double what it was three years ago.  
+Real estate prices in Albania have been rising drastically for several years. Especially in Tirana. A 2+1 apartment in a mid-range neighborhood of the capital that cost €90,000 in 2022 can easily go for €130,000 to €160,000 today, depending on the area you choose. In fact, according to the latest market reports published by consulting firms like <a href="https://www2.deloitte.com/al/en.html" target="_blank" rel="noopener noreferrer">Deloitte Albania</a>, the average price per square meter in the capital has reached historical highs, doubling the values of just three years ago in consolidated zones.  
 
-This changes the math completely.  
+This changes the math of money completely.  
 
-If prices keep climbing, buying today looks smart — you are getting in before it gets more expensive. But if the market stabilizes or undergoes a correction (as has happened in other countries in the region), you bought at the peak and are stuck with a twenty-year mortgage on an overpriced asset.  
+If prices keep climbing without a break, buying today looks like a masterstroke — you are getting into the game before everything becomes unaffordable. But if the market stabilizes or undergoes a correction (as has happened historically in other countries in the region), it means you bought at the peak and are stuck with a twenty-year mortgage on an asset that is losing value.  
 
-> **Let's be honest:** Nobody knows for sure what will happen. Anyone who tells you they do is lying.  
+> **Let's be totally honest:** Nobody knows for sure what will happen tomorrow. Anyone who tells you they know the future of the real estate market is lying to you.  
 
-What we can do is understand exactly what you are signing up for in each scenario. How much you pay in total. How much of that money stays yours in the end. And when — if ever — buying starts making more sense than renting.  
-For that, you need numbers. Not opinions. Not intuition. Numbers.  
+What we can do is understand exactly what you are signing up for in each scenario. How much you pay in total, how much of that money stays in your net worth at the end of the road, and when buying makes more sense than renting. For that, you need clear numbers. Not opinions from coffee bar counters, or hunches. Numbers.  
 
 ---
 
@@ -48,41 +46,40 @@ For that, you need numbers. Not opinions. Not intuition. Numbers.
 
 A realistic scenario in Tirana today:  
 
-A 2+1 apartment in a mid-range neighborhood costs approximately €130,000. To apply for a mortgage, you need to have saved at least 20% of the total price — meaning a **€26,000 down payment**. The bank loans you the remaining €104,000.  
+A 2+1 apartment in a normal mid-range neighborhood costs approximately €130,000. To apply for a mortgage loan from a local bank, regulations require you to have saved at least 20% of the total property price as an entry requirement. This means a **€26,000 down payment**. The bank loans you the remaining €104,000.  
 
-At what rate? Albanian banks are currently offering euro home loans between 3.5% and 5.5% annually. Let's use 4.5% as a realistic market reference point today.  
-For a 20-year term, **your monthly payment would be roughly €650**.  
+At what rate? Currently, under the active guidelines of the <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë (Bank of Albania)</a>, commercial lenders are offering euro home loans between 3.5% and 5.5% annually. Let's use 4.5% as a realistic and average market reference point today for a 20-year term. **Your monthly payment would be roughly €650**.  
 
-Now let's look at renting. That exact same 2+1 apartment in the same neighborhood currently rents for between €600 and €800 a month. Let's take **€700 as an average**.  
+Now let's look at renting. That exact same 2+1 apartment in the same building currently rents for between €600 and €800 a month. Let's take **€700 as an average**.  
 
-So, the monthly difference between renting and paying a mortgage seems almost identical: €650 vs €700.  
-But the calculation doesn't end there.  
+So, looking only at the surface, the monthly difference between paying rent and paying a mortgage payment seems almost identical: €650 vs €700. But the calculation doesn't end there.  
 
-* **The hidden costs of a mortgage:** A mortgage has expenses that renting doesn't: notary fees, property registry (Hipoteka) fees, and property appraisal (around €2,000 to €4,000 right at the start). Mandatory annual property insurance. Plus, maintenance and repairs that a landlord would normally cover. And above all — those €26,000 out of your pocket on day one.  
-* **The hidden costs of renting:** On the flip side, renting has a cost that a mortgage locks out: landlords can raise the price. In Tirana, rents increased sharply over the past year. What you pay €700 for today could easily become €770 next year. And you have zero control over that.  
+*   **The hidden costs of a mortgage:** Being an owner with a bank overhead brings mandatory expenses that a tenant doesn't have. We are talking about notary fees, registration fees at the property registry office regulated by the <a href="https://www.ashk.gov.al/" target="_blank" rel="noopener noreferrer">Agjencia Shtetërore e Kadastrës (ASHK)</a>, and the cost of the property appraiser (which adds between €2,000 and €4,000 right at the start). Mandatory annual property insurance. Plus, maintenance and structural repairs that a landlord would normally cover. And above all — those €26,000 out of your pocket on day one.  
+*   **The hidden costs of renting:** On the flip side, renting has a critical enemy that a mortgage locks out: price hikes by the owner. In Tirana, rents have increased with tremendous sharpness. What you pay €700 for today could easily become €770 next year through a contract renewal. And you have zero legal control over that movement.  
 
-Therefore, the question isn't which one is cheaper today. The question is which one makes more sense for your specific situation over the next twenty years. And that answer is not the same for everyone.  
+Therefore, the question isn't which one is cheaper this month. The question is which one makes more sense for your specific financial situation over the next twenty years. And that answer is not the same for everyone.  
+
+To simplify this equation without having to do manual math yourself, you can plug your data into our interactive **[Mortgage vs Rent Comparator at leku.al](https://leku.al/albania/kredi-vs-qira/)**, which will evaluate the figures in seconds.
 
 ---
 
-### An honest clarification  
+### An honest clarification from the field  
 
-I live near Kamëz myself. Not in Blloku, not in the city center. And that's exactly why I understand that this calculation changes completely from one person to another. An apartment near my area costs significantly less than the €130,000 we used in the example above. This means the down payment is much more achievable, the monthly payment is lower, and the entire equation shifts.  
+I live near Kamëz myself. Not in Blloku, not in the city center. And that's exactly why I understand that this calculation changes completely depending on the zip code. An apartment near my area costs significantly less than the €130,000 we used in the general example above. This means the down payment is much more achievable, the monthly payment drops drastically, and the entire financial equation shifts in favor of buying.  
 
-Location matters. Your situation matters. That's why there is no universal answer.  
-However, there are specific scenarios where each option makes the most sense.  
+Location matters. Your job stability matters. That's why there is no universal magical answer. However, there are specific scenarios where one option beats the other.  
 
 ### Buying (Mortgage) makes more sense if:  
 
-- **You have the 20% down payment saved without completely wiping out your savings.** If gathering those €26,000 means emptying every single cent you own, a minor unexpected event — a medical issue or being out of a job for a month — can turn into a financial catastrophe. The down payment cannot be your entire net worth.  
-- **You plan to stay in that city for at least 10 years.** A mortgage is a long-term commitment. If you need to move in 3 years for work, family, or other reasons, renting gives you a flexibility that a mortgage locks down.  
-- **Rent prices in your area are rising non-stop.** If your landlord hikes the rent by 8% or 10% every year, what looks affordable today might become unsustainable in five years. A mortgage freezes and fixes your monthly housing cost.  
+*   **You have the 20% down payment saved without leaving your checking account at zero.** If gathering those €26,000 means emptying every single cent you own, a minor unexpected event — a medical issue or being out of income for a month — can turn into a family financial crisis. The down payment cannot be all the money you have in life.  
+*   **You have firm plans to stay in that city for at least 10 years.** A mortgage is a long-term anchor. If for work, family, or personal reasons you need to move countries in three years, renting gives you a freedom of movement that a mortgage completely blocks.  
+*   **Rent prices in your area are rising non-stop.** If your landlord hikes the rent by 8% or 10% at every contract renewal, what looks affordable today might become unsustainable in five years. A mortgage has the advantage of freezing and fixing your monthly housing cost.  
 
 ### Renting makes more sense if:  
 
-- **You don't have the down payment saved yet.** Taking out a mortgage without having your own share saved — by going into debt with family or taking out an additional consumer loan — is like starting a marathon with a backpack full of rocks.  
-- **Your income is not stable yet.** A mortgage does not forgive bad months. Banks do not negotiate. Renting gives you a bit more breathing room if things get rough.  
-- **You are in a period of transition.** A new job, a new city, a new relationship. Tying yourself to a mortgage during a time of personal uncertainty can be the worst financial move of your life — not because of the numbers, but because of the wrong timing.  
+*   **You don't have the down payment saved yet.** Trying to apply for a mortgage by borrowing money from family for the down payment or chaining another high-interest consumer loan to cover the initial payment is starting a marathon with a backpack full of rocks on your back. It's unsustainable.  
+*   **Your monthly income is not stable yet.** The bank does not understand bad months or hold friendly negotiations if things go wrong at work. Renting gives you a much more flexible maneuvering room to adjust your expenses if things get rough economically.  
+*   **You are in a period of personal or professional transition.** A new job, a different city, or a relationship that is just starting. Tying yourself to a six-figure debt with a bank during a time of personal uncertainty is the worst financial mistake you can make — not because of the numbers, but because of picking the wrong timing.  
 
 ---
 
@@ -90,14 +87,45 @@ However, there are specific scenarios where each option makes the most sense.
 
 The two neighbors from the beginning.  
 
-Neither of them necessarily made a bad choice. They just made a decision without having all the facts on hand. And in today's Albania, with prices shifting at this pace, making the biggest move of your financial life without the math is a luxury you cannot afford.  
+Neither of them necessarily made a stupid choice. They just took the biggest step of their economic life guided by emotion and without having all the real facts on hand. And in today's Albania, with prices shifting at the speed of light, deciding the destiny of your income over the long term without calculating the cold math is a luxury no one should allow themselves.  
 
-The market doesn't wait. Time ticks on, and the question is whether it's working in your favor or against you. That depends on a single number: **yours**.  
+The real estate market doesn't wait for anyone. Time ticks on, and the only real question is whether interests and installments are working in your favor or are destroying your future liquidity. In the end, all the mystery reduces to a single number: yours. Not your friends', nor your neighbors'. Yours — your real liquid savings, the stability of your paycheck, your life plans for the next decade, and the exact neighborhood where you want to see your family grow.  
 
-Not Agron's. Not Besnik's. Yours — your available down payment, your monthly income, your plans for the next ten years, and the neighborhood you want to live in.  
+Taking control of your housing requires setting aside social pressures and analyzing contracts with absolute coldness. Properties are bought with the head, not with the impulses of the moment. True financial peace of mind does not consist of having a title deed in your name at any cost, but in having the absolute certainty that you are the master of your decisions and not the slave of your debts.
 
-That's why we built the **"Mortgage vs Rent"** calculator on `leku.al`. Plug in your real figures — the price of the apartment you are eyeing, the rent you pay today, the bank's interest rate, the years — and in seconds, you will see which option actually makes sense for you specifically.  
+---
 
-Not for Agron. Not for Besnik. For you.  
+## 🧠 Frequently Asked Questions (FAQ)
 
-Go to `leku.al` and run the numbers before signing anything. Five minutes today can save you years of carrying the wrong financial burden.
+<br>
+
+<details>
+<summary><b>What is the life insurance tied to the mortgage in Albania and who collects it if something happens?</b></summary>
+<br>
+When signing a home loan in Tirana, banks compel you to contract and pay an annual life insurance policy. It is important to understand that you pay the bill out of your own pocket, but the main beneficiary who will collect the money if you pass away is the bank, not your heirs. The insurance is designed so that the provider pays off the outstanding debt on the apartment and the bank doesn't lose its capital, guaranteeing that the property is left free of charges for your family.
+<br><br>
+</details>
+
+<details>
+<summary><b>Can my mortgage payment in Albania increase if the Euribor shifts in Europe?</b></summary>
+<br>
+Yes, completely if your contract is a variable or mixed interest rate type. Most home loans signed in euros in Tirana are linked to the fluctuations of the international Euribor index controlled by the European Central Bank. If interest rates rise abroad to curb inflation, your local bank will apply the increase in your annual contract review, which will increase your monthly payment automatically.
+<br><br>
+</details>
+
+<details>
+<summary><b>What happens to my rental deposit in Tirana if I decide to terminate the contract early?</b></summary>
+<br>
+As a general rule according to the informal practices of the capital's real estate market, if you decide to leave the apartment before the deadline specified in the lease agreement, the owner has the legal right to keep the deposit money (which is usually one or two months' rent) as a penalty for breaking the agreement early, unless you have given notice within the minimum period agreed upon in writing.
+<br><br>
+</details>
+
+<br>
+
+---
+
+### Specific Data References:
+
+*   **Banka e Shqipërisë - Financial Stability Reports and Real Estate Market:** <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">https://www.bankofalbania.org/</a>
+*   **Deloitte Albania - Real Estate Market Trends and Capital Indices:** <a href="https://www2.deloitte.com/al/en.html" target="_blank" rel="noopener noreferrer">https://www2.deloitte.com/al/en.html</a>
+*   **Agjencia Shtetërore e Kadastrës (ASHK) - Property Registration Fees:** <a href="https://www.ashk.gov.al/" target="_blank" rel="noopener noreferrer">https://www.ashk.gov.al/</a>

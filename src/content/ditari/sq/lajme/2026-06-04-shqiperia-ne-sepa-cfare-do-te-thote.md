@@ -14,53 +14,118 @@ readMinutes: 4
 lang: "sq"
 ---
 
-Deri para pak kohësh, kur dikush në Itali donte t'i dërgonte para familjes së tij në Shqipëri përmes bankës, paguante nga 15 deri në 20 € vetëm si komision bankar. Ndonjëherë edhe më shumë. Dhe i duhej të priste nga dy deri në pesë ditë pune që paratë të mbërrinin.
+E njëjta ndërtesë. E njëjta lagje në Tiranë.  
 
-Sot, kjo transfertë mund të kushtojë 3 € ose më pak. Dhe mbërrin në llogari për disa orë.
+Agroni paguan 600 € qira ka pesë vite. Çdo të parë të muajit, kur firmos faturën, mendon të njëjtën gjë: *"Këto para po ikin e nuk kthehen më. Po paguaj kredinë e pronarit, jo timen."* Fqinji i tij, Besniku, mori një kredi për shtëpi para tre vitesh. Paguan 780 € në muaj. Kur dikush e pyet se si po i shkon, ai përgjigjet me krenari: *"Po investoj në diçka timen. Çdo muaj që paguaj, shtëpia është pak më shumë e imja."* Të dy janë të bindur se kanë marrë vendimin e duhur.  
 
-Nuk ka ndryshuar teknologjia. Nuk ka dalë ndonjë aplikacion i ri magjik. Nuk ka asnjë truk rrugës. Ajo që ka ndryshuar është se Shqipëria ka hyrë zyrtarisht në sistemin SEPA — zona më e madhe e pagesave në euro në botë. Dhe me këtë hap, transfertat bankare në euro nga çdo vend europian drejt Shqipërisë funksionojnë ekzaktësisht njësoj si një transfertë lokale brenda Europës.
+Por, të dy mund të jenë gabim.  
 
-Banka e Shqipërisë e quajti këtë një "arritje historike". Banka Botërore përllogariti se vetëm në vitin e parë, ky sistem do t'i kursejë ekonomisë shqiptare rreth 20 milionë euro.
+Sepse asnjëri prej tyre nuk u ul të bënte llogaritë me numra realë. Agroni nuk e si sa ka paguar gjithsej në pesë vite dhe çfarë alternative tjetër kishte. Besniku nuk e di se sa do t'i ketë paguar bankës kur të përfundojë kontrata pas njëzet vitesh, dhe sa nga ato para ishin thjesht interesa të pastra.  
 
-Dhe sa shqiptarë e dinë këtë? Shumë pak.
-
-Përpara se të shpjegojmë se si të prek ty kjo gjë, duhet të kuptosh se çfarë është SEPA me fjalë të thjeshta. SEPA do të thotë Zona Unike e Payments në Euro (në anglisht, *Single Euro Payments Area*). Është një sistem ku bëjnë pjesë 41 vende europiane — të gjitha vendet e Bashkimit Europian, plus Britaninë e Madhe, Zvicrën, Norvegjinë dhe të tjerë — ku transfertat bankare në euro funksionojnë njësoj sikur po paguan një faturë te banka e lagjes.
-
-Pa kufij. Pa burokraci shtesë. Pa komisione të çmendura.
-
-Mendoje kështu: Përpara SEPA-s, të nisje para nga një bankë italiane në një bankë shqiptare ishte si të dërgoje një letër me postë ndërkombëtare — e ngadaltë, e shtrenjtë dhe me shumë ndërmjetës rrugës që mbanin pjesën e tyre. Me SEPA-n, është si të dërgosh një mesazh në WhatsApp — e shpejtë, direkte dhe pothuajse pa asnjë kosto.
+Dhe në Shqipëri, me çmimet e pronave që po fluturojnë, të marrësh këtë vendim pa bërë llogaritë nuk është trimëri. Është një **kërcim në qorr**.  
 
 ---
 
-## Si të ndihmon kjo ty konkretisht?
+## Së pari, konteksti.
 
-* **Nëse ke familjarë në diasporë që të dërgojnë para:** Përpara, kur motra jote në Milano të niste 500 € me transfertë bankare, banka italiane i merrte asaj 15-25 € komision, plus marzhin te kursi i këmbimit. Me SEPA, ajo transfertë direkte mund të kushtojë nga 1 deri në 3 €. Paratë mbërrijnë në pak orë dhe vijnë të plota.
-* **Nëse jeton në Shqipëri dhe bën biznes me Europën:** Të paguash një furnitor në Gjermani, të marrësh paratë nga një klient në Francë, apo të paguhesh për një projekt *freelance* nga Spanja — të gjitha këto përpara donin transferta ndërkombëtare të shtrenjta. Tani është po aq e thjeshtë sa të paguash një faturë lokale.
-* **Nëse punon në remoto për kompani europiane:** Ky është ndryshimi më i madh për një brez të tërë të rinjsh shqiptarë që punojnë online. Të marrësh rrogën apo honoraret nga Europa nuk do të thotë më të humbësh një përqindje të madhe çdo muaj nëpër komisione bankash. Çfarë fiton, të vjen në llogari.
-* **Nëse planifikon të kthehesh në Shqipëri nga diaspora:** Të kalosh kursimet e tua nga Italia, Greqia apo Gjermania në llogarinë tënde në Shqipëri për të blerë një pronë apo për të hapur një biznes — një operacion që përpara të kushtonte qindra euro komisione — tani është një transfertë standarde SEPA. E sigurt, e shpejtë dhe ekonomike.
+Sepse ky vendim nuk merret në ajër — merret në një treg konkret dhe në një moment konkret. Dhe momenti konkret i këtij viti 2026 është ky:  
+
+Çmimet e pasurive të paluajtshme në Shqipëri kanë disa vite që rriten në mënyrë drastike. Sidomos në Tiranë. Një apartament 2+1 në një lagje mesatare të kryeqytetit që në vitin 2022 kushtonte 90.000 €, sot mund të shkojë nga 130.000 € deri në 160.000 €, varësisht nga zona. Sipas indeksit dhe raporteve të fundit të <a href="https://www2.deloitte.com/al/en.html" target="_blank" rel="noopener noreferrer">Deloitte Albania</a>, çmimi mesatar për metër katror në Tiranë arriti në 2.000 € — pothuajse dyfishi i asaj që ishte para tre vitesh.  
+
+Kjo gjë e ndryshon kalkulimin plotësisht.  
+
+Sepse nëse çmimet vazhdojnë të rriten, të blesh sot duket gjë e mençur — po futesh në lojë para se të shtrenjtohet më shumë. Por nëse tregu stabilizohet ose pëson një korrigjim (siç ka ndodhur në vende të tjera të rajonit), i bie që ke blerë shtrenjtë dhe ke mbi shpinë një kredi që zgjat njëzet vjet mbi një aset që po zhvlerësohet.  
+
+> **Të jemi të sinqertë:** Askush nuk e di me siguri se çfarë do të ndodhë. Kushdo që të thotë se e di, po të gënjen.  
+
+Ajo që mund të bëjmë është të kuptojmë saktësisht se çfarë po firmos në secilin skenar. Sa paguan gjithsej. Sa nga ato para mbeten të tuat në fund. Dhe kur (nëse ndodh ndonjëherë) blerja ka më shumë sens sesa qiraja. Për këtë të duhen numra. Jo opinione. Jo intuicion. Numra.  
 
 ---
 
-## Pjesa që askush nuk ta shpjegon
+## Le të flasim me shifra konkrete mbi tryezë.
 
-Sistemi SEPA është aktiv, por kjo nuk do të thotë se banka jote po e përdor automatikisht në mënyrën më të mirë, apo që ti e di se si ta kërkosh. Si çdo ndryshim në sistemin financiar, teoria vjen pak më shpejt se praktika.
+Skenari real në Tiranë sot:  
 
-Kjo është ajo që duhet të bësh konkretisht:
+Një apartament 2+1 në një lagje mesatare të Tiranës kushton përafërsisht 130.000 €. Për të kërkuar kredi në bankë, të duhet të kesh të kursyer të paktën 20% të shumës — domethënë **26.000 € paradhënie**. Banka të huazon 104.000 € e mbetura.  
 
-### 1. Verifiko që banka jote në Shqipëri është gati
-Të gjitha bankat kryesore në Shqipëri (BKT, Raiffeisen, Intesa Sanpaolo Albania, OTP, etj.) janë të regjistruara zyrtarisht në sistemin SEPA. Por që të pranosh një transfertë të tillë, të duhet një e dhënë jetike që mbase nuk e ke ende: **IBAN-i yt shqiptar**.  
-IBAN-i është numri ndërkombëtar që identifikon llogarinë tënde brenda rrjetit SEPA. Pa të, personi në Europë nuk bën dot transfertën e saktë. Nëse nuk e di, hyr në aplikacionin e bankës tënde ose telefono bordin e klientit dhe kërko IBAN-in tënd. Është një numër që fillon me kodin "AL" dhe ka gjithsej 28 karaktere.
+Me çfarë nisme? Nën udhëzimet dhe politikat e <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Bankës së Shqipërisë</a>, bankat tregtare po ofrojnë kredi për shtëpi në euro me interesa midis 3.5% dhe 5.5% në vit. Le të marrim si referencë 4.5% — një shifër reale e tregut sot. Për një afat 20-vjeçar, **kësti yt mujor do të ishte afërsisht 650 €**.  
 
-### 2. Tregoi familjes në Europë si të dërgojë paratë saktë
-Ky është hapi ku gabojnë shumica. Motra jote në Milano mund të ketë qëllimet më të mira, por nëse vazhdon të përdorë të njëjtën metodë të vjetër — Western Union fizik, MoneyGram apo një transfertë të vjetër ndërkombëtare — nuk do të përfitojë nga SEPA.  
-Për të bërë një transfertë SEPA nga Europa në Shqipëri, asaj i duhen vetëm tre gjëra: **Emri yt i plotë, IBAN-i yt shqiptar dhe kodi BIC/SWIFT i bankës tënde**. Me këto të dhëna, ajo mund ta bëjë transfertën nga aplikacioni i bankës së saj në Europë për pak minuta. Çmimi nga ana europiane varion nga 0 deri në 3 € maksimumi.
+Tani shohim qiranë. Po ai apartament 2+1, në të njëjtën lagje të Tiranës, jepet sot me qira midis 600 € dhe 800 € në muaj. Le të marrim **700 € si mesatare**.  
 
-### 3. Kupto çfarë mbulon SEPA dhe çfarë jo
-SEPA funksionon **vetëm për transfertat në euro**. Nëse dikush të nis para në dollarë nga Shtetet e Bashkuara, SEPA nuk vlen — ajo mbetet një transfertë klasike me kostot e saj të larta. Po ashtu, nëse të vijnë para në monedha të tjera (franga zvicerane apo paund), nuk futen te ky rrjet direkt. Për diasporën në Itali, Greqi apo Gjermani, SEPA mbulon çdo gjë sepse ata përdorin euron.
+Pra, diferenca mujore midis qirasë dhe këstit të kredisë është pothuajse e njëjtë: 650 € vs 700 €. Por llogaria nuk mbaron këtu.  
 
-### 4. Krahaso përsëri, gjithmonë!
-SEPA i ka ulur drastikisht kostot e bankave. Por aplikacione si Paysend apo Remitly janë gjithashtu në lojë dhe ofrojnë kurse këmbimi shumë agresive. Cila opsion të konvenon më shumë sot? Varet nga shuma dhe nga urgjenca.  
+*   **Kostot e fshehura të kredisë:** Kredia ka kosto që qiraja nuk i ka: shpenzime noteriale, regjistrimi në zyrat e pronës të <a href="https://www.ashk.gov.al/" target="_blank" rel="noopener noreferrer">Agjencisë Shtetërore të Kadastrës (ASHK)</a>, dhe vlerësimi i pronës (rreth 2.000 € deri në 4.000 € në fillim). Sigurimi i detyrueshëm i pronës çdo vit. Mirëmbajtja dhe riparimet që në rastin e qirasë i paguan pronari. Dhe mbi të gjitha — ato 26.000 € paradhënie që dalin nga xhepi yt që ditën e parë.  
+*   **Kostot e fshehura të qirasë:** Nga ana tjetër, qiraja ka një kosto që kredia nuk e ka: çdo vit pronari mund të ngrejë çmimin. Në Tiranë, qiratë u rritën ndjeshëm gjatë vitit të kaluar. Atë që sot e paguan 700 €, vitin tjetër mund të bëhet 770 €. Dhe ti nuk e kontrollon dot këtë.  
 
-Prandaj ekziston kalkulatori dhe krahasuesi te `leku.al` — që të mos bësh llogari me laps e letër çdo herë. Para se të bësh transfertën e radhës, hyr te `leku.al` dhe shiko në kohë reale se cila rrugë është më e lira për ty sot.
+Prandaj, pyetja nuk është se cila është më e lirë sot. Pyetja është se cila ka më shumë sens për situatën tënde specifike në njëzet vitet e ardhshme. Dhe kjo përgjigje nuk është e njëjtë për të gjithë.  
 
-Bota financiare e Shqipërisë ka ndryshuar. Pyetja është: **A e dines ti?**
+Për të thjeshtuar këtë ekuacion pa pasur nevojë të bëni llogari manuale, mund të përdorni mjetin tonë interaktiv **[Kalkulatori Kredi vs Qira në leku.al](https://leku.al/albania/kredi-vs-qira/)**, i cili do të krahasojë vlerat në kohë reale.
+
+---
+
+### Një sqarim i sinqertë
+
+Unë vetë jetoj afër Kamzës. Jo te Blloku, jo në qendër. Dhe pikërisht për këtë arsye e kuptoj që ky kalkulim ndryshon totalisht nga njëri person te tjetri. Një apartament afër zonës sime kushton dukshëm më pak se ato 130.000 € që morëm si shembull më lart. Kjo do të thotë se paradhënia është më e kapshme, kësti mujor është më i ulët dhe e gjithë ekuacioni ndryshon.  
+
+Vendndodhja ka rëndësi. Situata jote ka rëndësi. Prandaj nuk ka një përgjigje universale.  
+Por, ka disa situata ku secili opsion ka më shumë sens.  
+
+### Blerja (Kredia) ka më shumë sens nëse:
+
+*   **Ke kursimet për paradhënien (20%) pa mbetur fare pa para.** Nëse për të bërë bashkë ato 26.000 € të duhet të zbrazësh çdo qindarkë që ke, një e papritur e vogël — një problem shëndetësor apo mbetja pa punë për një muaj — mund të kthehet në katastrofë financiare. Paradhënia nuk mund të jetë i gjithë buxheti yt.  
+*   **Planifikon të jetosh në atë qytet të paktën 10 vite.** Kredia është një angazhim afatgjatë. Nëse pas 3 vitesh të duhet të lëvizësh për punë, familje apo arsye të tjera, qiraja të jep një liri që kredia nuk ta mundëson.  
+*   **Çmimet e qirasë në zonën tënde po rriten pafund.** Nëse pronari ta rrit qiranë me 8% apo 10% çdo vit, pas pesë vitesh ajo që sot duket e lirë mund të bëhet e papërballueshme. Kredia ta ngrin dhe ta fikson koston mujore.  
+
+### Qiraja ka më shumë sens nëse:
+
+*   **Nuk i ke ende të kursyera paratë e paradhënies.** Të marrësh kredi pa pasur pjesën tënde të kursyer — duke hyrë në borxhe te familjarët apo duke marrë një kredi tjetër konsumatore — është si të nisësh garën me një çantë plot me gurë mbi shpinë.  
+*   **Të ardhurat e tua nuk janë ende të qëndrueshme.** Kredia nuk të fal në muajt e këqij. Banka nuk bën negociata. Qiraja të jep pak më shumë hapësirë manovrimi nëse gjërat vështirësohen.  
+*   **Je në një moment tranzicioni.** Punë e re, qytet i ri, marrëdhënie e re. Të lidhesh pas një kredie në një moment pasigurie personale mund të jetë vendimi më i keq financiar i jetës tënde — jo prej numrave, por prej momentit të gabuar.  
+
+---
+
+## Agroni dhe Besniku...
+
+Të dy fqinjët që përmendëm në fillim.  
+
+Asnjëri prej tyre nuk ka bërë domosdoshmërisht një zgjedhje të gabuar. Thjesht morën një vendim pa pasur të gjitha të dhënat në dorë. Dhe në Shqipërinë e sotme, med çmimet që ndryshojnë me këtë ritëm, të marrësh vendimin më të madh të jetës sate financiare pa bërë llogaritë, është një luks që nuk ia lejon dot vetes.  
+
+Tregu nuk pret. Koha ecën, pyetja është nëse po punon në favorin tënd apo kundër teje. Dhe kjo varet nga një numër i vetëm: **numri yt**.  
+
+Jo ai i Agronit. Jo ai i Besnikut. I yti — paradhënia që ke në dispozicion, të ardhurat e tua mujore, planet e tua për dhjetë vitet e ardhshme dhe lagjja ku dëshiron të jetosh. Marrja e kontrollit të strehimit tuaj kërkon lënien mënjanë të presioneve sociale dhe analizimin e kontratave me ftohtësi absolute. Pronat blihen me kokë, jo me impulse. Stabiliteti i vërtetë nuk vjen nga pasja e një karte pronësie me çdo kusht, por nga siguria që jeni zot i vendimeve tuaja dhe jo skllav i borxheve.
+
+---
+
+## 🧠 Pyetjet e Shpeshta (FAQ)
+
+<br>
+
+<details>
+<summary><b>Çfarë është sigurimi i jetës që kërkohet për kredinë e shtëpisë dhe kush e përfiton atë?</b></summary>
+<br>
+Gjatë nënshkrimit të një kredie hipotekare në Shqipëri, bankat ju detyrojnë të kontraktoni një sigurim jete vjetor. Është e rëndësishme të kuptoni që ju e paguani faturën nga xhepi juaj, por përfituesi kryesor në rast fatkeqësie është banka. Sigurimi shërben që kompania siguruese të shlyejë borxhin e mbetur të shtëpisë në mënyrë që banka të mos humbasë paratë e saj, duke garantuar që prona të mbetet e lirë nga ngarkesat për familjen tuaj.
+<br><br>
+</details>
+
+<details>
+<summary><b>A mund të më rritet kësti i kredisë në euro në Shqipëri nëse ndryshon tregu evropian?</b></summary>
+<br>
+Po, plotësisht nëse kontrata juaj është me interes të ndryshueshëm ose të përzier. Shumica e kredive për shtëpi në euro në Tiranë janë të lidhura me lëvizjet e indeksit Euribor. Nëse interesat rriten jashtë vendit për të frenuar inflacionin, banka juaj lokale do të aplikojë rritjen në rishikimin tuaj vjetor, gjë që do të rrisë këstin tuaj mujor automatikisht.
+<br><br>
+</details>
+
+<details>
+<summary><b>Çfarë ndodh me kaparin apo garancinë e qirasë nëse vendos të largohem para kohe?</b></summary>
+<br>
+Sipas rregullave të tregut imobiliar në kryeqytet, nëse vendosni të largoheni nga apartamenti përpara afatit të përcaktuar në kontratën e qirasë, pronari ka të drejtë ligjore të mbajë vlerën e garancisë (që zakonisht është sa një ose dy muaj qirë) si penalitet për thyerjen e marrëveshjes para kohe, përveç rasteve kur keni njoftuar brenda afatit të rënë dakord me shkrim.
+<br><br>
+</details>
+
+<br>
+
+---
+
+### Referencat specifike të të dhënave:
+*   **Banka e Shqipërisë - Raportet e Stabilitetit Financiar dhe Tregu Imobiliar:** <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">https://www.bankofalbania.org/</a>
+*   **Deloitte Albania - Real Estate Market Trends and Capital Indices:** <a href="https://www2.deloitte.com/al/en.html" target="_blank" rel="noopener noreferrer">https://www2.deloitte.com/al/en.html</a>
+*   **Agjencia Shtetërore e Kadastrës (ASHK) - Tarifat e Regjistrimit të Pronësisë:** <a href="https://www.ashk.gov.al/" target="_blank" rel="noopener noreferrer">https://www.ashk.gov.al/</a>
