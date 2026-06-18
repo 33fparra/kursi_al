@@ -14,60 +14,77 @@ readMinutes: 4
 lang: "en"
 ---
 
-Imagine that today a loaf of bread costs 100 lekë.  
-Next year it costs 104 lekë.  
-The bread didn't get any better, it didn't grow, and the recipe didn't change. It simply costs more.  
-And you, who kept 1,000 lekë under the mattress during that year, still have exactly the same 1,000 lekë. The bill is the same. The number is the same.  
+Imagine this situation. Today, a standard loaf of bread costs 100 Lekë. Next year, that exact same loaf of bread costs 104 Lekë. The bread didn't get any tastier, it didn't grow in size, and the recipe remains exactly the same. It simply costs more. 
 
-But something has changed.  
-Before, you bought 10 loaves of bread. Now you can only buy 9 and a bit.  
-Nobody robbed you. Nobody lied to you. Nobody touched your money.  
-But your money is worth less. Just like that, silently, without you even noticing.  
-This thing has a name: **inflation**.  
+And you, who kept a 1,000 Lekë bill under the mattress during that whole year, still have exactly the same 1,000 Lekë bill in your hand. The color is the same. The printed number is the same. But something has broken completely. Before, you bought 10 loaves of bread with that bill; now you can only buy 9 and a piece. Nobody robbed you on the street, nobody lied to you, and nobody touched your savings. But your money is worth less. Just like that, silently, without you even noticing. This economic phenomenon has a very clear name: **inflation**.
 
-Great. Now you know what inflation is.  
-Now comes the important question: **why does it happen?** Think of it this way. Imagine that in a small village there are 10 people and 10 apples.  
-Each apple costs 10 lekë. Everything is in balance.  
-Now imagine that suddenly everyone has double the money: 20 lekë in their pocket. But the apples remain at 10.  
-What happens? Everyone wants to buy, there is more money chasing the same amount of goods, and the seller raises the price. Now each apple costs 20 lekë.  
+Now that you understand the basic concept, here comes the important question: why does this happen? Think of this very simple example. Imagine that in a small village there are only 10 people and 10 apples in total. Each apple costs 10 Lekë; the whole market is in perfect balance. Now imagine that, suddenly, the government hands out money and everyone happens to have double in their pocket: 20 Lekë. But the village apples remain the same 10. What happens? Since everyone wants to buy and there is more money chasing the same amount of products, the seller simply raises the prices. Now each apple costs 20 Lekë. The money doubled, but the apples did not. And each Lek passed to be worth half as much. 
 
-The money doubled. The apples did not. And every single lek is worth half as much.  
-This is exactly what happens in an entire economy when there is too much money in circulation, when production costs rise, or when there is a shortage of products. Prices go up. And your money, without moving an inch from the mattress, shrinks, while prices *"inflate like a balloon"*.  
+This is exactly what happens in an entire economy when there is too much money in circulation, when production costs for companies rise, or when there is a shortage of products in stores. Prices go up and your savings, without moving a single millimeter from under the mattress, shrink while life inflates like a balloon.
 
-Now comes the part that nobody ever explained to you.  
-In Albania, thousands of families keep their savings in cash. At home. Under the mattress, in a box, or in a drawer. It's understandable — there is a historical distrust toward banks, and keeping money where you can see it gives a sense of security.  
-But there is a silent problem with this.  
+---
 
-If inflation this year is 4%, and you have 100,000 lekë stored at home, at the end of the year that money remains exactly 100,000 lekë. The number didn't change. But its purchasing power fell. What you used to buy for 100,000 lekë will now require 104,000 lekë to purchase.  
-You lost 4,000 lekë simply by keeping it locked away at home.  
+## What Nobody Explains to You About Keeping Money at Home
 
-Then someone might think: *"Ok, I'll put it in the bank at least"*. And they are right — it's better than the mattress, provided the bank is reliable. But you have to read the fine print.  
-If your bank gives you a 1% annual interest rate and inflation is 4%, you are still losing. Not as much as with the mattress, but you are losing. The bank returns 101,000 lekë to you at the end of the year. But to maintain the exact same purchasing power, you needed 104,000 lekë.  
+In Albania, thousands of families maintain the deeply rooted custom of keeping their savings in cash. At home. Whether under the mattress, in a metal box, or in a locked drawer. It is something completely understandable: there is a historical distrust toward financial institutions and keeping money where you can see and touch it gives a false sense of security. But there is a very serious mathematical problem with this.
 
-The difference — those 3,000 lekë — wasn't lost all at once. You lost it bit by bit, without feeling it, while the money sat quietly in the account.  
-Economists call this a *"negative real interest rate"*. But you don't need to remember this term. You just need to remember a simple rule:  
+If the inflation rate officially registered this year by <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">INSTAT (Institute of Statistics of Albania)</a> is 4%, it means those 100,000 Lekë you have in a drawer will remain the same banknote. But your purchasing power will have bled out. What you used to buy with those 100,000 Lekë will now cost you 104,000 Lekë at the supermarket. You have lost 4,000 Lekë of real value simply by leaving the money frozen at home. This directly affects the real consumption capacity of households, a financial blow similar to the one we explain when analyzing the <a href="https://leku.al/ditari/artikull/edukim/paga-neto-kosove-atk/">tax impact on local net salary</a>.
 
-> If the interest the bank gives you is lower than inflation, you are losing money even if you don't touch a single lek.
+Then, someone might think: *"Very well, to avoid this I will put the savings in the bank"*. And they are entirely right; it will always be a much safer option than the home drawer, but you have to read the real conditions. If your commercial bank offers you an interest rate of 1% per year in your account and the country's inflation is at 4%, you are still losing money. Not as much as in the home drawer, but you are losing. The bank will return 101,000 Lekë to you at the end of the year, but to maintain exactly the same purchasing power you had on day one, you needed 104,000 Lekë. 
 
-But... there is good news.  
-You don't need to become an economist, or have bags of money, or understand complicated terms to protect yourself from inflation. You only need to understand one idea:  
-**Your money has to move faster than inflation. That is all.** The practical question is: how? And here are real options, ranked from the simplest to the most complex.  
+That difference — those 3,000 Lekë you are missing — you didn't lose all at once. The market took it away from you day after day, cent by cent, while your savings rested in the checking account. Economists call this having a *"negative real interest rate"*. But you don't need to learn that technical term. You just need to remember a golden rule of the street: **if the interest the bank gives you is lower than the country's inflation, you are losing money even if you do not spend a single Lek.**
 
-* **The first option — time deposits:** It is the simplest thing there is. You give your money to the bank for a fixed period — six months, a year — and the bank pays you a fixed interest rate agreed upon in advance. In Albania, some banks currently offer time deposits with interest rates between 3% and 5% per year, depending on the amount and the term.  
-    It won't make you rich. But it is the difference between losing purchasing power and keeping it.  
-    If you keep 500,000 lekë in a deposit with a 4% annual interest rate and inflation that year is also 4%, your money didn't grow — but it didn't shrink either. You broke even with inflation. And breaking even with inflation, when the alternative is the mattress, is a massive win.  
-* **The second option — don't put all your eggs in one basket:** A rule that people who understand money have been using for centuries. One part in a current account for the month's expenses. Another part in a time deposit to generate something. And if you want to explore more options in the future — investment funds, properties, or other instruments — you will already have the baseline to understand them.  
-    But we will look into those in other articles. For now, by taking this first step, you are ahead of 80% of people.  
+---
 
-Let's go back to the bread.  
-Today it costs 100 lekë. Next year it will cost 104. The year after, a bit more. Like this every year, without stopping, without asking for your permission.  
-You cannot stop inflation. Nobody can. It is part of the normal functioning of any economy.  
+## The Real Tools to Protect Your Effort
 
-But you can decide whether your money will sit still watching the world get more expensive around it, or if it will move enough not to be left behind.  
-The mattress is comfortable. But it makes you lose money every single day.  
+The good news is that you do not need to be a stock market expert, nor have millions of euros, nor understand complicated financial charts to protect your family's assets against inflation. You only need to master a basic idea: **your money has to move faster than the rise in prices.** The practical question is how to achieve this in our current market, and here are the real options ordered from the simplest to the most advanced:
 
-The difference between someone who loses money without spending a single lek and someone who doesn't is not intelligence. It's not the salary. It's not having friends at the bank.  
-It is knowing this very thing you just read.  
-Now that you know...  
+*   **Time deposits:** It is the most direct tool that exists. You hand over your savings to the bank for a closed period of time (six months, one year, two years) and the entity commits by contract to pay you a fixed interest agreed upon in advance. Currently, under the reference rates of the <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë (Bank of Albania)</a>, some local banks are offering time deposits with very competitive returns that help mitigate the impact of inflation. You won't get rich with this, but it is the first line of defense separating your money from absolute devaluation. If you wish to review what options suit your savings today, you can use the **[Time Deposit Comparison Engine at leku.al](https://leku.al/albania/depozita/)** to calculate which institution offers you the best coverage before moving your funds.
+*   **Basic diversification:** A rule that people who care for their money have been using for centuries: do not put all your eggs in one basket. Keeping a small portion in the checking account for the month's daily expenses, another portion in a time deposit to curb inflation and, if in the future you wish to explore other alternatives (like investment funds or real estate), you will already have a solid financial base to understand them.
 
-The next step is yours — enter the comparison platform `leku.al` and see what deposit options banks in Albania and Kosovo are offering today. A single click can be the difference between a year where your money worked for you, or a year where it simply shrank.
+---
+
+## Protect the Fruit of Your Labor
+
+Let's go back to the example of the bread. Today it costs 100 Lekë. Next year it will cost 104 Lekë. The following year, a bit more. And so the market will continue year after year, constantly and without asking anyone's permission. You cannot stop the country's inflation, nobody can do it individually; it is a natural variable of the functioning of any modern economy.
+
+But what is under your absolute control is deciding what you are going to do with the money you earn with the sweat of your brow. You can choose to leave it still in a corner watching life become more expensive around you every day, or you can force it to move enough so that it doesn't fall behind. The mattress is a very comfortable place to sleep, but it is the worst hiding place for your financial stability because it makes you lose assets every morning.
+
+The real difference between a person who sees their savings evaporate in silence without having spent a single Lek and someone who manages to shield the future of their home is not intelligence, nor the size of their monthly salary, nor having contacts inside bank branches. It is simply having the right information at the right time. The control of your money is your responsibility.
+
+---
+
+## 🧠 Frequently Asked Questions (FAQ)
+
+<br>
+
+<details>
+<summary><b>What is the Consumer Price Index (CPI) and how is it used to measure inflation in Albania?</b></summary>
+<br>
+The Consumer Price Index (CPI) is the official statistical indicator calculated monthly by <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">INSTAT</a> to measure the average change in the prices of a representative "shopping basket" for Albanian households. This basket includes more than 300 everyday items, from basic foods like bread, milk, and meat, to the cost of fuel, electricity, rent, and medical services. When the total cost of this basket rises compared to the previous year, the country's official inflation percentage is determined.
+<br><br>
+</details>
+
+<details>
+<summary><b>Are my savings protected by the government if I decide to put them in a time deposit in an Albanian bank?</b></summary>
+<br>
+Yes, all deposits of natural persons in licensed commercial banks in the country are insured by law through the <a href="https://asd.gov.al/" target="_blank" rel="noopener noreferrer">Agjencia e Sigurimit të Depozitave (ASD)</a>. This state guarantee fund covers a maximum amount up to 2,500,000 Lekë (or its equivalent in foreign currency such as euros) for each client in each financial institution. If a bank goes bankrupt or suffers an intervention, the state returns your money mandatorily up to this legal limit, making keeping savings in the bank infinitely safer than leaving them exposed to theft or fires at home.
+<br><br>
+</details>
+
+<details>
+<summary><b>Does inflation affect my savings in the same way if I have them saved in Euros instead of Lekë?</b></summary>
+<br>
+No, because inflation measures the loss of value of a currency within its own market. If you keep your savings in Euros inside Albania, you are exposed to two different risks: the internal inflation of the Eurozone (which reduces the value of the Euro at an international level) and the local exchange rate regulated by the <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Bank of Albania</a>. If the Lek strengthens against the Euro in our country, your saved Euros will lose purchasing power in local shops in Tirana twice as fast, so deposit accounts should be chosen by carefully analyzing the currency in which you will spend in the future.
+<br><br>
+</details>
+
+<br>
+
+---
+
+### Specific Data References:
+*   **Monthly publication of the Consumer Price Index and cost of living:** <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">Instituti i Statistikave (INSTAT) - Indeksi i Çmimeve të Konsumit (IÇK)</a>
+*   **Monetary policy reports and market reference interest rates:** <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë - Financial Intermediation Analysis Report</a>
+*   **Depositor protection laws and state fund coverage limits:** <a href="https://asd.gov.al/" target="_blank" rel="noopener noreferrer">Agjencia e Sigurimit të Depozitave (ASD) - Deposit Insurance Scheme in Albania</a>
