@@ -15,7 +15,7 @@ function getSection(pathname) {
   if (p === '/' || p === '' || p === '/home') return 'home';
   if (p.startsWith('/kursi') || p.startsWith('/historiku') ||
       p.startsWith('/tabela') || p.startsWith('/remitanca')) return 'change';
-  if (p.startsWith('/albania') || p.startsWith('/kosova') || p.startsWith('/blog')) return 'country';
+  if (p.startsWith('/albania') || p.startsWith('/kosova')) return 'country';
   return 'home';
 }
 
@@ -34,7 +34,6 @@ const HOME_LINKS = {
     { path: '/albania', label: 'Shqipëria',   flag: 'al' },
     { path: '/kosova',  label: 'Kosova',       flag: 'xk' },
     { path: '/kursi',  label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
-    { path: '/blog',    label: 'Blog',         icon: 'ti-notebook' },
     { path: '/ditari',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
   ],
   en: [
@@ -42,7 +41,6 @@ const HOME_LINKS = {
     { path: '/en/albania', label: 'Albania',   flag: 'al' },
     { path: '/en/kosova',  label: 'Kosovo',    flag: 'xk' },
     { path: '/en/kursi',  label: 'Converter', icon: 'ti-arrows-up-down' },
-    { path: '/en/blog',    label: 'Blog',      icon: 'ti-notebook' },
     { path: '/en/ditari',  label: "Lek's Diary", icon: 'ti-notebook-2' },
   ],
   it: [
@@ -89,14 +87,12 @@ const COUNTRY_TOP = {
     { path: '/',        label: 'Kreu',      icon: 'ti-arrow-left' },
     { path: '/albania', label: 'Shqipëria', flag: 'al' },
     { path: '/kosova',  label: 'Kosova',    flag: 'xk' },
-    { path: '/blog',    label: 'Blog',      icon: 'ti-notebook' },
     { path: '/ditari',  label: 'Lajme',     icon: 'ti-news' },
   ],
   en: [
     { path: '/',           label: 'Home',    icon: 'ti-arrow-left' },
     { path: '/en/albania', label: 'Albania', flag: 'al' },
     { path: '/en/kosova',  label: 'Kosovo',  flag: 'xk' },
-    { path: '/en/blog',    label: 'Blog',    icon: 'ti-notebook' },
     { path: '/en/ditari',  label: 'News',    icon: 'ti-news' },
   ],
 };
