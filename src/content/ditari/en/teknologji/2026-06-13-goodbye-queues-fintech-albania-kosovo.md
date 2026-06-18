@@ -7,7 +7,7 @@ author: "F.A Parretti"
 country: "Albania / Kosovo"
 translationKey: "fintech-vs-traditional-banking-balkans"
 date: 2026-06-13
-image: "/ditari/images/fintech-vs-traditional-banking-balkans.webp"
+image: "/ditari/images/fintech-vs-banca-tradicionale-ballkan.webp"
 imageAlt: "A citizen in Pristina paying with their smartphone via a QR code"
 readMinutes: 5
 lang: "en"
