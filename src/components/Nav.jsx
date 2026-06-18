@@ -90,12 +90,14 @@ const COUNTRY_TOP = {
     { path: '/albania', label: 'Shqipëria', flag: 'al' },
     { path: '/kosova',  label: 'Kosova',    flag: 'xk' },
     { path: '/blog',    label: 'Blog',      icon: 'ti-notebook' },
+    { path: '/ditari',  label: 'Lajme',     icon: 'ti-news' },
   ],
   en: [
-    { path: '/',          label: 'Home',    icon: 'ti-arrow-left' },
+    { path: '/',           label: 'Home',    icon: 'ti-arrow-left' },
     { path: '/en/albania', label: 'Albania', flag: 'al' },
     { path: '/en/kosova',  label: 'Kosovo',  flag: 'xk' },
     { path: '/en/blog',    label: 'Blog',    icon: 'ti-notebook' },
+    { path: '/en/ditari',  label: 'News',    icon: 'ti-news' },
   ],
 };
 
