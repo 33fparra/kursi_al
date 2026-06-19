@@ -110,7 +110,7 @@ export default function RateTable({ lang = 'sq' }) {
           {updatedAt && (
             <> · {new Date(updatedAt).toLocaleTimeString(lang === 'en' ? 'en-GB' : 'sq-AL', { hour: '2-digit', minute: '2-digit' })}</>
           )}
-          {' '}· kursi.al
+          {' '}· leku.al
         </p>
       )}
       <table className="rates-table rates-table--full" aria-label={u.pair}>

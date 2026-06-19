@@ -185,7 +185,7 @@ export default function Remittance({ lang = 'sq' }) {
         <div style={{ marginBottom: 'var(--space-4)' }}>
           <span className="rate-badge">
             <i className="ti ti-info-circle" style={{ fontSize: '13px' }} aria-hidden="true" />
-            {u.rateReal}: 1 {currency} = {fmt(midRate, 'ALL')} ALL · kursi.al
+            {u.rateReal}: 1 {currency} = {fmt(midRate, 'ALL')} ALL · leku.al
           </span>
         </div>
       )}
