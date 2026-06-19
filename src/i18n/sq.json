@@ -89,7 +89,6 @@
 
   "nav.albania":        "Shqipëria",
   "nav.kosovo":         "Kosova",
-  "nav.blog":           "Blog",
   "nav.countries":      "Shtetet",
   "nav.tools":          "Mjetet",
 
@@ -181,13 +180,6 @@
   "salary.faq.q2.xk":        "Si llogaritet tatimi mbi pagën në Kosovë?",
   "salary.faq.a2.xk":        "Tatimi në Kosovë: 0% deri €80, 4% midis €80–250, 8% midis €250–450 dhe 10% mbi €450. Plus pension 5% nga punëmarrësi.",
 
-  "blog.title":              "Blog financiar",
-  "blog.subtitle":           "Artikuj mbi financat personale, bankat dhe ekonominë shqiptare",
-  "blog.readMore":           "Lexo më shumë",
-  "blog.backToBlog":         "Kthehu te blogu",
-  "blog.publishedOn":        "Publikuar",
-  "blog.category":           "Kategoria",
-  "blog.minRead":            "min lexim",
 
   "hub.al.title":            "Shqipëria — Mjetet Financiare",
   "hub.al.subtitle":         "Bankat, hipotekat, kreditë dhe pagat — gjithçka për financat tuaja në Shqipëri",

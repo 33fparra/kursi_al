@@ -89,7 +89,6 @@
 
   "nav.albania":        "Albania",
   "nav.kosovo":         "Kosovo",
-  "nav.blog":           "Blog",
   "nav.countries":      "Countries",
   "nav.tools":          "Tools",
 
@@ -181,13 +180,6 @@
   "salary.faq.q2.xk":        "How is wage tax calculated in Kosovo?",
   "salary.faq.a2.xk":        "Kosovo tax: 0% up to €80, 4% between €80–250, 8% between €250–450 and 10% above €450. Plus 5% pension from the employee.",
 
-  "blog.title":              "Financial blog",
-  "blog.subtitle":           "Articles about personal finance, banking and the Albanian economy",
-  "blog.readMore":           "Read more",
-  "blog.backToBlog":         "Back to blog",
-  "blog.publishedOn":        "Published",
-  "blog.category":           "Category",
-  "blog.minRead":            "min read",
 
   "hub.al.title":            "Albania — Financial Tools",
   "hub.al.subtitle":         "Banks, mortgages, loans and salaries — everything for your finances in Albania",
