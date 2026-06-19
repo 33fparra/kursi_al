@@ -39,14 +39,14 @@ To stop viewing a negative balance as \"safety funds\" and to understand the rea
 
 If you fail to fill that financial hole and leave the account frozen in negative territory, this is the approximate cost that the bank will siphon out of your pocket completely silently:
 
-* **After 60 days in the negative:** The bank is not going to wait until the end of the year to collect its money. In just two months, the accumulated daily interest plus the automated account fees will cost you roughly **4,800 Lekë** (€50) extra. Your debt is no longer 150.000; it has risen to 154,800 Lekë, shrinking your purchasing power for the following month without you buying anything.
+* **After 60 days in the negative:** The bank is not going to wait until the end of the year to collect its money. In just two months, the accumulated daily interest plus the automated account fees will cost you roughly **4,800 Lekë** (€50) extra. Your debt is no longer 150,000; it has risen to 154,800 Lekë, shrinking your purchasing power for the following month without you buying anything.
 * **After 6 months (180 days) in the negative:** This is where the snowball becomes destructive for household finances. If you spend half a year at the bottom of the pit without ever bringing the balance back to positive ground, the real APR chokes everything out. Between daily compound interest, the contract renewal fee automatically applied mid-year, and prolonged deficit penalties, the cost flies to almost **16,500 Lekë** (around €170).
 
 
 | Days with a negative balance | Your initial debt | Accumulated interest and fees | Total owed to the bank |
 | :--- | :---: | :---: | :---: |
 | **30 days** | 150,000 Lekë / €1,500 | ~2,100 Lekë / €22 | **152,100 Lekë / €1,522** |
-| **60 days** | 150,000 Lekë / €1,500 | ~4.800 Lekë / €50 | **154,800 Lekë / €1.550** |
+| **60 days** | 150,000 Lekë / €1,500 | ~4,800 Lekë / €50 | **154,800 Lekë / €1,550** |
 | **6 months (180 days)** | 150,000 Lekë / €1,500 | ~16,500 Lekë / €170 | **166,500 Lekë / €1,670** |
 
 
