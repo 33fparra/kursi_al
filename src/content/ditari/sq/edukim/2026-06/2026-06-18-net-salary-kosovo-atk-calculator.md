@@ -6,7 +6,7 @@ category: "Pagat"
 author: "F.A Parretti"
 country: "Kosovo"
 translationKey: "paga-neto-kosove-atk"
-date: 2026-06-18
+date: 2026-06-19
 image: "/ditari/images/2026-06/paga-neto-kosove-atk.webp"
 imageAlt: "Një profesionist i ri në zyrë duke llogaritur rrogën e tij bruto dhe neto në kompjuter me sistemin e ATK-së"
 readMinutes: 4
