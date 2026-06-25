@@ -10,12 +10,12 @@ const { lang = 'sq', active } = Astro.props;
 const base = lang === 'en' ? '/en/ditari' : '/ditari';
 
 const filters = [
-  { key: 'all',    href: base,               label: t(lang, 'ditari.allArticles') },
-  { key: 'edukim', href: `${base}/edukim`,   label: t(lang, 'ditari.typeEdukim') },
-  { key: 'lajme',  href: `${base}/lajme`,    label: t(lang, 'ditari.typeLajme') },
-  { key: 'tech',   href: `${base}/tech`,     label: t(lang, 'ditari.typeTech') },
-  { key: 'ai',     href: `${base}/ai`,       label: t(lang, 'ditari.typeAi') },
-  { key: 'int',    href: `${base}/int`,      label: t(lang, 'ditari.typeInt') },
+  { key: 'all',    href: `${base}/`,         label: t(lang, 'ditari.allArticles') },
+  { key: 'edukim', href: `${base}/edukim/`,  label: t(lang, 'ditari.typeEdukim') },
+  { key: 'lajme',  href: `${base}/lajme/`,   label: t(lang, 'ditari.typeLajme') },
+  { key: 'tech',   href: `${base}/tech/`,    label: t(lang, 'ditari.typeTech') },
+  { key: 'ai',     href: `${base}/ai/`,      label: t(lang, 'ditari.typeAi') },
+  { key: 'int',    href: `${base}/int/`,     label: t(lang, 'ditari.typeInt') },
 ] as const;
 ---
 <nav class="ditari-filters" aria-label="Filter">

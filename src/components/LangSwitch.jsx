@@ -3,8 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 const LANGS = [
   { code: 'sq', flag: 'al', name: 'Shqip' },
   { code: 'en', flag: 'gb', name: 'English' },
-  // { code: 'it', flag: 'it', name: 'Italiano' },
-  // { code: 'el', flag: 'gr', name: 'Ελληνικά' },
 ];
 
 export default function LangSwitch({ currentLang = 'sq', pathname = '/', ariaLabel = 'Select language', allowedLangs = null, langLinks = null }) {

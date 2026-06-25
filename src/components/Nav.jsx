@@ -3,15 +3,13 @@ import LangSwitch from './LangSwitch';
 
 import sqData from '../i18n/sq.json';
 import enData from '../i18n/en.json';
-import itData from '../i18n/it.json';
-import elData from '../i18n/el.json';
 
-const TRANSLATIONS = { sq: sqData, en: enData, it: itData, el: elData };
+const TRANSLATIONS = { sq: sqData, en: enData };
 function t(lang, key) { return TRANSLATIONS[lang]?.[key] ?? TRANSLATIONS.sq[key] ?? key; }
 
 // ── Section detection ──────────────────────────────────────────────────────────
 function getSection(pathname) {
-  const p = pathname.replace(/^\/(en|it|el)/, '') || '/';
+  const p = pathname.replace(/^\/en/, '') || '/';
   if (p === '/' || p === '' || p === '/home') return 'home';
   if (p.startsWith('/kursi') || p.startsWith('/historiku') ||
       p.startsWith('/tabela') || p.startsWith('/remitanca')) return 'change';
@@ -30,70 +28,50 @@ function getActiveCountry(pathname) {
 // Top-level links for HOME section nav
 const HOME_LINKS = {
   sq: [
-    { path: '/',        label: 'Kreu',        icon: 'ti-home-2' },
-    { path: '/albania', label: 'Shqipëria',   flag: 'al' },
-    { path: '/kosova',  label: 'Kosova',       flag: 'xk' },
-    { path: '/kursi',  label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
-    { path: '/ditari',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
+    { path: '/',         label: 'Kreu',        icon: 'ti-home-2' },
+    { path: '/albania/', label: 'Shqipëria',   flag: 'al' },
+    { path: '/kosova/',  label: 'Kosova',       flag: 'xk' },
+    { path: '/kursi/',   label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
+    { path: '/ditari/',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
   ],
   en: [
-    { path: '/',           label: 'Home',      icon: 'ti-home-2' },
-    { path: '/en/albania', label: 'Albania',   flag: 'al' },
-    { path: '/en/kosova',  label: 'Kosovo',    flag: 'xk' },
-    { path: '/en/kursi',  label: 'Converter', icon: 'ti-arrows-up-down' },
-    { path: '/en/ditari',  label: "Lek's Diary", icon: 'ti-notebook-2' },
-  ],
-  it: [
-    { path: '/',              label: 'Home',         icon: 'ti-home-2' },
-    { path: '/it/kursi',     label: 'Convertitore', icon: 'ti-arrows-up-down' },
-  ],
-  el: [
-    { path: '/',              label: 'Αρχική',  icon: 'ti-home-2' },
-    { path: '/el/kursi',     label: 'Μετατροπή', icon: 'ti-arrows-up-down' },
+    { path: '/',            label: 'Home',      icon: 'ti-home-2' },
+    { path: '/en/albania/', label: 'Albania',   flag: 'al' },
+    { path: '/en/kosova/',  label: 'Kosovo',    flag: 'xk' },
+    { path: '/en/kursi/',   label: 'Converter', icon: 'ti-arrows-up-down' },
+    { path: '/en/ditari/',  label: "Lek's Diary", icon: 'ti-notebook-2' },
   ],
 };
 
 // Change section nav (all 4 languages)
 const CHANGE_LINKS = {
   sq: [
-    { path: '/kursi',           label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
-    { path: '/kursi/tabela',    label: 'Tabela',      icon: 'ti-table' },
-    { path: '/kursi/historiku', label: 'Historiku',   icon: 'ti-chart-line' },
-    { path: '/kursi/remitanca', label: 'Remitanca',   icon: 'ti-send' },
+    { path: '/kursi/',           label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
+    { path: '/kursi/tabela/',    label: 'Tabela',      icon: 'ti-table' },
+    { path: '/kursi/historiku/', label: 'Historiku',   icon: 'ti-chart-line' },
+    { path: '/kursi/remitanca/', label: 'Remitanca',   icon: 'ti-send' },
   ],
   en: [
-    { path: '/en/kursi',           label: 'Converter',  icon: 'ti-arrows-up-down' },
-    { path: '/en/kursi/tabela',    label: 'Rates',      icon: 'ti-table' },
-    { path: '/en/kursi/historiku', label: 'History',    icon: 'ti-chart-line' },
-    { path: '/en/kursi/remitanca', label: 'Remittance', icon: 'ti-send' },
-  ],
-  it: [
-    { path: '/it/kursi',           label: 'Convertitore', icon: 'ti-arrows-up-down' },
-    { path: '/it/kursi/tabela',    label: 'Tassi',        icon: 'ti-table' },
-    { path: '/it/kursi/historiku', label: 'Storico',      icon: 'ti-chart-line' },
-    { path: '/it/kursi/remitanca', label: 'Rimesse',      icon: 'ti-send' },
-  ],
-  el: [
-    { path: '/el/kursi',           label: 'Μετατροπή',   icon: 'ti-arrows-up-down' },
-    { path: '/el/kursi/tabela',    label: 'Ισοτιμίες',   icon: 'ti-table' },
-    { path: '/el/kursi/historiku', label: 'Ιστορικό',    icon: 'ti-chart-line' },
-    { path: '/el/kursi/remitanca', label: 'Εμβάσματα',   icon: 'ti-send' },
+    { path: '/en/kursi/',           label: 'Converter',  icon: 'ti-arrows-up-down' },
+    { path: '/en/kursi/tabela/',    label: 'Rates',      icon: 'ti-table' },
+    { path: '/en/kursi/historiku/', label: 'History',    icon: 'ti-chart-line' },
+    { path: '/en/kursi/remitanca/', label: 'Remittance', icon: 'ti-send' },
   ],
 };
 
 // Country section — top links (only sq/en)
 const COUNTRY_TOP = {
   sq: [
-    { path: '/',        label: 'Kreu',      icon: 'ti-arrow-left' },
-    { path: '/albania', label: 'Shqipëria', flag: 'al' },
-    { path: '/kosova',  label: 'Kosova',    flag: 'xk' },
-    { path: '/ditari',  label: 'Lajme',     icon: 'ti-news' },
+    { path: '/',         label: 'Kreu',      icon: 'ti-arrow-left' },
+    { path: '/albania/', label: 'Shqipëria', flag: 'al' },
+    { path: '/kosova/',  label: 'Kosova',    flag: 'xk' },
+    { path: '/ditari/',  label: 'Lajme',     icon: 'ti-news' },
   ],
   en: [
-    { path: '/',           label: 'Home',    icon: 'ti-arrow-left' },
-    { path: '/en/albania', label: 'Albania', flag: 'al' },
-    { path: '/en/kosova',  label: 'Kosovo',  flag: 'xk' },
-    { path: '/en/ditari',  label: 'News',    icon: 'ti-news' },
+    { path: '/',            label: 'Home',    icon: 'ti-arrow-left' },
+    { path: '/en/albania/', label: 'Albania', flag: 'al' },
+    { path: '/en/kosova/',  label: 'Kosovo',  flag: 'xk' },
+    { path: '/en/ditari/',  label: 'News',    icon: 'ti-news' },
   ],
 };
 
@@ -101,34 +79,34 @@ const COUNTRY_TOP = {
 const COUNTRY_TOOLS = {
   al: {
     sq: [
-      { path: '/albania/paga',        label: 'Paga',        icon: 'ti-wallet' },
-      { path: '/albania/bankat',      label: 'Bankat',      icon: 'ti-building-bank' },
-      { path: '/albania/hipoteka',    label: 'Hipoteka',    icon: 'ti-home' },
-      { path: '/albania/kredia',      label: 'Kredia',      icon: 'ti-credit-card' },
-      { path: '/albania/kualifikim',  label: 'Kualifikim',  icon: 'ti-user-check' },
+      { path: '/albania/paga/',        label: 'Paga',        icon: 'ti-wallet' },
+      { path: '/albania/bankat/',      label: 'Bankat',      icon: 'ti-building-bank' },
+      { path: '/albania/hipoteka/',    label: 'Hipoteka',    icon: 'ti-home' },
+      { path: '/albania/kredia/',      label: 'Kredia',      icon: 'ti-credit-card' },
+      { path: '/albania/kualifikim/',  label: 'Kualifikim',  icon: 'ti-user-check' },
     ],
     en: [
-      { path: '/en/albania/paga',        label: 'Salary',      icon: 'ti-wallet' },
-      { path: '/en/albania/bankat',      label: 'Banks',       icon: 'ti-building-bank' },
-      { path: '/en/albania/hipoteka',    label: 'Mortgage',    icon: 'ti-home' },
-      { path: '/en/albania/kredia',      label: 'Loan',        icon: 'ti-credit-card' },
-      { path: '/en/albania/kualifikim',  label: 'Eligibility', icon: 'ti-user-check' },
+      { path: '/en/albania/paga/',        label: 'Salary',      icon: 'ti-wallet' },
+      { path: '/en/albania/bankat/',      label: 'Banks',       icon: 'ti-building-bank' },
+      { path: '/en/albania/hipoteka/',    label: 'Mortgage',    icon: 'ti-home' },
+      { path: '/en/albania/kredia/',      label: 'Loan',        icon: 'ti-credit-card' },
+      { path: '/en/albania/kualifikim/',  label: 'Eligibility', icon: 'ti-user-check' },
     ],
   },
   xk: {
     sq: [
-      { path: '/kosova/paga',        label: 'Paga',        icon: 'ti-wallet' },
-      { path: '/kosova/bankat',      label: 'Bankat',      icon: 'ti-building-bank' },
-      { path: '/kosova/hipoteka',    label: 'Hipoteka',    icon: 'ti-home' },
-      { path: '/kosova/kredia',      label: 'Kredia',      icon: 'ti-credit-card' },
-      { path: '/kosova/kualifikim',  label: 'Kualifikim',  icon: 'ti-user-check' },
+      { path: '/kosova/paga/',        label: 'Paga',        icon: 'ti-wallet' },
+      { path: '/kosova/bankat/',      label: 'Bankat',      icon: 'ti-building-bank' },
+      { path: '/kosova/hipoteka/',    label: 'Hipoteka',    icon: 'ti-home' },
+      { path: '/kosova/kredia/',      label: 'Kredia',      icon: 'ti-credit-card' },
+      { path: '/kosova/kualifikim/',  label: 'Kualifikim',  icon: 'ti-user-check' },
     ],
     en: [
-      { path: '/en/kosova/paga',        label: 'Salary',      icon: 'ti-wallet' },
-      { path: '/en/kosova/bankat',      label: 'Banks',       icon: 'ti-building-bank' },
-      { path: '/en/kosova/hipoteka',    label: 'Mortgage',    icon: 'ti-home' },
-      { path: '/en/kosova/kredia',      label: 'Loan',        icon: 'ti-credit-card' },
-      { path: '/en/kosova/kualifikim',  label: 'Eligibility', icon: 'ti-user-check' },
+      { path: '/en/kosova/paga/',        label: 'Salary',      icon: 'ti-wallet' },
+      { path: '/en/kosova/bankat/',      label: 'Banks',       icon: 'ti-building-bank' },
+      { path: '/en/kosova/hipoteka/',    label: 'Mortgage',    icon: 'ti-home' },
+      { path: '/en/kosova/kredia/',      label: 'Loan',        icon: 'ti-credit-card' },
+      { path: '/en/kosova/kualifikim/',  label: 'Eligibility', icon: 'ti-user-check' },
     ],
   },
 };
@@ -236,7 +214,7 @@ export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', al
           {section === 'change' && (
             <span className="topbar-section-badge">
               <i className="ti ti-arrows-up-down" aria-hidden="true" />
-              {lang === 'en' ? 'Exchange' : lang === 'it' ? 'Cambio' : lang === 'el' ? 'Ισοτιμίες' : 'Konvertuesi'}
+              {lang === 'en' ? 'Exchange' : 'Konvertuesi'}
             </span>
           )}
 

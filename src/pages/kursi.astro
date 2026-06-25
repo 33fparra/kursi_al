@@ -16,14 +16,14 @@ const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: '
   description={t(lang, 'index.meta.description')}
   keywords={t(lang, 'index.meta.keywords')}
   lang={lang}
-  currentPath="/kursi"
+  currentPath="/kursi/"
 >
   <h1 class="sr-only">{t(lang, 'index.meta.title')}</h1>
   <p class="page-intro">{t(lang, 'index.intro')}</p>
 
   <Converter client:only="react" initialRates={rates} lang={lang} />
 
-  <a href="/kursi/remitanca" class="remit-banner">
+  <a href="/kursi/remitanca/" class="remit-banner">
     <div>
       <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang, 'index.remit.title')}</p>
       <p class="remit-sub">{t(lang, 'index.remit.sub')}</p>
@@ -64,22 +64,22 @@ const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: '
     <p class="kursi-xlinks-label">Eksploroni gjithashtu</p>
     <div class="kursi-xlinks-grid">
       <div class="kursi-xlinks-group">
-        <a href="/albania" class="kursi-xlinks-country">
+        <a href="/albania/" class="kursi-xlinks-country">
           <span class="fi fi-al" aria-hidden="true"></span><strong>Shqipëria</strong>
         </a>
-        <a href="/albania/hipoteka" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
-        <a href="/albania/paga"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
-        <a href="/albania/bankat"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
-        <a href="/albania/kredia"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
+        <a href="/albania/hipoteka/" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
+        <a href="/albania/paga/"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
+        <a href="/albania/bankat/"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
+        <a href="/albania/kredia/"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
       </div>
       <div class="kursi-xlinks-group">
-        <a href="/kosova" class="kursi-xlinks-country">
+        <a href="/kosova/" class="kursi-xlinks-country">
           <span class="fi fi-xk" aria-hidden="true"></span><strong>Kosova</strong>
         </a>
-        <a href="/kosova/hipoteka" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
-        <a href="/kosova/paga"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
-        <a href="/kosova/bankat"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
-        <a href="/kosova/kredia"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
+        <a href="/kosova/hipoteka/" class="kursi-xlink"><i class="ti ti-home" aria-hidden="true"></i> Hipoteka</a>
+        <a href="/kosova/paga/"     class="kursi-xlink"><i class="ti ti-wallet" aria-hidden="true"></i> Paga &amp; Tatimi</a>
+        <a href="/kosova/bankat/"   class="kursi-xlink"><i class="ti ti-building-bank" aria-hidden="true"></i> Krahasim bankash</a>
+        <a href="/kosova/kredia/"   class="kursi-xlink"><i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale</a>
       </div>
     </div>
   </div>

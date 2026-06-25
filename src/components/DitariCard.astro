@@ -12,7 +12,7 @@ const { title, description, type, category, date, image, imageAlt, readMinutes }
 
 const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 const base = lang === 'en' ? '/en/ditari' : '/ditari';
-const href = `${base}/artikull/${type}/${slug}`;
+const href = `${base}/artikull/${type}/${slug}/`;
 
 const TYPE_KEYS: Record<string, string> = {
   edukim: 'ditari.typeEdukim',

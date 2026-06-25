@@ -13,7 +13,7 @@ const locale = lang === 'en' ? 'en-GB' : 'sq-AL';
 
 function getHref(entry: CollectionEntry<'ditari'>) {
   const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
-  return `${base}/artikull/${entry.data.type}/${slug}`;
+  return `${base}/artikull/${entry.data.type}/${slug}/`;
 }
 ---
 

@@ -22,14 +22,14 @@ const faqJsonLd = JSON.stringify({
   description="Krahaso normat e hipotekës dhe kredisë personale të bankave kryesore shqiptare: Raiffeisen, BKT, OTP, Tirana Bank, Credins dhe ProCredit."
   keywords="bankat shqiptare, norma hipoteke shqipëri, kredi personale shqipëri, raiffeisen albania, BKT albania, krahasim bankash"
   lang={lang}
-  currentPath="/albania/bankat"
+  currentPath="/albania/bankat/"
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={faqJsonLd} />
   </Fragment>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/albania" class="breadcrumb-link">
+    <a href="/albania/" class="breadcrumb-link">
       <span class="fi fi-al" aria-hidden="true"></span> Shqipëria
     </a>
     <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
@@ -59,10 +59,10 @@ const faqJsonLd = JSON.stringify({
   </section>
 
   <div class="country-tool-nav">
-    <a href="/albania/hipoteka" class="tool-nav-link">
+    <a href="/albania/hipoteka/" class="tool-nav-link">
       <i class="ti ti-home" aria-hidden="true"></i> Kalkulatore hipoteke →
     </a>
-    <a href="/albania/kredia" class="tool-nav-link">
+    <a href="/albania/kredia/" class="tool-nav-link">
       <i class="ti ti-credit-card" aria-hidden="true"></i> Kredi personale →
     </a>
   </div>

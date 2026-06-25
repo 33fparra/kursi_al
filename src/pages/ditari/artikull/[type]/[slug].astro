@@ -21,10 +21,10 @@ const { Content } = await render(entry);
 const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 const enEntries = await getCollection('ditari', e => e.data.lang === 'en' && e.data.type === type);
 const enMatch = enEntries.find(e => e.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '') === slug);
-const allowedLangs: ('sq' | 'en' | 'it' | 'el')[] | null = ['sq', 'en'];
+const allowedLangs: ('sq' | 'en')[] | null = ['sq', 'en'];
 const langLinks = {
-  sq: `/ditari/artikull/${type}/${slug}`,
-  en: enMatch ? `/en/ditari/artikull/${type}/${enMatch.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '')}` : '/en/ditari',
+  sq: `/ditari/artikull/${type}/${slug}/`,
+  en: enMatch ? `/en/ditari/artikull/${type}/${enMatch.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '')}/` : '/en/ditari/',
 };
 
 const dateLabel = date.toLocaleDateString('sq-AL', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -49,7 +49,7 @@ const articleJsonLd = JSON.stringify({
   title={`${title} | leku.al`}
   description={description}
   lang={lang}
-  currentPath="/ditari"
+  currentPath="/ditari/"
   allowedLangs={allowedLangs}
   langLinks={langLinks}
 >
@@ -58,7 +58,7 @@ const articleJsonLd = JSON.stringify({
   </Fragment>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/ditari" class="breadcrumb-link">{t(lang, 'ditari.heading')}</a>
+    <a href="/ditari/" class="breadcrumb-link">{t(lang, 'ditari.heading')}</a>
     <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
     <span class="breadcrumb-current">{category}</span>
   </nav>
@@ -108,7 +108,7 @@ const articleJsonLd = JSON.stringify({
     )}
 
     <footer class="blog-post-footer">
-      <a href="/ditari" class="tool-nav-link">
+      <a href="/ditari/" class="tool-nav-link">
         <i class="ti ti-arrow-left" aria-hidden="true"></i> {t(lang, 'ditari.backToList')}
       </a>
     </footer>

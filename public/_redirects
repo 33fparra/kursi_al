@@ -1,0 +1,26 @@
+# ─── Italiano eliminado (jun 2026) → todo redirige a inglés ───
+# Rutas legacy explícitas primero (el wildcard de abajo no las mapea 1:1)
+/it/tabela              /en/kursi/tabela       301
+/it/historiku           /en/kursi/historiku    301
+/it/remitanca           /en/kursi/remitanca    301
+/it/change              /en/kursi              301
+/it/change/tabela       /en/kursi/tabela       301
+/it/change/historiku    /en/kursi/historiku    301
+/it/change/remitanca    /en/kursi/remitanca    301
+/it/                    /en/                   301
+/it                     /en/                   301
+# Wildcard: cubre /it/kursi, /it/kursi/tabela, /it/kursi/historiku, /it/kursi/remitanca
+/it/*                   /en/:splat             301
+
+# ─── Griego eliminado (jun 2026) → todo redirige a inglés ───
+/el/tabela              /en/kursi/tabela       301
+/el/historiku           /en/kursi/historiku    301
+/el/remitanca           /en/kursi/remitanca    301
+/el/change              /en/kursi              301
+/el/change/tabela       /en/kursi/tabela       301
+/el/change/historiku    /en/kursi/historiku    301
+/el/change/remitanca    /en/kursi/remitanca    301
+/el/                    /en/                   301
+/el                     /en/                   301
+# Wildcard: cubre /el/kursi, /el/kursi/tabela, /el/kursi/historiku, /el/kursi/remitanca
+/el/*                   /en/:splat             301

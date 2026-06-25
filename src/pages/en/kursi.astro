@@ -10,11 +10,11 @@ const rates     = ratesData?.rates ?? {};
 const ratesDate = ratesData?.date ?? '';
 const PAIRS = [{ from: 'EUR', to: 'ALL' }, { from: 'USD', to: 'ALL' }, { from: 'GBP', to: 'ALL' }, { from: 'CHF', to: 'ALL' }];
 ---
-<Base title={t(lang,'index.meta.title')} description={t(lang,'index.meta.description')} keywords={t(lang,'index.meta.keywords')} lang={lang} currentPath="/kursi">
+<Base title={t(lang,'index.meta.title')} description={t(lang,'index.meta.description')} keywords={t(lang,'index.meta.keywords')} lang={lang} currentPath="/kursi/">
   <h1 class="sr-only">{t(lang,'index.meta.title')}</h1>
   <p class="page-intro">{t(lang,'index.intro')}</p>
   <Converter client:only="react" initialRates={rates} lang={lang} />
-  <a href="/en/kursi/remitanca" class="remit-banner">
+  <a href="/en/kursi/remitanca/" class="remit-banner">
     <div>
       <p class="remit-title"><i class="ti ti-send" aria-hidden="true"></i>{t(lang,'index.remit.title')}</p>
       <p class="remit-sub">{t(lang,'index.remit.sub')}</p>

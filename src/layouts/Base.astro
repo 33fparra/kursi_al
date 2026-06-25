@@ -6,12 +6,12 @@ export interface Props {
   title: string;
   description?: string;
   keywords?: string;
-  lang?: 'sq' | 'en' | 'it' | 'el';
+  lang?: 'sq' | 'en';
   currentPath?: string;
   ogType?: string;
   dateModified?: string;
-  allowedLangs?: ('sq' | 'en' | 'it' | 'el')[] | null;
-  langLinks?: Partial<Record<'sq' | 'en' | 'it' | 'el', string>> | null;
+  allowedLangs?: ('sq' | 'en')[] | null;
+  langLinks?: Partial<Record<'sq' | 'en', string>> | null;
 }
 
 const {
@@ -33,11 +33,11 @@ const canonicalUrl = `${SITE}${pathname}`;
 const ogImageUrl   = `${SITE}/og-image.svg`;
 
 const ogLocales: Record<string, string> = {
-  sq: 'sq_AL', en: 'en_US', it: 'it_IT', el: 'el_GR',
+  sq: 'sq_AL', en: 'en_US',
 };
 const ogLocale    = ogLocales[lang] ?? 'sq_AL';
 const langNames: Record<string, string> = {
-  sq: 'Albanian', en: 'English', it: 'Italian', el: 'Greek',
+  sq: 'Albanian', en: 'English',
 };
 
 // ── Comprehensive JSON-LD @graph ──────────────────────────────────────────────
@@ -67,7 +67,7 @@ const jsonLd = JSON.stringify({
         { '@type': 'Country', name: 'Albania', sameAs: 'https://www.wikidata.org/wiki/Q222' },
         { '@type': 'Country', name: 'Kosovo',  sameAs: 'https://www.wikidata.org/wiki/Q1246' },
       ],
-      knowsLanguage: ['sq', 'en', 'it', 'el'],
+      knowsLanguage: ['sq', 'en'],
       serviceType: 'Currency Exchange Calculator, Mortgage Calculator, Salary Calculator',
     },
 
@@ -78,7 +78,7 @@ const jsonLd = JSON.stringify({
       url: SITE,
       name: 'leku.al',
       description: t(lang, 'index.meta.description'),
-      inLanguage: ['sq', 'en', 'it', 'el'],
+      inLanguage: ['sq', 'en'],
       publisher: { '@id': `${SITE}/#org` },
       potentialAction: {
         '@type': 'SearchAction',
@@ -231,8 +231,6 @@ const jsonLd = JSON.stringify({
     <!-- hreflang — multilingual SEO -->
     <link rel="alternate" hreflang="sq"        href={`${SITE}${currentPath}`} />
     <link rel="alternate" hreflang="en"        href={`${SITE}/en${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="it"        href={`${SITE}/it${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="el"        href={`${SITE}/el${currentPath === '/' ? '' : currentPath}`} />
     <link rel="alternate" hreflang="x-default" href={`${SITE}${currentPath}`} />
 
     <!-- Anti-flash: corre ANTES de cualquier CSS, evita parpadeo en dark mode -->

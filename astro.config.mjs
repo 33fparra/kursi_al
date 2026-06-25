@@ -9,12 +9,12 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: 'sq',
-        locales: { sq: 'sq-AL', en: 'en', it: 'it', el: 'el' },
+        locales: { sq: 'sq-AL', en: 'en' },
       },
     }),
   ],
   output: 'static',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   redirects: {
     // Old top-level URLs → /kursi/*
     '/tabela':              '/kursi/tabela',
@@ -32,15 +32,6 @@ export default defineConfig({
     '/en/change/tabela':    '/en/kursi/tabela',
     '/en/change/historiku': '/en/kursi/historiku',
     '/en/change/remitanca': '/en/kursi/remitanca',
-    // IT / EL old change URLs → kursi
-    '/it/change':              '/it/kursi',
-    '/it/change/tabela':       '/it/kursi/tabela',
-    '/it/change/historiku':    '/it/kursi/historiku',
-    '/it/change/remitanca':    '/it/kursi/remitanca',
-    '/el/change':              '/el/kursi',
-    '/el/change/tabela':       '/el/kursi/tabela',
-    '/el/change/historiku':    '/el/kursi/historiku',
-    '/el/change/remitanca':    '/el/kursi/remitanca',
     // Home
     '/home':                '/',
     '/en/home':             '/en',
