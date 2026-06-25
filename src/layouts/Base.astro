@@ -12,6 +12,7 @@ export interface Props {
   dateModified?: string;
   allowedLangs?: ('sq' | 'en')[] | null;
   langLinks?: Partial<Record<'sq' | 'en', string>> | null;
+  wide?: boolean;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   dateModified = new Date().toISOString().split('T')[0],
   allowedLangs = null,
   langLinks = null,
+  wide = false,
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -282,7 +284,7 @@ const jsonLd = JSON.stringify({
 
     <div class="app-shell">
       <main class="app-main">
-        <div class="container">
+        <div class={`container${wide ? ' container--wide' : ''}`}>
           <slot />
         </div>
       </main>
@@ -1132,8 +1134,8 @@ const jsonLd = JSON.stringify({
 
   .legal-note { font-size: var(--text-xs); color: var(--ink-muted); margin-top: var(--space-6); display: flex; align-items: flex-start; gap: var(--space-2); line-height: 1.6; }
 
-  /* container--wide kept for compatibility */
-  .container--wide { max-width: 900px; }
+  /* Wider container — listing pages that benefit from using more screen width (e.g. /ditari) */
+  .container--wide { max-width: 1280px; }
 
   /* ─── Breadcrumb ─── */
   .breadcrumb { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); flex-wrap: wrap; }
@@ -1321,7 +1323,8 @@ const jsonLd = JSON.stringify({
   [data-theme='dark'] .ditari-filter--active { background: var(--ink); color: var(--bg-page); }
 
   .ditari-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-5); margin-bottom: var(--space-8); }
-  @media (min-width: 640px) { .ditari-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 640px)  { .ditari-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1100px) { .ditari-grid { grid-template-columns: repeat(3, 1fr); } }
 
   .ditari-card { display: flex; flex-direction: column; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-light); overflow: hidden; text-decoration: none; transition: border-color var(--transition-fast); }
   .ditari-card:hover { border-color: var(--red-albania); }
