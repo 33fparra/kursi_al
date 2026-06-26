@@ -18,7 +18,7 @@ Te pasas muaj të tërë duke kërkuar apartamente në telefonin tënd, duke rua
 
 Aty e kupton se e vetmja rrugë reale është të kërkosh ndihmë dhe leje nga banka. Por të firmosësh një kredi për shtëpi me sytë mbyllur është gabimi më i shtrenjtë i jetës sate. Gjatë kërkimit të financimit, pjesa më e madhe e njerëzve bëjnë gabim sepse shikojnë vetëm një numër: interesin që banka vendos me shkronja gjigante nëpër pankartat e rrugëve. Ajo është thjesht një grep për të të futur brenda në degë. Ajo që asistenti nuk do të të shpjegojë kurrë me qartësi të plotë është \"letra e vogël\" e kontratës. Pas atyre emrave të huaj dhe teknikë fshihen dy shefat e vërtetë të xhepit tënd për 25 vitet e ardhshme: Euribori dhe NEI.
 
-Në artikullin tonë të kaluar mbi **[hartën e tre bankave të mëdha në Kosovë](https://leku.al/ditari/artikull/edukim/cili-eshte-banka-me-e-mire-hipoteke-kosove/)**, pamë se si çdo institucion të analizon sipas llojit të punës që bën. Por le të supozojmë se tani e ke zgjedhur bankën tënde. Te ulesh në karrige dhe këshilltari të thotë me buzëqeshje: *\"Kemi një ofertë shumë të mirë për ty, interesin e kredisë ta lëmë vetëm 4%\"*. Truri yt relaksohet, e imagjinon veten duke gatuar në shtëpinë tënde të re në lagjen *Mati 1* dhe të vjen të firmosësh menjëherë. Mos e bëj. Ky 4% është pothuajse gjithmonë një e vërtetë e përgjysmuar që mund të të lejë të bllokuar në të ardhmen.
+Në artikullin tonë të kaluar mbi **[hartën e tre bankave të mëdha në Kosovë](https://leku.al/ditari/artikull/lajme/bankat-me-te-mira-kosove-hipoteke/)**, pamë se si çdo institucion të analizon sipas llojit të punës që bën. Por le të supozojmë se tani e ke zgjedhur bankën tënde. Te ulesh në karrige dhe këshilltari të thotë me buzëqeshje: *\"Kemi një ofertë shumë të mirë për ty, interesin e kredisë ta lëmë vetëm 4%\"*. Truri yt relaksohet, e imagjinon veten duke gatuar në shtëpinë tënde të re në lagjen *Mati 1* dhe të vjen të firmosësh menjëherë. Mos e bëj. Ky 4% është pothuajse gjithmonë një e vërtetë e përgjysmuar që mund të të lejë të bllokuar në të ardhmen.
 
 ---
 
@@ -39,7 +39,7 @@ Bëhet fjalë për **110 € ekstra çdo muaj** që do të të hiqen nga rroga p
 
 ---
 
-## Rompiendo el código secreto: El efecto \"billete de avión low-cost\"
+## Duke thyer kodin sekret: Efekti i biletës \"low-cost\"
 
 Për të shmangur mashtrimet e reklamave, i vetmi numër real që duhet të kërkosh përpara se të prekësh letrën me stilolaps është **NEI (Norma Efektive e Interesit)**, që është emri zyrtar ligjor për atë që në internet dhe rrjetet sociale ndërkombëtare njihet si **APR** (Annual Percentage Rate).
 

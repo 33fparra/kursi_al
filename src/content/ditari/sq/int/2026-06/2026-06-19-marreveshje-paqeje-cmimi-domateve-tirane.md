@@ -47,7 +47,7 @@ Për të vëzhguar se si këto ulje çmimesh në tregjet globale ju ndihmojnë t
 
 Kur kostoja e plehut ka rënë, traktori ka shpenzuar më pak naftë për të punuar tokën dhe kamioni ka paguar më pak karburant për të hyrë në kryeqytet, domatja mbërrin në treg me një kosto totale shumë më të ulët.
 
-Shitësi i tregut apo pronari i supermarketit të lagjes suaj nuk i ulin çmimet për bujari; e bëjnë për pastër konkurrencë rruge. Nëse të gjithë tregtarëve u kushton më pak sigurimi i mallit, i pari që ul çmimin e k गुरुग्रामit të domateve do të marrë të gjithë klientët e bllokut, duke detyruar dyqanet e tjera të bëjnë të njëjtën gjë për të mos humbur biznesin e tyre. Kështu, një firmë paqeje në Lindjen e Mesme kthehet, hap pas hapi, në një zbritje reale për ju në arkën e pagesës.
+Shitësi i tregut apo pronari i supermarketit të lagjes suaj nuk i ulin çmimet për bujari; e bëjnë për pastër konkurrencë rruge. Nëse të gjithë tregtarëve u kushton më pak sigurimi i mallit, i pari që ul çmimin e kilogramit të domateve do të marrë të gjithë klientët e bllokut, duke detyruar dyqanet e tjera të bëjnë të njëjtën gjë për të mos humbur biznesin e tyre. Kështu, një firmë paqeje në Lindjen e Mesme kthehet, hap pas hapi, në një zbritje reale për ju në arkën e pagesës.
 
 ---
 

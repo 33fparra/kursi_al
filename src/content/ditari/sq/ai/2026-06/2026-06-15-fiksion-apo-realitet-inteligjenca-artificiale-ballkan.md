@@ -51,7 +51,7 @@ Frika për të mbetur prapa është e vlefshme, por paraliza është rreziku i v
 
 Raportet e zhvillimit rajonal nga <a href="https://www.worldbank.org/en/region/eca/publication/western-balkans-regular-economic-report" target="_blank" rel="noopener noreferrer">Banka Botërore për Ballkanin Perëndimor</a> konfirmojnë se vendet që përshpejtojnë rikualifikimin dixhital të punonjësve të tyre të rinj do të shohin një rritje direkte në konkurrueshmërinë e pagave të tyre përballë Bashkimit Europian.
 
-Gjyshërit tanë ecnin në qendër për të paguar shërbimet dhe prindërit tanë gëzoheshin kur kishin një zyrë afër; ne kemi mjetet e së ardhmes në pëllëmbë të dorës. Të ndalojmë së順konkurruari me makinat dhe të fillojmë t'i përdorim ato si asistentë është e vetmja mënyrë që të ardhurat tona të vazhdojnë të rriten. Në fund të ditës, IA nuk do t'ju heqë punën; do t'ju heqë dikush që di ta përdorë atë më mirë se ju.
+Gjyshërit tanë ecnin në qendër për të paguar shërbimet dhe prindërit tanë gëzoheshin kur kishin një zyrë afër; ne kemi mjetet e së ardhmes në pëllëmbë të dorës. Të ndalojmë së konkurruari me makinat dhe të fillojmë t'i përdorim ato si asistentë është e vetmja mënyrë që të ardhurat tona të vazhdojnë të rriten. Në fund të ditës, IA nuk do t'ju heqë punën; do t'ju heqë dikush që di ta përdorë atë më mirë se ju.
 
 ---
 

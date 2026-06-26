@@ -13,13 +13,13 @@ readMinutes: 5
 lang: "sq"
 ---
 
-Gjyshërit e mi ecnin deri në qendër të qytetit për të paguar faturat e dritave dhe të ujit. With kalimin e kohës, mamaja dhe babai im përjetuan një përparim të madh: kompania e ujit dhe ajo e energjisë hapën një zyrë më pranë shtëpisë sonë. Për herë të parë, kjo u ndie si një hap i madh drejt së ardhmes!
+Gjyshërit e mi ecnin deri në qendër të qytetit për të paguar faturat e dritave dhe të ujit. Me kalimin e kohës, mamaja dhe babai im përjetuan një përparim të madh: kompania e ujit dhe ajo e energjisë hapën një zyrë më pranë shtëpisë sonë. Për herë të parë, kjo u ndie si një hap i madh drejt së ardhmes!
 
 Sot, në mes të qershorit, i mbytur nga nxehtësia e verës ndërsa shkruaj këtë artikull, ndaloj dhe mendoj se situata ime nuk ka asnjë sens. Nuk ka absolutisht asnjë kuptim që në ditët e sotme më duhet ende të shkoj në një bankomat për të tërhequr para kesh (Lek), vetëm për të ecur nën diell drejt një zyre ku paguhet uji dhe drita. Jemi në epokën e internetit me shpejtësi të lartë, fibrave optike, teknologjisë 5G dhe Inteligjencës Artificiale, dhe unë jam këtu: duke shënuar borxhin tim në një bllok letre të thjeshtë, ndërsa në dorë mbaj një celular me Siri.
 
 Të them të drejtën, unë e adhuroj gjënë analoge; në shumë aspekte të jetës mbetet zgjedhja më e mirë. Por le të jemi të sinqertë, është vërtet e çuditshme të shkosh ende fizikisht për të paguar dritat dhe ujin, madje shpeshherë përballesh me situatën ku zyrës "nuk i punon makina" e kartave të bankës.
 
-Është një kontrast krejtësisht absurd. Në këtë vit 2026, teknologjia na lejon të komunikojmë med çdo kënd të planetit në sekondë, por lëvizja e parave tona përmes bankave tradicionale në Ballkan ende ndihet si një udhëtim pas në kohë në vitet nëntëdhjetë. Edhe pse vitet e fundit ka pasur përparime të rëndësishme, shumica prej nesh kërkojnë më shumë shpejtësi në procese. Pikërisht përballë kësaj situate dhe kërkesave të gjeneratës së re, aplikacionet celulare të pagesave dhe bankat virtuale po hyjnë me një forcë të jashtëzakonshme.
+Është një kontrast krejtësisht absurd. Në këtë vit 2026, teknologjia na lejon të komunikojmë me çdo kënd të planetit në sekondë, por lëvizja e parave tona përmes bankave tradicionale në Ballkan ende ndihet si një udhëtim pas në kohë në vitet nëntëdhjetë. Edhe pse vitet e fundit ka pasur përparime të rëndësishme, shumica prej nesh kërkojnë më shumë shpejtësi në procese. Pikërisht përballë kësaj situate dhe kërkesave të gjeneratës së re, aplikacionet celulare të pagesave dhe bankat virtuale po hyjnë me një forcë të jashtëzakonshme.
 
 ---
 

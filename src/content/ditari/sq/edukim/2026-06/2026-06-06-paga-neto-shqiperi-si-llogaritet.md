@@ -2,7 +2,7 @@
 title: "Sa merr në dorë? Si llogaritet paga neto në Shqipëri hap pas hapi (2026)"
 description: "Shumë njerëz në Shqipëri negociojnë vetëm pagën neto pa kuptuar se si llogaritet ajo nga paga bruto. Zbuloni sigurimet, tramat e TAP dhe rreziqet e deklarimit të ulët."
 type: "edukim"
-category: "Salarios"
+category: "Pagat"
 author: "F.A Parretti"
 country: "Albania"
 translationKey: "paga-neto-shqiperi-si-llogaritet"
