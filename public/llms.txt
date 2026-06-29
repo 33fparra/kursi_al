@@ -1,0 +1,63 @@
+# leku.al
+
+> Konvertues valutor dhe mjete financiare falas për Shqipërinë dhe Kosovën: kursi i këmbimit ditor ALL/EUR/USD/GBP/CHF, kalkulatorë page neto, hipoteke dhe kredie, krahasim bankash, dhe kalkulatore remitancash (Wise vs Remitly vs bankë). Burimi i kursit: Frankfurter API (të dhëna nga BCE), përditësuar ditë pas dite.
+
+leku.al është faqe statike (Astro) e disponueshme në shqip (gjuha kryesore, pa prefiks URL) dhe anglisht (prefiks `/en/`). Përmbajtja synon publikun në Shqipëri dhe Kosovë, plus diasporën shqiptare. Numrat në faqet shqip përdorin pikën si ndarës mijësh (p.sh. 150.000); faqet në anglisht përdorin presjen (150,000).
+
+## Konvertuesi dhe kursi i këmbimit
+
+- [Konvertuesi i valutave](https://leku.al/kursi/): konverto ALL me EUR, USD, GBP, CHF me kursin e ditës
+- [Tabela e kurseve](https://leku.al/kursi/tabela/): kursi i blerjes/shitjes për të gjitha çiftet, variacioni 24h
+- [Historiku 30-ditor](https://leku.al/kursi/historiku/): grafik dhe tabelë e kursit për 30 ditët e fundit
+- [Kalkulatori i remitancave](https://leku.al/kursi/remitanca/): krahaso Wise, Remitly dhe bankën tradicionale — sa arrin realisht familja
+
+## Shqipëria
+
+- [Mjetet financiare për Shqipërinë](https://leku.al/albania/): hub me të gjitha kalkulatorët për Shqipërinë
+- [Paga neto](https://leku.al/albania/paga/): llogarit pagën neto nga bruto sipas sistemit tatimor shqiptar (TAP)
+- [Bankat](https://leku.al/albania/bankat/): krahasim i tarifave hipotekore dhe të kredive nga bankat kryesore
+- [Hipoteka](https://leku.al/albania/hipoteka/): kalkulator i këstit mujor dhe kostos totale të kredisë për shtëpi
+- [Kredia personale](https://leku.al/albania/kredia/): kalkulator i këstit mujor për kredi konsumatore
+- [Kualifikimi për hipotekë](https://leku.al/albania/kualifikim/): a kualifikohesh për një kredi bazuar në të ardhurat
+
+## Kosova
+
+- [Mjetet financiare për Kosovën](https://leku.al/kosova/): hub me të gjitha kalkulatorët për Kosovën
+- [Paga neto](https://leku.al/kosova/paga/): llogarit pagën neto sipas ligjit tatimor të Kosovës (ATK, Trusti 5%)
+- [Bankat](https://leku.al/kosova/bankat/): krahasim i tarifave hipotekore dhe të kredive
+- [Hipoteka](https://leku.al/kosova/hipoteka/): kalkulator i këstit mujor dhe kostos totale
+- [Kredia personale](https://leku.al/kosova/kredia/): kalkulator i këstit mujor për kredi konsumatore
+- [Kualifikimi për hipotekë](https://leku.al/kosova/kualifikim/): a kualifikohesh bazuar në të ardhurat
+
+## Ditari i Lekut (artikuj)
+
+- [Të gjithë artikujt](https://leku.al/ditari/): edukim financiar dhe lajme ekonomike për Shqipërinë dhe Kosovën
+- [Edukim financiar](https://leku.al/ditari/edukim/): guida praktike (paga, hipoteka, kursime)
+- [Lajme ekonomike](https://leku.al/ditari/lajme/): lajme bankare dhe ekonomike aktuale
+- [Teknologji dhe fintech](https://leku.al/ditari/tech/)
+- [Inteligjenca Artificiale](https://leku.al/ditari/ai/)
+- [Ndërkombëtare](https://leku.al/ditari/int/): si ngjarjet globale ndikojnë xhepin tënd
+
+## English
+
+- [Currency converter](https://leku.al/en/kursi/)
+- [Exchange rate table](https://leku.al/en/kursi/tabela/)
+- [30-day rate history](https://leku.al/en/kursi/historiku/)
+- [Remittance calculator](https://leku.al/en/kursi/remitanca/): compare Wise, Remitly and traditional banks
+- [Albania financial tools](https://leku.al/en/albania/)
+- [Albania salary calculator](https://leku.al/en/albania/salary/)
+- [Albania mortgage calculator](https://leku.al/en/albania/mortgage/)
+- [Kosovo financial tools](https://leku.al/en/kosova/)
+- [Kosovo salary calculator](https://leku.al/en/kosova/salary/)
+- [Kosovo mortgage calculator](https://leku.al/en/kosova/mortgage/)
+- [Lek's Diary (articles)](https://leku.al/en/ditari/): financial education and economic news in English
+
+## Optional
+
+- [Sitemap](https://leku.al/sitemap-index.xml): indeks i plotë i të gjitha URL-ve
+- [Albania loan calculator](https://leku.al/en/albania/loan/)
+- [Albania bank comparison](https://leku.al/en/albania/banks/)
+- [Albania mortgage eligibility](https://leku.al/en/albania/kualifikim/)
+- [Kosovo loan calculator](https://leku.al/en/kosova/loan/)
+- [Kosovo bank comparison](https://leku.al/en/kosova/banks/)
+- [Kosovo mortgage eligibility](https://leku.al/en/kosova/kualifikim/)
