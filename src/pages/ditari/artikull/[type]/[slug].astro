@@ -44,6 +44,30 @@ const articleJsonLd = JSON.stringify({
     url: 'https://leku.al',
   },
 });
+
+// Extract FAQ pairs from <details>/<summary> blocks in the article body
+const faqRegex = /<summary[^>]*><b>([\s\S]*?)<\/b><\/summary>([\s\S]*?)<\/details>/gi;
+const faqItems: { question: string; answer: string }[] = [];
+let faqMatch;
+while ((faqMatch = faqRegex.exec(entry.body || '')) !== null) {
+  const question = faqMatch[1].trim();
+  const answer = faqMatch[2]
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (question && answer) faqItems.push({ question, answer });
+}
+
+const faqJsonLd = faqItems.length > 0 ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+}) : null;
 ---
 <Base
   title={`${title} | leku.al`}
@@ -55,6 +79,7 @@ const articleJsonLd = JSON.stringify({
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={articleJsonLd} />
+    {faqJsonLd && <script type="application/ld+json" set:html={faqJsonLd} />}
   </Fragment>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
