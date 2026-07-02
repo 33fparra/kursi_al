@@ -1,7 +1,7 @@
 ﻿---
 title: "The Smoke Economy in Albania: The Monthly Budget That Burns Away in an Ashtray"
 description: "When I arrived in Albania, one thing struck me immediately: the amount of people smoking. Discover the hidden math suffocating our wallets."
-type: "lajme"
+type: "edukim"
 category: "Personal Finances"
 author: "F.A Parretti"
 coAuthor: ""

@@ -1,7 +1,7 @@
 ﻿---
 title: "Ekonomia e tymit në Shqipëri: Buxheti mujor që digjet në tavllën e duhanit"
 description: "Kur mbërrita në Shqipëri, diçka më bëri përshtypje menjëherë: numri i lartë i duhanpirësve. Zbuloni matematikën e fshehur që po shkatërron xhepat tanë."
-type: "lajme"
+type: "edukim"
 category: "Financa Personale"
 author: "F.A Parretti"
 coAuthor: ""
