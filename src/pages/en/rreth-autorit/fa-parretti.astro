@@ -1,16 +1,16 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../../../layouts/Base.astro';
 
 export const prerender = true;
 const lang = 'en' as const;
 
-const langLinks = { sq: '/rreth-autorit/', en: '/en/rreth-autorit/' };
+const langLinks = { sq: '/rreth-autorit/fa-parretti/', en: '/en/rreth-autorit/fa-parretti/' };
 
 const personJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'F.A. Parretti',
-  url: 'https://leku.al/rreth-autorit/',
+  url: 'https://leku.al/rreth-autorit/fa-parretti/',
   sameAs: ['https://www.linkedin.com/in/felipe-andres-parra-alvarez/'],
   jobTitle: 'Software Engineer and University Lecturer',
   knowsLanguage: ['es', 'en', 'sq'],
@@ -22,10 +22,10 @@ const personJsonLd = JSON.stringify({
 });
 ---
 <Base
-  title="About the Author | F.A. Parretti – leku.al"
+  title="F.A. Parretti — Author | leku.al"
   description="Meet the author of leku.al — software engineer, university lecturer and Tirana resident with over 2 years of hands-on experience in the Albanian and Kosovar financial market."
   lang={lang}
-  currentPath="/rreth-autorit/"
+  currentPath="/rreth-autorit/fa-parretti/"
   ogType="profile"
   langLinks={langLinks}
 >
@@ -35,7 +35,12 @@ const personJsonLd = JSON.stringify({
     <meta property="og:description" content="Meet the author of leku.al — software engineer, university lecturer and Tirana resident with over 2 years of hands-on experience in the Albanian and Kosovar financial market." />
   </Fragment>
 
-  <!-- ── Author profile ── -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/rreth-autorit/" class="breadcrumb-link">Contributors</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">F.A. Parretti</span>
+  </nav>
+
   <div class="author-header">
     <div class="author-avatar" aria-hidden="true">FA</div>
     <h1 class="author-name">F.A. Parretti</h1>
@@ -47,7 +52,6 @@ const personJsonLd = JSON.stringify({
     </div>
   </div>
 
-  <!-- ── Why leku.al ── -->
   <div class="section-header" style="margin-top: var(--space-10);">
     <h2 class="page-title">Why leku.al</h2>
   </div>
@@ -60,7 +64,6 @@ const personJsonLd = JSON.stringify({
     </blockquote>
   </div>
 
-  <!-- ── Who I am ── -->
   <div class="section-header" style="margin-top: var(--space-10);">
     <h2 class="page-title">Who I am</h2>
   </div>
@@ -87,7 +90,6 @@ const personJsonLd = JSON.stringify({
     </div>
   </div>
 
-  <!-- ── What I am not ── -->
   <div class="section-header" style="margin-top: var(--space-10);">
     <h2 class="page-title">What I am not</h2>
   </div>
@@ -95,7 +97,6 @@ const personJsonLd = JSON.stringify({
     <p>I am not a certified economist and I do not claim to be. You will never find "invest in this" or "do that" on this site. What you will find are real figures from the Albanian and Kosovar markets, explained through the logic of someone who has lived with them — not from a distance.</p>
   </div>
 
-  <!-- ── Contact ── -->
   <div class="section-header" style="margin-top: var(--space-10);">
     <h2 class="page-title">Contact and social networks</h2>
   </div>
@@ -113,116 +114,19 @@ const personJsonLd = JSON.stringify({
 </Base>
 
 <style>
-  .author-header {
-    text-align: center;
-    padding: var(--space-8) 0 var(--space-6);
-    border-bottom: 1px solid var(--border-light);
-    margin-bottom: var(--space-6);
-  }
-
-  .author-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--red-albania);
-    color: #fff;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--space-4);
-  }
-
-  .author-name {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: var(--text-h1);
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: var(--space-2);
-  }
-
-  .author-role {
-    font-size: var(--text-small);
-    color: var(--ink-secondary);
-    margin-bottom: var(--space-4);
-    line-height: 1.6;
-  }
-
-  .author-badges {
-    display: flex;
-    gap: var(--space-2);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .author-body p {
-    font-size: var(--text-body);
-    color: var(--ink-secondary);
-    line-height: 1.75;
-    margin-bottom: var(--space-4);
-  }
-
-  .author-quote {
-    margin: var(--space-6) 0;
-    padding: var(--space-5) var(--space-6);
-    background: var(--green-soft);
-    border-left: 4px solid var(--green-result);
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    font-size: var(--text-body);
-    color: var(--green-result);
-    font-style: italic;
-    line-height: 1.7;
-  }
-
-  .author-quote .ti-quote {
-    font-size: 20px;
-    display: block;
-    margin-bottom: var(--space-2);
-    opacity: 0.6;
-  }
-
-  [data-theme='dark'] .author-quote {
-    background: var(--green-soft);
-    border-color: var(--green-trend);
-    color: var(--green-result);
-  }
-
-  .author-credentials {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .credential-icon {
-    display: block;
-    font-size: 28px;
-    color: var(--red-albania);
-    margin-bottom: var(--space-3);
-  }
-
-  .author-credentials .country-fact-value {
-    font-size: var(--text-small);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: var(--weight-medium);
-    margin-bottom: var(--space-2);
-  }
-
-  .author-credentials .country-fact-label {
-    font-size: var(--text-xs);
-    line-height: 1.5;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-
-  .author-contact {
-    margin-bottom: var(--space-10);
-  }
-
-  .author-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    width: auto;
-    text-decoration: none;
-  }
+  .author-header { text-align: center; padding: var(--space-8) 0 var(--space-6); border-bottom: 1px solid var(--border-light); margin-bottom: var(--space-6); }
+  .author-avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--red-albania); color: #fff; font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); }
+  .author-name { font-family: 'Playfair Display', Georgia, serif; font-size: var(--text-h1); font-weight: 700; color: var(--ink); margin-bottom: var(--space-2); }
+  .author-role { font-size: var(--text-small); color: var(--ink-secondary); margin-bottom: var(--space-4); line-height: 1.6; }
+  .author-badges { display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap; }
+  .author-body p { font-size: var(--text-body); color: var(--ink-secondary); line-height: 1.75; margin-bottom: var(--space-4); }
+  .author-quote { margin: var(--space-6) 0; padding: var(--space-5) var(--space-6); background: var(--green-soft); border-left: 4px solid var(--green-result); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; font-size: var(--text-body); color: var(--green-result); font-style: italic; line-height: 1.7; }
+  .author-quote .ti-quote { font-size: 20px; display: block; margin-bottom: var(--space-2); opacity: 0.6; }
+  [data-theme='dark'] .author-quote { background: var(--green-soft); border-color: var(--green-trend); color: var(--green-result); }
+  .author-credentials { grid-template-columns: repeat(2, 1fr); }
+  .credential-icon { display: block; font-size: 28px; color: var(--red-albania); margin-bottom: var(--space-3); }
+  .author-credentials .country-fact-value { font-size: var(--text-small); font-family: 'DM Sans', sans-serif; font-weight: var(--weight-medium); margin-bottom: var(--space-2); }
+  .author-credentials .country-fact-label { font-size: var(--text-xs); line-height: 1.5; text-transform: none; letter-spacing: 0; }
+  .author-contact { margin-bottom: var(--space-10); }
+  .author-btn { display: inline-flex; align-items: center; gap: var(--space-2); width: auto; text-decoration: none; }
 </style>

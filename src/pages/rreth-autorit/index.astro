@@ -1,0 +1,111 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const prerender = true;
+const lang = 'sq' as const;
+
+const langLinks = { sq: '/rreth-autorit/', en: '/en/rreth-autorit/' };
+
+// Shto autorë ose rishikues të rinj këtu
+const contributors = [
+  {
+    slug:     'fa-parretti',
+    initials: 'FA',
+    name:     'F.A. Parretti',
+    role:     'Autor kryesor',
+    bio:      'Inxhinier softuerësh, pedagog universitar dhe banor i Tiranës. Shkruan për financat personale në shqip dhe anglisht.',
+    badges:   ['Tiranë, Shqipëri', 'Kile', 'ES · EN · SQ'],
+  },
+];
+---
+<Base
+  title="Bashkëpunëtorët | leku.al"
+  description="Autorët dhe rishikuesit e leku.al — njerëzit që shkruajnë dhe verifikojnë informacionin financiar për Shqipërinë dhe Kosovën."
+  lang={lang}
+  currentPath="/rreth-autorit/"
+  langLinks={langLinks}
+>
+  <div class="section-header">
+    <h1 class="page-title">Bashkëpunëtorët</h1>
+    <p class="page-subtitle">Autorët dhe rishikuesit e leku.al</p>
+  </div>
+
+  <div class="contributors-grid">
+    {contributors.map(c => (
+      <a href={`/rreth-autorit/${c.slug}/`} class="contributor-card">
+        <div class="contributor-avatar">{c.initials}</div>
+        <div class="contributor-body">
+          <p class="contributor-name">{c.name}</p>
+          <p class="contributor-role">{c.role}</p>
+          <p class="contributor-bio">{c.bio}</p>
+          <div class="contributor-badges">
+            {c.badges.map(b => <span class="rate-badge">{b}</span>)}
+          </div>
+        </div>
+        <i class="ti ti-chevron-right contributor-arrow" aria-hidden="true"></i>
+      </a>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .contributors-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
+  }
+
+  .contributor-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+    padding: var(--space-6);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  .contributor-card:hover {
+    border-color: var(--red-albania);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .contributor-avatar {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--red-albania); color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contributor-body { flex: 1; min-width: 0; }
+
+  .contributor-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: var(--text-body); font-weight: var(--weight-medium);
+    color: var(--ink); margin-bottom: 2px;
+  }
+
+  .contributor-role {
+    font-size: var(--text-xs); font-weight: var(--weight-medium);
+    color: var(--red-albania); text-transform: uppercase;
+    letter-spacing: 0.06em; margin-bottom: var(--space-2);
+  }
+
+  .contributor-bio {
+    font-size: var(--text-small); color: var(--ink-secondary);
+    line-height: 1.6; margin-bottom: var(--space-3);
+  }
+
+  .contributor-badges { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+  .contributor-arrow {
+    font-size: 18px; color: var(--ink-muted);
+    flex-shrink: 0; margin-top: 4px;
+    transition: color var(--transition-fast);
+  }
+  .contributor-card:hover .contributor-arrow { color: var(--red-albania); }
+</style>
