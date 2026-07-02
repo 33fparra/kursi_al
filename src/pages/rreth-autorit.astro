@@ -1,0 +1,228 @@
+---
+import Base from '../layouts/Base.astro';
+
+export const prerender = true;
+const lang = 'sq' as const;
+
+const langLinks = { sq: '/rreth-autorit/', en: '/en/rreth-autorit/' };
+
+const personJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'F.A. Parretti',
+  url: 'https://leku.al/rreth-autorit/',
+  sameAs: ['https://www.linkedin.com/in/felipe-andres-parra-alvarez/'],
+  jobTitle: 'Inxhinier Softuerësh dhe Pedagog',
+  knowsLanguage: ['es', 'en', 'sq'],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'leku.al',
+    url: 'https://leku.al',
+  },
+});
+---
+<Base
+  title="Rreth Autorit | F.A. Parretti – leku.al"
+  description="Njihuni me autorin e leku.al — inxhinier softuerësh, pedagog universitar dhe banor i Tiranës me mbi 2 vjet eksperiencë në tregun financiar shqiptar dhe kosovar."
+  lang={lang}
+  currentPath="/rreth-autorit/"
+  ogType="profile"
+  langLinks={langLinks}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={personJsonLd} />
+    <meta property="og:title"       content="F.A. Parretti – Autori i leku.al" />
+    <meta property="og:description" content="Njihuni me autorin e leku.al — inxhinier softuerësh, pedagog universitar dhe banor i Tiranës me mbi 2 vjet eksperiencë në tregun financiar shqiptar dhe kosovar." />
+  </Fragment>
+
+  <!-- ── Profili i autorit ── -->
+  <div class="author-header">
+    <div class="author-avatar" aria-hidden="true">FA</div>
+    <h1 class="author-name">F.A. Parretti</h1>
+    <p class="author-role">Inxhinier Softuerësh · Pedagog Universitar · Interpretues i Gjuhës Kile të Shenjave</p>
+    <div class="author-badges">
+      <span class="rate-badge"><i class="ti ti-map-pin" aria-hidden="true"></i> Tiranë, Shqipëri</span>
+      <span class="rate-badge"><i class="ti ti-flag" aria-hidden="true"></i> Kile</span>
+      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES · EN · SQ · GJSH-Kile</span>
+    </div>
+  </div>
+
+  <!-- ── Pse leku.al ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Pse leku.al</h2>
+  </div>
+  <div class="author-body">
+    <p>Kur mbërrita në Tiranë, gjëja e parë që më bëri përshtypje nuk ishte as arkitektura, as ushqimi dhe as ritmi i qytetit. Ishte diçka tjetër: miqtë e mi shqiptarë — njerëz të arsimuar, shumëgjuhësh, të aftë në profesione të ndryshme — kur vinte puna te financat personale, hesabet bankare apo hipotekat, heshtnin. Jo nga mosinteresimi. Nga mungesa e informacionit të thjeshtë dhe të besueshëm në gjuhën e tyre.</p>
+    <p>Nuk ekzistonte asnjë burim në shqip që të shpjegonte me numra realë se çfarë do të thotë të marrësh një kredi, të llogarisësh pagën neto, apo të krahasosh bankat. Kjo boshllëk ishte e qartë. Dhe për mua, e mbushme.</p>
+    <blockquote class="author-quote">
+      <i class="ti ti-quote" aria-hidden="true"></i>
+      Qëllimi im nuk është të jap leksione ekonomike. Qëllimi im është të ndihmoj njeriun e zakonshëm — që punon, kursen dhe merr vendime financiare çdo ditë — të kuptojë saktësisht çfarë po firmos dhe çfarë po humb.
+    </blockquote>
+  </div>
+
+  <!-- ── Kush jam ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Kush jam</h2>
+  </div>
+  <div class="country-facts author-credentials">
+    <div class="country-fact">
+      <i class="ti ti-code credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Inxhinier Softuerësh</span>
+      <span class="country-fact-label">Formim teknik që më ka mësuar të analizoj sisteme komplekse dhe t'i shpjegoj thjeshtë</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-school credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Pedagog Universitar</span>
+      <span class="country-fact-label">Mbi 7 vjet duke mësuar në Kile. Shpjegimi i koncepteve të vështira me fjalë të thjeshta është zanati im</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-hand-stop credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Gjuhë Shenjash</span>
+      <span class="country-fact-label">Interpretues i certifikuar i gjuhës kile të shenjave. Flas gjuhën shqipe të shenjave me rrjedhshmëri — ende në rrugën drejt certifikimit</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-calendar credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">2 vjet në Shqipëri</span>
+      <span class="country-fact-label">Jetoj dhe punoj këtu. Çmimet, bankat dhe realiteti financiar i Tiranës janë pjesë e jetës sime të përditshme</span>
+    </div>
+  </div>
+
+  <!-- ── Çfarë nuk jam ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Çfarë nuk jam</h2>
+  </div>
+  <div class="author-body">
+    <p>Nuk jam ekonomist i certifikuar dhe nuk pretendoj të jem. Asnjëherë nuk do të gjeni në këtë faqe "investoni në këtë" ose "bëni atë". Ajo që do të gjeni janë numrat realë të tregut shqiptar dhe kosovar, shpjeguar me logjikën e dikujt që ka jetuar me ta — jo nga larg.</p>
+  </div>
+
+  <!-- ── Kontakt ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Kontakt dhe rrjete sociale</h2>
+  </div>
+  <div class="author-contact">
+    <a
+      href="https://www.linkedin.com/in/felipe-andres-parra-alvarez/"
+      class="btn-primary author-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+      Lidhu në LinkedIn
+    </a>
+  </div>
+</Base>
+
+<style>
+  .author-header {
+    text-align: center;
+    padding: var(--space-8) 0 var(--space-6);
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--space-6);
+  }
+
+  .author-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--red-albania);
+    color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+  }
+
+  .author-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: var(--text-h1);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: var(--space-2);
+  }
+
+  .author-role {
+    font-size: var(--text-small);
+    color: var(--ink-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+  }
+
+  .author-badges {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .author-body p {
+    font-size: var(--text-body);
+    color: var(--ink-secondary);
+    line-height: 1.75;
+    margin-bottom: var(--space-4);
+  }
+
+  .author-quote {
+    margin: var(--space-6) 0;
+    padding: var(--space-5) var(--space-6);
+    background: var(--green-soft);
+    border-left: 4px solid var(--green-result);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    font-size: var(--text-body);
+    color: var(--green-result);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .author-quote .ti-quote {
+    font-size: 20px;
+    display: block;
+    margin-bottom: var(--space-2);
+    opacity: 0.6;
+  }
+
+  [data-theme='dark'] .author-quote {
+    background: var(--green-soft);
+    border-color: var(--green-trend);
+    color: var(--green-result);
+  }
+
+  .author-credentials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .credential-icon {
+    display: block;
+    font-size: 28px;
+    color: var(--red-albania);
+    margin-bottom: var(--space-3);
+  }
+
+  .author-credentials .country-fact-value {
+    font-size: var(--text-small);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: var(--weight-medium);
+    margin-bottom: var(--space-2);
+  }
+
+  .author-credentials .country-fact-label {
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .author-contact {
+    margin-bottom: var(--space-10);
+  }
+
+  .author-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: auto;
+    text-decoration: none;
+  }
+</style>

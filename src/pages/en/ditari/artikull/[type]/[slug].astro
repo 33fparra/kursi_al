@@ -99,10 +99,10 @@ const faqJsonLd = faqItems.length > 0 ? JSON.stringify({
       <h1 class="blog-post-title">{title}</h1>
       {author && (
         <div class="article-byline">
-          <span class="article-byline-author">
+          <a href="/en/rreth-autorit/" class="article-byline-author">
             <i class="ti ti-user-circle" aria-hidden="true"></i>
             {author}
-          </span>
+          </a>
           {coAuthor && (
             <span class="article-byline-coauthor">
               <i class="ti ti-users" aria-hidden="true"></i>
@@ -125,7 +125,7 @@ const faqJsonLd = faqItems.length > 0 ? JSON.stringify({
         <div class="article-author-card">
           <i class="ti ti-user-circle article-author-icon" aria-hidden="true"></i>
           <div>
-            <p class="article-author-name">{author}</p>
+            <a href="/en/rreth-autorit/" class="article-author-name">{author}</a>
             {coAuthor && <p class="article-author-coname">{coAuthor}</p>}
           </div>
         </div>

@@ -1,0 +1,228 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const prerender = true;
+const lang = 'en' as const;
+
+const langLinks = { sq: '/rreth-autorit/', en: '/en/rreth-autorit/' };
+
+const personJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'F.A. Parretti',
+  url: 'https://leku.al/rreth-autorit/',
+  sameAs: ['https://www.linkedin.com/in/felipe-andres-parra-alvarez/'],
+  jobTitle: 'Software Engineer and University Lecturer',
+  knowsLanguage: ['es', 'en', 'sq'],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'leku.al',
+    url: 'https://leku.al',
+  },
+});
+---
+<Base
+  title="About the Author | F.A. Parretti – leku.al"
+  description="Meet the author of leku.al — software engineer, university lecturer and Tirana resident with over 2 years of hands-on experience in the Albanian and Kosovar financial market."
+  lang={lang}
+  currentPath="/rreth-autorit/"
+  ogType="profile"
+  langLinks={langLinks}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={personJsonLd} />
+    <meta property="og:title"       content="F.A. Parretti – Author of leku.al" />
+    <meta property="og:description" content="Meet the author of leku.al — software engineer, university lecturer and Tirana resident with over 2 years of hands-on experience in the Albanian and Kosovar financial market." />
+  </Fragment>
+
+  <!-- ── Author profile ── -->
+  <div class="author-header">
+    <div class="author-avatar" aria-hidden="true">FA</div>
+    <h1 class="author-name">F.A. Parretti</h1>
+    <p class="author-role">Software Engineer · University Lecturer · Chilean Sign Language Interpreter</p>
+    <div class="author-badges">
+      <span class="rate-badge"><i class="ti ti-map-pin" aria-hidden="true"></i> Tirana, Albania</span>
+      <span class="rate-badge"><i class="ti ti-flag" aria-hidden="true"></i> Chile</span>
+      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES · EN · SQ · CSL</span>
+    </div>
+  </div>
+
+  <!-- ── Why leku.al ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Why leku.al</h2>
+  </div>
+  <div class="author-body">
+    <p>When I arrived in Tirana, the first thing that struck me was not the architecture, the food, or the rhythm of the city. It was something else: my Albanian friends — educated, multilingual people, skilled across many different professions — when the conversation turned to personal finance, bank accounts, or mortgages, they went silent. Not from lack of interest. From a lack of simple, trustworthy information in their own language.</p>
+    <p>There was no resource in Albanian that explained with real numbers what it means to take out a loan, calculate your net salary, or compare banks. That gap was obvious. And to me, it was clearly fillable.</p>
+    <blockquote class="author-quote">
+      <i class="ti ti-quote" aria-hidden="true"></i>
+      My goal is not to give economics lectures. My goal is to help the ordinary person — who works, saves and makes financial decisions every day — understand exactly what they are signing and what they stand to lose.
+    </blockquote>
+  </div>
+
+  <!-- ── Who I am ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Who I am</h2>
+  </div>
+  <div class="country-facts author-credentials">
+    <div class="country-fact">
+      <i class="ti ti-code credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Software Engineer</span>
+      <span class="country-fact-label">A technical background that taught me how to analyse complex systems and explain them simply</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-school credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">University Lecturer</span>
+      <span class="country-fact-label">Over 7 years teaching in Chile. Explaining difficult concepts in plain language is my craft</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-hand-stop credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Sign Language</span>
+      <span class="country-fact-label">Certified Chilean Sign Language interpreter. Fluent in Albanian Sign Language — still working towards official certification</span>
+    </div>
+    <div class="country-fact">
+      <i class="ti ti-calendar credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">2 years in Albania</span>
+      <span class="country-fact-label">I live and work here. Tirana's prices, banks and financial reality are part of my daily life</span>
+    </div>
+  </div>
+
+  <!-- ── What I am not ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">What I am not</h2>
+  </div>
+  <div class="author-body">
+    <p>I am not a certified economist and I do not claim to be. You will never find "invest in this" or "do that" on this site. What you will find are real figures from the Albanian and Kosovar markets, explained through the logic of someone who has lived with them — not from a distance.</p>
+  </div>
+
+  <!-- ── Contact ── -->
+  <div class="section-header" style="margin-top: var(--space-10);">
+    <h2 class="page-title">Contact and social networks</h2>
+  </div>
+  <div class="author-contact">
+    <a
+      href="https://www.linkedin.com/in/felipe-andres-parra-alvarez/"
+      class="btn-primary author-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+      Connect on LinkedIn
+    </a>
+  </div>
+</Base>
+
+<style>
+  .author-header {
+    text-align: center;
+    padding: var(--space-8) 0 var(--space-6);
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--space-6);
+  }
+
+  .author-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--red-albania);
+    color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+  }
+
+  .author-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: var(--text-h1);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: var(--space-2);
+  }
+
+  .author-role {
+    font-size: var(--text-small);
+    color: var(--ink-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+  }
+
+  .author-badges {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .author-body p {
+    font-size: var(--text-body);
+    color: var(--ink-secondary);
+    line-height: 1.75;
+    margin-bottom: var(--space-4);
+  }
+
+  .author-quote {
+    margin: var(--space-6) 0;
+    padding: var(--space-5) var(--space-6);
+    background: var(--green-soft);
+    border-left: 4px solid var(--green-result);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    font-size: var(--text-body);
+    color: var(--green-result);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .author-quote .ti-quote {
+    font-size: 20px;
+    display: block;
+    margin-bottom: var(--space-2);
+    opacity: 0.6;
+  }
+
+  [data-theme='dark'] .author-quote {
+    background: var(--green-soft);
+    border-color: var(--green-trend);
+    color: var(--green-result);
+  }
+
+  .author-credentials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .credential-icon {
+    display: block;
+    font-size: 28px;
+    color: var(--red-albania);
+    margin-bottom: var(--space-3);
+  }
+
+  .author-credentials .country-fact-value {
+    font-size: var(--text-small);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: var(--weight-medium);
+    margin-bottom: var(--space-2);
+  }
+
+  .author-credentials .country-fact-label {
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .author-contact {
+    margin-bottom: var(--space-10);
+  }
+
+  .author-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: auto;
+    text-decoration: none;
+  }
+</style>
