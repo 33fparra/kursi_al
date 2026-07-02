@@ -1,7 +1,7 @@
 ﻿---
 title: "The New Fire: How Artificial Intelligence is Changing the Future of Albania"
 description: "For many, it sounds like science fiction like Terminator, but AI is already here. Discover how it's redefining employment and bureaucracy in Albania in 2026."
-type: "lajme"
+type: "ai"
 category: "Technology and Future"
 author: "F.A Parretti"
 coAuthor: ""

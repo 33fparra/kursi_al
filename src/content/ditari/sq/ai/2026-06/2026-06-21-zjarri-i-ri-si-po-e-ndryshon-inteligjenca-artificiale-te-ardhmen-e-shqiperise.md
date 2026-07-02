@@ -1,7 +1,7 @@
 ﻿---
 title: "Zjarri i ri: Si po e ndryshon Inteligjenca Artificiale të ardhmen e Shqipërisë"
 description: "Për shumë njerëz duket si shkencë-fiksion si Terminator, por IA është tashmë këtu. Zbuloni se si po rishpik punësimin dhe burokracinë në Shqipëri në vitin 2026."
-type: "lajme"
+type: "ai"
 category: "Teknologji dhe Futuro"
 author: "F.A Parretti"
 coAuthor: ""
