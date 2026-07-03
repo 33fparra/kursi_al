@@ -3,8 +3,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_astro/
 
-# Sitemaps
-Sitemap: https://leku.al/sitemap.xml
+# Sitemap — auto-generado por @astrojs/sitemap en cada build
 Sitemap: https://leku.al/sitemap-index.xml
 
 # Crawl-delay for polite crawlers
