@@ -1,6 +1,6 @@
 ﻿---
 title: "Paratë e tua po zvogëlohen. Dhe nuk është faji i askujt. Është inflacioni."
-description: "Çdo vit që mban kesh në shtëpi ose në një llogari pa interes, paratë e tua vlejnë më pak. Të shpjegojmë se çfarë është inflacioni, pse ndodh dhe çfarë mund të bësh që të mos humbësh pa e kuptuar fare."
+description: "Çdo vit që mbani para kesh në shtëpi ose në një llogari me interes zero, paratë tuaja humbin vlerë reale. Ne shpjegojmë se si të ndaloni humbjen e parave."
 type: "edukim"
 category: "Edukimi Financiar"
 author: "F.A Parretti"
@@ -9,49 +9,149 @@ country: "Albania"
 translationKey: "inflation-savings"
 date: 2026-06-03
 image: "/ditari/images/2026-06/inflacioni-kursimet.webp"
-imageAlt: "Një personazh duke parë me habi se si paratë e tij nën dyshek po zvogëlohen ndërsa çmimet rriten"
+imageAlt: "Një person që shikon me çudi se si paratë e tij nën dyshek zvogëlohen ndërsa çmimet rriten"
 readMinutes: 4
 lang: "sq"
 ---
 
-Paramendo këtë situatë. Sot, një bukë normale kushton 100 lekë. Vitin e ardhshëm, e njëjta bukë kushton 104 lekë. Buka nuk u bë më e shijshme, nuk u rrit në madhësi dhe receta mbetet ekzaktësisht e njëjtë. Thjesht kushton më shumë. 
+Imagjinoni këtë situatë. 
 
-Dhe ti, që e mbajte një prerje 1.000 lekësh nën dyshek gjatë gjithë atij viti, ke ende ekzaktësisht të njëjtën kartëmonedhë në dorë. Ngjyra është e njëjtë. Numri i shtypur është i njëjtë. Por diçka është thyer plotësisht. Përpara blije 10 bukë me atë kartëmonedhë; tani mund të blesh vetëm 9 dhe një copë. Askush nuk të vodhi në rrugë, askush nuk të gënjeu dhe askush nuk i preku kursimet e tua. Por paratë e tua vlejnë më pak. Kështu, në heshtje, pa e kuptuar. Ky fenomen ekonomik ka një emër shumë të qartë: **inflacion**.
+Sot, një bukë standarde kushton 100 Lekë. 
 
-Tani që e kupton konceptin bazë, vjen pyetja e rëndësishme: pse ndodh kjo? Mendoni për këtë shembull shumë të thjeshtë. Paramendoni se në një fshat të vogël ka vetëm 10 njerëz dhe 10 mollë gjithsej. Çdo mollë kushton 10 lekë; i gjithë tregu është në ekuilibër të plotë. Tani paramendoni se, papritur, qeveria ndan para dhe të gjithë kalojnë të kenë dyfishin në xhep: 20 lekë. Por mollët e fshatit mbeten po ato 10. Çfarë ndodh? Meqenëse të gjithë duan të blejnë dhe ka më shumë para që ndjekin të njëjtën sasi produktesh, shitësi thjesht ngre çmimet. Tani çdo mollë kushton 20 lekë. Paratë u dyfishuan, por mollët jo. Dhe çdo lek kaloi të vlente sa gjysma. 
+Vitin e ardhshëm, po kjo bukë kushton 104 Lekë. 
 
-Kjo është ekzaktësisht ajo që ndodh në një ekonomi të tërë kur ka shumë para në qarkullim, kur kostot e prodhimit të kompanive rriten ose kur ka mungesë produktesh nëpër dyqane. Çmimet rriten dhe kursimet e tua, pa u lëvizur asnjë milimetër nga nën dysheku, zvogëlohen ndërsa jeta fryhet si një tullumbace.
+Buka nuk u bë më e shijshme.
+
+Nuk u rrit në madhësi.
+
+Receta mbetet saktësisht e njëjtë. 
+
+Ajo thjesht kushton më shumë. 
+
+Dhe ju, që keni mbajtur një kartëmonedhë 1,000 Lekëshe nën dyshek gjatë gjithë atij viti, keni ende saktësisht të njëjtën kartëmonedhë 1,000 Lekëshe në dorë. 
+
+Ngjyra është e njëjtë. 
+
+Numri i stampuar është i njëjtë. 
+
+Por diçka është thyer plotësisht. 
+
+Më parë, me atë kartëmonedhë blinit 10 bukë; tani mund të blini vetëm 9 dhe një pjesë. 
+
+Askush nuk ju vodhi në rrugë.
+
+Askush nuk ju gënjeu.
+
+Askush nuk i preku kursimet tuaja. 
+
+Por paratë tuaja vlejnë më pak. Kështu, në heshtje, pa e vënë re fare. 
+
+
+
+Ky fenomen ekonomik ka një emër shumë të qartë: **inflacioni**.
 
 ---
 
-## Çfarë askush nuk të shpjegon për mbajtjen e parave në shtëpi
+## Pse paratë e tua blejnë më pak çdo ditë?
 
-Në Shqipëri, mijëra familje ruajnë zakonin e hershëm të mbajtjes së kursimeve në kesh. Në shtëpi. Qoftë nën dyshek, në një kuti metalike apo në një sirtar me çelës. Është diçka plotësisht e kuptueshme: ekziston një mosbesim historik ndaj institucioneve financiare dhe mbajtja e parave aty ku mund t'i shohësh dhe t'i prekësh jep një ndjesi të rreme sigurie. Por ka një problem shumë të rëndë matematik me këtë.
+Mendoni për këtë shembull shumë të thjeshtë. 
 
-Nëse norma e inflacionit e regjistruar zyrtarisht për këtë vit nga <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">INSTAT (Instituti i Statistikave të Shqipërisë)</a> është 4%, i bie që ato 100.000 lekë që ke në sirtar do të mbeten po aq në numër, por fuqia e tyre blerëse do të jetë gjakosur. Atë që më parë e blije me ato 100.000 lekë, tani do të të kushtojë 104.000 lekë në supermarket. Ke humbur 4.000 lekë vlerë reale thjesht duke i lënë paratë e ngrira në shtëpi. Kjo gjë prek drejtpërdrejt kapacitetin real të konsumit të familjeve, një goditje e ngjashme me atë që shpjegojmë kur analizojmë <a href="https://leku.al/ditari/artikull/edukim/paga-neto-kosove-atk/">ndikimin e taksave mbi pagën neto lokale</a>.
+Imagjinoni se në një fshat të vogël ka vetëm 10 njerëz dhe 10 mollë në total. 
 
-Atëherë, dikush mund të mendojë: *"Shumë mirë, për të shmangur këtë do t'i fus kursimet në bankë"*. Dhe ka plotësisht të drejtë; gjithmonë do të jetë një opsion shumë më i sigurt se sirtari i shtëpisë, por duhet të lexohen kushtet reale. Nëse banka jote tregtare të ofron një interes prej 1% në vit në llogarinë tënde dhe inflacioni i vendit është 4%, ti përsëri po humb para. Jo aq sa në sirtar, por po humb. Banka do të të kthejë 101.000 lekë në fund të vitit, por për të mbajtur ekzaktësisht të njëjtën fuqi blerëse që kishe ditën e parë, ty të duheshin 104.000 lekë. 
+Çdo mollë kushton 10 Lekë; i gjithë tregu është në ekuilibër të plotë. 
 
-Ajo diferencë — ato 3.000 lekë që të mungojnë — nuk i humbe menjëherë. T'i hoqi tregu ditë pas dite, qindarkë pas qindarke, ndërsa kursimet e tua pushonin në llogari. Ekonomistët e quajnë këtë si një *"normë interesi real negative"*. Por nuk ke nevojë të mësosh këtë term teknik. Duhet të mbash mend vetëm një rregull të artë rruge: **nëse interesi që të jep banka është më i ulët se inflacioni i vendit, ti po humb para edhe nëse nuk shpenzon asnjë lek.**
+Tani imagjinoni se, papritmas, qeveria shpërndan para dhe të gjithë ndodhin të kenë dyfishin në xhep: 20 Lekë. 
+
+Por mollët e fshatit mbeten të njëjtat 10. 
+
+Çfarë ndodh? 
+
+Meqenëse të gjithë duan të blejnë dhe ka më shumë para që ndjekin të njëjtën sasi produktesh, shitësi thjesht ngre çmimet. 
+
+Tani çdo mollë kushton 20 Lekë. 
+
+Paratë u dyfishuan, por mollët jo. Dhe çdo Lek kaloi të vlente sa gjysma. 
+
+Kjo është saktësisht ajo që ndodh në një ekonomi të tërë kur ka shumë para në qarkullim, kur kostot e prodhimit për kompanitë rriten, ose kur ka mungesë produktesh në dyqane. 
+
+Çmimet rriten dhe kursimet tuaja, pa lëvizur asnjë milimetër nga nën dysheku, zvogëlohen ndërsa jeta fryhet si tullumbace.
 
 ---
 
-## Mjetet reale për të mbrojtur mundin tuaj
+## Gjakderdhja e heshtur e mbajtjes së parave në shtëpi
 
-Lajmi i mirë është se nuk ke nevojë të jesh një ekspert i bursave, as të kesh miliona euro, as të kuptosh grafikë financiarë të komplikuar për të mbrojtur pasurinë e familjes sate nga inflacioni. Ty të duhet të zotërosh vetëm një ide bazë: **paratë e tua duhet të lëvizin më shpejt se rritja e çmimeve.** Pyetja praktike është se si të arrihet kjo në tregun tonë aktual, dhe këtu janë opsionet reale të renditura nga më e thjeshta te më e avancuara:
+Në Shqipëri, mijëra familje ruajnë zakonin e rrënjosur thellë të mbajtjes së kursimeve në kesh. Në shtëpi. 
 
-*   **Depozitat me afat:** Është mjeti më i drejtpërdrejtë që ekziston. I dorëzon kursimet e tua bankës për një periudhë kohore të mbyllur (gjashtë muaj, një vit, dy vite) dhe institucioni angazhohet me kontratë të të paguajë një interes fiksim të rënë dakord që më parë. Aktualisht, nën normat e referencës të <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Bankës së Shqipërisë</a>, disa banka lokale po ofrojnë depozita me afat me kthime shumë konkurruese që ndihmojnë në zbutjen e ndikimit të inflacionit. Nuk do të bëhesh i pasur me këtë, por është linja e parë e mbrojtjes që ndan paratë e tua nga zhvlerësimi absolut. Nëse dëshiron të rishikosh se cilat opsione u përshtaten kursimeve të tua sot, mund të përdorni mjetin **[Kalkulatori i Depozitave me Afat në leku.al](https://leku.al/albania/depozita/)** për të llogaritur se cili institucion ju ofron mbulimin më të mirë përpara se të lëvizni fondet tuaja.
-*   **Diversifikimi bazë:** Një rregull që njerëzit që kujdesen për paratë e tyre e përdorin prej shekujsh: mos i vendos të gjithë vezët në një shportë. Mbajtja e një pjese të vogël në llogarinë rrjedhëse për shpenzimet ditore të muajit, një pjesë tjetër në një depozitë me afat për të frenuar inflacionin dhe, nëse në të ardhmen dëshiron të eksplorosh alternativa të tjera (si fondet e investimit apo pasuritë e paluajtshme), do të kesh tashmë një bazë financiare solide për t'i kuptuar ato.
+Qoftë nën dyshek, në një kuti metalike apo në një sirtar të mbyllur me çelës. 
+
+Është diçka plotësisht e kuptueshme: ekziston një mosbesim historik ndaj institucioneve financiare dhe mbajtja e parave aty ku mund t'i shohësh dhe t'i prekësh jep një ndjesi të rreme sigurie. 
+
+Por ka një problem matematik shumë serioz me këtë.
+
+Nëse norma e inflacionit e regjistruar zyrtarisht këtë vit nga [INSTAT (Instituti i Statistikave të Shqipërisë)](https://www.instat.gov.al/) është 4%, kjo nënkupton se ato 100,000 Lekë që keni në sirtar do të mbeten po ajo kartëmonedhë. 
+
+Por fuqia juaj blerëse do të ketë rrjedhur jashtë. 
+
+Ajo që blinit me ato 100,000 Lekë, tani do t'ju kushtojë 104,000 Lekë në supermarket. 
+
+Keni humbur 4,000 Lekë të vlerës reale thjesht duke i lënë paratë të ngrira në shtëpi. 
+
+Kjo ndikon drejtpërdrejt në kapacitetin real të konsumit të familjeve, një goditje financiare e ngjashme me ndikimet strukturore mbi pagat.
+
+---
+
+## Kurthi i llogarive bankare me interes zero
+
+Atëherë, dikush mund të mendojë: *"Shumë mirë, për të shmangur këtë do t'i çoj kursimet në bankë"*. 
+
+Dhe ka plotësisht të drejtë; do të jetë gjithmonë një opsion shumë më i sigurt se sirtari i shtëpisë, por duhet të lexoni kushtet reale. 
+
+Nëse banka juaj komerciale ju ofron një normë interesi prej 1% në vit në llogarinë tuaj dhe inflacioni i vendit është në 4%, ju ende po humbni para. 
+
+Jo aq sa në sirtarin e shtëpisë, por po humbni. 
+
+Banka do t'ju kthejë 101,000 Lekë në fund të vitit, por për të mbajtur saktësisht të njëjtën fuqi blerëse që kishit në ditën e parë, ju duheshin 104,000 Lekë. 
+
+Atë diferencë — ato 3,000 Lekë që ju mungojnë — nuk i humbët të gjitha menjëherë. 
+
+Tregu ua mori ditë pas dite, qindarkë pas qindarke, ndërsa kursimet tuaja pushonin në llogarinë rrjedhëse. 
+
+Ekonomistët e quajnë këtë të kesh një **\"normë negative reale të interesit\"**. 
+
+
+
+Por ju nuk keni nevojë ta mësoni atë term teknik. Ju thjesht duhet të mbani mend një rregull të artë të rrugës: **nëse interesi që ju jep banka është më i ulët se inflacioni i vendit, ju po humbni para edhe nëse nuk shpenzoni asnjë Lek.**
+
+---
+
+## Mjetet reale për të mbrojtur sforcimin tënd
+
+Lajmi i mirë është se nuk keni nevojë të jeni ekspert i bursës, as të keni miliona euro, e as të kuptoni grafikë të ndërlikuar financiarë për të mbrojtur pasurinë e familjes suaj kundër inflacionit. 
+
+Ju vetëm duhet të zotëroni një ide bazë: **paraja juaj duhet të lëvizë më shpejt se rritja e çmimeve.** Pyetja praktike është se si të arrihet kjo në tregun tonë aktual, dhe këtu janë opsionet reale të renditura nga më e thjeshta te më e përparuara:
+
+* **Depozitat me afat:** Është mjeti më i drejtpërdrejtë që ekziston. Ju ia dorëzoni kursimet tuaja bankës për një periudhë të mbyllur kohore (gjashtë muaj, një vit, dy vjet) dhe institucioni angazhohet me kontratë t'ju paguajë një interes të fiksuar të rënë dakord paraprakisht. Aktualisht, nën normat e referencës së [Bankës së Shqipërisë](https://www.bankofalbania.org/), disa banka lokale po ofrojnë depozita me afat me kthime shumë konkurruese që ndihmojnë në zbutjen e ndikimit të inflacionit. Nuk do të pasuroheni me këtë, por është linja e parë e mbrojtjes që ndan paratë tuaja nga zhvlerësimi absolut. Nëse dëshironi të rishikoni se cilat opsione u përshtaten kursimeve tuaja sot, mund të përdorni **[Motorin e Krahasimit të Depozitave me Afat në leku.al](https://leku.al/albania/depozita/)** për të llogaritur se cili institucion ju ofron mbulimin më të mirë përpara se të lëvizni fondet tuaja.
+* **Diversifikimi bazë:** Një rregull që njerëzit që kujdesen për paratë e tyre e përdorin prej shekujsh: mos i vendosni të gjitha vezët në një shportë. Mbajtja e një pjese të vogël në llogarinë rrjedhëse për shpenzimet e përditshme të muajit, një pjesë tjetër në një depozitë me afat për të frenuar inflacionin dhe, nëse në të ardhmen dëshironi të eksploroni alternativa të tjera (si fondet e investimeve apo patundshmëritë), do të keni tashmë një bazë solide financiare për t'i kuptuar ato.
 
 ---
 
 ## Mbroni frytin e punës suaj
 
-Le të kthehemi te shembulli i bukës. Sot kushton 100 lekë. Vitin e ardhshëm do të kushtojë 104 lekë. Atë që vjen, pak më shumë. Dhe kështu do të vazhdojë tregu vit pas viti, në mënyrë konstante dhe pa i kërkuar leje askujt. Ti nuk mund ta ndalosh inflacionin e vendit, askush nuk mund ta bëjë këtë në mënyrë individuale; është një variabël natyral i funksionimit të çdo ekonomie moderne.
+Le të kthehemi te shembulli i bukës. 
 
-Por ajo që është nën kontrollin tënd absolut është të vendosësh se çfarë do të bësh me paratë që fiton me mundin e ballit tënd. Mund të zgjedhësh t'i lësh ato të qeta në një qoshe duke parë se si jeta bëhet më e shtrenjtë rreth teje çdo ditë, ose mund t'i detyrosh të lëvizin mjaftueshëm që të mos mbeten pas. Dysheku është një vend shumë i rehatshëm për të fjetur, por është fshehësi më i keq për stabilitetin tënd financiar sepse të bën të humbësh pasuri çdo mëngjes.
+Sot kushton 100 Lekë. Vitin e ardhshëm do të kushtojë 104 Lekë. Vitin pasardhës, pak më shumë. 
 
-Diferenca reale midis një personi që sheh se si kursimet e tij avullojnë në heshtje pa pasur shpenzuar asnjë lek dhe dikujt që arrin të blindojë të ardhmen e shtëpisë së tij nuk është inteligjenca, as madhësia e rrogës mujore, as pasja e kontakteve brenda degëve të bankës. Është thjesht pasja e informacionit të saktë në momentin e duhur. Kontrolli i parave të tua është përgjegjësia jote.
+Dhe kështu tregu do të vazhdojë vit pas viti, vazhdimisht dhe pa i kërkuar leje askujt. 
+
+Ju nuk mund ta ndaloni inflacionin e vendit, askush nuk mund ta bëjë këtë individualisht; është një variabël natyral i funksionimit të çdo ekonomie moderne.
+
+Por ajo që është nën kontrollin tuaj absolut është të vendosni se çfarë do të bëni me paratë që fitoni me djersën e ballit. 
+
+Ju mund të zgjidhni t'i lini ato ende në një qoshe duke parë se si jeta bëhet më e shtrenjtë rreth jush çdo ditë, ose mund t'i detyroni të lëvizin mjaftueshëm në mënyrë që të mos mbeten prapa. Dysheku është një vend shumë i rehatshëm për të fjetur, por është vendi më i keq i fshehjes për stabilitetin tuaj financiar sepse ju bën të humbni pasuri çdo mëngjes.
+
+Diferenca reale midis një personi që sheh kursimet e tij të avullojnë në heshtje pa pasur shpenzuar asnjë Lek dhe dikujt që arrin të mbrojë të ardhmen e shtëpisë së tij nuk është inteligjenca, as madhësia e pagës së tij mujore, e as të pasurit kontakte brenda degëve të bankave. 
+
+Është thjesht të kesh informacionin e duhur në kohën e duhur. Kontrolli i parave tuaja është përgjegjësia juaj.
 
 ---
 
@@ -62,21 +162,21 @@ Diferenca reale midis një personi që sheh se si kursimet e tij avullojnë në 
 <details>
 <summary><b>Çfarë është Indeksi i Çmimeve të Konsumit (IÇK) dhe si përdoret për të matur inflacionin në Shqipëri?</b></summary>
 <br>
-Indeksi i Çmimeve të Konsumit (IÇK) është treguesi statistikor zyrtar që llogarit çdo muaj <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">INSTAT-i</a> për të matur ndryshimin mesatar në çmimet e një \"shporte blerjeje\" përfaqësuese për familjet shqiptare. Kjo shportë përfshin më shumë se 300 artikuj të përdorimit të përditshëm, nga ushqimet bazë si buka, qumështi dhe mishi, deri te kostoja e karburantit, energjisë elektrike, qirasë dhe shërbimeve mjekësore. Kur kostoja totale e kësaj shporte rritet në krahasim me vitin e kaluar, përcaktohet përqindja zyrtare e inflacionit në vend.
+Indeksi i Çmimeve të Konsumit (IÇK / CPI) është treguesi zyrtar statistikor i llogaritur çdo muaj nga <a href="https://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">INSTAT</a> për të matur ndryshimin mesatar të çmimeve të një \"shporte blerjesh\" përfaqësuese për familjet shqiptare. Kjo shportë përfshin më shumë se 300 artikuj të përditshëm, nga ushqimet bazë si buka, qumështi dhe mishi, deri te kostoja e karburantit, energjisë elektrike, qirasë dhe shërbimeve mjekësore.
 <br><br>
 </details>
 
 <details>
-<summary><b>A janë të mbrojtura kursimet e mia nga qeveria nëse vendos t'i fus në një depozitë me afat në një bankë shqiptare?</b></summary>
+<summary><b>A janë të mbrojtura kursimet e mia nga qeveria nëse vendos t'i vendos ato në një depozitë me afat në një bankë shqiptare?</b></summary>
 <br>
-Po, të gjitha depozitat e personave fizikë në bankat tregtare të licencuara në vend janë të siguruara me ligj përmes <a href="https://asd.gov.al/" target="_blank" rel="noopener noreferrer">Agjencisë së Sigurimit të Depozitave (ASD)</a>. Ky fond garancie shtetëror mbulon një vlerë maksimale deri në 2.500.000 Lekë (ose ekuivalentin në monedhë të huaj si euro) për çdo klient në çdo institucion financiar. Nëse një bankë falimenton apo pëson një ndërhyrje, shteti ua kthen paratë në mënyrë të detyrueshme deri në këtë limit ligjor, gjë që e bën mbajtjen e kursimeve në bankë pafundësisht më të sigurt sesa lënia e tyre e ekspozuar ndaj vjedhjeve apo zjarreve në shtëpi.
+Po, të gjitha depozitat e personave fizikë në bankat komerciale të licencuara në vend janë të siguruara me ligj përmes <a href="https://asd.gov.al/" target="_blank" rel="noopener noreferrer">Agjencisë së Sigurimit të Depozitave (ASD)</a>. Ky fond garancie shtetëror mbulon një vlerë maksimale deri në 2,500,000 Lekë (ose ekuivalentin e saj në monedhë të huaj si euro) për çdo klient në çdo institucion financiar. Nëse një bankë përballet me proces likuidimi, shteti kthen paratë tuaja në mënyrë të detyrueshme deri në këtë limit ligjor.
 <br><br>
 </details>
 
 <details>
-<summary><b>A i prek inflacioni në të njëjtën mënyrë kursimet e mia nëse i kam të ruajtura në euro në vend të lekëve?</b></summary>
+<summary><b>A ndikon inflacioni në të njëjtën mënyrë në kursimet e mia nëse i kam ato të kursyera në Euro në vend të Lekut?</b></summary>
 <br>
-Jo, sepse inflacioni mat humbjen e vlerës së një monedhe brenda tregut të saj. Nëse i keni kursimet në euro brenda Shqipërisë, jeni të ekspozuar ndaj dy rreziqeve të ndryshme: inflacionit të brendshëm të eurozonës (që zvogëlon vlerën e euros në nivel ndërkombëtar) dhe kursit lokal të këmbimit që rregullohet nga <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë</a>. Nëse leku forcohet ndaj euros në vendin tonë, eurot tuaja të ruajtura do të humbasin fuqi blerëse në dyqanet lokale të Tiranës dy herë më shpejt, prandaj llogaritë e depozitave duhet të zgjidhen duke analizuar me kujdes monedhën në të cilën do të shpenzoni në të ardhmen.
+Jo, sepse inflacioni mat humbjen e vlerës së një monedhe brenda tregut të saj. Nëse i mbani kursimet në Euro brenda Shqipërisë, ju jeni të ekspozuar ndaj dy rreziqeve të ndryshme: inflacionit të brendshëm të Eurozonës dhe kursit lokal të këmbimit të rregulluar nga <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë</a>. Nëse Leku forcohet ndaj Euros në vendin tonë, Eurot tuaja të kursyera do të humbasin fuqi blerëse në dyqanet lokale dy herë më shpejt.
 <br><br>
 </details>
 
@@ -84,7 +184,7 @@ Jo, sepse inflacioni mat humbjen e vlerës së një monedhe brenda tregut të sa
 
 ---
 
-### Referencat specifike të të dhënave:
-*   **Publikimi mujor i Indeksit të Çmimeve të Konsumit dhe kostoja e jetesës:** <a href="http://www.instat.gov.al/" target="_blank" rel="noopener noreferrer">Instituti i Statistikave (INSTAT) - Indeksi i Çmimeve të Konsumit (IÇK)</a>
-*   **Raportet e politikës monetare dhe normat e interesit të referencës së tregut:** <a href="https://www.bankofalbania.org/" target="_blank" rel="noopener noreferrer">Banka e Shqipërisë - Raporti i Ndërmjetësimit Financiar</a>
-*   **Ligjet për mbrojtjen e depozituesit dhe limitet e mbulimit të fondit shtetëror:** <a href="https://asd.gov.al/" target="_blank" rel="noopener noreferrer">Agjencia e Sigurimit të Depozitave (ASD) - Skema e Sigurimit të Depozitave në Shqipëri</a>
+### 📊 Referencat specifike të të dhënave:
+*   **Publikimi mujor i Indeksit të Çmimeve të Konsumit dhe kostoja e jetesës:** [Instituti i Statistikave (INSTAT) - Indeksi i Çmimeve të Konsumit (IÇK)](https://www.instat.gov.al/)
+*   **Raportet e politikës monetare dhe normat e interesit të tregut:** [Banka e Shqipërisë - Raportet dhe Indekset e Stabilitetit Financiar](https://www.bankofalbania.org/)
+*   **Ligjet për mbrojtjen e depozituesve dhe kufijtë e mbulimit:** [Agjencia e Sigurimit të Depozitave (ASD) - Skema e Sigurimit të Depozitave në Shqipëri](https://asd.gov.al/)

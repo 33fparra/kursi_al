@@ -1,90 +1,141 @@
 ﻿---
-title: "Letra e vogël e hipotekave në Kosovë: Euribori dhe kodi sekret i NEI-t."
-description: "Ka një dallim të madh mes reklamave të bankave dhe asaj që paguan vërtet. Të zbërthejmë dy rreziqet e fshehura që rrezikojnë të prishin ekonominë tuaj familjare: Euriborin dhe NEI-n."
+title: "The Fine Print of Mortgages in Kosovo: Euribor and the Secret Code of NEI"
+description: "There is a massive gap between bank advertisements and what you actually pay. Let's unpack the hidden risks that threaten your family budget: Euribor and the NEI."
 type: "lajme"
-category: "Kredi Hipotekare"
+category: "Mortgages"
 author: "F.A Parretti"
 coAuthor: ""
 country: "Kosovo"
 translationKey: "kosovo-mortgage-fine-print"
 date: 2026-06-03
 image: "/ditari/images/2026-06/kosove-euribor-nei.webp"
-imageAlt: "Një kontratë bankare e zmadhuar me lupë ku zbulohen kostot e fshehura të Euriborit dhe NEI-t"
-readMinutes: 4
-lang: "sq"
+imageAlt: "A bank contract magnified under a lens revealing the hidden costs of Euribor and NEI"
+readMinutes: 5
+lang: "en"
 ---
 
-Te pasas muaj të tërë duke kërkuar apartamente në telefonin tënd, duke ruajtur njoftime të ndërtimeve të reja nëpër lagjet e Prishtinës. Një ditë merr guximin, shkon te zyra e shitjeve të një kompanie ndërtimi, të presin shumë mirë me një kafe dhe të tregojnë disa plane në tre dimensione që duken mrekulli. Çdo gjë është një iluzion i bukur derisa shitësi nxjerr një letër me çmimin përfundimtar: 145.000 €. Përshëndetesh me mirësjellje, del në rrugë, hap kalkulatorin e celularit dhe të kap një mërzitje e madhe: edhe duke kursyer si i çmendur, rroga nuk të mjafton për ta paguar kesh.
+You spend months scrolling through real estate platforms on your phone.
 
-Aty e kupton se e vetmja rrugë reale është të kërkosh ndihmë dhe leje nga banka. Por të firmosësh një kredi për shtëpi me sytë mbyllur është gabimi më i shtrenjtë i jetës sate. Gjatë kërkimit të financimit, pjesa më e madhe e njerëzve bëjnë gabim sepse shikojnë vetëm një numër: interesin që banka vendos me shkronja gjigante nëpër pankartat e rrugëve. Ajo është thjesht një grep për të të futur brenda në degë. Ajo që asistenti nuk do të të shpjegojë kurrë me qartësi të plotë është \"letra e vogël\" e kontratës. Pas atyre emrave të huaj dhe teknikë fshihen dy shefat e vërtetë të xhepit tënd për 25 vitet e ardhshme: Euribori dhe NEI.
+You save listings for new developments in the emerging neighborhoods of Pristina. 
 
-Në artikullin tonë të kaluar mbi **[hartën e tre bankave të mëdha në Kosovë](https://leku.al/ditari/artikull/lajme/bankat-me-te-mira-kosove-hipoteke/)**, pamë se si çdo institucion të analizon sipas llojit të punës që bën. Por le të supozojmë se tani e ke zgjedhur bankën tënde. Te ulesh në karrige dhe këshilltari të thotë me buzëqeshje: *\"Kemi një ofertë shumë të mirë për ty, interesin e kredisë ta lëmë vetëm 4%\"*. Truri yt relaksohet, e imagjinon veten duke gatuar në shtëpinë tënde të re në lagjen *Mati 1* dhe të vjen të firmosësh menjëherë. Mos e bëj. Ky 4% është pothuajse gjithmonë një e vërtetë e përgjysmuar që mund të të lejë të bllokuar në të ardhmen.
+One day, you build up the courage, walk into a developer's sales office, get a warm welcome with a cup of coffee, and look at beautiful 3D architectural floor plans. 
 
----
+Everything is a beautiful illusion until the salesman pulls out a piece of paper with the final price tag: 
 
-## Rreziku i interesit të ndryshueshëm: Frankfurti vendos për këstin tënd në Prishtinë
+**€145,000.**
 
-Këtu qëndron truku i madh ligjor që e dallon Kosovën nga vendet e tjera. Duke qenë se këtu përdorim euron si monedhë zyrtare por nuk jemi anëtarë të Bashkimit Evropian, bankat e Prishtinës nuk i shpikin vetë çmimet e kredive sipas asaj që ndodh në vendin tonë. Ngritjet dhe rëniet e vlerës së parave vendosen direkt në Gjermani, në Bankën Qendrore Evropiane, përmes një treguesi ndërkombëtar të quajtur <a href="https://www.euribor-rates.eu/" target="_blank" rel="noopener noreferrer">Euribor</a> (i cili, thjeshtuar, është interesi që bankat evropiane i faturuajnë njëra-tjetrës për të marrë hua).
+You politely say goodbye, step out onto the street, open your phone's calculator, and a massive wave of anxiety hits you.
 
-Pothuajse të gjitha bankat në Kosovë do të të ofrojnë një \"Normë Fikse\" shumë joshëse për të të bindur të firmosësh. Por nëse e lexon kontratën me lupë, do të zbulosh se ai çmim i ngrirë zgjat **vetëm 3 ose 5 vitet e para**.
+Even if you save like crazy, your regular wage is simply not enough to pay it upfront.
 
-Çfarë ndodh më pas, në vitin e katërt apo të gjashtë? Kredia jote hipotekare shndërrohet automatikisht në një hua me \"Interes të Ndryshueshëm\". Formula për të llogaritur këstin tënd të ri do të jetë vlera që ka Euribori në atë moment plus margjinën e fitimit që banka ka vendosur për veten e saj. Nëse gjërat shkojnë keq në Evropë dhe rriten interesat në Gjermani, kësti yt mujor në Prishtinë do të rritet në sekondë.
+That is the exact moment you realize that the only viable path is requesting financial backing from a commercial lender. But signing a home loan with your eyes closed is the most expensive mistake of your life. 
 
-Për ta kuptuar goditjen në portofolin tënd, shiko këtë matematikë tregu shumë të thjeshtë:
-* Paramendo se kërkon një kredi normale. Për çdo **10.000 €** që i merr huaj bankës me interesin fillestar prej 4%, kësti yt në muaj është rreth **61 €**.
-* Nëse Euribori rritet në Evropë dhe interesi yt total shtohet me vetëm dy pikë (duke kaluar nga 4% në 6%), kësti për çdo 10.000 € shkon në **72 €**.
-* Duke e parë në letër, 11 € diferencë duket një gjë e vogël. Por nëse blejmë një banesë reale në Prishtinë dhe borxhi total me bankën është **100.000 €**, pagesa jote mujore do të kalojë nga 610 € në **720 € në muaj**.
+When looking for financing, most people make the mistake of focusing solely on one number: the nominal interest rate printed in giant fonts across street billboards. That is merely an anchor to get you through the front door. 
 
-Bëhet fjalë për **110 € ekstra çdo muaj** që do të të hiqen nga rroga për një vendim të marrë në Gjermani, dhe ti mbase nuk di as gjermanisht! Shumë të rinj firmosin duke angazhuar rrogën e tyre në limitet maksimale, duke llogaritur paratë e mbetura neto sipas formulës që shpjegojmë te udhëzuesi për <a href="https://leku.al/ditari/artikull/edukim/paga-neto-kosove-atk/">llogaritjen e pagës neto me sistemin e ATK-së</a>, pa menduar se një lëkundje e vetme e Euriborit ndërkombëtar mund të lërë familjen e tyre pa likuiditet.
+What the loan officer will never explain with absolute clarity is the "fine print" of the contract. Behind that technical jargon hide the two true bosses of your wallet for the next 25 years: **Euribor** and the **NEI**.
 
----
+In our previous article covering [the map of the big three banks in Kosovo](https://leku.al/ditari/artikull/lajme/bankat-me-te-mira-kosove-hipoteke/), we observed how each entity analyzes your application based on your employment status. But let's assume you have already chosen your bank. 
 
-## Duke thyer kodin sekret: Efekti i biletës \"low-cost\"
+You sit down at the desk, and the advisor smiles and says: *"We have an excellent promotional offer for you, we will lock your mortgage interest rate at just 4%"*. 
 
-Për të shmangur mashtrimet e reklamave, i vetmi numër real që duhet të kërkosh përpara se të prekësh letrën me stilolaps është **NEI (Norma Efektive e Interesit)**, që është emri zyrtar ligjor për atë që në internet dhe rrjetet sociale ndërkombëtare njihet si **APR** (Annual Percentage Rate).
+Your brain relaxes, you imagine yourself cooking inside your new home in the *Mati 1* district, and you feel ready to sign right away. 
 
-Të gjithë e kemi përjetuar këtë: kërkon një biletë avioni në internet për të udhëtuar drejt Gjermanisë apo Zvicrës për vetëm 90 €. Gëzohesh dhe i jep butonit për ta blerë. Por në ekranin tjetër të shtohen 30 € për çantën e dorës, pastaj 15 € për të zgjedhur vendin që të mos udhëtosh i ndarë nga partneri, dhe në fund edhe 25 € të tjera për tarifa administrimi të faqes. Kur nxjerr kartën e kreditit, udhëtimi nga 90 € është bërë **160 €**. Çmimi i shpalljes ishte real, po, por ishte një e vërtetë e përgjysmuar.
-
-NEI i një banke është ekzaktësisht kjo gjë: çmimi real me të gjitha \"valixhet\" e detyrueshme të përfshira. Përderisa interesi nominal (ai 4%-shi i reklamës) është vetëm çmimi i parave të pastra, NEI është një tregues i detyrueshëm sipas rregullave të transparencës të <a href="https://bqk-kos.org/" target="_blank" rel="noopener noreferrer">Bankës Qendrore të Republikës së Kosovës (BQK)</a> që detyron institucionin të fusë në të njëjtën llogari të gjitha shpenzimet që do të t'i marrin patjetër:
-
-1.  **Komisioni i hapjes së kredisë:** Banka të merr midis 1% dhe 2% të vlerës totale të kredisë vetëm për procesimin e letrave dhe dosjes. Nëse kërkon 100.000 €, ata të heqin midis 1.000 € dhe 2.000 € nga llogaria rrjedhëse që ditën e parë.
-2.  **Sigurimet e detyrueshme:** Do të të detyrojnë të paguash çdo vit një sigurim jete dhe një sigurim për dëmet në banesë. Ti e paguan faturën nga xhepi yt, por nëse ndodh një fatkeqësi, paratë i merr banka për të mbyllur borxhin, jo familja jote.
-3.  **Vlerësuesi i pronës:** Duhet të paguash nga paratë e tua një ekspert të certifikuar që të shkojë të kontrollojë nëse apartamenti në Lakrishtë apo Mati 1 vlen vërtet aq sa thonë letrat e shitblerjes.
-
-Kur i fut të gjitha këto komisione në makinën llogaritëse, ai 4% i bukur shndërrohet në një NEI real prej **5.2% ose 5.5%**. Duket një dallim i vogël, por nëse e shumëzon për 240 muaj që zgjat kontrata, po i fal bankës vlerën e një makine të re vetëm për mos rënë në gjurmët e interesit efektiv që në fillim. Për të shmangur këto probleme, idealja është të vendosësh shifrat e tua te **[Kalkulatori i Hipotekave në leku.al](https://leku.al/kosova/hipoteka/)** përpara se të shkosh të humbasësh kohë duke bërë radhë nëpër degë fizike.
+Do not do it. That 4% is almost always a half-truth that can leave you financially trapped down the road.
 
 ---
 
-## Mbroni qëndrueshmërinë tuaj financiare
+## The Danger of Variable Rates: Frankfurt Dictates Your Monthly Payment in Pristina
 
-Gabimi më i shpeshtë në vendin tonë është të shikosh vetëm nëse e paguan dot këstin e këtij muaji. Nëse rroga jote e sotme ose paratë që të dërgon familja nga diaspora të mjaftojnë për të mbuluar 600 eurot aktuale, mendon se je i sigurt. Por një kredi për shtëpi nuk është një garë e shkurtër vrapimi; është një maratonë e gjatë që do të zgjasë një çerek shekulli.
+Here lies the massive legal and regulatory detail separating Kosovo from other regional markets. Because we use the euro as our official tender without being a formal member state of the European Union, the banks in Pristina do not invent loan pricing frameworks based on internal domestic markers. 
 
-Mos shko verbërisht te banka e përhershme vetëm sepse aty ke kartën apo sepse arkëtari njeh prindërit e tu. Borxhet afatgjatë analizohen me kokën e ftohtë, jo me emocione. Tregu i pasurive të paluajtshme nuk kupton nga miqësitë dhe as nuk do të të falë nëse mbetesh pa punë. E vetmja mënyrë për t'u siguruar që shtëpia jote të jetë një bekim dhe jo një dënim është të kuptosh rregullat e vërteta të lojës. Shiko numrat realë, kërko të të tregojnë NEI-n e saktë, llogarit rreziqet e Euriborit dhe mbro paratë që i fiton me mund e djersë.
+Money supply fluctuations are dictated straight out of Germany, from the European Central Bank, through an international benchmark called **Euribor** (Euro Interbank Offered Rate). 
+
+Almost every commercial bank in Kosovo will offer you a highly appealing "Fixed Rate" package to secure your signature. But if you read the contract clauses with a magnifying glass, you will discover that this frozen stability lasts **only for the first 3 or 5 initial years**.
+
+What happens afterward, in year four or year six? Your home loan automatically morphs into a "Variable Interest" structure. 
+
+The mathematical formula used to calculate your new monthly remittance will be whatever the active 12-month or 6-month Euribor is valued at that specific time, plus the raw profit margin the bank carved out for itself. 
+
+> **The Structural Variable Formula:** *Variable Mortgage Rate = Euribor Base (Administered by EMMI) + Bank Fixed Premium Margin.*
+
+If economic indicators face turbulence in Europe and interest rates spike in Frankfurt, your monthly statement in Pristina will surge instantly.
+
+To grasp the impact on your real wallet, look at this very basic market arithmetic:
+
+* Imagine you request a standard mortgage. For every **€10,000** you borrow from the bank under the introductory 4% interest rate, your monthly payment stands at roughly **€61**.
+* If macroeconomic conditions push European interest rates up and your total variable interest grows by just two percentage points (moving from 4% to 6%), the payment for those same €10,000 jumps to **€72**.
+* Looking at the paper, an €11 difference seems like a minor annoyance. But if we purchase an actual apartment in Pristina and your total debt with the lender stands at **€100,000**, your monthly statement will instantly shift from €610 to **€720 per month**.
+
+We are talking about **an extra €110 every single month** taken directly out of your paycheck due to a resolution drafted in Germany—and you probably do not even speak German! 
+
+Many young borrowers sign agreements stretching their financial limits, calculating cash flow based on the formula we unpack inside the [net salary calculator under the ATK framework](https://leku.al/ditari/artikull/edukim/paga-neto-kosove-atk/), without realizing that a single shift in the international Euribor index can leave their household completely strapped for liquidity.
 
 ---
 
-## 🧠 Pyetjet e Shpeshta (FAQ)
+## Cracking the Secret Code: The "Low-Cost Flight" Phenomenon of Bank Fees
+
+To avoid being deceived by billboard marketing, the single real metric you must demand before touching the contract with your pen is the **NEI (Norma Efektive e Interesit)**, which is the official legal terminology in Albanian for what web platforms and global social networks call the **APR** (Annual Percentage Rate).
+
+Everyone has experienced this: you search for a plane ticket online to travel to Germany or Switzerland for an advertised price of just €90. You get excited and hit buy. 
+
+But on the next screen, they tack on €30 for carry-on luggage, then €15 to pick a seat so you are not separated from your partner, and finally, another €25 for website administration overhead. 
+
+By the time you pull out your credit card, the €90 trip has turned into **€160**. The initial teaser price was technically real, yes, but it was an operational half-truth.
+
+A bank's NEI is exactly that: the real price with all mandatory "baggage" built into the calculation. 
+
+While the nominal interest rate (the 4% shown on commercials) represents only the raw cost of the naked cash, the NEI is a mandatory indicator regulated under the strict transparency circulars of the [Banka Qendrore e Republikës së Kosovës (BQK)](https://bqk-kos.org/) that forces lenders to bunch together all the non-negotiable costs they will charge you regardless:
+
+1. **File Opening Fees:** The bank subtracts between 1% and 2% of the total mortgage valuation just for processing paperwork and file underwriting. If you request €100,000, they will pull between €1,000 and €2,000 from your checking account on day one.
+2. **Mandatory Tied Insurance:** They will compel you to fund annual premiums for a life insurance policy and a home structural damage policy. You foot the bill, but if a tragedy strikes, the insurance provider writes the check directly to the bank to settle the debt, not to your family.
+3. **The Property Appraiser:** You must pay out of pocket for a certified specialist to inspect whether the apartment in *Lakrishtë* or *Mati 1* is legally valued at what the purchase agreement claims.
+
+When you blend all these fees into the underwriting machine, that beautiful 4% nominal rate turns into a real NEI of **5.2% or 5.5%**. 
+
+It looks like a minor variance, but multiply that sliver across the 240 months of the loan's lifecycle, and you are handing the bank the price of a brand-new car just for failing to audit the effective interest from day one. 
+
+To skip these financial pitfalls, the smartest route is plugging your variables into the **[Mortgage Loan Comparison Tool at leku.al](https://leku.al/kosova/hipoteka/)** before wasting time waiting in lines at brick-and-mortar branches.
+
+---
+
+## The Cold Reality of the Pen: You Are Buying a Debt, Not a House
+
+The most widespread financial mistake in our country is judging the viability of a debt based strictly on whether you can clear next month's payment. If your active wage or the remittances your family forwards from the diaspora cover the current €600 statement, you assume you are secure. 
+
+But a mortgage is not a short 100-meter dash; it is a grueling financial marathon that spans a quarter of a century.
+
+Let's look at reality without anesthesia. When you sign a mortgage loan, **you are not buying a house. You are buying a financial product from a bank.** The house belongs to the bank. Your name might be on a paper at the registry, but the property asset is fully collateralized. For the next 25 years, the bank is your uninvited financial roommate. It eats from your fridge. It dictates what car you can drive, where your children can study, and how many days of vacation you can afford. 
+
+If you understand this, your perspective changes completely. You stop negotiating out of emotion or family pride. You realize that you cannot counter a corporate machine with "good vibes." You counter it with spreadsheets, audited contract clauses, and rigid numbers.
+
+Do not blindly walk into your usual bank just because that is where your debit card rests or because the teller knows your parents. Long-term debts require cold data analysis, not interpersonal loyalties. The market will never excuse you if you face temporary unemployment or an economic downturn. 
+
+The single method to guarantee your future property remains a wealth blessing rather than a debt sentence is mastering the ground rules. Audit the raw figures, demand to see the exact NEI breakdown, evaluate variable risk scenarios under an elevated Euribor, and protect the money you earn through hard, daily work. True financial peace does not mean holding keys today at any cost; it means ensuring that you remain the absolute master of your signature until the very last installment is cleared.
+
+---
+
+## 🧠 Frequently Asked Questions (FAQ)
 
 <br>
 
 <details>
-<summary><b>Çfarë është \"margjina fikse\" e bankës dhe pse është gjëja më e rëndësishme kur negocion një kredi hipotekare me interes variable?</b></summary>
+<summary><b>What is the bank's "fixed margin" and why is it the most crucial item to negotiate inside a variable rate home loan?</b></summary>
 <br>
-Kur pakoja jote fillestare mbaron dhe kredia kalon në interes variable, tarifa finale përbëhet nga dy pjesë: Euribori (që lëviz sipas tregut evropian) dhe \"margjina fikse\" e bankës (që është fitoja e pastër e institucionit). Nëse banka të nënshkruan një margjinë fikse prej 3.5% dhe Euribori është 1%, ti paguan 4.5%. Nëse Euribori rritet në 3%, ti do të paguash 6.5%. Euriborin ti nuk mund ta kontrollosh dot sepse vjen nga jashtë, por margjina e bankës mbetet e ngrirë përgjithmonë me kontratë. Prandaj, misioni yt i vetëm në zyrë është të luftosh që banka të të japë margjinën fikse më të ulët të mundshme.
+When your initial introductory fixed period expires and your mortgage shifts to a variable index, your final rate is split into two components: the Euribor (which shifts based on European market liquidity) and the bank's "fixed margin" (which represents the lender's raw premium). If the bank signs a fixed margin of 3.5% and the Euribor rests at 1%, you pay 4.5%. If the Euribor spikes to 3%, you will end up paying 6.5%. You cannot control international Euribor metrics, but the bank's margin remains frozen by contract terms forever. Therefore, your prime mission inside the branch is fighting to secure the absolute lowest fixed margin possible.
 <br><br>
 </details>
 
 <details>
-<summary><b>Pse bankat në Kosovë nuk pranojnë të ofrojnë një normë interesi të ngrirë dhe fikse për të 20 ose 25 vitet e kredisë?</b></summary>
+<summary><b>Why won't commercial banks in Kosovo offer me a locked, fixed interest rate for the entire 20 or 25-year lifespan of the debt?</b></summary>
 <br>
-Për shkak të frikës nga inflacioni dhe ndryshimet e paparashikueshme të tregjeve ndërkombëtare. Rregullat zyrtare të nxjerra nga <a href="https://bqk-kos.org/mbikqyrja-financiare/regjistri-i-kredive/" target="_blank" rel="noopener noreferrer">Banka Qendrore e Kosovës (BQK)</a> detyrojnë bankat të jenë transparente me klientin, por nuk i detyrojnë ato të marrin përsipër rreziqe afatgjatë. Meqenëse vlera e parave ndryshon gjatë një çerek shekulli, bankat private preferojnë të të japin siguri vetëm në fillim (3 ose 5 vite) dhe më pas t'ia kalojnë rrezikun e luhatjeve klientit përmes Euriborit variable.
+Due to structural risk aversion regarding inflation and unpredictable shifts in global international money markets. Official compliance standards issued by the Central Bank of Kosovo (CBK) force banks to remain clear with consumer disclosures, but they do not mandate them to carry long-term financial exposure. Since money valuations fluctuate wildly over a quarter-century, local banks prefer giving you transactional safety only at the start (3 to 5 years) and subsequently offloading market volatility risks to your wallet via the variable Euribor.
 <br><br>
 </details>
 
 <details>
-<summary><b>A është e vërtetë që një vonesë e vogël në pagesën e një karte apo një borxhi konsumator mund të bëjë që banka të refuzojë hipotekën time?</b></summary>
+<summary><b>Is it true that a minor payment delay on a credit card or a small retail consumer debt can completely tank my mortgage approval?</b></summary>
 <br>
-Po, kjo ndodh pothuajse çdo ditë. Çdo bankë në Kosovë kontrollon në mënyrë të detyrueshme databazën zyrtare të <a href="https://bqk-kos.org/mbikqyrja-financiare/regjistri-i-kredive/" target="_blank" rel="noopener noreferrer">Sistemit të Regjistrit të Kredive (CRK)</a>, që është regjistri i centralizuar i Bankës Qendrore ku shfaqet çdo borxh i joti. Nëse keni vonesa më shumë se 30 ditë në pagimin e këstit të një telefoni, të një kredie të vogël apo nëse e lini llogarinë rrjedhëse në minus për muaj të tërë, sistemi ju vendos një dritë të kuqe. Për departamentin e rrezikut të bankës ti kthehesh në një klient të rrezikshëm dhe hipoteka do të refuzohet menjëherë, pavarësisht nëse ke një rrogë të lartë.
+Yes, and it happens on a daily basis. Every single commercial bank in Kosovo queries the mandatory centralized ledger of the [Credit Registry System (CRK)](https://bqk-kos.org/) managed directly by the Central Bank. If you run over 30 days late on a mobile phone installment, a credit card statement, or leave your regular checking account overdrawn for months, the infrastructure flags your profile. Risk underwriting departments instantly classify you as a high-hazard client, rejecting your mortgage application on the spot, regardless of how high your active salary might be.
 <br><br>
 </details>
 
@@ -92,7 +143,8 @@ Po, kjo ndodh pothuajse çdo ditë. Çdo bankë në Kosovë kontrollon në mëny
 
 ---
 
-### Referencat specifike të të dhënave:
-*   **Monitorimi zyrtar i normave të interesit të parave në Evropë:** <a href="https://www.euribor-rates.eu/" target="_blank" rel="noopener noreferrer">Euribor Rates Official Structural Indices</a>
-*   **Rregulloret e transparencës dhe mbrojtjes së konsumatorit të BQK-së:** <a href="https://bqk-kos.org/mbikqyrja-financiare/rregullat-dhe-rregulloret/" target="_blank" rel="noopener noreferrer">Banka Qendrore e Republikës së Kosovës (BQK) - Departamentet e Mbikëqyrjes</a>
-*   **Rregullat mbi deklarimin e pagave zyrtare dhe të ardhurave personale:** <a href="https://www.atk-ks.org/" target="_blank" rel="noopener noreferrer">Administrata Tatimore e Kosovës (ATK) - Shërbimet Elektronike EDI</a>
+### 📊 Verified Institutional References:
+* **Official Euribor Interest Rate Datasets:** [European Money Markets Institute (EMMI) - Benchmark Core Registries](https://www.emmi-benchmarks.eu/)
+* **Eurozone Monetary Policy Guidelines & Long-term Projections:** [European Central Bank (ECB) Statistical Data Warehouse](https://www.ecb.europa.eu/)
+* **Transparency Directives and Consumer Protection Regulations:** [Banka Qendrore e Republikës së Kosovës (BQK) - Official Codes](https://bqk-kos.org/)
+* **Tax Code and Income Validation Compliance Standards:** [Administrata Tatimore e Kosovës (ATK) - Fiscal Frameworks](https://www.atk-ks.org/)
