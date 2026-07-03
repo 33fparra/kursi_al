@@ -1,33 +1,104 @@
-# ─── Blog eliminado → Ditari (evita 404 en URLs indexadas por Google) ───
-/blog                   /ditari/               301
-/blog/                  /ditari/               301
-/en/blog                /en/ditari/            301
-/en/blog/               /en/ditari/            301
-/blog/*                 /ditari/               301
-/en/blog/*              /en/ditari/            301
+# ══════════════════════════════════════════════════════════════════
+# Cloudflare Pages _redirects — reglas procesadas top-down, primera
+# coincidencia gana. SIEMPRE poner reglas explícitas ANTES de wildcards.
+# ══════════════════════════════════════════════════════════════════
 
-# ─── Italiano eliminado (jun 2026) → todo redirige a inglés ───
-# Rutas legacy explícitas primero — con trailing slash en destino (evita cadena doble)
-/it/tabela              /en/kursi/tabela/      301
-/it/historiku           /en/kursi/historiku/   301
-/it/remitanca           /en/kursi/remitanca/   301
-/it/change              /en/kursi/             301
-/it/change/tabela       /en/kursi/tabela/      301
-/it/change/historiku    /en/kursi/historiku/   301
-/it/change/remitanca    /en/kursi/remitanca/   301
-/it/                    /en/                   301
-/it                     /en/                   301
-# Wildcard: cubre /it/kursi/, /it/kursi/tabela/ etc. (splat incluye la barra si la URL la tiene)
-/it/*                   /en/:splat             301
+# ─── GROUP 1: Blog eliminado → Ditari ────────────────────────────
+/blog                                                    /ditari/      301
+/blog/                                                   /ditari/      301
+/en/blog                                                 /en/ditari/   301
+/en/blog/                                                /en/ditari/   301
+/blog/wise-ose-remitly-kush-eshte-me-i-lire-shqiperi    /ditari/      301
+/blog/wise-ose-remitly-kush-eshte-me-i-lire-shqiperi/   /ditari/      301
+/blog/bankate-me-te-mira-hipoteke-shqiperi-2025          /ditari/      301
+/blog/bankate-me-te-mira-hipoteke-shqiperi-2025/         /ditari/      301
+/blog/pagat-mesatare-sipas-profesionit-shqiperi-2025     /ditari/      301
+/blog/pagat-mesatare-sipas-profesionit-shqiperi-2025/    /ditari/      301
+/en/blog/albania-vs-kosovo-cost-of-living-2025           /en/ditari/   301
+/en/blog/albania-vs-kosovo-cost-of-living-2025/          /en/ditari/   301
+/en/blog/best-mortgage-rates-albania-2025                /en/ditari/   301
+/en/blog/best-mortgage-rates-albania-2025/               /en/ditari/   301
+# Wildcard catch-all para cualquier otro post de blog no listado
+/blog/*                                                  /ditari/      301
+/en/blog/*                                               /en/ditari/   301
 
-# ─── Griego eliminado (jun 2026) → todo redirige a inglés ───
-/el/tabela              /en/kursi/tabela/      301
-/el/historiku           /en/kursi/historiku/   301
-/el/remitanca           /en/kursi/remitanca/   301
-/el/change              /en/kursi/             301
-/el/change/tabela       /en/kursi/tabela/      301
-/el/change/historiku    /en/kursi/historiku/   301
-/el/change/remitanca    /en/kursi/remitanca/   301
-/el/                    /en/                   301
-/el                     /en/                   301
-/el/*                   /en/:splat             301
+# ─── GROUP 2: Italiano /it/ — Albania y Kosovo → versión albanesa ──
+# Estas van ANTES del wildcard /it/* para anular la regla /en/:splat
+/it/albania                  /albania/         301
+/it/albania/                 /albania/         301
+/it/albania/bankat           /albania/bankat/  301
+/it/albania/bankat/          /albania/bankat/  301
+/it/albania/hipoteka         /albania/hipoteka/ 301
+/it/albania/hipoteka/        /albania/hipoteka/ 301
+/it/albania/kredia           /albania/kredia/  301
+/it/albania/kredia/          /albania/kredia/  301
+/it/albania/paga             /albania/paga/    301
+/it/albania/paga/            /albania/paga/    301
+/it/kosova                   /kosova/          301
+/it/kosova/                  /kosova/          301
+/it/kosova/bankat            /kosova/bankat/   301
+/it/kosova/bankat/           /kosova/bankat/   301
+/it/kosova/hipoteka          /kosova/hipoteka/ 301
+/it/kosova/hipoteka/         /kosova/hipoteka/ 301
+/it/kosova/kredia            /kosova/kredia/   301
+/it/kosova/kredia/           /kosova/kredia/   301
+/it/kosova/paga              /kosova/paga/     301
+/it/kosova/paga/             /kosova/paga/     301
+/it/blog                     /ditari/          301
+/it/blog/                    /ditari/          301
+/it/en/ditari                /ditari/          301
+/it/en/ditari/               /ditari/          301
+# Conversor IT → EN (páginas que sí tenían versión IT)
+/it/tabela                   /en/kursi/tabela/     301
+/it/historiku                /en/kursi/historiku/  301
+/it/remitanca                /en/kursi/remitanca/  301
+/it/change                   /en/kursi/            301
+/it/change/tabela            /en/kursi/tabela/     301
+/it/change/historiku         /en/kursi/historiku/  301
+/it/change/remitanca         /en/kursi/remitanca/  301
+/it/                         /en/                  301
+/it                          /en/                  301
+# Wildcard catch-all para cualquier otra ruta /it/ no listada
+/it/*                        /en/:splat            301
+
+# ─── GROUP 3: Griego /el/ — Albania y Kosovo → versión albanesa ───
+# Estas van ANTES del wildcard /el/* para anular la regla /en/:splat
+/el/albania                  /albania/         301
+/el/albania/                 /albania/         301
+/el/albania/bankat           /albania/bankat/  301
+/el/albania/bankat/          /albania/bankat/  301
+/el/albania/hipoteka         /albania/hipoteka/ 301
+/el/albania/hipoteka/        /albania/hipoteka/ 301
+/el/albania/kredia           /albania/kredia/  301
+/el/albania/kredia/          /albania/kredia/  301
+/el/albania/paga             /albania/paga/    301
+/el/albania/paga/            /albania/paga/    301
+/el/kosova                   /kosova/          301
+/el/kosova/                  /kosova/          301
+/el/kosova/bankat            /kosova/bankat/   301
+/el/kosova/bankat/           /kosova/bankat/   301
+/el/kosova/hipoteka          /kosova/hipoteka/ 301
+/el/kosova/hipoteka/         /kosova/hipoteka/ 301
+/el/kosova/kredia            /kosova/kredia/   301
+/el/kosova/kredia/           /kosova/kredia/   301
+/el/kosova/paga              /kosova/paga/     301
+/el/kosova/paga/             /kosova/paga/     301
+/el/blog                     /ditari/          301
+/el/blog/                    /ditari/          301
+/el/en/ditari                /ditari/          301
+/el/en/ditari/               /ditari/          301
+# Conversor EL → EN
+/el/tabela                   /en/kursi/tabela/     301
+/el/historiku                /en/kursi/historiku/  301
+/el/remitanca                /en/kursi/remitanca/  301
+/el/change                   /en/kursi/            301
+/el/change/tabela            /en/kursi/tabela/     301
+/el/change/historiku         /en/kursi/historiku/  301
+/el/change/remitanca         /en/kursi/remitanca/  301
+/el/                         /en/                  301
+/el                          /en/                  301
+/el/*                        /en/:splat            301
+
+# ─── URL rara /en/en/ditari que Google encontró ───────────────────
+/en/en/ditari                /en/ditari/       301
+/en/en/ditari/               /en/ditari/       301
