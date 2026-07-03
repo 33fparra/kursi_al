@@ -8,7 +8,7 @@ coAuthor: ""
 country: "Kosovo"
 translationKey: "kosovo-mortgage-fine-print"
 date: 2026-06-03
-image: "/ditari/images/2026-06/kosve-euribor-nei.webp"
+image: "/ditari/images/2026-06/kosove-euribor-nei.webp"
 imageAlt: "Një kontratë bankare e zmadhuar nën lentë duke zbuluar kostot e fshehura të Euribor-it dhe NEI-së"
 readMinutes: 5
 lang: "sq"
