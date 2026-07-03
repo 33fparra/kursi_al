@@ -234,10 +234,12 @@ const jsonLd = JSON.stringify({
     <!-- Global JSON-LD (Organization + WebSite + WebPage + WebApplication) -->
     <script is:inline type="application/ld+json" set:html={jsonLd} />
 
-    <!-- hreflang — multilingual SEO -->
-    <link rel="alternate" hreflang="sq"        href={`${SITE}${currentPath}`} />
-    <link rel="alternate" hreflang="en"        href={`${SITE}/en${currentPath === '/' ? '' : currentPath}`} />
-    <link rel="alternate" hreflang="x-default" href={`${SITE}${currentPath}`} />
+    <!-- hreflang — multilingual SEO
+         langLinks takes priority (articles have per-article URLs);
+         currentPath-based fallback for all other pages.           -->
+    <link rel="alternate" hreflang="sq"        href={langLinks?.sq  ? `${SITE}${langLinks.sq}`  : `${SITE}${currentPath}`} />
+    <link rel="alternate" hreflang="en"        href={langLinks?.en  ? `${SITE}${langLinks.en}`  : `${SITE}/en${currentPath === '/' ? '' : currentPath}`} />
+    <link rel="alternate" hreflang="x-default" href={langLinks?.sq  ? `${SITE}${langLinks.sq}`  : `${SITE}${currentPath}`} />
 
     <!-- Anti-flash: corre ANTES de cualquier CSS, evita parpadeo en dark mode -->
     <script is:inline>

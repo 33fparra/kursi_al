@@ -20,7 +20,8 @@ const { Content } = await render(entry);
 
 const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 const sqEntries = await getCollection('ditari', e => e.data.lang === 'sq' && e.data.type === type);
-const sqMatch = sqEntries.find(e => e.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '') === slug);
+// Match by translationKey (not slug) so EN/SQ pairs with different filenames link correctly
+const sqMatch = sqEntries.find(e => e.data.translationKey === entry.data.translationKey);
 const allowedLangs: ('sq' | 'en')[] | null = ['sq', 'en'];
 const langLinks = {
   en: `/en/ditari/artikull/${type}/${slug}/`,
