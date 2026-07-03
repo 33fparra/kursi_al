@@ -34,11 +34,9 @@ const pathname = Astro.url.pathname;
 
 const SITE        = 'https://leku.al';
 const canonicalUrl = `${SITE}${pathname}`;
-// Article images (.webp) take priority; fallback is the generic SVG.
-// ⚠️ NOTE: /og-image.svg is SVG — social platforms may not render it.
-//    Replace with /og-image.png (1200×630) for universal compatibility.
-const ogImageUrl  = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-image.svg`;
-const ogImageType = ogImage ? 'image/webp' : 'image/svg+xml';
+// Article images (.webp) take priority; fallback is the site logo.
+const ogImageUrl  = ogImage ? `${SITE}${ogImage}` : `${SITE}/lekulogo.webp`;
+const ogImageType = 'image/webp';
 
 const ogLocales: Record<string, string> = {
   sq: 'sq_AL', en: 'en_US',
