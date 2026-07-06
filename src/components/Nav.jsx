@@ -207,7 +207,8 @@ export default function Nav({ lang = 'sq', currentPath = '/', pathname = '/', al
         <div className="topbar-inner">
           {/* Logo */}
           <a href="/" className="topbar-logo" aria-label="leku.al">
-            <img src="/logo.svg" alt="leku.al" className="topbar-logo-img" />
+            <img src="/logo.svg"                alt="leku.al" className="topbar-logo-img logo-light" />
+            <img src="/logo_versionNoche.webp"  alt="leku.al" className="topbar-logo-img logo-dark" />
           </a>
 
           {/* Section badge (change only) */}

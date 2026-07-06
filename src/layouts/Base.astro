@@ -388,6 +388,15 @@ const jsonLd = JSON.stringify({
     --blue-info:     #2563eb; --blue-soft:     #eff6ff;
   }
 
+  /* ─── Logo dark/light swap ─── */
+  .logo-dark { display: none; }
+  [data-theme='dark'] .logo-light { display: none; }
+  [data-theme='dark'] .logo-dark  { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .logo-light { display: none; }
+    :root:not([data-theme='light']) .logo-dark  { display: block; }
+  }
+
   /* ─── Reset ─── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   [hidden] { display: none !important; }
