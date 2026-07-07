@@ -48,7 +48,7 @@ const personJsonLd = JSON.stringify({
     <div class="author-badges">
       <span class="rate-badge"><i class="ti ti-map-pin" aria-hidden="true"></i> Tiranë, Shqipëri</span>
       <span class="rate-badge"><i class="ti ti-flag" aria-hidden="true"></i> Kile</span>
-      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES · EN · SQ · GJSH-Kile</span>
+      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES (amëgjuhë) · EN B1→B2 · SQ A1→A2</span>
     </div>
   </div>
 
@@ -87,6 +87,16 @@ const personJsonLd = JSON.stringify({
       <i class="ti ti-calendar credential-icon" aria-hidden="true"></i>
       <span class="country-fact-value">2 vjet në Shqipëri</span>
       <span class="country-fact-label">Jetoj dhe punoj këtu. Çmimet, bankat dhe realiteti financiar i Tiranës janë pjesë e jetës sime të përditshme</span>
+    </div>
+    <div class="country-fact credential-langs">
+      <i class="ti ti-language credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Nivelet gjuhësore</span>
+      <ul class="lang-levels">
+        <li><strong>Spanjisht</strong> — amëgjuhë</li>
+        <li><strong>Anglisht</strong> — B1, duke avancuar drejt B2</li>
+        <li><strong>Shqip</strong> — A1, duke avancuar drejt A2 · ende jo rrjedhshëm · artikujt shqip kontrollohen nga folës amës</li>
+        <li><strong>GJSH-Kile</strong> — i certifikuar</li>
+      </ul>
     </div>
   </div>
 
@@ -154,4 +164,8 @@ const personJsonLd = JSON.stringify({
   .author-credentials .country-fact-label { font-size: var(--text-xs); line-height: 1.5; text-transform: none; letter-spacing: 0; }
   .author-contact { margin-bottom: var(--space-10); }
   .author-btn { display: inline-flex; align-items: center; gap: var(--space-2); width: auto; text-decoration: none; }
+  .credential-langs { grid-column: 1 / -1; }
+  .lang-levels { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .lang-levels li { font-size: var(--text-xs); color: var(--ink-secondary); line-height: 1.5; }
+  .lang-levels strong { color: var(--ink); font-weight: 600; }
 </style>

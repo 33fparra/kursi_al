@@ -48,7 +48,7 @@ const personJsonLd = JSON.stringify({
     <div class="author-badges">
       <span class="rate-badge"><i class="ti ti-map-pin" aria-hidden="true"></i> Tirana, Albania</span>
       <span class="rate-badge"><i class="ti ti-flag" aria-hidden="true"></i> Chile</span>
-      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES · EN · SQ · CSL</span>
+      <span class="rate-badge"><i class="ti ti-language" aria-hidden="true"></i> ES (native) · EN B1→B2 · SQ A1→A2</span>
     </div>
   </div>
 
@@ -87,6 +87,16 @@ const personJsonLd = JSON.stringify({
       <i class="ti ti-calendar credential-icon" aria-hidden="true"></i>
       <span class="country-fact-value">2 years in Albania</span>
       <span class="country-fact-label">I live and work here. Tirana's prices, banks and financial reality are part of my daily life</span>
+    </div>
+    <div class="country-fact credential-langs">
+      <i class="ti ti-language credential-icon" aria-hidden="true"></i>
+      <span class="country-fact-value">Language levels</span>
+      <ul class="lang-levels">
+        <li><strong>Spanish</strong> — native</li>
+        <li><strong>English</strong> — B1, advancing to B2</li>
+        <li><strong>Albanian</strong> — A1, advancing to A2 · not yet fluent · Albanian articles are reviewed by native speakers</li>
+        <li><strong>Chilean Sign Language</strong> — certified interpreter</li>
+      </ul>
     </div>
   </div>
 
@@ -129,4 +139,8 @@ const personJsonLd = JSON.stringify({
   .author-credentials .country-fact-label { font-size: var(--text-xs); line-height: 1.5; text-transform: none; letter-spacing: 0; }
   .author-contact { margin-bottom: var(--space-10); }
   .author-btn { display: inline-flex; align-items: center; gap: var(--space-2); width: auto; text-decoration: none; }
+  .credential-langs { grid-column: 1 / -1; }
+  .lang-levels { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .lang-levels li { font-size: var(--text-xs); color: var(--ink-secondary); line-height: 1.5; }
+  .lang-levels strong { color: var(--ink); font-weight: 600; }
 </style>
