@@ -65,13 +65,13 @@ const COUNTRY_TOP = {
     { path: '/',         label: 'Kreu',      icon: 'ti-arrow-left' },
     { path: '/albania/', label: 'Shqipëria', flag: 'al' },
     { path: '/kosova/',  label: 'Kosova',    flag: 'xk' },
-    { path: '/ditari/',  label: 'Lajme',     icon: 'ti-news' },
+    { path: '/ditari/',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
   ],
   en: [
-    { path: '/',            label: 'Home',    icon: 'ti-arrow-left' },
-    { path: '/en/albania/', label: 'Albania', flag: 'al' },
-    { path: '/en/kosova/',  label: 'Kosovo',  flag: 'xk' },
-    { path: '/en/ditari/',  label: 'News',    icon: 'ti-news' },
+    { path: '/',            label: 'Home',       icon: 'ti-arrow-left' },
+    { path: '/en/albania/', label: 'Albania',    flag: 'al' },
+    { path: '/en/kosova/',  label: 'Kosovo',     flag: 'xk' },
+    { path: '/en/ditari/',  label: "Lek's Diary", icon: 'ti-notebook-2' },
   ],
 };
 
