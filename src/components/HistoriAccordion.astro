@@ -1,0 +1,58 @@
+---
+import { t } from '../lib/i18n';
+import { HISTORI_BLOCKS } from '../lib/historiBlocks';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  lang?: 'sq' | 'en';
+  entriesByBlock: Record<string, CollectionEntry<'historiEkonomi'>[]>;
+}
+
+const { lang = 'sq', entriesByBlock } = Astro.props;
+const base = lang === 'en' ? '/en/histori-ekonomi' : '/histori-ekonomi';
+---
+<div class="histori-accordion">
+  {HISTORI_BLOCKS.map(block => {
+    const chapters = entriesByBlock[block.slug] ?? [];
+    return (
+      <details class="histori-accordion-item" open={block.number === 0}>
+        <summary class="histori-accordion-summary">
+          <span class={`histori-accordion-number histori-accordion-number--${block.number}`}>{block.number}</span>
+          <span class="histori-accordion-title">{block.title[lang]}</span>
+          <i class="ti ti-chevron-down histori-accordion-chevron" aria-hidden="true"></i>
+        </summary>
+        <div class="histori-accordion-body">
+          <p class="histori-accordion-desc">{block.description[lang]}</p>
+
+          {chapters.length > 0 ? (
+            <ul class="histori-accordion-list">
+              {chapters.map((entry, i) => {
+                const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+                return (
+                  <li>
+                    <a href={`${base}/artikull/${block.slug}/${slug}/`} class="histori-accordion-link">
+                      <span class="histori-accordion-link-num">{i + 1}</span>
+                      <span class="histori-accordion-link-title">{entry.data.title}</span>
+                      <i class="ti ti-arrow-right histori-accordion-link-arrow" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <p class="histori-accordion-empty">
+              <i class="ti ti-tools" aria-hidden="true"></i>
+              {t(lang, 'histori.underConstruction')}
+            </p>
+          )}
+
+          {chapters.length > 0 && (
+            <a href={`${base}/${block.slug}/`} class="histori-accordion-more">
+              {t(lang, 'histori.viewBlock')} <i class="ti ti-arrow-right" aria-hidden="true"></i>
+            </a>
+          )}
+        </div>
+      </details>
+    );
+  })}
+</div>

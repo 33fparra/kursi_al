@@ -33,6 +33,7 @@ const HOME_LINKS = {
     { path: '/kosova/',  label: 'Kosova',       flag: 'xk' },
     { path: '/kursi/',   label: 'Konvertuesi', icon: 'ti-arrows-up-down' },
     { path: '/ditari/',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
+    { path: '/histori-ekonomi/', label: 'Historia', icon: 'ti-books' },
   ],
   en: [
     { path: '/',            label: 'Home',      icon: 'ti-home-2' },
@@ -40,6 +41,7 @@ const HOME_LINKS = {
     { path: '/en/kosova/',  label: 'Kosovo',    flag: 'xk' },
     { path: '/en/kursi/',   label: 'Converter', icon: 'ti-arrows-up-down' },
     { path: '/en/ditari/',  label: "Lek's Diary", icon: 'ti-notebook-2' },
+    { path: '/en/histori-ekonomi/', label: 'History', icon: 'ti-books' },
   ],
 };
 
@@ -66,12 +68,14 @@ const COUNTRY_TOP = {
     { path: '/albania/', label: 'Shqipëria', flag: 'al' },
     { path: '/kosova/',  label: 'Kosova',    flag: 'xk' },
     { path: '/ditari/',  label: 'Ditari i Lekut', icon: 'ti-notebook-2' },
+    { path: '/histori-ekonomi/', label: 'Historia', icon: 'ti-books' },
   ],
   en: [
     { path: '/',            label: 'Home',       icon: 'ti-arrow-left' },
     { path: '/en/albania/', label: 'Albania',    flag: 'al' },
     { path: '/en/kosova/',  label: 'Kosovo',     flag: 'xk' },
     { path: '/en/ditari/',  label: "Lek's Diary", icon: 'ti-notebook-2' },
+    { path: '/en/histori-ekonomi/', label: 'History', icon: 'ti-books' },
   ],
 };
 

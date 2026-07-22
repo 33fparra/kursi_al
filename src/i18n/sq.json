@@ -228,5 +228,23 @@
   "ditari.int.meta.description":    "Ngjarje ndërkombëtare me ndikim direkt mbi ekonominë shqiptare dhe diasporën.",
   "ditari.search.placeholder":      "Kërko artikuj...",
   "ditari.search.noResults":        "Nuk u gjet asnjë artikull për këtë kërkim.",
-  "ditari.sidebar.recent":          "Artikujt e fundit"
+  "ditari.sidebar.recent":          "Artikujt e fundit",
+  "ditari.historiaLink":            "Historia",
+
+  "histori.navLabel":         "Historia",
+  "histori.heading":          "Historia dhe Ekonomia e Shqipërisë",
+  "histori.subtitle":         "Një udhëtim nëpër shekuj, nga Ilirët e lashtë deri te Shqipëria e sotme",
+  "histori.allBlocks":        "Të gjitha",
+  "histori.readMore":         "Lexo më shumë",
+  "histori.minRead":          "min lexim",
+  "histori.backToList":       "Kthehu te Historia",
+  "histori.prevPage":         "Faqja e mëparshme",
+  "histori.nextPage":         "Faqja tjetër",
+  "histori.page":             "Faqja",
+  "histori.empty":            "Nuk ka kapituj ende.",
+  "histori.underConstruction": "Po punojmë për këto kapituj. Numri total i kapitujve ende nuk është përcaktuar dhe mund të ndryshojë ndërsa përparojmë.",
+  "histori.viewBlock":        "Shiko të gjithë bllokun",
+  "histori.meta.title":       "Historia dhe Ekonomia e Shqipërisë | leku.al",
+  "histori.meta.description": "Historia e Shqipërisë e treguar në kapituj, nga Ilirët e lashtë e deri te Shqipëria moderne — thjeshtë dhe saktë.",
+  "histori.meta.keywords":    "historia e shqiperise, iliret, skenderbeu, pushtimi otoman, pavaresia e shqiperise, komunizmi"
 }

@@ -1,0 +1,147 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { t } from '../../../../lib/i18n';
+import { getHistoriBlock } from '../../../../lib/historiBlocks';
+import { getCollection, render } from 'astro:content';
+
+export const prerender = true;
+const lang = 'sq' as const;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('historiEkonomi', e => e.data.lang === 'sq');
+  return entries.map(entry => ({
+    params: { type: entry.data.type, slug: entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, description, type, category, date, image, imageAlt, readMinutes, author, coAuthor } = entry.data;
+const { Content } = await render(entry);
+
+const slug = entry.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+const enEntries = await getCollection('historiEkonomi', e => e.data.lang === 'en' && e.data.type === type);
+// Match by translationKey (not slug) so SQ/EN pairs with different filenames link correctly
+const enMatch = enEntries.find(e => e.data.translationKey === entry.data.translationKey);
+const allowedLangs: ('sq' | 'en')[] | null = ['sq', 'en'];
+const langLinks = {
+  sq: `/histori-ekonomi/artikull/${type}/${slug}/`,
+  en: enMatch ? `/en/histori-ekonomi/artikull/${type}/${enMatch.id.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '')}/` : '/en/histori-ekonomi/',
+};
+
+const dateLabel = date.toLocaleDateString('sq-AL', { year: 'numeric', month: 'long', day: 'numeric' });
+const block = getHistoriBlock(type);
+const typeLabel = block ? block.shortTitle[lang] : type;
+
+const articleJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: `https://leku.al${image}`,
+  datePublished: date.toISOString(),
+  inLanguage: 'sq',
+  publisher: {
+    '@type': 'Organization',
+    name: 'leku.al',
+    url: 'https://leku.al',
+  },
+});
+
+// Extract FAQ pairs from <details>/<summary> blocks in the article body
+const faqRegex = /<summary[^>]*><b>([\s\S]*?)<\/b><\/summary>([\s\S]*?)<\/details>/gi;
+const faqItems: { question: string; answer: string }[] = [];
+let faqMatch;
+while ((faqMatch = faqRegex.exec(entry.body || '')) !== null) {
+  const question = faqMatch[1].trim();
+  const answer = faqMatch[2]
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (question && answer) faqItems.push({ question, answer });
+}
+
+const faqJsonLd = faqItems.length > 0 ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+}) : null;
+---
+<Base
+  title={`${title} | leku.al`}
+  description={description}
+  lang={lang}
+  currentPath="/histori-ekonomi/"
+  ogImage={image}
+  ogType="article"
+  articleWide
+  allowedLangs={allowedLangs}
+  langLinks={langLinks}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={articleJsonLd} />
+    {faqJsonLd && <script type="application/ld+json" set:html={faqJsonLd} />}
+  </Fragment>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/histori-ekonomi/" class="breadcrumb-link">{t(lang, 'histori.heading')}</a>
+    <i class="ti ti-chevron-right breadcrumb-sep" aria-hidden="true"></i>
+    <span class="breadcrumb-current">{category}</span>
+  </nav>
+
+  <article class="histori-post">
+    <header class="blog-post-header">
+      <div class="blog-post-meta">
+        <span class={`ditari-badge ditari-badge--historia-${block?.number ?? 0}`} style="position: static;">{typeLabel}</span>
+        <span class="blog-category">{category}</span>
+        <span class="blog-date">{dateLabel}</span>
+        <span class="blog-read">{readMinutes} {t(lang, 'histori.minRead')}</span>
+      </div>
+      <h1 class="blog-post-title">{title}</h1>
+      {author && (
+        <div class="article-byline">
+          <a href="/rreth-autorit/fa-parretti/" class="article-byline-author">
+            <i class="ti ti-user-circle" aria-hidden="true"></i>
+            {author}
+          </a>
+          {coAuthor && (
+            <span class="article-byline-coauthor">
+              <i class="ti ti-users" aria-hidden="true"></i>
+              {coAuthor}
+            </span>
+          )}
+        </div>
+      )}
+      <p class="blog-post-desc">{description}</p>
+    </header>
+
+    <img src={image} alt={imageAlt} class="ditari-article-img" />
+
+    <div class="histori-content">
+      <Content />
+    </div>
+
+    {author && (
+      <div class="article-author-footer">
+        <div class="article-author-card">
+          <i class="ti ti-user-circle article-author-icon" aria-hidden="true"></i>
+          <div>
+            <a href="/rreth-autorit/fa-parretti/" class="article-author-name">{author}</a>
+            {coAuthor && <p class="article-author-coname">{coAuthor}</p>}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <footer class="blog-post-footer">
+      <a href="/histori-ekonomi/" class="tool-nav-link">
+        <i class="ti ti-arrow-left" aria-hidden="true"></i> {t(lang, 'histori.backToList')}
+      </a>
+    </footer>
+  </article>
+</Base>

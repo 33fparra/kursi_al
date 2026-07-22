@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import HistoriAccordion from '../../components/HistoriAccordion.astro';
+import { t } from '../../lib/i18n';
+import { HISTORI_BLOCKS } from '../../lib/historiBlocks';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export const prerender = true;
+const lang = 'sq' as const;
+
+const allSq = await getCollection('historiEkonomi', e => e.data.lang === 'sq');
+
+const entriesByBlock: Record<string, CollectionEntry<'historiEkonomi'>[]> = {};
+for (const block of HISTORI_BLOCKS) {
+  entriesByBlock[block.slug] = allSq
+    .filter(e => e.data.type === block.slug)
+    .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0) || a.data.date.valueOf() - b.data.date.valueOf());
+}
+---
+<Base
+  title={t(lang, 'histori.meta.title')}
+  description={t(lang, 'histori.meta.description')}
+  keywords={t(lang, 'histori.meta.keywords')}
+  lang={lang}
+  currentPath="/histori-ekonomi/"
+  wide
+>
+  <div class="section-header">
+    <h1 class="page-title">{t(lang, 'histori.heading')}</h1>
+    <p class="page-subtitle">{t(lang, 'histori.subtitle')}</p>
+  </div>
+
+  <HistoriAccordion lang={lang} entriesByBlock={entriesByBlock} />
+</Base>

@@ -228,5 +228,23 @@
   "ditari.int.meta.description":    "International events with direct impact on the Albanian economy and diaspora.",
   "ditari.search.placeholder":      "Search articles...",
   "ditari.search.noResults":        "No articles found for this search.",
-  "ditari.sidebar.recent":          "Recent articles"
+  "ditari.sidebar.recent":          "Recent articles",
+  "ditari.historiaLink":            "History",
+
+  "histori.navLabel":         "History",
+  "histori.heading":          "History and Economy of Albania",
+  "histori.subtitle":         "A journey through the centuries, from the ancient Illyrians to modern Albania",
+  "histori.allBlocks":        "All",
+  "histori.readMore":         "Read more",
+  "histori.minRead":          "min read",
+  "histori.backToList":       "Back to History",
+  "histori.prevPage":         "Previous page",
+  "histori.nextPage":         "Next page",
+  "histori.page":             "Page",
+  "histori.empty":            "No chapters yet.",
+  "histori.underConstruction": "We're working on these chapters. The total number of chapters isn't finalized yet and may change as we go.",
+  "histori.viewBlock":        "View full block",
+  "histori.meta.title":       "History and Economy of Albania | leku.al",
+  "histori.meta.description": "The history of Albania told in chapters, from the ancient Illyrians to modern Albania — simple and accurate.",
+  "histori.meta.keywords":    "history of albania, illyrians, skanderbeg, ottoman empire, albanian independence, communism"
 }

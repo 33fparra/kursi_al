@@ -1,0 +1,30 @@
+---
+import { t } from '../lib/i18n';
+import type { Page } from 'astro';
+
+export interface Props {
+  page: Page<any>;
+  lang?: 'sq' | 'en';
+}
+
+const { page, lang = 'sq' } = Astro.props;
+---
+{page.lastPage > 1 && (
+  <nav class="ditari-pagination" aria-label="Pagination">
+    {page.url.prev ? (
+      <a href={page.url.prev} class="ditari-page-link">
+        <i class="ti ti-chevron-left" aria-hidden="true"></i>
+        <span>{t(lang, 'histori.prevPage')}</span>
+      </a>
+    ) : <span class="ditari-page-link ditari-page-link--disabled" aria-hidden="true"></span>}
+
+    <span class="ditari-page-status">{t(lang, 'histori.page')} {page.currentPage} / {page.lastPage}</span>
+
+    {page.url.next ? (
+      <a href={page.url.next} class="ditari-page-link">
+        <span>{t(lang, 'histori.nextPage')}</span>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+      </a>
+    ) : <span class="ditari-page-link ditari-page-link--disabled" aria-hidden="true"></span>}
+  </nav>
+)}

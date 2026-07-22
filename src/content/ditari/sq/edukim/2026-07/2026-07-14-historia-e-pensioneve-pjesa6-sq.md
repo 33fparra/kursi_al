@@ -202,12 +202,12 @@ Vetëm kështu do të arrijmë që, pas një jete të tërë përpjekjesh, asnj�
 
 Për të lundruar në hartën e plotë të kësaj serie edukative, mund të konsultoni çdo vëllim direkt këtu:
 
-*   **[Pjesa 1: Kush do t'ju japë të hani kur të jeni 70 vjeç? Historia pas pensioneve](#)** *(Origjina e paktit social dhe dilema historike e mbijetesës në pleqëri).*
-*   **[Pjesa 2: Pakt i madh midis gjeneratave: nga ku vijnë realisht paratë e një pensioni?](#)** *(Si funksionon sistemi i shpërndarjes apo i solidaritetit dhe ndikimi i forcave demografike).*
-*   **[Pjesa 3: Të mbjellësh një pemë për të ardhmen ose si funksionon kapitalizimi individual](#)** *(Mekanika e kursimit vetjak, investimi i fondeve dhe miti i parave të palëvizshme).*
-*   **[Pjesa 4: Sistemet mikse dhe ekuilibri midis solidaritetit dhe kursimit](#)** *(Modeli me shumë shtylla i vendeve të avancuara dhe mbrojtja ndaj rasteve si aftësia e kufizuar).*
-*   **[Pjesa 5: Shqipëria dhe litar shtetëror që po mbetet pa duar](#)** *(Radiografia e ISSH-së përballë krizës migratore, rënies së lindshmërisë dhe pagës gri).*
-*   **[Pjesa 6: Trusti i Kosovës, dy kushërirat dhe leksioni që duhet të nxjerrim të gjithë](#)** *(Funksionimi i shtyllës së dytë të detyrueshme dhe muri strukturor i informalitetit në Ballkan).*
+*   **[Pjesa 1: Kush do t'ju japë të hani kur të jeni 70 vjeç? Historia pas pensioneve](https://leku.al/ditari/artikull/edukim/historia-e-pensioneve-pjesa1/)** *(Origjina e paktit social dhe dilema historike e mbijetesës në pleqëri).*
+*   **[Pjesa 2: Pakt i madh midis gjeneratave: nga ku vijnë realisht paratë e një pensioni?](https://leku.al/ditari/artikull/edukim/historia-e-pensioneve-pjesa2/)** *(Si funksionon sistemi i shpërndarjes apo i solidaritetit dhe ndikimi i forcave demografike).*
+*   **[Pjesa 3: Të mbjellësh një pemë për të ardhmen ose si funksionon kapitalizimi individual](https://leku.al/ditari/artikull/edukim/historia-e-pensioneve-pjesa3-sq/)** *(Mekanika e kursimit vetjak, investimi i fondeve dhe miti i parave të palëvizshme).*
+*   **[Pjesa 4: Sistemet mikse dhe ekuilibri midis solidaritetit dhe kursimit](https://leku.al/ditari/artikull/edukim/sistemet-mikse-te-pensioneve-sq/)** *(Modeli me shumë shtylla i vendeve të avancuara dhe mbrojtja ndaj rasteve si aftësia e kufizuar).*
+*   **[Pjesa 5: Shqipëria dhe litar shtetëror që po mbetet pa duar](https://leku.al/ditari/artikull/lajme/historia-e-pensioneve-pjesa5-sq/)** *(Radiografia e ISSH-së përballë krizës migratore, rënies së lindshmërisë dhe pagës gri).*
+*   **[Pjesa 6: Trusti i Kosovës, dy kushërirat dhe leksioni që duhet të nxjerrim të gjithë](https://leku.al/ditari/artikull/edukim/historia-e-pensioneve-pjesa6-sq/)** *(Funksionimi i shtyllës së dytë të detyrueshme dhe muri strukturor i informalitetit në Ballkan).*
 
 ---
 

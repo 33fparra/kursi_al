@@ -1,0 +1,50 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import HistoriCard from '../../../../components/HistoriCard.astro';
+import HistoriPagination from '../../../../components/HistoriPagination.astro';
+import HistoriFilters from '../../../../components/HistoriFilters.astro';
+import { t } from '../../../../lib/i18n';
+import { getHistoriBlock } from '../../../../lib/historiBlocks';
+import { getCollection } from 'astro:content';
+import type { GetStaticPathsOptions } from 'astro';
+
+export const prerender = true;
+const lang = 'en' as const;
+const blockSlug = 'iliret' as const;
+const block = getHistoriBlock(blockSlug)!;
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = (await getCollection('historiEkonomi', e => e.data.lang === 'en' && e.data.type === 'iliret'))
+    .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0) || a.data.date.valueOf() - b.data.date.valueOf());
+  return paginate(entries, { pageSize: 24 });
+}
+
+const { page } = Astro.props;
+---
+<Base
+  title={`${block.title[lang]} | leku.al`}
+  description={block.description[lang]}
+  keywords={t(lang, 'histori.meta.keywords')}
+  lang={lang}
+  currentPath="/en/histori-ekonomi/"
+  wide
+>
+  <div class="section-header">
+    <h1 class="page-title">{block.title[lang]}</h1>
+    <p class="page-subtitle">{block.description[lang]}</p>
+  </div>
+
+  <HistoriFilters lang={lang} active={blockSlug} />
+
+  {page.data.length > 0 ? (
+    <div class="ditari-grid">
+      {page.data.map(entry => <HistoriCard entry={entry} lang={lang} />)}
+    </div>
+  ) : (
+    <p class="ditari-empty">
+      <i class="ti ti-tools" aria-hidden="true"></i> {t(lang, 'histori.underConstruction')}
+    </p>
+  )}
+
+  <HistoriPagination page={page} lang={lang} />
+</Base>

@@ -202,12 +202,12 @@ Only then will we ensure that, after a lifetime of hard work, no worker is left 
 
 To navigate the entire educational roadmap of this series, you can consult each volume directly here:
 
-*   **[Part 1: Who Will Feed You When You Are 70? The Story Behind Pensions](#)** *(The origin of the social contract and the historical dilemma of surviving old age).*
-*   **[Part 2: Pensions, Part 2: Where Does Your Retirement Money Actually Come From?](#)** *(How the pay-as-you-go or solidarity system operates and the impact of demographic trends).*
-*   **[Part 3: Pensions, Part 3: Planting a Tree for the Future, or How Individual Capitalization Works](#)** *(The mechanics of personal savings, institutional asset investment, and the myth of idle cash).*
-*   **[Part 4: Pensions, Part 4: Mixed Systems and the Balance Between Solidarity and Savings](#)** *(The multi-pillar frameworks of advanced economies and protections against systemic risks like disability).*
-*   **[Part 5: Pensions, Part 5: Albania and the State Rope That Is Running Out of Hands](#)** *(A deep dive into the ISSH under the pressures of youth emigration, low birth rates, and grey wages).*
-*   **[Part 6: Pensions, Part 6: The Kosovo Trust, the Two Cousins, and the Lesson We All Must Learn](#)** *(The operational reality of the mandatory second pillar and the structural wall of informality in the Western Balkans).*
+*   **[Part 1: Who Will Feed You When You Are 70? The Story Behind Pensions](https://leku.al/en/ditari/artikull/edukim/history-of-pensions-part1/)** *(The origin of the social contract and the historical dilemma of surviving old age).*
+*   **[Part 2: Pensions, Part 2: Where Does Your Retirement Money Actually Come From?](https://leku.al/en/ditari/artikull/edukim/history-of-pensions-part2/)** *(How the pay-as-you-go or solidarity system operates and the impact of demographic trends).*
+*   **[Part 3: Pensions, Part 3: Planting a Tree for the Future, or How Individual Capitalization Works](https://leku.al/en/ditari/artikull/edukim/history-of-pensions-part3-en/)** *(The mechanics of personal savings, institutional asset investment, and the myth of idle cash).*
+*   **[Part 4: Pensions, Part 4: Mixed Systems and the Balance Between Solidarity and Savings](https://leku.al/en/ditari/artikull/edukim/history-of-pensions-part4-en/)** *(The multi-pillar frameworks of advanced economies and protections against systemic risks like disability).*
+*   **[Part 5: Pensions, Part 5: Albania and the State Rope That Is Running Out of Hands](https://leku.al/en/ditari/artikull/lajme/history-of-pensions-part5-en/)** *(A deep dive into the ISSH under the pressures of youth emigration, low birth rates, and grey wages).*
+*   **[Part 6: Pensions, Part 6: The Kosovo Trust, the Two Cousins, and the Lesson We All Must Learn](https://leku.al/en/ditari/artikull/edukim/history-of-pensions-part6-en/)** *(The operational reality of the mandatory second pillar and the structural wall of informality in the Western Balkans).*
 
 ---
 

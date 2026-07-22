@@ -1,0 +1,24 @@
+---
+import { t } from '../lib/i18n';
+import { HISTORI_BLOCKS, type HistoriBlockSlug } from '../lib/historiBlocks';
+
+export interface Props {
+  lang?: 'sq' | 'en';
+  active: 'all' | HistoriBlockSlug;
+}
+
+const { lang = 'sq', active } = Astro.props;
+const base = lang === 'en' ? '/en/histori-ekonomi' : '/histori-ekonomi';
+
+const filters = [
+  { key: 'all', href: `${base}/`, label: t(lang, 'histori.allBlocks') },
+  ...HISTORI_BLOCKS.map(b => ({ key: b.slug, href: `${base}/${b.slug}/`, label: b.shortTitle[lang] })),
+] as const;
+---
+<nav class="ditari-filters" aria-label="Filter">
+  {filters.map(f => (
+    <a href={f.href} class={`ditari-filter${active === f.key ? ' ditari-filter--active' : ''}`}>
+      {f.label}
+    </a>
+  ))}
+</nav>

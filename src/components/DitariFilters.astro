@@ -8,6 +8,7 @@ export interface Props {
 
 const { lang = 'sq', active } = Astro.props;
 const base = lang === 'en' ? '/en/ditari' : '/ditari';
+const historiBase = lang === 'en' ? '/en/histori-ekonomi' : '/histori-ekonomi';
 
 const filters = [
   { key: 'all',    href: `${base}/`,         label: t(lang, 'ditari.allArticles') },
@@ -24,4 +25,8 @@ const filters = [
       {f.label}
     </a>
   ))}
+  <a href={`${historiBase}/`} class="ditari-filter ditari-filter--cross">
+    <i class="ti ti-books" aria-hidden="true" style="margin-right: 4px;"></i>
+    {t(lang, 'ditari.historiaLink')}
+  </a>
 </nav>
