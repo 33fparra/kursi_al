@@ -51,9 +51,11 @@ public/histori-ekonomi/images/
   — nuk ka limit dhe nuk kërkohet ndryshim skeme.
 - Një kapitull mund të ekzistojë vetëm në `sq`, vetëm në `en`, ose në të dyja
   (si dy skedarë të veçantë me të njëjtin `translationKey` dhe `image`).
-- Skedarët që fillojnë me `_` (p.sh. `_shembull-kapitulli.md`) **injorohen nga
-  ndërtimi** — përdoren vetëm si shembuj/draft, shiko seksionin "Shembull"
-  më poshtë.
+- Dosja `_examples/` dhe çdo skedar/dosje që fillon me `_` **injorohen nga
+  ndërtimi, gjithmonë** — nuk shfaqen kurrë në sitin live, as edhe nëse dikush
+  fshin njërin prej dy parashtesave (emrin e skedarit ose emrin e dosjes) —
+  mbrojtja e dytë mbetet. Përdoren vetëm si shembuj/draft, shiko seksionin
+  "Shembull" më poshtë.
 
 ## Teksti i justifikuar dhe imazhet brenda kapitullit
 
@@ -133,10 +135,13 @@ në desktop, sipas numrit të `<figure>`).
 
 ## Shembull i plotë
 
-Shiko `sq/para-ilire/_shembull-kapitulli.md` (dhe `en/para-ilire/_example-chapter.md`)
-për një skedar shembull të plotë me frontmatter, tekst të justifikuar dhe
-galerinë me 3 imazhe. Për ta bërë real: kopjoje, hiqe `_`-në nga emri, vendos
-datën si parashtesë dhe plotëso frontmatter-in me përmbajtjen e vërtetë.
+Shiko `_examples/_shembull-imazhe-sq.md` (dhe `_examples/_example-images-en.md`)
+për një skedar shembull të plotë me frontmatter dhe të katërta mënyrat e
+vendosjes së imazheve. Për ta përdorur si bazë për një kapitull real:
+kopjoje **jashtë** dosjes `_examples/` (te dosja e bllokut përkatës, p.sh.
+`sq/iliret/`), hiqe `_`-në nga emri, vendos datën si parashtesë dhe plotëso
+frontmatter-in me përmbajtjen e vërtetë. Nëse skedari mbetet brenda
+`_examples/`, nuk do të shfaqet kurrë, edhe nëse i heq `_`-në nga emri.
 
 ## Frontmatter (metadata)
 

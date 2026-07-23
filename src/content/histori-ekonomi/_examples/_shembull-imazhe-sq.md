@@ -1,18 +1,5 @@
 ---
-title: "Shembull: Vendosja e Imazheve"
-description: "Skedar shembull që tregon 4 mënyrat për të vendosur imazhe brenda një kapitulli."
-type: "para-ilire"
-category: "Shembull"
-author: "F.A Parretti"
-coAuthor: ""
-country: "Albania"
-translationKey: "shembull-imazhe"
-date: 2026-07-20
-image: "/histori-ekonomi/images/2026-07/shembull-kryesor.webp"
-imageAlt: "Imazhi kryesor i shembullit"
-readMinutes: 2
-lang: "sq"
-order: 99
+
 ---
 
 <!--

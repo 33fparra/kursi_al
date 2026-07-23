@@ -1,18 +1,5 @@
 ---
-title: "Example: Placing Images"
-description: "Example file showing the 4 ways to place images inside a chapter."
-type: "para-ilire"
-category: "Example"
-author: "F.A Parretti"
-coAuthor: ""
-country: "Albania"
-translationKey: "example-images"
-date: 2026-07-20
-image: "/histori-ekonomi/images/2026-07/example-cover.webp"
-imageAlt: "Example cover image"
-readMinutes: 2
-lang: "en"
-order: 99
+
 ---
 
 <!--

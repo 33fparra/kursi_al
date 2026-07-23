@@ -21,9 +21,10 @@ const ditari = defineCollection({
 });
 
 const historiEkonomi = defineCollection({
-  // Files prefixed with "_" (e.g. _shembull-kapitulli.md) are drafts/examples
-  // and are excluded from the collection — they never appear on the live site.
-  loader: glob({ pattern: ['**/*.md', '!README.md', '!**/_*.md'], base: './src/content/histori-ekonomi' }),
+  // Files or folders prefixed with "_" (e.g. _examples/, _shembull-kapitulli.md)
+  // are drafts/examples and are excluded from the collection — they never
+  // appear on the live site, even if one of the two prefixes is later removed.
+  loader: glob({ pattern: ['**/*.md', '!README.md', '!**/_*.md', '!**/_*/**'], base: './src/content/histori-ekonomi' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
